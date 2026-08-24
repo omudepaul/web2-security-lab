@@ -1,0 +1,45 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check JavaScript syntax
+        run: node --check index.js
+
+      - name: Verify project files
+        run: |
+          test -f index.js
+          test -f package.json
+          test -f package-lock.json
+          test -f .env.example
+          echo "Required project files are present."
+
+      - name: Confirm secrets are not committed
+        run: |
+          if [ -f ".env" ]; then
+            echo ".env file must not be committed."
+            exit 1
+          fi
+          echo "No .env file found in repository."
