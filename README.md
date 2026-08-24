@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# Web2 Security Research Lab
 
 
@@ -240,3 +241,7 @@ Never commit the `.env` file.
 
 The project currently supports a working local live demonstration of OAuth/OIDC authentication, security-event monitoring, brute-force detection, and automatic risk classification.
 
+=======
+# web2-security-lab
+OAuth 2.0 and Keycloak security monitoring lab with brute-force attack detection
+>>>>>>> 033c184268ec401a58999187c94dc149374b6f78
