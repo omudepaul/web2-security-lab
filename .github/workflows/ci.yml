@@ -28,12 +28,16 @@ jobs:
       - name: Check JavaScript syntax
         run: node --check index.js
 
+      - name: Run detector unit tests
+        run: node --test tests/detector.test.js
+
       - name: Verify project files
         run: |
           test -f index.js
           test -f package.json
           test -f package-lock.json
           test -f .env.example
+          test -f tests/detector.test.js
           echo "Required project files are present."
 
       - name: Confirm secrets are not committed
