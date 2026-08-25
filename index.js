@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT || 3000);
 
 const LOG_FILE = path.join(__dirname, "security-events.json");
 const EXPERIMENT_FILE = path.join(__dirname, "detector-experiments.json");
@@ -16,7 +16,27 @@ const KEYCLOAK_REALM = process.env.KEYCLOAK_REALM;
 const MONITOR_CLIENT_ID = process.env.MONITOR_CLIENT_ID;
 const MONITOR_CLIENT_SECRET = process.env.MONITOR_CLIENT_SECRET;
 
+const RESEARCH_CLIENT_ID = "research-app";
 const FAILED_LOGIN_THRESHOLD = 3;
+
+/*
+|--------------------------------------------------------------------------
+| VERIFY REQUIRED ENVIRONMENT VARIABLES
+|--------------------------------------------------------------------------
+*/
+
+for (const [name, value] of Object.entries({
+  KEYCLOAK_URL,
+  KEYCLOAK_REALM,
+  MONITOR_CLIENT_ID,
+  MONITOR_CLIENT_SECRET,
+})) {
+  if (!value) {
+    throw new Error(
+      `Missing required environment variable: ${name}`
+    );
+  }
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -24,12 +44,20 @@ const FAILED_LOGIN_THRESHOLD = 3;
 |--------------------------------------------------------------------------
 */
 
-app.use(express.urlencoded({ extended: false }));
+app.use(
+  express.urlencoded({
+    extended: false,
+  })
+);
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "research-app-secret",
+    secret:
+      process.env.SESSION_SECRET ||
+      "research-app-secret-change-me",
+
     resave: false,
+
     saveUninitialized: false,
 
     cookie: {
@@ -51,23 +79,36 @@ function loadJsonFile(filePath) {
       return [];
     }
 
-    const data = fs.readFileSync(filePath, "utf8");
+    const data =
+      fs.readFileSync(
+        filePath,
+        "utf8"
+      );
 
-    if (!data.trim()) {
-      return [];
-    }
-
-    return JSON.parse(data);
+    return data.trim()
+      ? JSON.parse(data)
+      : [];
   } catch (error) {
-    console.error(`Could not read ${filePath}:`, error);
+    console.error(
+      `Could not read ${filePath}:`,
+      error
+    );
+
     return [];
   }
 }
 
-function saveJsonFile(filePath, data) {
+function saveJsonFile(
+  filePath,
+  data
+) {
   fs.writeFileSync(
     filePath,
-    JSON.stringify(data, null, 2),
+    JSON.stringify(
+      data,
+      null,
+      2
+    ),
     "utf8"
   );
 }
@@ -78,27 +119,56 @@ function saveJsonFile(filePath, data) {
 |--------------------------------------------------------------------------
 */
 
-let securityEvents = loadJsonFile(LOG_FILE);
-let experiments = loadJsonFile(EXPERIMENT_FILE);
+let securityEvents =
+  loadJsonFile(LOG_FILE);
+
+let experiments =
+  loadJsonFile(EXPERIMENT_FILE);
 
 function saveSecurityEvents() {
-  saveJsonFile(LOG_FILE, securityEvents);
+  saveJsonFile(
+    LOG_FILE,
+    securityEvents
+  );
 }
 
 function saveExperiments() {
-  saveJsonFile(EXPERIMENT_FILE, experiments);
+  saveJsonFile(
+    EXPERIMENT_FILE,
+    experiments
+  );
 }
 
-function addSecurityEvent(type, username, details) {
+function addSecurityEvent(
+  type,
+  username,
+  details
+) {
   securityEvents.unshift({
-    time: new Date().toISOString(),
+    time:
+      new Date().toISOString(),
+
     type,
-    username: username || "unknown",
-    details: details || "",
+
+    username:
+      username || "unknown",
+
+    details:
+      details || "",
   });
 
-  if (securityEvents.length > 200) {
-    securityEvents = securityEvents.slice(0, 200);
+  /*
+    Limit local application log size.
+  */
+
+  if (
+    securityEvents.length > 500
+  ) {
+    securityEvents =
+      securityEvents.slice(
+        0,
+        500
+      );
   }
 
   saveSecurityEvents();
@@ -106,37 +176,61 @@ function addSecurityEvent(type, username, details) {
 
 /*
 |--------------------------------------------------------------------------
-| HELPER FUNCTIONS
+| GENERAL HELPERS
 |--------------------------------------------------------------------------
 */
 
 function escapeHtml(value) {
-  if (value === undefined || value === null) {
+  if (
+    value === undefined ||
+    value === null
+  ) {
     return "";
   }
 
   return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+    .replaceAll(
+      "&",
+      "&amp;"
+    )
+    .replaceAll(
+      "<",
+      "&lt;"
+    )
+    .replaceAll(
+      ">",
+      "&gt;"
+    )
+    .replaceAll(
+      '"',
+      "&quot;"
+    )
+    .replaceAll(
+      "'",
+      "&#039;"
+    );
 }
 
-function formatTime(value) {
-  if (!value) {
+function formatTime(seconds) {
+  if (!seconds) {
     return "Not available";
   }
 
-  return new Date(Number(value) * 1000).toLocaleString();
+  return new Date(
+    Number(seconds) * 1000
+  ).toLocaleString();
 }
 
-function formatKeycloakTime(value) {
-  if (!value) {
+function formatKeycloakTime(
+  milliseconds
+) {
+  if (!milliseconds) {
     return "Not available";
   }
 
-  return new Date(Number(value)).toLocaleString();
+  return new Date(
+    Number(milliseconds)
+  ).toLocaleString();
 }
 
 function formatIsoTime(value) {
@@ -144,19 +238,45 @@ function formatIsoTime(value) {
     return "Not available";
   }
 
-  return new Date(value).toLocaleString();
+  return new Date(
+    value
+  ).toLocaleString();
 }
 
-function percentage(numerator, denominator) {
+function percentage(
+  numerator,
+  denominator
+) {
   if (!denominator) {
     return 0;
   }
 
-  return (numerator / denominator) * 100;
+  return (
+    numerator /
+    denominator
+  ) * 100;
 }
 
 function formatPercent(value) {
-  return `${value.toFixed(2)}%`;
+  return `${Number(
+    value || 0
+  ).toFixed(2)}%`;
+}
+
+function requireLogin(
+  req,
+  res,
+  next
+) {
+  if (!req.session.user) {
+    return res
+      .status(401)
+      .send(
+        "Authentication required."
+      );
+  }
+
+  next();
 }
 
 /*
@@ -170,61 +290,134 @@ async function getMonitorAccessToken() {
     `${KEYCLOAK_URL}/realms/${KEYCLOAK_REALM}` +
     `/protocol/openid-connect/token`;
 
-  const response = await fetch(tokenUrl, {
-    method: "POST",
+  const response =
+    await fetch(
+      tokenUrl,
+      {
+        method: "POST",
 
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
+        headers: {
+          "Content-Type":
+            "application/x-www-form-urlencoded",
+        },
 
-    body: new URLSearchParams({
-      grant_type: "client_credentials",
-      client_id: MONITOR_CLIENT_ID,
-      client_secret: MONITOR_CLIENT_SECRET,
-    }),
-  });
+        body:
+          new URLSearchParams({
+            grant_type:
+              "client_credentials",
+
+            client_id:
+              MONITOR_CLIENT_ID,
+
+            client_secret:
+              MONITOR_CLIENT_SECRET,
+          }),
+      }
+    );
 
   if (!response.ok) {
-    const text = await response.text();
+    const text =
+      await response.text();
 
     throw new Error(
-      `Could not obtain monitor token. HTTP ${response.status}: ${text}`
+      `Could not obtain monitor token. ` +
+      `HTTP ${response.status}: ${text}`
     );
   }
 
-  const data = await response.json();
+  const data =
+    await response.json();
 
   return data.access_token;
 }
 
 /*
 |--------------------------------------------------------------------------
-| KEYCLOAK EVENTS
+| GET KEYCLOAK EVENTS
 |--------------------------------------------------------------------------
 */
 
 async function getKeycloakEvents() {
-  const accessToken = await getMonitorAccessToken();
+  const accessToken =
+    await getMonitorAccessToken();
 
   const eventsUrl =
     `${KEYCLOAK_URL}/admin/realms/${KEYCLOAK_REALM}` +
-    `/events?max=100`;
+    `/events?max=200`;
 
-  const response = await fetch(eventsUrl, {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
-  });
+  const response =
+    await fetch(
+      eventsUrl,
+      {
+        headers: {
+          Authorization:
+            `Bearer ${accessToken}`,
+        },
+      }
+    );
 
   if (!response.ok) {
-    const text = await response.text();
+    const text =
+      await response.text();
 
     throw new Error(
-      `Could not retrieve Keycloak events. HTTP ${response.status}: ${text}`
+      `Could not retrieve Keycloak events. ` +
+      `HTTP ${response.status}: ${text}`
     );
   }
 
   return response.json();
+}
+
+/*
+|--------------------------------------------------------------------------
+| RESET KEYCLOAK BRUTE-FORCE STATE
+|--------------------------------------------------------------------------
+|
+| This is critical for controlled experiments.
+|
+| Previous failed-login counters and temporary lockouts are cleared BEFORE
+| the next experiment begins.
+|
+| Therefore an ATTACK experiment cannot contaminate the following NORMAL
+| experiment.
+|
+*/
+
+async function resetKeycloakBruteForceState() {
+  const accessToken =
+    await getMonitorAccessToken();
+
+  const resetUrl =
+    `${KEYCLOAK_URL}/admin/realms/${KEYCLOAK_REALM}` +
+    `/attack-detection/brute-force/users`;
+
+  const response =
+    await fetch(
+      resetUrl,
+      {
+        method: "DELETE",
+
+        headers: {
+          Authorization:
+            `Bearer ${accessToken}`,
+        },
+      }
+    );
+
+  if (!response.ok) {
+    const text =
+      await response.text();
+
+    throw new Error(
+      `Could not reset Keycloak brute-force state. ` +
+      `HTTP ${response.status}: ${text}`
+    );
+  }
+
+  console.log(
+    "Keycloak brute-force state successfully reset"
+  );
 }
 
 /*
@@ -244,25 +437,63 @@ function getEventUsername(event) {
 
 /*
 |--------------------------------------------------------------------------
-| FILTER EVENTS FOR ONE EXPERIMENT
+| IDENTIFY MONITOR EVENTS
 |--------------------------------------------------------------------------
 |
-| This is the important correction.
+| The security-monitor service account itself generates CLIENT_LOGIN events
+| whenever the application requests Keycloak event data.
 |
-| Only events generated BETWEEN experiment start and finish
-| are analyzed.
+| Those monitoring events should not influence the controlled experiment.
 |
 */
 
-function filterExperimentEvents(events, startTime, endTime) {
-  return events.filter((event) => {
-    const eventTime = Number(event.time || 0);
+function isMonitorEvent(event) {
+  const username =
+    getEventUsername(event);
 
-    return (
-      eventTime >= Number(startTime) &&
-      eventTime <= Number(endTime)
-    );
-  });
+  return (
+    event.clientId ===
+      MONITOR_CLIENT_ID ||
+
+    username ===
+      `service-account-${MONITOR_CLIENT_ID}`
+  );
+}
+
+/*
+|--------------------------------------------------------------------------
+| FILTER EVENTS FOR ONE EXPERIMENT
+|--------------------------------------------------------------------------
+|
+| Only events BETWEEN start and finish are analyzed.
+|
+| Security-monitor-generated events are also removed.
+|
+*/
+
+function filterExperimentEvents(
+  events,
+  startTime,
+  endTime
+) {
+  return events.filter(
+    (event) => {
+      const eventTime =
+        Number(
+          event.time || 0
+        );
+
+      return (
+        eventTime >=
+          Number(startTime) &&
+
+        eventTime <=
+          Number(endTime) &&
+
+        !isMonitorEvent(event)
+      );
+    }
+  );
 }
 
 /*
@@ -271,33 +502,61 @@ function filterExperimentEvents(events, startTime, endTime) {
 |--------------------------------------------------------------------------
 */
 
-function analyzeKeycloakEvents(events) {
-  const successfulLoginEvents = events.filter(
-    (event) => event.type === "LOGIN"
-  );
-
-  const failedLoginEvents = events.filter(
-    (event) => event.type === "LOGIN_ERROR"
-  );
-
-  const lockoutEvents = events
-    .filter(
+function analyzeKeycloakEvents(
+  events
+) {
+  const successfulLoginEvents =
+    events.filter(
       (event) =>
-        event.type === "USER_DISABLED_BY_TEMPORARY_LOCKOUT"
-    )
-    .sort(
-      (a, b) =>
-        Number(b.time || 0) - Number(a.time || 0)
+        event.type ===
+        "LOGIN"
     );
 
-  const reasonEvents = events.filter(
-    (event) =>
-      event.details?.reason === "brute_force_attack_detected"
-  );
+  const failedLoginEvents =
+    events.filter(
+      (event) =>
+        event.type ===
+        "LOGIN_ERROR"
+    );
 
-  const attackMap = new Map();
+  const lockoutEvents =
+    events
+      .filter(
+        (event) =>
+          event.type ===
+          "USER_DISABLED_BY_TEMPORARY_LOCKOUT"
+      )
+      .sort(
+        (a, b) =>
+          Number(
+            b.time || 0
+          ) -
+          Number(
+            a.time || 0
+          )
+      );
 
-  for (const event of [...lockoutEvents, ...reasonEvents]) {
+  const reasonEvents =
+    events.filter(
+      (event) =>
+        event.details?.reason ===
+        "brute_force_attack_detected"
+    );
+
+  /*
+    Deduplicate brute-force
+    indication events.
+  */
+
+  const attackMap =
+    new Map();
+
+  for (
+    const event of [
+      ...lockoutEvents,
+      ...reasonEvents,
+    ]
+  ) {
     const key = [
       event.time || "",
       event.type || "",
@@ -305,64 +564,112 @@ function analyzeKeycloakEvents(events) {
       event.ipAddress || "",
     ].join("|");
 
-    attackMap.set(key, event);
+    attackMap.set(
+      key,
+      event
+    );
   }
 
-  const bruteForceEvents = Array.from(
-    attackMap.values()
-  ).sort(
-    (a, b) =>
-      Number(b.time || 0) - Number(a.time || 0)
-  );
+  const bruteForceEvents =
+    Array.from(
+      attackMap.values()
+    ).sort(
+      (a, b) =>
+        Number(
+          b.time || 0
+        ) -
+        Number(
+          a.time || 0
+        )
+    );
 
-  const latestAttackEvent = bruteForceEvents[0] || null;
+  const latestAttackEvent =
+    bruteForceEvents[0] ||
+    null;
 
-  let attackUser = "Not available";
+  let attackUser =
+    "Not available";
 
   if (latestAttackEvent) {
-    const attackTimestamp = Number(latestAttackEvent.time || 0);
+    const attackTimestamp =
+      Number(
+        latestAttackEvent.time ||
+        0
+      );
 
-    const relatedLoginError = failedLoginEvents
-      .filter((event) => {
-        const eventTime = Number(event.time || 0);
+    const relatedLoginError =
+      failedLoginEvents
+        .filter(
+          (event) => {
+            const eventTime =
+              Number(
+                event.time ||
+                0
+              );
 
-        return (
-          eventTime <= attackTimestamp &&
-          attackTimestamp - eventTime <= 60000
-        );
-      })
-      .sort(
-        (a, b) =>
-          Number(b.time || 0) - Number(a.time || 0)
-      )[0];
+            return (
+              eventTime <=
+                attackTimestamp &&
+
+              attackTimestamp -
+                eventTime <=
+                60000
+            );
+          }
+        )
+        .sort(
+          (a, b) =>
+            Number(
+              b.time || 0
+            ) -
+            Number(
+              a.time || 0
+            )
+        )[0];
 
     attackUser =
-      latestAttackEvent.details?.username ||
-      relatedLoginError?.details?.username ||
-      latestAttackEvent.userId ||
+      latestAttackEvent
+        .details
+        ?.username ||
+
+      relatedLoginError
+        ?.details
+        ?.username ||
+
+      latestAttackEvent
+        .userId ||
+
       "Not available";
   }
 
   return {
-    totalEvents: events.length,
+    totalEvents:
+      events.length,
 
-    successfulLogins: successfulLoginEvents.length,
+    successfulLogins:
+      successfulLoginEvents.length,
 
-    failedLogins: failedLoginEvents.length,
+    failedLogins:
+      failedLoginEvents.length,
 
-    bruteForceDetections: bruteForceEvents.length,
+    bruteForceDetections:
+      bruteForceEvents.length,
 
-    temporaryLockouts: lockoutEvents.length,
+    temporaryLockouts:
+      lockoutEvents.length,
 
     attackUser,
 
     attackIp:
-      latestAttackEvent?.ipAddress ||
+      latestAttackEvent
+        ?.ipAddress ||
       "Not available",
 
     lastAttackTime:
       latestAttackEvent
-        ? formatKeycloakTime(latestAttackEvent.time)
+        ? formatKeycloakTime(
+            latestAttackEvent.time
+          )
         : "Not available",
   };
 }
@@ -371,57 +678,121 @@ function analyzeKeycloakEvents(events) {
 |--------------------------------------------------------------------------
 | INDEPENDENT DETECTION ENGINE
 |--------------------------------------------------------------------------
-|
-| This detector can now analyze ANY supplied set of events.
-|
-| During an experiment we pass ONLY events that occurred during
-| that experiment.
-|
 */
 
-function runIndependentDetector(events) {
-  const failedEvents = events.filter(
-    (event) => event.type === "LOGIN_ERROR"
-  );
+function runIndependentDetector(
+  events
+) {
+  const failedEvents =
+    events.filter(
+      (event) =>
+        event.type ===
+        "LOGIN_ERROR"
+    );
 
-  const lockoutEvents = events.filter(
-    (event) =>
-      event.type === "USER_DISABLED_BY_TEMPORARY_LOCKOUT"
-  );
+  const lockoutEvents =
+    events.filter(
+      (event) =>
+        event.type ===
+        "USER_DISABLED_BY_TEMPORARY_LOCKOUT"
+    );
 
   const failuresByIp = {};
   const failuresByUser = {};
 
-  for (const event of failedEvents) {
-    const ip = event.ipAddress || "unknown";
+  /*
+    Count failed attempts
+    by source IP and user.
+  */
 
-    failuresByIp[ip] = (failuresByIp[ip] || 0) + 1;
-
-    const username =
-      event.details?.username ||
+  for (
+    const event of
+    failedEvents
+  ) {
+    const ip =
+      event.ipAddress ||
       "unknown";
 
-    failuresByUser[username] =
-      (failuresByUser[username] || 0) + 1;
+    failuresByIp[ip] =
+      (
+        failuresByIp[ip] ||
+        0
+      ) + 1;
+
+    const username =
+      event.details
+        ?.username ||
+      "unknown";
+
+    failuresByUser[
+      username
+    ] =
+      (
+        failuresByUser[
+          username
+        ] ||
+        0
+      ) + 1;
   }
 
-  let highestFailureIp = "Not available";
-  let highestIpFailureCount = 0;
+  /*
+    Find most active
+    failed-login source.
+  */
 
-  for (const [ip, count] of Object.entries(failuresByIp)) {
-    if (count > highestIpFailureCount) {
-      highestFailureIp = ip;
-      highestIpFailureCount = count;
+  let highestFailureIp =
+    "Not available";
+
+  let highestIpFailureCount =
+    0;
+
+  for (
+    const [
+      ip,
+      count,
+    ] of Object.entries(
+      failuresByIp
+    )
+  ) {
+    if (
+      count >
+      highestIpFailureCount
+    ) {
+      highestFailureIp =
+        ip;
+
+      highestIpFailureCount =
+        count;
     }
   }
 
-  let highestFailureUser = "Not available";
-  let highestUserFailureCount = 0;
+  /*
+    Find most targeted user.
+  */
 
-  for (const [username, count] of Object.entries(failuresByUser)) {
-    if (count > highestUserFailureCount) {
-      highestFailureUser = username;
-      highestUserFailureCount = count;
+  let highestFailureUser =
+    "Not available";
+
+  let highestUserFailureCount =
+    0;
+
+  for (
+    const [
+      username,
+      count,
+    ] of Object.entries(
+      failuresByUser
+    )
+  ) {
+    if (
+      count >
+      highestUserFailureCount
+    ) {
+      highestFailureUser =
+        username;
+
+      highestUserFailureCount =
+        count;
     }
   }
 
@@ -432,22 +803,28 @@ function runIndependentDetector(events) {
   */
 
   let riskScore = 0;
+
   const signals = [];
 
   /*
     Failed-login frequency.
 
-    +10 per failure.
-    Maximum = +40.
+    +10 per failed login.
+    Maximum +40.
   */
 
-  if (failedEvents.length > 0) {
-    const failureScore = Math.min(
-      failedEvents.length * 10,
-      40
-    );
+  if (
+    failedEvents.length > 0
+  ) {
+    const failureScore =
+      Math.min(
+        failedEvents.length *
+          10,
+        40
+      );
 
-    riskScore += failureScore;
+    riskScore +=
+      failureScore;
 
     signals.push(
       `${failedEvents.length} failed login attempt(s) detected during experiment`
@@ -455,11 +832,13 @@ function runIndependentDetector(events) {
   }
 
   /*
-    Repeated source IP.
+    Three or more failures
+    from same IP.
   */
 
   if (
-    highestIpFailureCount >= FAILED_LOGIN_THRESHOLD
+    highestIpFailureCount >=
+    FAILED_LOGIN_THRESHOLD
   ) {
     riskScore += 20;
 
@@ -469,11 +848,13 @@ function runIndependentDetector(events) {
   }
 
   /*
-    Repeated target account.
+    Three or more failures
+    against same user.
   */
 
   if (
-    highestUserFailureCount >= FAILED_LOGIN_THRESHOLD
+    highestUserFailureCount >=
+    FAILED_LOGIN_THRESHOLD
   ) {
     riskScore += 20;
 
@@ -483,10 +864,12 @@ function runIndependentDetector(events) {
   }
 
   /*
-    Keycloak lockout confirmation.
+    Keycloak lockout signal.
   */
 
-  if (lockoutEvents.length > 0) {
+  if (
+    lockoutEvents.length > 0
+  ) {
     riskScore += 40;
 
     signals.push(
@@ -494,7 +877,15 @@ function runIndependentDetector(events) {
     );
   }
 
-  riskScore = Math.min(riskScore, 100);
+  /*
+    Maximum score = 100.
+  */
+
+  riskScore =
+    Math.min(
+      riskScore,
+      100
+    );
 
   /*
   |--------------------------------------------------------------------------
@@ -502,14 +893,22 @@ function runIndependentDetector(events) {
   |--------------------------------------------------------------------------
   */
 
-  let classification = "LOW";
+  let classification =
+    "LOW";
 
-  if (riskScore >= 30 && riskScore < 60) {
-    classification = "MEDIUM";
+  if (
+    riskScore >= 30 &&
+    riskScore < 60
+  ) {
+    classification =
+      "MEDIUM";
   }
 
-  if (riskScore >= 60) {
-    classification = "HIGH";
+  if (
+    riskScore >= 60
+  ) {
+    classification =
+      "HIGH";
   }
 
   /*
@@ -518,28 +917,38 @@ function runIndependentDetector(events) {
   |--------------------------------------------------------------------------
   */
 
-  let keycloakAssessment = "LOW";
+  let keycloakAssessment =
+    "LOW";
 
   if (
-    failedEvents.length >= FAILED_LOGIN_THRESHOLD
+    failedEvents.length >=
+    FAILED_LOGIN_THRESHOLD
   ) {
-    keycloakAssessment = "MEDIUM";
+    keycloakAssessment =
+      "MEDIUM";
   }
 
-  if (lockoutEvents.length > 0) {
-    keycloakAssessment = "HIGH";
+  if (
+    lockoutEvents.length > 0
+  ) {
+    keycloakAssessment =
+      "HIGH";
   }
+
+  /*
+    Compare custom detector
+    with Keycloak.
+  */
 
   const comparison =
-    classification === keycloakAssessment
+    classification ===
+    keycloakAssessment
       ? "MATCH"
       : "MISMATCH";
 
   /*
-    For binary evaluation:
-
-    LOW = NORMAL
-    MEDIUM/HIGH = ATTACK
+    Convert classification
+    into binary prediction.
   */
 
   const customPrediction =
@@ -548,16 +957,20 @@ function runIndependentDetector(events) {
       : "ATTACK";
 
   const keycloakPrediction =
-    keycloakAssessment === "LOW"
+    keycloakAssessment ===
+    "LOW"
       ? "NORMAL"
       : "ATTACK";
 
   return {
-    totalExperimentEvents: events.length,
+    totalExperimentEvents:
+      events.length,
 
-    failedLoginCount: failedEvents.length,
+    failedLoginCount:
+      failedEvents.length,
 
-    lockoutCount: lockoutEvents.length,
+    lockoutCount:
+      lockoutEvents.length,
 
     highestFailureIp,
 
@@ -585,7 +998,7 @@ function runIndependentDetector(events) {
 
 /*
 |--------------------------------------------------------------------------
-| CONFUSION-MATRIX OUTCOME
+| CONFUSION MATRIX OUTCOME
 |--------------------------------------------------------------------------
 */
 
@@ -594,22 +1007,28 @@ function classifyExperimentOutcome(
   prediction
 ) {
   if (
-    groundTruth === "ATTACK" &&
-    prediction === "ATTACK"
+    groundTruth ===
+      "ATTACK" &&
+    prediction ===
+      "ATTACK"
   ) {
     return "TRUE POSITIVE";
   }
 
   if (
-    groundTruth === "NORMAL" &&
-    prediction === "NORMAL"
+    groundTruth ===
+      "NORMAL" &&
+    prediction ===
+      "NORMAL"
   ) {
     return "TRUE NEGATIVE";
   }
 
   if (
-    groundTruth === "NORMAL" &&
-    prediction === "ATTACK"
+    groundTruth ===
+      "NORMAL" &&
+    prediction ===
+      "ATTACK"
   ) {
     return "FALSE POSITIVE";
   }
@@ -631,68 +1050,133 @@ function calculateEvaluationMetrics() {
 
   let keycloakMatches = 0;
 
-  for (const experiment of experiments) {
-    if (experiment.outcome === "TRUE POSITIVE") {
+  for (
+    const experiment of
+    experiments
+  ) {
+    if (
+      experiment.outcome ===
+      "TRUE POSITIVE"
+    ) {
       truePositive++;
     }
 
-    if (experiment.outcome === "TRUE NEGATIVE") {
+    if (
+      experiment.outcome ===
+      "TRUE NEGATIVE"
+    ) {
       trueNegative++;
     }
 
-    if (experiment.outcome === "FALSE POSITIVE") {
+    if (
+      experiment.outcome ===
+      "FALSE POSITIVE"
+    ) {
       falsePositive++;
     }
 
-    if (experiment.outcome === "FALSE NEGATIVE") {
+    if (
+      experiment.outcome ===
+      "FALSE NEGATIVE"
+    ) {
       falseNegative++;
     }
 
     if (
-      experiment.customPrediction ===
-      experiment.keycloakPrediction
+      experiment
+        .customPrediction ===
+      experiment
+        .keycloakPrediction
     ) {
       keycloakMatches++;
     }
   }
 
-  const total = experiments.length;
+  const total =
+    experiments.length;
 
-  const accuracy = percentage(
-    truePositive + trueNegative,
-    total
-  );
+  /*
+    Accuracy
+  */
 
-  const precision = percentage(
-    truePositive,
-    truePositive + falsePositive
-  );
+  const accuracy =
+    percentage(
+      truePositive +
+        trueNegative,
+      total
+    );
 
-  const recall = percentage(
-    truePositive,
-    truePositive + falseNegative
-  );
+  /*
+    Precision
+  */
+
+  const precision =
+    percentage(
+      truePositive,
+      truePositive +
+        falsePositive
+    );
+
+  /*
+    Recall
+  */
+
+  const recall =
+    percentage(
+      truePositive,
+      truePositive +
+        falseNegative
+    );
+
+  /*
+    F1
+  */
 
   const f1 =
     precision + recall === 0
       ? 0
-      : (2 * precision * recall) /
-        (precision + recall);
+      :
+        (
+          2 *
+          precision *
+          recall
+        ) /
+        (
+          precision +
+          recall
+        );
 
-  const agreementRate = percentage(
-    keycloakMatches,
-    total
-  );
+  /*
+    Detector agreement
+  */
 
-  const falsePositiveRate = percentage(
-    falsePositive,
-    falsePositive + trueNegative
-  );
+  const agreementRate =
+    percentage(
+      keycloakMatches,
+      total
+    );
 
-  const falseNegativeRate = percentage(
-    falseNegative,
-    falseNegative + truePositive
-  );
+  /*
+    False Positive Rate
+  */
+
+  const falsePositiveRate =
+    percentage(
+      falsePositive,
+      falsePositive +
+        trueNegative
+    );
+
+  /*
+    False Negative Rate
+  */
+
+  const falseNegativeRate =
+    percentage(
+      falseNegative,
+      falseNegative +
+        truePositive
+    );
 
   return {
     total,
@@ -716,7 +1200,7 @@ function calculateEvaluationMetrics() {
 
 /*
 |--------------------------------------------------------------------------
-| DASHBOARD STYLES
+| DASHBOARD CSS
 |--------------------------------------------------------------------------
 */
 
@@ -729,182 +1213,260 @@ function dashboardStyles() {
       }
 
       body {
-        font-family: Arial, sans-serif;
+        font-family:
+          Arial,
+          sans-serif;
+
         margin: 0;
-        padding: 30px;
-        background: #f5f7fa;
-        color: #222;
+
+        padding: 28px;
+
+        background:
+          #f5f7fa;
+
+        color:
+          #1f2937;
       }
 
       h1 {
         margin-top: 0;
       }
 
+      a {
+        color:
+          #5b21b6;
+      }
+
       .cards {
         display: flex;
+
         flex-wrap: wrap;
+
         gap: 18px;
-        margin: 20px 0 35px 0;
+
+        margin:
+          20px 0
+          32px;
       }
 
       .card {
-        background: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 22px;
-        min-width: 210px;
+        background:
+          white;
+
+        border:
+          1px solid
+          #ddd;
+
+        border-radius:
+          9px;
+
+        padding:
+          22px;
+
+        min-width:
+          220px;
 
         box-shadow:
-          0 2px 5px
-          rgba(0,0,0,0.08);
+          0 2px 6px
+          rgba(
+            0,
+            0,
+            0,
+            .08
+          );
       }
 
       .number {
-        font-size: 34px;
-        font-weight: bold;
+        font-size:
+          34px;
+
+        font-weight:
+          700;
       }
 
-      .engine-box {
-        background: white;
+      .experiment-box,
+      .active-experiment,
+      .engine-box,
+      .success-box {
+        background:
+          white;
 
-        border:
-          2px solid #345995;
+        border-radius:
+          9px;
 
-        border-radius: 8px;
+        padding:
+          24px;
 
-        padding: 25px;
-        margin: 25px 0;
+        margin:
+          24px 0;
       }
 
       .experiment-box {
-        background: white;
-
         border:
-          2px solid #5c6bc0;
-
-        border-radius: 8px;
-
-        padding: 25px;
-        margin: 25px 0;
+          2px solid
+          #5c6bc0;
       }
 
       .active-experiment {
-        background: #fff8e1;
+        background:
+          #fff8e1;
 
         border:
-          2px solid #f9a825;
+          2px solid
+          #f9a825;
+      }
 
-        border-radius: 8px;
-
-        padding: 25px;
-        margin: 25px 0;
+      .engine-box {
+        border:
+          2px solid
+          #345995;
       }
 
       .success-box {
-        background: #e8f5e9;
+        background:
+          #e8f5e9;
 
         border:
-          2px solid #2e7d32;
-
-        border-radius: 8px;
-
-        padding: 20px;
-        margin: 20px 0;
+          2px solid
+          #2e7d32;
       }
 
-      .risk-high {
-        color: #b00020;
-        font-weight: bold;
+      .risk-high,
+      .false-result {
+        color:
+          #b00020;
+
+        font-weight:
+          700;
       }
 
       .risk-medium {
-        color: #a65f00;
-        font-weight: bold;
+        color:
+          #9a5b00;
+
+        font-weight:
+          700;
       }
 
-      .risk-low {
-        color: #1b5e20;
-        font-weight: bold;
-      }
-
+      .risk-low,
       .true-result {
-        color: #1b5e20;
-        font-weight: bold;
-      }
+        color:
+          #1b5e20;
 
-      .false-result {
-        color: #b00020;
-        font-weight: bold;
-      }
-
-      .score {
-        font-size: 42px;
-        font-weight: bold;
+        font-weight:
+          700;
       }
 
       table {
-        width: 100%;
-        border-collapse: collapse;
-        background: white;
-        margin-top: 15px;
+        width:
+          100%;
+
+        border-collapse:
+          collapse;
+
+        background:
+          white;
+
+        margin:
+          15px 0
+          24px;
       }
 
       th,
       td {
-        border: 1px solid #ccc;
-        padding: 12px;
-        text-align: left;
-        vertical-align: top;
+        border:
+          1px solid
+          #ccc;
+
+        padding:
+          12px;
+
+        text-align:
+          left;
+
+        vertical-align:
+          top;
       }
 
       th {
-        background: #eee;
+        background:
+          #eee;
       }
 
       button {
-        padding: 12px 20px;
-        margin-right: 10px;
-        margin-top: 8px;
-        cursor: pointer;
-        font-size: 15px;
+        padding:
+          12px 20px;
+
+        margin:
+          8px 10px
+          0 0;
+
+        cursor:
+          pointer;
+
+        font-size:
+          15px;
+
+        border:
+          none;
       }
 
       .attack-button {
-        background: #b00020;
-        color: white;
-        border: none;
+        background:
+          #b00020;
+
+        color:
+          white;
       }
 
       .normal-button {
-        background: #1b5e20;
-        color: white;
-        border: none;
+        background:
+          #1b5e20;
+
+        color:
+          white;
       }
 
       .finish-button {
-        background: #1565c0;
-        color: white;
-        border: none;
+        background:
+          #1565c0;
+
+        color:
+          white;
       }
 
-      .cancel-button {
-        background: #666;
-        color: white;
-        border: none;
-      }
-
+      .cancel-button,
       .clear-button {
-        background: #444;
-        color: white;
-        border: none;
+        background:
+          #444;
+
+        color:
+          white;
       }
 
       .links {
-        margin-top: 30px;
+        margin-top:
+          28px;
       }
 
       .links a {
-        margin-right: 25px;
+        margin-right:
+          24px;
+      }
+
+      .notice {
+        background:
+          #eef2ff;
+
+        border-left:
+          4px solid
+          #4f46e5;
+
+        padding:
+          14px;
+
+        margin:
+          16px 0;
       }
 
     </style>
@@ -913,164 +1475,189 @@ function dashboardStyles() {
 
 /*
 |--------------------------------------------------------------------------
-| APPLICATION
+| APPLICATION STARTUP
 |--------------------------------------------------------------------------
 */
 
 async function start() {
-  const client = await import("openid-client");
+  const client =
+    await import(
+      "openid-client"
+    );
 
-  const issuer = new URL(
-    `${KEYCLOAK_URL}/realms/${KEYCLOAK_REALM}`
-  );
+  const issuer =
+    new URL(
+      `${KEYCLOAK_URL}/realms/${KEYCLOAK_REALM}`
+    );
 
-  const config = await client.discovery(
-    issuer,
-    "research-app",
-    undefined,
-    client.None(),
-    {
-      execute: [
-        client.allowInsecureRequests,
-      ],
-    }
-  );
+  /*
+    Discover Keycloak's
+    OpenID Connect endpoints.
+  */
+
+  const config =
+    await client.discovery(
+      issuer,
+
+      RESEARCH_CLIENT_ID,
+
+      undefined,
+
+      client.None(),
+
+      {
+        execute: [
+          client
+            .allowInsecureRequests,
+        ],
+      }
+    );
 
   /*
   |--------------------------------------------------------------------------
-  | HOME
+  | MAIN PAGE
   |--------------------------------------------------------------------------
   */
 
-  app.get("/", (req, res) => {
-    if (!req.session.user) {
-      return res.send(`
+  app.get(
+    "/",
+    (req, res) => {
+      if (
+        !req.session.user
+      ) {
+        return res.send(`
+          ${dashboardStyles()}
+
+          <h1>
+            Web2 Security Research Application
+          </h1>
+
+          <p>
+            <strong>
+              Authentication Status:
+            </strong>
+
+            Not authenticated
+          </p>
+
+          <p>
+            <a href="/login">
+              Login with Keycloak
+            </a>
+          </p>
+        `);
+      }
+
+      const user =
+        req.session.user;
+
+      res.send(`
         ${dashboardStyles()}
 
         <h1>
           Web2 Security Research Application
         </h1>
 
+        <h2>
+          Protected OAuth 2.0 / OIDC Dashboard
+        </h2>
+
         <p>
           <strong>
             Authentication Status:
           </strong>
 
-          Not authenticated
+          Authenticated
         </p>
 
         <p>
-          <a href="/login">
-            Login with Keycloak
+          <strong>
+            Username:
+          </strong>
+
+          ${escapeHtml(
+            user.preferred_username
+          )}
+        </p>
+
+        <p>
+          <strong>
+            Email:
+          </strong>
+
+          ${escapeHtml(
+            user.email
+          )}
+        </p>
+
+        <p>
+          <strong>
+            User ID:
+          </strong>
+
+          ${escapeHtml(
+            user.sub
+          )}
+        </p>
+
+        <p>
+          <strong>
+            Token Issued:
+          </strong>
+
+          ${formatTime(
+            user.iat
+          )}
+        </p>
+
+        <p>
+          <strong>
+            Token Expires:
+          </strong>
+
+          ${formatTime(
+            user.exp
+          )}
+        </p>
+
+        <hr>
+
+        <h3>
+          Research Dashboards
+        </h3>
+
+        <p>
+          <a href="/security-dashboard">
+            Security Detection Dashboard
+          </a>
+        </p>
+
+        <p>
+          <a href="/evaluation">
+            Detector Evaluation Dashboard
+          </a>
+        </p>
+
+        <p>
+          <a href="/keycloak-events">
+            Raw Keycloak Events
+          </a>
+        </p>
+
+        <p>
+          <a href="/security-events">
+            Application Security Events
+          </a>
+        </p>
+
+        <p>
+          <a href="/logout">
+            Logout
           </a>
         </p>
       `);
     }
-
-    const user = req.session.user;
-
-    res.send(`
-      ${dashboardStyles()}
-
-      <h1>
-        Web2 Security Research Application
-      </h1>
-
-      <h2>
-        Protected OAuth 2.0 / OIDC Dashboard
-      </h2>
-
-      <p>
-        <strong>
-          Authentication Status:
-        </strong>
-
-        Authenticated
-      </p>
-
-      <p>
-        <strong>
-          Username:
-        </strong>
-
-        ${escapeHtml(
-          user.preferred_username
-        )}
-      </p>
-
-      <p>
-        <strong>
-          Email:
-        </strong>
-
-        ${escapeHtml(
-          user.email
-        )}
-      </p>
-
-      <p>
-        <strong>
-          User ID:
-        </strong>
-
-        ${escapeHtml(
-          user.sub
-        )}
-      </p>
-
-      <p>
-        <strong>
-          Token Issued:
-        </strong>
-
-        ${formatTime(user.iat)}
-      </p>
-
-      <p>
-        <strong>
-          Token Expires:
-        </strong>
-
-        ${formatTime(user.exp)}
-      </p>
-
-      <hr>
-
-      <h3>
-        Research Dashboards
-      </h3>
-
-      <p>
-        <a href="/security-dashboard">
-          Security Detection Dashboard
-        </a>
-      </p>
-
-      <p>
-        <a href="/evaluation">
-          Detector Evaluation Dashboard
-        </a>
-      </p>
-
-      <p>
-        <a href="/keycloak-events">
-          Raw Keycloak Events
-        </a>
-      </p>
-
-      <p>
-        <a href="/security-events">
-          Application Security Events
-        </a>
-      </p>
-
-      <p>
-        <a href="/logout">
-          Logout
-        </a>
-      </p>
-    `);
-  });
+  );
 
   /*
   |--------------------------------------------------------------------------
@@ -1078,94 +1665,117 @@ async function start() {
   |--------------------------------------------------------------------------
   */
 
-  app.get("/login", async (req, res) => {
-    const codeVerifier =
-      client.randomPKCECodeVerifier();
+  app.get(
+    "/login",
+    async (
+      req,
+      res
+    ) => {
+      const codeVerifier =
+        client
+          .randomPKCECodeVerifier();
 
-    const codeChallenge =
-      await client.calculatePKCECodeChallenge(
-        codeVerifier
+      const codeChallenge =
+        await client
+          .calculatePKCECodeChallenge(
+            codeVerifier
+          );
+
+      req.session
+        .codeVerifier =
+        codeVerifier;
+
+      const authorizationUrl =
+        client
+          .buildAuthorizationUrl(
+            config,
+            {
+              redirect_uri:
+                `http://localhost:${PORT}/callback`,
+
+              scope:
+                "openid profile email",
+
+              code_challenge:
+                codeChallenge,
+
+              code_challenge_method:
+                "S256",
+            }
+          );
+
+      res.redirect(
+        authorizationUrl.href
       );
-
-    req.session.codeVerifier =
-      codeVerifier;
-
-    const authorizationUrl =
-      client.buildAuthorizationUrl(
-        config,
-        {
-          redirect_uri:
-            "http://localhost:3000/callback",
-
-          scope:
-            "openid profile email",
-
-          code_challenge:
-            codeChallenge,
-
-          code_challenge_method:
-            "S256",
-        }
-      );
-
-    res.redirect(
-      authorizationUrl.href
-    );
-  });
+    }
+  );
 
   /*
   |--------------------------------------------------------------------------
-  | CALLBACK
+  | LOGIN CALLBACK
   |--------------------------------------------------------------------------
   */
 
-  app.get("/callback", async (req, res) => {
-    try {
-      const currentUrl =
-        new URL(
-          req.protocol +
-            "://" +
-            req.get("host") +
-            req.originalUrl
-        );
-
-      const tokens =
-        await client.authorizationCodeGrant(
-          config,
-          currentUrl,
-          {
-            pkceCodeVerifier:
-              req.session.codeVerifier,
-
-            idTokenExpected: true,
-          }
-        );
-
-      const claims =
-        tokens.claims();
-
-      req.session.user =
-        claims;
-
-      addSecurityEvent(
-        "LOGIN_SUCCESS",
-
-        claims.preferred_username,
-
-        "OAuth/OIDC authentication completed successfully"
-      );
-
-      res.redirect("/");
-    } catch (error) {
-      console.error(error);
-
+  app.get(
+    "/callback",
+    async (
+      req,
       res
-        .status(500)
-        .send(
-          "Authentication failed."
+    ) => {
+      try {
+        const currentUrl =
+          new URL(
+            `${req.protocol}://${req.get(
+              "host"
+            )}${req.originalUrl}`
+          );
+
+        const tokens =
+          await client
+            .authorizationCodeGrant(
+              config,
+
+              currentUrl,
+
+              {
+                pkceCodeVerifier:
+                  req.session
+                    .codeVerifier,
+
+                idTokenExpected:
+                  true,
+              }
+            );
+
+        const claims =
+          tokens.claims();
+
+        req.session.user =
+          claims;
+
+        addSecurityEvent(
+          "LOGIN_SUCCESS",
+
+          claims
+            .preferred_username,
+
+          "OAuth/OIDC authentication completed successfully"
         );
+
+        res.redirect("/");
+      } catch (error) {
+        console.error(
+          error
+        );
+
+        res
+          .status(500)
+          .send(
+            "Authentication failed."
+          );
+      }
     }
-  });
+  );
 
   /*
   |--------------------------------------------------------------------------
@@ -1175,15 +1785,13 @@ async function start() {
 
   app.get(
     "/security-dashboard",
-    async (req, res) => {
-      if (!req.session.user) {
-        return res
-          .status(401)
-          .send(
-            "Authentication required."
-          );
-      }
 
+    requireLogin,
+
+    async (
+      req,
+      res
+    ) => {
       try {
         const events =
           await getKeycloakEvents();
@@ -1193,12 +1801,12 @@ async function start() {
             events
           );
 
-        /*
-          Current detector status is informational only.
-          Experimental metrics use isolated experiment events.
-        */
-
         let experimentSection;
+
+        /*
+          If an experiment
+          is currently active.
+        */
 
         if (
           req.session
@@ -1209,6 +1817,7 @@ async function start() {
               .activeExperiment;
 
           experimentSection = `
+
             <div class="active-experiment">
 
               <h2>
@@ -1236,26 +1845,30 @@ async function start() {
               </p>
 
               <p>
-                Perform the authentication
-                activity for this test now.
+                <strong>
+                  Previous brute-force state:
+                </strong>
+
+                CLEARED
               </p>
 
               ${
-                active.groundTruth ===
+                active
+                  .groundTruth ===
                 "ATTACK"
+
                   ? `
                     <p>
-                      For the controlled
-                      ATTACK test, perform the
-                      failed-login sequence.
+                      Perform the controlled
+                      failed-login sequence now.
                     </p>
                   `
+
                   : `
                     <p>
-                      For the controlled
-                      NORMAL test, perform
-                      normal authentication
-                      activity only.
+                      Perform only the intended
+                      NORMAL authentication
+                      behavior now.
                     </p>
                   `
               }
@@ -1264,30 +1877,42 @@ async function start() {
                 method="POST"
                 action="/finish-experiment"
               >
+
                 <button
                   class="finish-button"
                   type="submit"
                 >
                   Finish & Analyze Experiment
                 </button>
+
               </form>
 
               <form
                 method="POST"
                 action="/cancel-experiment"
               >
+
                 <button
                   class="cancel-button"
                   type="submit"
                 >
                   Cancel Experiment
                 </button>
+
               </form>
 
             </div>
           `;
+
         } else {
+
+          /*
+            No experiment
+            currently running.
+          */
+
           experimentSection = `
+
             <div class="experiment-box">
 
               <h2>
@@ -1295,10 +1920,11 @@ async function start() {
               </h2>
 
               <p>
-                Start a new isolated experiment.
-                Only Keycloak events generated
-                after you press Start will be
-                analyzed.
+                Starting a test automatically
+                clears Keycloak's previous
+                brute-force state and then
+                creates a fresh experiment
+                window.
               </p>
 
               <form
@@ -1331,11 +1957,20 @@ async function start() {
         }
 
         res.send(`
+
           ${dashboardStyles()}
 
           <h1>
             Security Detection Dashboard
           </h1>
+
+          <div class="notice">
+
+            Experiment isolation now includes
+            both event-window isolation and
+            Keycloak brute-force-state reset.
+
+          </div>
 
           ${experimentSection}
 
@@ -1343,24 +1978,22 @@ async function start() {
             Historical Security Statistics
           </h2>
 
-          <p>
-            These statistics summarize
-            stored Keycloak events and are
-            separate from isolated experiment
-            evaluation.
-          </p>
-
           <div class="cards">
 
             <div class="card">
-              <h3>Total Events</h3>
+
+              <h3>
+                Total Events
+              </h3>
 
               <div class="number">
                 ${historical.totalEvents}
               </div>
+
             </div>
 
             <div class="card">
+
               <h3>
                 Successful Logins
               </h3>
@@ -1368,9 +2001,11 @@ async function start() {
               <div class="number">
                 ${historical.successfulLogins}
               </div>
+
             </div>
 
             <div class="card">
+
               <h3>
                 Failed Logins
               </h3>
@@ -1378,9 +2013,11 @@ async function start() {
               <div class="number">
                 ${historical.failedLogins}
               </div>
+
             </div>
 
             <div class="card">
+
               <h3>
                 Brute Force Detections
               </h3>
@@ -1388,9 +2025,11 @@ async function start() {
               <div class="number">
                 ${historical.bruteForceDetections}
               </div>
+
             </div>
 
             <div class="card">
+
               <h3>
                 Temporary Lockouts
               </h3>
@@ -1398,6 +2037,7 @@ async function start() {
               <div class="number">
                 ${historical.temporaryLockouts}
               </div>
+
             </div>
 
           </div>
@@ -1418,8 +2058,12 @@ async function start() {
 
           </div>
         `);
+
       } catch (error) {
-        console.error(error);
+
+        console.error(
+          error
+        );
 
         res
           .status(500)
@@ -1434,27 +2078,36 @@ async function start() {
 
   /*
   |--------------------------------------------------------------------------
-  | START ISOLATED EXPERIMENT
+  | START CONTROLLED EXPERIMENT
   |--------------------------------------------------------------------------
+  |
+  | Important ordering:
+  |
+  | 1. Reset Keycloak brute-force state.
+  | 2. Record experiment start time.
+  | 3. Begin collecting experiment events.
+  |
   */
 
   app.post(
     "/start-experiment",
-    (req, res) => {
-      if (!req.session.user) {
-        return res
-          .status(401)
-          .send(
-            "Authentication required."
-          );
-      }
 
+    requireLogin,
+
+    async (
+      req,
+      res
+    ) => {
       const groundTruth =
-        req.body.groundTruth;
+        req.body
+          .groundTruth;
 
       if (
-        groundTruth !== "ATTACK" &&
-        groundTruth !== "NORMAL"
+        groundTruth !==
+          "ATTACK" &&
+
+        groundTruth !==
+          "NORMAL"
       ) {
         return res
           .status(400)
@@ -1464,39 +2117,187 @@ async function start() {
       }
 
       /*
-        Record the exact experiment
-        starting timestamp.
-
-        Keycloak timestamps use
-        milliseconds since epoch.
+        Prevent overlapping experiments.
       */
 
-      const startTimestamp =
-        Date.now();
+      if (
+        req.session
+          .activeExperiment
+      ) {
+        return res
+          .status(400)
+          .send(
+            "An experiment is already running. Finish or cancel it first."
+          );
+      }
 
-      req.session.activeExperiment = {
-        groundTruth,
+      try {
 
-        startTimestamp,
+        /*
+        |--------------------------------------------------------------------------
+        | STEP 1 — RESET PREVIOUS KEYCLOAK STATE
+        |--------------------------------------------------------------------------
+        */
 
-        startedAtIso:
-          new Date(
-            startTimestamp
-          ).toISOString(),
-      };
+        console.log(
+          "Resetting previous Keycloak brute-force state..."
+        );
 
-      addSecurityEvent(
-        "EXPERIMENT_STARTED",
+        await resetKeycloakBruteForceState();
 
-        req.session.user
-          .preferred_username,
+        /*
+        |--------------------------------------------------------------------------
+        | STEP 2 — RECORD EXPERIMENT START
+        |--------------------------------------------------------------------------
+        */
 
-        `Ground truth=${groundTruth}`
-      );
+        const startTimestamp =
+          Date.now();
 
-      res.redirect(
-        "/security-dashboard"
-      );
+        req.session
+          .activeExperiment = {
+
+            groundTruth,
+
+            startTimestamp,
+
+            startedAtIso:
+              new Date(
+                startTimestamp
+              ).toISOString(),
+
+            bruteForceStateReset:
+              true,
+          };
+
+        /*
+        |--------------------------------------------------------------------------
+        | LOCAL AUDIT LOG
+        |--------------------------------------------------------------------------
+        */
+
+        addSecurityEvent(
+          "BRUTE_FORCE_STATE_RESET",
+
+          req.session
+            .user
+            .preferred_username,
+
+          `Keycloak brute-force state cleared before ${groundTruth} experiment`
+        );
+
+        addSecurityEvent(
+          "EXPERIMENT_STARTED",
+
+          req.session
+            .user
+            .preferred_username,
+
+          `Ground truth=${groundTruth}; brute-force state reset=true`
+        );
+
+        /*
+        |--------------------------------------------------------------------------
+        | CMD CONFIRMATION
+        |--------------------------------------------------------------------------
+        */
+
+        console.log(
+          "----------------------------------------"
+        );
+
+        console.log(
+          "Controlled experiment started"
+        );
+
+        console.log(
+          `Ground truth: ${groundTruth}`
+        );
+
+        console.log(
+          "Previous Keycloak brute-force state: CLEARED"
+        );
+
+        console.log(
+          `Experiment start: ${
+            new Date(
+              startTimestamp
+            ).toLocaleString()
+          }`
+        );
+
+        console.log(
+          "----------------------------------------"
+        );
+
+        res.redirect(
+          "/security-dashboard"
+        );
+
+      } catch (error) {
+
+        console.error(
+          "Could not start isolated experiment:",
+          error
+        );
+
+        res
+          .status(500)
+          .send(`
+
+            ${dashboardStyles()}
+
+            <h1>
+              Experiment Could Not Start
+            </h1>
+
+            <p>
+              The application could not clear
+              the previous Keycloak
+              brute-force state.
+            </p>
+
+            <p>
+
+              <strong>
+                Error:
+              </strong>
+
+              ${escapeHtml(
+                error.message
+              )}
+
+            </p>
+
+            <p>
+              Confirm that the
+              <strong>
+                security-monitor
+              </strong>
+              service account has:
+            </p>
+
+            <ul>
+
+              <li>
+                realm-management → view-events
+              </li>
+
+              <li>
+                realm-management → manage-users
+              </li>
+
+            </ul>
+
+            <p>
+
+              <a href="/security-dashboard">
+                Return to Security Dashboard
+              </a>
+
+            </p>
+          `);
+      }
     }
   );
 
@@ -1508,14 +2309,13 @@ async function start() {
 
   app.post(
     "/finish-experiment",
-    async (req, res) => {
-      if (!req.session.user) {
-        return res
-          .status(401)
-          .send(
-            "Authentication required."
-          );
-      }
+
+    requireLogin,
+
+    async (
+      req,
+      res
+    ) => {
 
       const active =
         req.session
@@ -1530,9 +2330,14 @@ async function start() {
       }
 
       try {
+
         /*
-          Capture finish time BEFORE
-          requesting Keycloak events.
+          Capture experiment end BEFORE
+          requesting events.
+
+          This prevents monitor requests
+          generated after Finish from
+          entering the experiment window.
         */
 
         const endTimestamp =
@@ -1542,36 +2347,53 @@ async function start() {
           await getKeycloakEvents();
 
         /*
-          THE IMPORTANT FIX:
-
-          Only analyze events produced
-          inside this experiment.
+          Filter events to this experiment.
         */
 
         const experimentEvents =
           filterExperimentEvents(
             allEvents,
-            active.startTimestamp,
+
+            active
+              .startTimestamp,
+
             endTimestamp
           );
+
+        /*
+          Run detector.
+        */
 
         const detector =
           runIndependentDetector(
             experimentEvents
           );
 
+        /*
+          Determine confusion-matrix result.
+        */
+
         const outcome =
           classifyExperimentOutcome(
+
             active.groundTruth,
-            detector.customPrediction
+
+            detector
+              .customPrediction
           );
 
         const durationMilliseconds =
           endTimestamp -
           active.startTimestamp;
 
+        /*
+          Build experiment record.
+        */
+
         const experiment = {
-          id: Date.now(),
+
+          id:
+            Date.now(),
 
           startedAt:
             active.startedAtIso,
@@ -1590,51 +2412,74 @@ async function start() {
             ),
 
           recordedBy:
-            req.session.user
+            req.session
+              .user
               .preferred_username ||
             "unknown",
 
           groundTruth:
             active.groundTruth,
 
+          bruteForceStateReset:
+            Boolean(
+              active
+                .bruteForceStateReset
+            ),
+
           customPrediction:
-            detector.customPrediction,
+            detector
+              .customPrediction,
 
           customClassification:
-            detector.classification,
+            detector
+              .classification,
 
           riskScore:
-            detector.riskScore,
+            detector
+              .riskScore,
 
           keycloakAssessment:
-            detector.keycloakAssessment,
+            detector
+              .keycloakAssessment,
 
           keycloakPrediction:
-            detector.keycloakPrediction,
+            detector
+              .keycloakPrediction,
 
           comparison:
-            detector.comparison,
+            detector
+              .comparison,
 
           outcome,
 
           experimentEvents:
-            detector.totalExperimentEvents,
+            detector
+              .totalExperimentEvents,
 
           failedLogins:
-            detector.failedLoginCount,
+            detector
+              .failedLoginCount,
 
           lockouts:
-            detector.lockoutCount,
+            detector
+              .lockoutCount,
 
           sourceIp:
-            detector.highestFailureIp,
+            detector
+              .highestFailureIp,
 
           targetUser:
-            detector.highestFailureUser,
+            detector
+              .highestFailureUser,
 
           signals:
-            detector.signals,
+            detector
+              .signals,
         };
+
+        /*
+          Save experiment.
+        */
 
         experiments.unshift(
           experiment
@@ -1642,18 +2487,22 @@ async function start() {
 
         saveExperiments();
 
+        /*
+          Application audit record.
+        */
+
         addSecurityEvent(
           "EXPERIMENT_FINISHED",
 
-          req.session.user
+          req.session
+            .user
             .preferred_username,
 
           `Ground truth=${active.groundTruth}; prediction=${detector.customPrediction}; outcome=${outcome}`
         );
 
         /*
-          Clear active experiment only
-          after successful recording.
+          Clear active experiment.
         */
 
         delete req.session
@@ -1662,8 +2511,12 @@ async function start() {
         res.redirect(
           "/evaluation"
         );
+
       } catch (error) {
-        console.error(error);
+
+        console.error(
+          error
+        );
 
         res
           .status(500)
@@ -1684,26 +2537,31 @@ async function start() {
 
   app.post(
     "/cancel-experiment",
-    (req, res) => {
-      if (!req.session.user) {
-        return res
-          .status(401)
-          .send(
-            "Authentication required."
-          );
-      }
+
+    requireLogin,
+
+    (
+      req,
+      res
+    ) => {
 
       if (
         req.session
           .activeExperiment
       ) {
+
         addSecurityEvent(
           "EXPERIMENT_CANCELLED",
 
-          req.session.user
+          req.session
+            .user
             .preferred_username,
 
-          `Ground truth=${req.session.activeExperiment.groundTruth}`
+          `Ground truth=${
+            req.session
+              .activeExperiment
+              .groundTruth
+          }`
         );
       }
 
@@ -1724,30 +2582,41 @@ async function start() {
 
   app.get(
     "/evaluation",
-    (req, res) => {
-      if (!req.session.user) {
-        return res
-          .status(401)
-          .send(
-            "Authentication required."
-          );
-      }
+
+    requireLogin,
+
+    (
+      req,
+      res
+    ) => {
 
       const metrics =
         calculateEvaluationMetrics();
 
+      /*
+        Experiment table rows.
+      */
+
       const rows =
         experiments
           .map(
-            (experiment) => {
+            (
+              experiment
+            ) => {
+
               const outcomeClass =
-                experiment.outcome.startsWith(
-                  "TRUE"
-                )
+                experiment
+                  .outcome
+                  ?.startsWith(
+                    "TRUE"
+                  )
+
                   ? "true-result"
+
                   : "false-result";
 
               return `
+
                 <tr>
 
                   <td>
@@ -1779,7 +2648,9 @@ async function start() {
                   </td>
 
                   <td>
-                    ${experiment.riskScore}
+                    ${escapeHtml(
+                      experiment.riskScore
+                    )}
                   </td>
 
                   <td>
@@ -1789,44 +2660,55 @@ async function start() {
                   </td>
 
                   <td>
-                    ${
+                    ${escapeHtml(
                       experiment.experimentEvents ??
                       "N/A"
-                    }
+                    )}
                   </td>
 
                   <td>
-                    ${
+                    ${escapeHtml(
                       experiment.failedLogins ??
-                      experiment.recentFailures ??
                       "N/A"
-                    }
+                    )}
+                  </td>
+
+                  <td>
+                    ${escapeHtml(
+                      experiment.lockouts ??
+                      "N/A"
+                    )}
+                  </td>
+
+                  <td>
+                    ${escapeHtml(
+                      experiment.sourceIp ||
+                      "Not available"
+                    )}
+                  </td>
+
+                  <td>
+                    ${escapeHtml(
+                      experiment.targetUser ||
+                      "Not available"
+                    )}
                   </td>
 
                   <td>
                     ${
-                      experiment.lockouts ??
-                      experiment.recentLockouts ??
-                      "N/A"
+                      experiment
+                        .bruteForceStateReset
+                        ? "YES"
+                        : "NO/OLD"
                     }
-                  </td>
-
-                  <td>
-                    ${escapeHtml(
-                      experiment.sourceIp
-                    )}
-                  </td>
-
-                  <td>
-                    ${escapeHtml(
-                      experiment.targetUser
-                    )}
                   </td>
 
                   <td class="${outcomeClass}">
+
                     ${escapeHtml(
                       experiment.outcome
                     )}
+
                   </td>
 
                 </tr>
@@ -1835,7 +2717,12 @@ async function start() {
           )
           .join("");
 
+      /*
+        Render evaluation dashboard.
+      */
+
       res.send(`
+
         ${dashboardStyles()}
 
         <h1>
@@ -1849,13 +2736,15 @@ async function start() {
 
         <p>
           New experiments use isolated
-          start/end event windows to prevent
-          contamination from previous tests.
+          start/end event windows and reset
+          Keycloak brute-force state before
+          each test.
         </p>
 
         <div class="cards">
 
           <div class="card">
+
             <h3>
               Recorded Experiments
             </h3>
@@ -1863,9 +2752,11 @@ async function start() {
             <div class="number">
               ${metrics.total}
             </div>
+
           </div>
 
           <div class="card">
+
             <h3>
               True Positives
             </h3>
@@ -1873,9 +2764,11 @@ async function start() {
             <div class="number">
               ${metrics.truePositive}
             </div>
+
           </div>
 
           <div class="card">
+
             <h3>
               True Negatives
             </h3>
@@ -1883,9 +2776,11 @@ async function start() {
             <div class="number">
               ${metrics.trueNegative}
             </div>
+
           </div>
 
           <div class="card">
+
             <h3>
               False Positives
             </h3>
@@ -1893,9 +2788,11 @@ async function start() {
             <div class="number">
               ${metrics.falsePositive}
             </div>
+
           </div>
 
           <div class="card">
+
             <h3>
               False Negatives
             </h3>
@@ -1903,6 +2800,7 @@ async function start() {
             <div class="number">
               ${metrics.falseNegative}
             </div>
+
           </div>
 
         </div>
@@ -1914,6 +2812,7 @@ async function start() {
         <table>
 
           <tr>
+
             <th>
               Metric
             </th>
@@ -1921,9 +2820,11 @@ async function start() {
             <th>
               Value
             </th>
+
           </tr>
 
           <tr>
+
             <td>
               Accuracy
             </td>
@@ -1933,9 +2834,11 @@ async function start() {
                 metrics.accuracy
               )}
             </td>
+
           </tr>
 
           <tr>
+
             <td>
               Precision
             </td>
@@ -1945,9 +2848,11 @@ async function start() {
                 metrics.precision
               )}
             </td>
+
           </tr>
 
           <tr>
+
             <td>
               Recall
             </td>
@@ -1957,9 +2862,11 @@ async function start() {
                 metrics.recall
               )}
             </td>
+
           </tr>
 
           <tr>
+
             <td>
               F1 Score
             </td>
@@ -1969,9 +2876,11 @@ async function start() {
                 metrics.f1
               )}
             </td>
+
           </tr>
 
           <tr>
+
             <td>
               False Positive Rate
             </td>
@@ -1981,9 +2890,11 @@ async function start() {
                 metrics.falsePositiveRate
               )}
             </td>
+
           </tr>
 
           <tr>
+
             <td>
               False Negative Rate
             </td>
@@ -1993,9 +2904,11 @@ async function start() {
                 metrics.falseNegativeRate
               )}
             </td>
+
           </tr>
 
           <tr>
+
             <td>
               Custom / Keycloak Agreement
             </td>
@@ -2005,6 +2918,7 @@ async function start() {
                 metrics.agreementRate
               )}
             </td>
+
           </tr>
 
         </table>
@@ -2016,7 +2930,9 @@ async function start() {
         <table>
 
           <tr>
-            <th></th>
+
+            <th>
+            </th>
 
             <th>
               Predicted ATTACK
@@ -2025,9 +2941,11 @@ async function start() {
             <th>
               Predicted NORMAL
             </th>
+
           </tr>
 
           <tr>
+
             <th>
               Actual ATTACK
             </th>
@@ -2041,9 +2959,11 @@ async function start() {
               FN =
               ${metrics.falseNegative}
             </td>
+
           </tr>
 
           <tr>
+
             <th>
               Actual NORMAL
             </th>
@@ -2057,6 +2977,7 @@ async function start() {
               TN =
               ${metrics.trueNegative}
             </td>
+
           </tr>
 
         </table>
@@ -2068,27 +2989,73 @@ async function start() {
         <table>
 
           <tr>
-            <th>Start</th>
-            <th>Finish</th>
-            <th>Ground Truth</th>
-            <th>Custom Prediction</th>
-            <th>Risk Score</th>
-            <th>Keycloak Prediction</th>
-            <th>Events</th>
-            <th>Failures</th>
-            <th>Lockouts</th>
-            <th>Source IP</th>
-            <th>Target User</th>
-            <th>Outcome</th>
+
+            <th>
+              Start
+            </th>
+
+            <th>
+              Finish
+            </th>
+
+            <th>
+              Ground Truth
+            </th>
+
+            <th>
+              Custom Prediction
+            </th>
+
+            <th>
+              Risk Score
+            </th>
+
+            <th>
+              Keycloak Prediction
+            </th>
+
+            <th>
+              Events
+            </th>
+
+            <th>
+              Failures
+            </th>
+
+            <th>
+              Lockouts
+            </th>
+
+            <th>
+              Source IP
+            </th>
+
+            <th>
+              Target User
+            </th>
+
+            <th>
+              State Reset
+            </th>
+
+            <th>
+              Outcome
+            </th>
+
           </tr>
 
           ${
             rows ||
+
             `
               <tr>
-                <td colspan="12">
+
+                <td colspan="13">
+
                   No experiments recorded.
+
                 </td>
+
               </tr>
             `
           }
@@ -2132,14 +3099,13 @@ async function start() {
 
   app.post(
     "/clear-experiments",
-    (req, res) => {
-      if (!req.session.user) {
-        return res
-          .status(401)
-          .send(
-            "Authentication required."
-          );
-      }
+
+    requireLogin,
+
+    (
+      req,
+      res
+    ) => {
 
       experiments = [];
 
@@ -2148,7 +3114,8 @@ async function start() {
       addSecurityEvent(
         "EXPERIMENT_HISTORY_CLEARED",
 
-        req.session.user
+        req.session
+          .user
           .preferred_username,
 
         "Detector experiment history cleared"
@@ -2168,85 +3135,94 @@ async function start() {
 
   app.get(
     "/keycloak-events",
-    async (req, res) => {
-      if (!req.session.user) {
-        return res
-          .status(401)
-          .send(
-            "Authentication required."
-          );
-      }
+
+    requireLogin,
+
+    async (
+      req,
+      res
+    ) => {
 
       try {
+
         const events =
           await getKeycloakEvents();
 
         events.sort(
           (a, b) =>
-            Number(b.time || 0) -
-            Number(a.time || 0)
+            Number(
+              b.time || 0
+            ) -
+            Number(
+              a.time || 0
+            )
         );
 
-        const rows = events
-          .map(
-            (event) => `
-              <tr>
+        const rows =
+          events
+            .map(
+              (
+                event
+              ) => `
 
-                <td>
-                  ${formatKeycloakTime(
-                    event.time
-                  )}
-                </td>
+                <tr>
 
-                <td>
-                  ${escapeHtml(
-                    event.type
-                  )}
-                </td>
+                  <td>
+                    ${formatKeycloakTime(
+                      event.time
+                    )}
+                  </td>
 
-                <td>
-                  ${escapeHtml(
-                    getEventUsername(
-                      event
-                    )
-                  )}
-                </td>
+                  <td>
+                    ${escapeHtml(
+                      event.type
+                    )}
+                  </td>
 
-                <td>
-                  ${escapeHtml(
-                    event.ipAddress ||
-                    ""
-                  )}
-                </td>
+                  <td>
+                    ${escapeHtml(
+                      getEventUsername(
+                        event
+                      )
+                    )}
+                  </td>
 
-                <td>
-                  ${escapeHtml(
-                    event.clientId ||
-                    ""
-                  )}
-                </td>
+                  <td>
+                    ${escapeHtml(
+                      event.ipAddress ||
+                      ""
+                    )}
+                  </td>
 
-                <td>
-                  ${escapeHtml(
-                    event.error ||
-                    event.details?.error ||
-                    ""
-                  )}
-                </td>
+                  <td>
+                    ${escapeHtml(
+                      event.clientId ||
+                      ""
+                    )}
+                  </td>
 
-                <td>
-                  ${escapeHtml(
-                    event.details?.reason ||
-                    ""
-                  )}
-                </td>
+                  <td>
+                    ${escapeHtml(
+                      event.error ||
+                      event.details?.error ||
+                      ""
+                    )}
+                  </td>
 
-              </tr>
-            `
-          )
-          .join("");
+                  <td>
+                    ${escapeHtml(
+                      event.details?.reason ||
+                      ""
+                    )}
+                  </td>
+
+                </tr>
+              `
+            )
+            .join("");
 
         res.send(`
+
           ${dashboardStyles()}
 
           <h1>
@@ -2256,13 +3232,35 @@ async function start() {
           <table>
 
             <tr>
-              <th>Time</th>
-              <th>Event Type</th>
-              <th>User</th>
-              <th>IP Address</th>
-              <th>Client</th>
-              <th>Error</th>
-              <th>Reason</th>
+
+              <th>
+                Time
+              </th>
+
+              <th>
+                Event Type
+              </th>
+
+              <th>
+                User
+              </th>
+
+              <th>
+                IP Address
+              </th>
+
+              <th>
+                Client
+              </th>
+
+              <th>
+                Error
+              </th>
+
+              <th>
+                Reason
+              </th>
+
             </tr>
 
             ${rows}
@@ -2281,8 +3279,12 @@ async function start() {
 
           </div>
         `);
+
       } catch (error) {
-        console.error(error);
+
+        console.error(
+          error
+        );
 
         res
           .status(500)
@@ -2303,19 +3305,21 @@ async function start() {
 
   app.get(
     "/security-events",
-    (req, res) => {
-      if (!req.session.user) {
-        return res
-          .status(401)
-          .send(
-            "Authentication required."
-          );
-      }
+
+    requireLogin,
+
+    (
+      req,
+      res
+    ) => {
 
       const rows =
         securityEvents
           .map(
-            (event) => `
+            (
+              event
+            ) => `
+
               <tr>
 
                 <td>
@@ -2348,6 +3352,7 @@ async function start() {
           .join("");
 
       res.send(`
+
         ${dashboardStyles()}
 
         <h1>
@@ -2357,10 +3362,23 @@ async function start() {
         <table>
 
           <tr>
-            <th>Time</th>
-            <th>Event Type</th>
-            <th>Username</th>
-            <th>Details</th>
+
+            <th>
+              Time
+            </th>
+
+            <th>
+              Event Type
+            </th>
+
+            <th>
+              Username
+            </th>
+
+            <th>
+              Details
+            </th>
+
           </tr>
 
           ${rows}
@@ -2390,9 +3408,15 @@ async function start() {
 
   app.get(
     "/logout",
-    (req, res) => {
+
+    (
+      req,
+      res
+    ) => {
+
       const username =
-        req.session.user
+        req.session
+          .user
           ?.preferred_username ||
         "unknown";
 
@@ -2420,7 +3444,9 @@ async function start() {
 
   app.listen(
     PORT,
+
     () => {
+
       console.log(
         `Research application running at http://localhost:${PORT}`
       );
@@ -2438,6 +3464,10 @@ async function start() {
       );
 
       console.log(
+        "Keycloak brute-force state reset enabled"
+      );
+
+      console.log(
         `Failed-login threshold: ${FAILED_LOGIN_THRESHOLD}`
       );
 
@@ -2452,11 +3482,20 @@ async function start() {
   );
 }
 
+/*
+|--------------------------------------------------------------------------
+| START APPLICATION
+|--------------------------------------------------------------------------
+*/
+
 start().catch(
   (error) => {
+
     console.error(
       "Application startup failed:",
       error
     );
+
+    process.exitCode = 1;
   }
 );
