@@ -1368,6 +1368,106 @@ web2-security-lab/
 `-- package-lock.json
 ```
 
+
+## Experimental Results
+
+The security detector was evaluated using controlled authentication experiments involving normal login behavior, repeated failed logins, brute-force activity, and password-spraying scenarios.
+
+A total of **22 controlled experiments** were recorded.
+
+### Overall Performance
+
+| Metric | Result |
+|---|---:|
+| Total Experiments | 22 |
+| True Positives | 7 |
+| True Negatives | 13 |
+| False Positives | 1 |
+| False Negatives | 1 |
+| Accuracy | 90.91% |
+| Precision | 87.50% |
+| Recall | 87.50% |
+| F1 Score | 87.50% |
+| False Positive Rate | 7.14% |
+| False Negative Rate | 12.50% |
+
+### Confusion Matrix
+
+| Actual / Predicted | ATTACK | NORMAL |
+|---|---:|---:|
+| ATTACK | TP = 7 | FN = 1 |
+| NORMAL | FP = 1 | TN = 13 |
+
+### Key Experimental Findings
+
+The experiments demonstrated several important characteristics of the detector.
+
+#### Normal Authentication
+
+Normal authentication activity was correctly classified as NORMAL.
+
+The detector also tolerated occasional user mistakes:
+
+- One incorrect password produced a risk score of 10 and remained NORMAL.
+- Two incorrect passwords produced a risk score of 20 and remained NORMAL.
+
+These tests resulted in True Negative classifications.
+
+#### Repeated Authentication Attack
+
+Three repeated failed login attempts against the same account from the same source were successfully detected as an attack.
+
+The detector combined:
+
+- failed-login frequency,
+- repeated source IP activity,
+- repeated targeting of the same account, and
+- Keycloak temporary-lockout information.
+
+A test involving three failed attempts followed by a Keycloak lockout reached a risk score of 100 and resulted in a True Positive.
+
+#### Password-Spraying Experiment
+
+A password-spraying style experiment was performed by attempting one incorrect password against multiple user accounts.
+
+With three failed attempts distributed across different accounts, the detector produced:
+
+- Risk Score: 50
+- Classification: MEDIUM
+- Prediction: ATTACK
+- Outcome: TRUE POSITIVE
+- Keycloak Lockout: No
+
+This result is significant because the attack was detected even though no individual account accumulated enough failures to trigger a Keycloak temporary lockout.
+
+#### False Negative Boundary
+
+A controlled ATTACK experiment containing only two failed authentication attempts produced:
+
+- Risk Score: 20
+- Prediction: NORMAL
+- Outcome: FALSE NEGATIVE
+
+This identifies an important limitation of the current threshold-based detector. Low-volume attack activity may remain below the detection threshold.
+
+#### False Positive Boundary
+
+A controlled NORMAL boundary experiment containing three failed attempts resulted in a Keycloak lockout and was classified as ATTACK.
+
+This produced a False Positive according to the experiment's assigned NORMAL ground truth.
+
+The result demonstrates the trade-off between detecting repeated malicious authentication attempts and tolerating repeated legitimate user errors.
+
+## Interpretation
+
+The experimental results show that the detector can identify conventional brute-force activity and multi-account password-spraying behavior while tolerating one or two isolated authentication mistakes.
+
+The observed false positive and false negative cases also identify useful areas for future improvement. A more advanced detector could incorporate temporal behavior, adaptive thresholds, account diversity, source-IP diversity, and historical authentication patterns instead of relying primarily on fixed thresholds.
+
+These results provide a measurable Web2 security baseline for subsequent research into enhanced authentication-security mechanisms.
+
+
+
 Runtime experiment files may also be generated locally.
 
 ---
