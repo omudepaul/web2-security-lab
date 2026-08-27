@@ -838,6 +838,27 @@ function runIndependentDetector(
 
   /*
   |--------------------------------------------------------------------------
+  | ALL TARGET USERS
+  |--------------------------------------------------------------------------
+  |
+  | Keep every distinct user targeted by failed-login activity.
+  |
+  | This is especially useful for password-spraying experiments where
+  | several accounts may each receive only one failed attempt.
+  |
+  */
+
+  const targetUsers =
+    Object.keys(
+      failuresByUser
+    ).filter(
+      (username) =>
+        username !== "unknown"
+    );
+
+
+  /*
+  |--------------------------------------------------------------------------
   | CUSTOM RISK SCORE
   |--------------------------------------------------------------------------
   */
@@ -1026,6 +1047,7 @@ function runIndependentDetector(
     highestFailureUser,
 
     highestUserFailureCount,
+    targetUsers,
 
     riskScore,
 
@@ -2074,8 +2096,6 @@ async function start() {
                 </button>
 
               </form>
-
-
               <form
                 method="POST"
                 action="/cancel-experiment"
@@ -2588,6 +2608,56 @@ async function start() {
             experimentEvents
           );
 
+        /*
+        |--------------------------------------------------------------------------
+        | IDENTIFY EXPERIMENT USER(S) AND SOURCE IP
+        |--------------------------------------------------------------------------
+        |
+        | ATTACK experiments normally obtain the source IP from LOGIN_ERROR
+        | activity. NORMAL experiments may contain only successful LOGIN events,
+        | so use the latest authentication event as a fallback.
+        |
+        | For password spraying, preserve every distinct failed-login target
+        | instead of displaying only the single "highest failure" user.
+        |
+        */
+
+        const authenticationEvent =
+          [...experimentEvents]
+            .filter(
+              (event) =>
+                event.type === "LOGIN" ||
+                event.type === "LOGIN_ERROR"
+            )
+            .sort(
+              (a, b) =>
+                Number(b.time || 0) -
+                Number(a.time || 0)
+            )[0] || null;
+
+
+        const experimentSourceIp =
+          detector.highestFailureIp !==
+            "Not available"
+
+            ? detector.highestFailureIp
+
+            : authenticationEvent?.ipAddress ||
+              "Not available";
+
+
+        const experimentTargetUser =
+          detector.targetUsers &&
+          detector.targetUsers.length > 0
+
+            ? detector.targetUsers.join(", ")
+
+            : authenticationEvent
+              ? getEventUsername(
+                  authenticationEvent
+                )
+              : "Not available";
+
 
         const outcome =
           classifyExperimentOutcome(
@@ -2697,13 +2767,15 @@ async function start() {
 
 
           sourceIp:
-            detector
-              .highestFailureIp,
+            experimentSourceIp,
 
 
           targetUser:
-            detector
-              .highestFailureUser,
+            experimentTargetUser,
+
+
+          targetUsers:
+            detector.targetUsers || [],
 
 
           signals:
@@ -3076,7 +3148,6 @@ async function start() {
             <h3>
               False Negatives
             </h3>
-
             <div class="number">
               ${metrics.falseNegative}
             </div>
@@ -3345,7 +3416,7 @@ async function start() {
             </th>
 
             <th>
-              Target User
+              Target User(s)
             </th>
 
             <th>
