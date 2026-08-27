@@ -2,3 +2,4 @@
 node_modules/
 security-events.json
 detector-experiments.json
+index-backup.js
