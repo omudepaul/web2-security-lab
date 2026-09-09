@@ -1,0 +1,26 @@
+QS DEPENDENCY PROPAGATION REPORT
+================================
+
+Controlled paths:
+  W1: research-app -> express -> qs
+  W2: research-app -> express -> body-parser -> qs
+
+Synthetic perturbation: in PERTURBED mode only, qs.parse changes
+probe=healthy to probe=corrupted when trigger=1.
+
+Total trials: 120
+Baseline downstream impacts: 0
+
+ESTIMATED PROPAGATION
+---------------------
+query / BENIGN: impacted=0/15, q_hat=0.0000
+query / TRIGGERED: impacted=15/15, q_hat=1.0000
+body / BENIGN: impacted=0/15, q_hat=0.0000
+body / TRIGGERED: impacted=15/15, q_hat=1.0000
+
+INTERPRETATION
+--------------
+q_hat is workload-conditioned experimental propagation, not a universal
+probability and not a real-world compromise probability.
+A value near 1 for TRIGGERED workloads means the synthetic dependency
+perturbation consistently reaches the observed parent/application layer.

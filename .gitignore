@@ -10,3 +10,5 @@ security-evidence.csv
 security-evidence.json
 dependency-edges.csv
 index-backup.js
+results/propagation/qs-propagation-results.csv
+results/propagation/qs-propagation-results.json
