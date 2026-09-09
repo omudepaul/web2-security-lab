@@ -1,0 +1,58 @@
+OPEN-SOURCE DEPENDENCY TOPOLOGY REPORT
+======================================
+Project: research-app@1.0.0
+Lockfile version: 3
+Model: G_P = (V, E, Λ, Q)
+Direction: source -> target means source depends on target
+
+Package nodes: 80
+Direct dependencies: 4
+Transitive dependency instances: 76
+Edges: 140
+Maximum dependency depth: 7
+Directed: YES
+Acyclic (DAG): YES
+Cyclic strongly connected components: 0
+Shared dependency instances (in-degree > 1): 29
+Duplicate package names with multiple installed instances: 4
+
+TOP SHARED DEPENDENCIES
+-----------------------
+es-errors@1.3.0 | in-degree=8 | depth=4
+debug@4.4.3 | in-degree=5 | depth=2
+parseurl@1.3.3 | in-degree=5 | depth=2
+depd@2.0.0 | in-degree=4 | depth=2
+encodeurl@2.0.0 | in-degree=4 | depth=2
+escape-html@1.0.3 | in-degree=4 | depth=2
+http-errors@2.0.1 | in-degree=4 | depth=2
+mime-types@3.0.2 | in-degree=4 | depth=2
+object-inspect@1.13.4 | in-degree=4 | depth=4
+on-finished@2.4.1 | in-degree=4 | depth=2
+statuses@2.0.2 | in-degree=4 | depth=2
+call-bind-apply-helpers@1.0.2 | in-degree=3 | depth=6
+function-bind@1.1.2 | in-degree=3 | depth=6
+get-intrinsic@1.3.0 | in-degree=3 | depth=5
+bytes@3.1.2 | in-degree=2 | depth=3
+
+HIGHEST FAN-OUT NODES
+---------------------
+express@5.2.1 | dependencies=28 | depth=1
+send@1.2.1 | dependencies=11 | depth=2
+get-intrinsic@1.3.0 | dependencies=10 | depth=5
+body-parser@2.3.0 | dependencies=9 | depth=2
+express-session@1.19.0 | dependencies=8 | depth=1
+finalhandler@2.1.1 | dependencies=6 | depth=2
+http-errors@2.0.1 | dependencies=5 | depth=2
+router@2.2.0 | dependencies=5 | depth=2
+side-channel@1.1.1 | dependencies=5 | depth=3
+side-channel-weakmap@1.0.2 | dependencies=5 | depth=4
+raw-body@3.0.2 | dependencies=4 | depth=3
+serve-static@2.2.1 | dependencies=4 | depth=2
+side-channel-map@1.0.1 | dependencies=4 | depth=4
+dunder-proto@1.0.1 | dependencies=3 | depth=7
+type-is@2.1.0 | dependencies=3 | depth=2
+
+NOTE
+----
+Failure rates λ and propagation probabilities q are intentionally left blank.
+They must be estimated from a defined empirical failure/security dataset, not invented.
