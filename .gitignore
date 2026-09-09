@@ -8,3 +8,5 @@ dependency-topology.dot
 dependency-topology.json
 security-evidence.csv
 security-evidence.json
+dependency-edges.csv
+index-backup.js
