@@ -1,0 +1,165 @@
+DEBUG@4.4.3 SHARED-NODE PERTURBATION REPORT
+===========================================
+
+Shared node: debug@4.4.3
+Shared path: C:\Users\omude\Documents\research-app\node_modules\debug\package.json
+Separate nested instance excluded: debug@2.6.9
+
+Total trials: 525
+Baseline application-status impacts: 0
+Repetitions per condition: 5
+
+Perturbations: DROP_LOG, CORRUPT_LOG, DUPLICATE_LOG, DELAY
+
+SUMMARY BY TARGET PARENT AND WORKLOAD
+-------------------------------------
+
+TARGET PARENT: body-parser
+  BASIC_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.630 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.408 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.437 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.541 inj_delay=0.0
+  FORM_BODY
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.762 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.811 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.799 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=168.763 inj_delay=125.0
+  STATIC_FILE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.399 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.929 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.895 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=3.221 inj_delay=0.0
+  MISSING_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.317 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.314 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.607 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.300 inj_delay=0.0
+  ERROR_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.456 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.534 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.800 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.675 inj_delay=0.0
+
+TARGET PARENT: express
+  BASIC_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.755 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.576 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.466 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.374 inj_delay=0.0
+  FORM_BODY
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.207 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.672 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.600 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.483 inj_delay=0.0
+  STATIC_FILE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.348 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.351 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.285 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.378 inj_delay=0.0
+  MISSING_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.427 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.562 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.357 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.549 inj_delay=0.0
+  ERROR_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.146 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.858 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.630 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.717 inj_delay=0.0
+
+TARGET PARENT: finalhandler
+  BASIC_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.366 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.336 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.323 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.336 inj_delay=0.0
+  FORM_BODY
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.610 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.509 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.374 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.491 inj_delay=0.0
+  STATIC_FILE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.222 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.182 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.030 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.056 inj_delay=0.0
+  MISSING_ROUTE
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.302 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.297 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.305 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=32.398 inj_delay=25.0
+  ERROR_ROUTE
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.594 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.588 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.853 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=34.767 inj_delay=25.0
+
+TARGET PARENT: router
+  BASIC_ROUTE
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=1.309 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.971 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.327 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=32.677 inj_delay=25.0
+  FORM_BODY
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=1.617 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.801 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.438 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=33.624 inj_delay=25.0
+  STATIC_FILE
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=2.332 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=1.081 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=1.170 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=103.050 inj_delay=75.0
+  MISSING_ROUTE
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.825 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.303 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.395 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=32.244 inj_delay=25.0
+  ERROR_ROUTE
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=2.072 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.797 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=0.904 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=33.744 inj_delay=25.0
+
+TARGET PARENT: send
+  BASIC_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.225 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.482 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.394 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.887 inj_delay=0.0
+  FORM_BODY
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.733 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.768 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.385 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=3.880 inj_delay=0.0
+  STATIC_FILE
+    DROP_LOG      active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=1.578 inj_delay=0.0
+    CORRUPT_LOG   active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=1.448 inj_delay=0.0
+    DUPLICATE_LOG active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=2.383 inj_delay=0.0
+    DELAY         active=5/5 activation=1.0000 q_hat=1.0000 q|active=1.0000 avg_ms=238.945 inj_delay=175.0
+  MISSING_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.830 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.372 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.727 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=2.172 inj_delay=0.0
+  ERROR_ROUTE
+    DROP_LOG      active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=1.476 inj_delay=0.0
+    CORRUPT_LOG   active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=0.522 inj_delay=0.0
+    DUPLICATE_LOG active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=2.280 inj_delay=0.0
+    DELAY         active=0/5 activation=0.0000 q_hat=0.0000 q|active=NA avg_ms=2.787 inj_delay=0.0
+
+APPLICATION STATUS CONTROL
+--------------------------
+Perturbed trials with unexpected HTTP status: 0
+
+INTERPRETATION
+--------------
+For this logging dependency, propagation is measured primarily in
+observability integrity/availability, duplication, and latency.
+A topological parent edge with activation=0 under a workload has
+q_hat=0 because the workload did not exercise that runtime edge.
+q|active separates edge activation from propagation once the edge
+is actually exercised.
+Unexpected HTTP-status impact is tracked separately so observability
+failure is not incorrectly equated with application failure.
