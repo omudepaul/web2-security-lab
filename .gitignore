@@ -24,3 +24,5 @@ results/debug-shared-node/debug-shared-node-results.csv
 results/debug-shared-node/debug-shared-node-results.json
 results/debug-shared-node-perturbation/debug-shared-perturbation-results.csv
 results/debug-shared-node-perturbation/debug-shared-perturbation-results.json
+results/model/debug-empirical-dependency-matrix.csv
+results/model/debug-empirical-dependency-matrix.json

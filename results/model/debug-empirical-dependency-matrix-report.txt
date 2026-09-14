@@ -1,0 +1,109 @@
+EMPIRICAL DEPENDENCY ACTIVATION-PROPAGATION MATRIX
+=================================================
+
+Shared node: debug@4.4.3
+Topological parent edges: 5
+Workloads: 5
+Perturbation types: 4
+Matrix rows: 100
+
+MODEL
+-----
+alpha_e(w) = P(edge active | workload w)
+q_e^(s,w) = P(impact | edge active, perturbation s, workload w)
+pi_e^(s,w) = alpha_e(w) * q_e^(s,w)
+
+IMPORTANT: pi is a controlled workload-conditioned propagation
+quantity, not a real-world compromise probability.
+
+PARENT-EDGE SUMMARY
+-------------------
+body-parser -> debug@4.4.3
+  active workloads: FORM_BODY
+  active workload coverage: 1/5
+  mean alpha across workloads: 0.2000
+
+express -> debug@4.4.3
+  active workloads: none observed
+  active workload coverage: 0/5
+  mean alpha across workloads: 0.0000
+
+finalhandler -> debug@4.4.3
+  active workloads: MISSING_ROUTE, ERROR_ROUTE
+  active workload coverage: 2/5
+  mean alpha across workloads: 0.4000
+
+router -> debug@4.4.3
+  active workloads: BASIC_ROUTE, FORM_BODY, STATIC_FILE, MISSING_ROUTE, ERROR_ROUTE
+  active workload coverage: 5/5
+  mean alpha across workloads: 1.0000
+
+send -> debug@4.4.3
+  active workloads: STATIC_FILE
+  active workload coverage: 1/5
+  mean alpha across workloads: 0.2000
+
+SELECTED EMPIRICAL MATRIX ROWS
+------------------------------
+body-parser  | BASIC_ROUTE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+body-parser  | FORM_BODY     | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+body-parser  | STATIC_FILE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+body-parser  | MISSING_ROUTE | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+body-parser  | ERROR_ROUTE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+body-parser  | BASIC_ROUTE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+body-parser  | FORM_BODY     | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+body-parser  | STATIC_FILE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+body-parser  | MISSING_ROUTE | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+body-parser  | ERROR_ROUTE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | BASIC_ROUTE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | FORM_BODY     | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | STATIC_FILE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | MISSING_ROUTE | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | ERROR_ROUTE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | BASIC_ROUTE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | FORM_BODY     | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | STATIC_FILE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | MISSING_ROUTE | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+express      | ERROR_ROUTE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+finalhandler | BASIC_ROUTE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+finalhandler | FORM_BODY     | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+finalhandler | STATIC_FILE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+finalhandler | MISSING_ROUTE | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+finalhandler | ERROR_ROUTE   | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+finalhandler | BASIC_ROUTE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+finalhandler | FORM_BODY     | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+finalhandler | STATIC_FILE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+finalhandler | MISSING_ROUTE | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+finalhandler | ERROR_ROUTE   | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | BASIC_ROUTE   | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | FORM_BODY     | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | STATIC_FILE   | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | MISSING_ROUTE | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | ERROR_ROUTE   | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | BASIC_ROUTE   | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | FORM_BODY     | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | STATIC_FILE   | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | MISSING_ROUTE | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+router       | ERROR_ROUTE   | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+send         | BASIC_ROUTE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+send         | FORM_BODY     | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+send         | STATIC_FILE   | CORRUPT_LOG | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+send         | MISSING_ROUTE | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+send         | ERROR_ROUTE   | CORRUPT_LOG | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+send         | BASIC_ROUTE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+send         | FORM_BODY     | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+send         | STATIC_FILE   | DELAY       | alpha=1.0000 | q|active=1.0000 | pi=1.0000 | observed_q=1.0000
+send         | MISSING_ROUTE | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+send         | ERROR_ROUTE   | DELAY       | alpha=0.0000 | q|active=NA | pi=0.0000 | observed_q=0.0000
+
+CONSISTENCY CHECK
+-----------------
+Maximum |pi - observed overall q_hat|: 0.0000
+
+INTERPRETATION
+--------------
+The static graph identifies potential dependency exposure.
+alpha captures whether an edge is actually exercised by a workload.
+q|active captures propagation once the runtime edge is active.
+pi combines both effects into a workload-conditioned propagation
+quantity. This separates topology from runtime behavior.
