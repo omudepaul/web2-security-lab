@@ -1,0 +1,4483 @@
+{
+  "symbolicModel": {
+    "expression": "G_E = (∪_k V_k, ∪_k E_k)",
+    "exactNodeIdentity": "package-name@installed-version",
+    "note": "Same package name with different versions is reported separately and is not collapsed into one exact node."
+  },
+  "products": [
+    {
+      "id": "P1",
+      "label": "Express",
+      "project": "product-express",
+      "projectVersion": "1.0.0",
+      "packageNodes": 68,
+      "edges": 125,
+      "maximumDependencyDepth": 7,
+      "isAcyclic": true
+    },
+    {
+      "id": "P2",
+      "label": "express-session",
+      "project": "product-session",
+      "projectVersion": "1.0.0",
+      "packageNodes": 11,
+      "edges": 11,
+      "maximumDependencyDepth": 3,
+      "isAcyclic": true
+    },
+    {
+      "id": "P3",
+      "label": "Morgan",
+      "project": "product-morgan",
+      "projectVersion": "1.0.0",
+      "packageNodes": 9,
+      "edges": 9,
+      "maximumDependencyDepth": 3,
+      "isAcyclic": true
+    }
+  ],
+  "summary": {
+    "productCount": 3,
+    "sumOfIndividualPackageNodeInstances": 88,
+    "uniqueExactPackageVersionNodes": 77,
+    "exactSharedNodesAcrossAtLeastTwoProducts": 8,
+    "exactNodesSharedAcrossAllProducts": 1,
+    "sumOfIndividualEdgesIncludingRootEdges": 145,
+    "sumOfIndividualNonRootEdges": 142,
+    "uniqueExactNonRootEdges": 140,
+    "exactSharedEdgesAcrossAtLeastTwoProducts": 2,
+    "exactEdgesSharedAcrossAllProducts": 0,
+    "sameNameDifferentVersionOverlaps": 4
+  },
+  "pairwiseExactNodeIntersections": [
+    {
+      "productA": "P1",
+      "productALabel": "Express",
+      "productB": "P2",
+      "productBLabel": "express-session",
+      "exactSharedNodeCount": 3,
+      "exactSharedNodes": [
+        "cookie@0.7.2",
+        "depd@2.0.0",
+        "parseurl@1.3.3"
+      ]
+    },
+    {
+      "productA": "P1",
+      "productALabel": "Express",
+      "productB": "P3",
+      "productBLabel": "Morgan",
+      "exactSharedNodeCount": 3,
+      "exactSharedNodes": [
+        "depd@2.0.0",
+        "ee-first@1.1.1",
+        "on-finished@2.4.1"
+      ]
+    },
+    {
+      "productA": "P2",
+      "productALabel": "express-session",
+      "productB": "P3",
+      "productBLabel": "Morgan",
+      "exactSharedNodeCount": 4,
+      "exactSharedNodes": [
+        "debug@2.6.9",
+        "depd@2.0.0",
+        "ms@2.0.0",
+        "on-headers@1.1.0"
+      ]
+    }
+  ],
+  "sharedExactNodes": [
+    {
+      "key": "depd@2.0.0",
+      "name": "depd",
+      "version": "2.0.0",
+      "productCount": 3,
+      "products": [
+        "Express",
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P2": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2,
+        "P2": 2,
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 3,
+        "P2": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    {
+      "key": "cookie@0.7.2",
+      "name": "cookie",
+      "version": "0.7.2",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "express-session"
+      ],
+      "productIds": [
+        "P1",
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2,
+        "P2": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1,
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0,
+        "P2": 0
+      }
+    },
+    {
+      "key": "debug@2.6.9",
+      "name": "debug",
+      "version": "2.6.9",
+      "productCount": 2,
+      "products": [
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P2",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 2,
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 1,
+        "P3": 1
+      }
+    },
+    {
+      "key": "ee-first@1.1.1",
+      "name": "ee-first",
+      "version": "1.1.1",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "Morgan"
+      ],
+      "productIds": [
+        "P1",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3,
+        "P3": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0,
+        "P3": 0
+      }
+    },
+    {
+      "key": "ms@2.0.0",
+      "name": "ms",
+      "version": "2.0.0",
+      "productCount": 2,
+      "products": [
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P2",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 3,
+        "P3": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    {
+      "key": "on-finished@2.4.1",
+      "name": "on-finished",
+      "version": "2.4.1",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "Morgan"
+      ],
+      "productIds": [
+        "P1",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2,
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1,
+        "P3": 1
+      }
+    },
+    {
+      "key": "on-headers@1.1.0",
+      "name": "on-headers",
+      "version": "1.1.0",
+      "productCount": 2,
+      "products": [
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P2",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 2,
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    {
+      "key": "parseurl@1.3.3",
+      "name": "parseurl",
+      "version": "1.3.3",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "express-session"
+      ],
+      "productIds": [
+        "P1",
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2,
+        "P2": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4,
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0,
+        "P2": 0
+      }
+    }
+  ],
+  "sharedExactEdges": [
+    {
+      "edge": "debug@2.6.9 -> ms@2.0.0",
+      "source": "debug@2.6.9",
+      "target": "ms@2.0.0",
+      "productCount": 2,
+      "products": [
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P2",
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1,
+        "P3": 1
+      }
+    },
+    {
+      "edge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "source": "on-finished@2.4.1",
+      "target": "ee-first@1.1.1",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "Morgan"
+      ],
+      "productIds": [
+        "P1",
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1,
+        "P3": 1
+      }
+    }
+  ],
+  "sameNameDifferentVersionOverlaps": [
+    {
+      "packageName": "debug",
+      "productCount": 3,
+      "products": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "versions": [
+        "2.6.9",
+        "4.4.3"
+      ],
+      "versionsByProduct": {
+        "P1": [
+          "4.4.3"
+        ],
+        "P2": [
+          "2.6.9"
+        ],
+        "P3": [
+          "2.6.9"
+        ]
+      }
+    },
+    {
+      "packageName": "ms",
+      "productCount": 3,
+      "products": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "versions": [
+        "2.0.0",
+        "2.1.3"
+      ],
+      "versionsByProduct": {
+        "P1": [
+          "2.1.3"
+        ],
+        "P2": [
+          "2.0.0"
+        ],
+        "P3": [
+          "2.0.0"
+        ]
+      }
+    },
+    {
+      "packageName": "cookie-signature",
+      "productCount": 2,
+      "products": [
+        "P1",
+        "P2"
+      ],
+      "versions": [
+        "1.0.7",
+        "1.2.2"
+      ],
+      "versionsByProduct": {
+        "P1": [
+          "1.2.2"
+        ],
+        "P2": [
+          "1.0.7"
+        ]
+      }
+    },
+    {
+      "packageName": "safe-buffer",
+      "productCount": 2,
+      "products": [
+        "P2",
+        "P3"
+      ],
+      "versions": [
+        "5.1.2",
+        "5.2.1"
+      ],
+      "versionsByProduct": {
+        "P2": [
+          "5.2.1"
+        ],
+        "P3": [
+          "5.1.2"
+        ]
+      }
+    }
+  ],
+  "allThreeExactNodes": [
+    "depd@2.0.0"
+  ],
+  "allThreeExactEdges": [],
+  "ecosystemNodes": [
+    {
+      "key": "depd@2.0.0",
+      "name": "depd",
+      "version": "2.0.0",
+      "productCount": 3,
+      "products": [
+        "Express",
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P2": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2,
+        "P2": 2,
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 3,
+        "P2": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    {
+      "key": "cookie@0.7.2",
+      "name": "cookie",
+      "version": "0.7.2",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "express-session"
+      ],
+      "productIds": [
+        "P1",
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2,
+        "P2": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1,
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0,
+        "P2": 0
+      }
+    },
+    {
+      "key": "debug@2.6.9",
+      "name": "debug",
+      "version": "2.6.9",
+      "productCount": 2,
+      "products": [
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P2",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 2,
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 1,
+        "P3": 1
+      }
+    },
+    {
+      "key": "ee-first@1.1.1",
+      "name": "ee-first",
+      "version": "1.1.1",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "Morgan"
+      ],
+      "productIds": [
+        "P1",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3,
+        "P3": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0,
+        "P3": 0
+      }
+    },
+    {
+      "key": "ms@2.0.0",
+      "name": "ms",
+      "version": "2.0.0",
+      "productCount": 2,
+      "products": [
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P2",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 3,
+        "P3": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    {
+      "key": "on-finished@2.4.1",
+      "name": "on-finished",
+      "version": "2.4.1",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "Morgan"
+      ],
+      "productIds": [
+        "P1",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2,
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1,
+        "P3": 1
+      }
+    },
+    {
+      "key": "on-headers@1.1.0",
+      "name": "on-headers",
+      "version": "1.1.0",
+      "productCount": 2,
+      "products": [
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P2",
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 2,
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1,
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    {
+      "key": "parseurl@1.3.3",
+      "name": "parseurl",
+      "version": "1.3.3",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "express-session"
+      ],
+      "productIds": [
+        "P1",
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P1": 1,
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2,
+        "P2": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4,
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0,
+        "P2": 0
+      }
+    },
+    {
+      "key": "accepts@2.0.0",
+      "name": "accepts",
+      "version": "2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 2
+      }
+    },
+    {
+      "key": "basic-auth@2.0.1",
+      "name": "basic-auth",
+      "version": "2.0.1",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P3": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P3": 1
+      }
+    },
+    {
+      "key": "body-parser@2.3.0",
+      "name": "body-parser",
+      "version": "2.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 9
+      }
+    },
+    {
+      "key": "bytes@3.1.2",
+      "name": "bytes",
+      "version": "3.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "call-bind-apply-helpers@1.0.2",
+      "name": "call-bind-apply-helpers",
+      "version": "1.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 6
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 3
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 2
+      }
+    },
+    {
+      "key": "call-bound@1.0.4",
+      "name": "call-bound",
+      "version": "1.0.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 5
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 2
+      }
+    },
+    {
+      "key": "content-disposition@1.1.0",
+      "name": "content-disposition",
+      "version": "1.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "content-type@1.0.5",
+      "name": "content-type",
+      "version": "1.0.5",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "content-type@2.1.0",
+      "name": "content-type",
+      "version": "2.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 3
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "cookie-signature@1.0.7",
+      "name": "cookie-signature",
+      "version": "1.0.7",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 0
+      }
+    },
+    {
+      "key": "cookie-signature@1.2.2",
+      "name": "cookie-signature",
+      "version": "1.2.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "debug@4.4.3",
+      "name": "debug",
+      "version": "4.4.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 5
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "key": "dunder-proto@1.0.1",
+      "name": "dunder-proto",
+      "version": "1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 7
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 3
+      }
+    },
+    {
+      "key": "encodeurl@2.0.0",
+      "name": "encodeurl",
+      "version": "2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "es-define-property@1.0.1",
+      "name": "es-define-property",
+      "version": "1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "es-errors@1.3.0",
+      "name": "es-errors",
+      "version": "1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 4
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 8
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "es-object-atoms@1.1.2",
+      "name": "es-object-atoms",
+      "version": "1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 6
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "key": "escape-html@1.0.3",
+      "name": "escape-html",
+      "version": "1.0.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "etag@1.8.1",
+      "name": "etag",
+      "version": "1.8.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "express-session@1.19.0",
+      "name": "express-session",
+      "version": "1.19.0",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 1
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 8
+      }
+    },
+    {
+      "key": "express@5.2.1",
+      "name": "express",
+      "version": "5.2.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 1
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 28
+      }
+    },
+    {
+      "key": "finalhandler@2.1.1",
+      "name": "finalhandler",
+      "version": "2.1.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 6
+      }
+    },
+    {
+      "key": "forwarded@0.2.0",
+      "name": "forwarded",
+      "version": "0.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "fresh@2.0.0",
+      "name": "fresh",
+      "version": "2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "function-bind@1.1.2",
+      "name": "function-bind",
+      "version": "1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 6
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 3
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "get-intrinsic@1.3.0",
+      "name": "get-intrinsic",
+      "version": "1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 5
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 3
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 10
+      }
+    },
+    {
+      "key": "get-proto@1.0.1",
+      "name": "get-proto",
+      "version": "1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 6
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 2
+      }
+    },
+    {
+      "key": "gopd@1.2.0",
+      "name": "gopd",
+      "version": "1.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 6
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "has-symbols@1.1.0",
+      "name": "has-symbols",
+      "version": "1.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 6
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "hasown@2.0.4",
+      "name": "hasown",
+      "version": "2.0.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 6
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "key": "http-errors@2.0.1",
+      "name": "http-errors",
+      "version": "2.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 5
+      }
+    },
+    {
+      "key": "iconv-lite@0.7.3",
+      "name": "iconv-lite",
+      "version": "0.7.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "key": "inherits@2.0.4",
+      "name": "inherits",
+      "version": "2.0.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "ipaddr.js@1.9.1",
+      "name": "ipaddr.js",
+      "version": "1.9.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "is-promise@4.0.0",
+      "name": "is-promise",
+      "version": "4.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "math-intrinsics@1.1.0",
+      "name": "math-intrinsics",
+      "version": "1.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 6
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "media-typer@1.1.1",
+      "name": "media-typer",
+      "version": "1.1.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "merge-descriptors@2.0.0",
+      "name": "merge-descriptors",
+      "version": "2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "mime-db@1.54.0",
+      "name": "mime-db",
+      "version": "1.54.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "mime-types@3.0.2",
+      "name": "mime-types",
+      "version": "3.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "key": "morgan@1.12.1",
+      "name": "morgan",
+      "version": "1.12.1",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P3": 1
+      },
+      "maximumInDegreeByProduct": {
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P3": 5
+      }
+    },
+    {
+      "key": "ms@2.1.3",
+      "name": "ms",
+      "version": "2.1.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "negotiator@1.1.0",
+      "name": "negotiator",
+      "version": "1.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "key": "object-inspect@1.13.4",
+      "name": "object-inspect",
+      "version": "1.13.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 4
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "once@1.4.0",
+      "name": "once",
+      "version": "1.4.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "key": "path-to-regexp@8.4.2",
+      "name": "path-to-regexp",
+      "version": "8.4.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "proxy-addr@2.0.7",
+      "name": "proxy-addr",
+      "version": "2.0.7",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 2
+      }
+    },
+    {
+      "key": "qs@6.16.0",
+      "name": "qs",
+      "version": "6.16.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 2
+      }
+    },
+    {
+      "key": "random-bytes@1.0.0",
+      "name": "random-bytes",
+      "version": "1.0.0",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 0
+      }
+    },
+    {
+      "key": "range-parser@1.3.0",
+      "name": "range-parser",
+      "version": "1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "raw-body@3.0.2",
+      "name": "raw-body",
+      "version": "3.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 4
+      }
+    },
+    {
+      "key": "router@2.2.0",
+      "name": "router",
+      "version": "2.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 5
+      }
+    },
+    {
+      "key": "safe-buffer@5.1.2",
+      "name": "safe-buffer",
+      "version": "5.1.2",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "instancesByProduct": {
+        "P3": 1
+      },
+      "minimumDepthByProduct": {
+        "P3": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P3": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P3": 0
+      }
+    },
+    {
+      "key": "safe-buffer@5.2.1",
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 0
+      }
+    },
+    {
+      "key": "safer-buffer@2.1.2",
+      "name": "safer-buffer",
+      "version": "2.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 4
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "send@1.2.1",
+      "name": "send",
+      "version": "1.2.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 11
+      }
+    },
+    {
+      "key": "serve-static@2.2.1",
+      "name": "serve-static",
+      "version": "2.2.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 4
+      }
+    },
+    {
+      "key": "setprototypeof@1.2.0",
+      "name": "setprototypeof",
+      "version": "1.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "side-channel-list@1.0.1",
+      "name": "side-channel-list",
+      "version": "1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 4
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 2
+      }
+    },
+    {
+      "key": "side-channel-map@1.0.1",
+      "name": "side-channel-map",
+      "version": "1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 4
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 4
+      }
+    },
+    {
+      "key": "side-channel-weakmap@1.0.2",
+      "name": "side-channel-weakmap",
+      "version": "1.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 4
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 5
+      }
+    },
+    {
+      "key": "side-channel@1.1.1",
+      "name": "side-channel",
+      "version": "1.1.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 5
+      }
+    },
+    {
+      "key": "statuses@2.0.2",
+      "name": "statuses",
+      "version": "2.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 4
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "toidentifier@1.0.1",
+      "name": "toidentifier",
+      "version": "1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "type-is@2.1.0",
+      "name": "type-is",
+      "version": "2.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 2
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 3
+      }
+    },
+    {
+      "key": "uid-safe@2.1.5",
+      "name": "uid-safe",
+      "version": "2.1.5",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "instancesByProduct": {
+        "P2": 1
+      },
+      "minimumDepthByProduct": {
+        "P2": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P2": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "key": "unpipe@1.0.0",
+      "name": "unpipe",
+      "version": "1.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 4
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "vary@1.1.2",
+      "name": "vary",
+      "version": "1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 2
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    },
+    {
+      "key": "wrappy@1.0.2",
+      "name": "wrappy",
+      "version": "1.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "instancesByProduct": {
+        "P1": 1
+      },
+      "minimumDepthByProduct": {
+        "P1": 3
+      },
+      "maximumInDegreeByProduct": {
+        "P1": 1
+      },
+      "maximumOutDegreeByProduct": {
+        "P1": 0
+      }
+    }
+  ],
+  "ecosystemEdges": [
+    {
+      "edge": "debug@2.6.9 -> ms@2.0.0",
+      "source": "debug@2.6.9",
+      "target": "ms@2.0.0",
+      "productCount": 2,
+      "products": [
+        "Morgan",
+        "express-session"
+      ],
+      "productIds": [
+        "P2",
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1,
+        "P3": 1
+      }
+    },
+    {
+      "edge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "source": "on-finished@2.4.1",
+      "target": "ee-first@1.1.1",
+      "productCount": 2,
+      "products": [
+        "Express",
+        "Morgan"
+      ],
+      "productIds": [
+        "P1",
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1,
+        "P3": 1
+      }
+    },
+    {
+      "edge": "accepts@2.0.0 -> mime-types@3.0.2",
+      "source": "accepts@2.0.0",
+      "target": "mime-types@3.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "accepts@2.0.0 -> negotiator@1.1.0",
+      "source": "accepts@2.0.0",
+      "target": "negotiator@1.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "basic-auth@2.0.1 -> safe-buffer@5.1.2",
+      "source": "basic-auth@2.0.1",
+      "target": "safe-buffer@5.1.2",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P3": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> bytes@3.1.2",
+      "source": "body-parser@2.3.0",
+      "target": "bytes@3.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> content-type@2.1.0",
+      "source": "body-parser@2.3.0",
+      "target": "content-type@2.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> debug@4.4.3",
+      "source": "body-parser@2.3.0",
+      "target": "debug@4.4.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> http-errors@2.0.1",
+      "source": "body-parser@2.3.0",
+      "target": "http-errors@2.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> iconv-lite@0.7.3",
+      "source": "body-parser@2.3.0",
+      "target": "iconv-lite@0.7.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> on-finished@2.4.1",
+      "source": "body-parser@2.3.0",
+      "target": "on-finished@2.4.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> qs@6.16.0",
+      "source": "body-parser@2.3.0",
+      "target": "qs@6.16.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> raw-body@3.0.2",
+      "source": "body-parser@2.3.0",
+      "target": "raw-body@3.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "body-parser@2.3.0 -> type-is@2.1.0",
+      "source": "body-parser@2.3.0",
+      "target": "type-is@2.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "call-bind-apply-helpers@1.0.2 -> es-errors@1.3.0",
+      "source": "call-bind-apply-helpers@1.0.2",
+      "target": "es-errors@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "call-bind-apply-helpers@1.0.2 -> function-bind@1.1.2",
+      "source": "call-bind-apply-helpers@1.0.2",
+      "target": "function-bind@1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "call-bound@1.0.4 -> call-bind-apply-helpers@1.0.2",
+      "source": "call-bound@1.0.4",
+      "target": "call-bind-apply-helpers@1.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "call-bound@1.0.4 -> get-intrinsic@1.3.0",
+      "source": "call-bound@1.0.4",
+      "target": "get-intrinsic@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "debug@4.4.3 -> ms@2.1.3",
+      "source": "debug@4.4.3",
+      "target": "ms@2.1.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "dunder-proto@1.0.1 -> call-bind-apply-helpers@1.0.2",
+      "source": "dunder-proto@1.0.1",
+      "target": "call-bind-apply-helpers@1.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "dunder-proto@1.0.1 -> es-errors@1.3.0",
+      "source": "dunder-proto@1.0.1",
+      "target": "es-errors@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "dunder-proto@1.0.1 -> gopd@1.2.0",
+      "source": "dunder-proto@1.0.1",
+      "target": "gopd@1.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "es-object-atoms@1.1.2 -> es-errors@1.3.0",
+      "source": "es-object-atoms@1.1.2",
+      "target": "es-errors@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express-session@1.19.0 -> cookie-signature@1.0.7",
+      "source": "express-session@1.19.0",
+      "target": "cookie-signature@1.0.7",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "edge": "express-session@1.19.0 -> cookie@0.7.2",
+      "source": "express-session@1.19.0",
+      "target": "cookie@0.7.2",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "edge": "express-session@1.19.0 -> debug@2.6.9",
+      "source": "express-session@1.19.0",
+      "target": "debug@2.6.9",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "edge": "express-session@1.19.0 -> depd@2.0.0",
+      "source": "express-session@1.19.0",
+      "target": "depd@2.0.0",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "edge": "express-session@1.19.0 -> on-headers@1.1.0",
+      "source": "express-session@1.19.0",
+      "target": "on-headers@1.1.0",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "edge": "express-session@1.19.0 -> parseurl@1.3.3",
+      "source": "express-session@1.19.0",
+      "target": "parseurl@1.3.3",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "edge": "express-session@1.19.0 -> safe-buffer@5.2.1",
+      "source": "express-session@1.19.0",
+      "target": "safe-buffer@5.2.1",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "edge": "express-session@1.19.0 -> uid-safe@2.1.5",
+      "source": "express-session@1.19.0",
+      "target": "uid-safe@2.1.5",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> accepts@2.0.0",
+      "source": "express@5.2.1",
+      "target": "accepts@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> body-parser@2.3.0",
+      "source": "express@5.2.1",
+      "target": "body-parser@2.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> content-disposition@1.1.0",
+      "source": "express@5.2.1",
+      "target": "content-disposition@1.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> content-type@1.0.5",
+      "source": "express@5.2.1",
+      "target": "content-type@1.0.5",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> cookie-signature@1.2.2",
+      "source": "express@5.2.1",
+      "target": "cookie-signature@1.2.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> cookie@0.7.2",
+      "source": "express@5.2.1",
+      "target": "cookie@0.7.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> debug@4.4.3",
+      "source": "express@5.2.1",
+      "target": "debug@4.4.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> depd@2.0.0",
+      "source": "express@5.2.1",
+      "target": "depd@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> encodeurl@2.0.0",
+      "source": "express@5.2.1",
+      "target": "encodeurl@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> escape-html@1.0.3",
+      "source": "express@5.2.1",
+      "target": "escape-html@1.0.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> etag@1.8.1",
+      "source": "express@5.2.1",
+      "target": "etag@1.8.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> finalhandler@2.1.1",
+      "source": "express@5.2.1",
+      "target": "finalhandler@2.1.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> fresh@2.0.0",
+      "source": "express@5.2.1",
+      "target": "fresh@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> http-errors@2.0.1",
+      "source": "express@5.2.1",
+      "target": "http-errors@2.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> merge-descriptors@2.0.0",
+      "source": "express@5.2.1",
+      "target": "merge-descriptors@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> mime-types@3.0.2",
+      "source": "express@5.2.1",
+      "target": "mime-types@3.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> on-finished@2.4.1",
+      "source": "express@5.2.1",
+      "target": "on-finished@2.4.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> once@1.4.0",
+      "source": "express@5.2.1",
+      "target": "once@1.4.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> parseurl@1.3.3",
+      "source": "express@5.2.1",
+      "target": "parseurl@1.3.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> proxy-addr@2.0.7",
+      "source": "express@5.2.1",
+      "target": "proxy-addr@2.0.7",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> qs@6.16.0",
+      "source": "express@5.2.1",
+      "target": "qs@6.16.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> range-parser@1.3.0",
+      "source": "express@5.2.1",
+      "target": "range-parser@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> router@2.2.0",
+      "source": "express@5.2.1",
+      "target": "router@2.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> send@1.2.1",
+      "source": "express@5.2.1",
+      "target": "send@1.2.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> serve-static@2.2.1",
+      "source": "express@5.2.1",
+      "target": "serve-static@2.2.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> statuses@2.0.2",
+      "source": "express@5.2.1",
+      "target": "statuses@2.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> type-is@2.1.0",
+      "source": "express@5.2.1",
+      "target": "type-is@2.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "express@5.2.1 -> vary@1.1.2",
+      "source": "express@5.2.1",
+      "target": "vary@1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "finalhandler@2.1.1 -> debug@4.4.3",
+      "source": "finalhandler@2.1.1",
+      "target": "debug@4.4.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "finalhandler@2.1.1 -> encodeurl@2.0.0",
+      "source": "finalhandler@2.1.1",
+      "target": "encodeurl@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "finalhandler@2.1.1 -> escape-html@1.0.3",
+      "source": "finalhandler@2.1.1",
+      "target": "escape-html@1.0.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "finalhandler@2.1.1 -> on-finished@2.4.1",
+      "source": "finalhandler@2.1.1",
+      "target": "on-finished@2.4.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "finalhandler@2.1.1 -> parseurl@1.3.3",
+      "source": "finalhandler@2.1.1",
+      "target": "parseurl@1.3.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "finalhandler@2.1.1 -> statuses@2.0.2",
+      "source": "finalhandler@2.1.1",
+      "target": "statuses@2.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> call-bind-apply-helpers@1.0.2",
+      "source": "get-intrinsic@1.3.0",
+      "target": "call-bind-apply-helpers@1.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> es-define-property@1.0.1",
+      "source": "get-intrinsic@1.3.0",
+      "target": "es-define-property@1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> es-errors@1.3.0",
+      "source": "get-intrinsic@1.3.0",
+      "target": "es-errors@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> es-object-atoms@1.1.2",
+      "source": "get-intrinsic@1.3.0",
+      "target": "es-object-atoms@1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> function-bind@1.1.2",
+      "source": "get-intrinsic@1.3.0",
+      "target": "function-bind@1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> get-proto@1.0.1",
+      "source": "get-intrinsic@1.3.0",
+      "target": "get-proto@1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> gopd@1.2.0",
+      "source": "get-intrinsic@1.3.0",
+      "target": "gopd@1.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> has-symbols@1.1.0",
+      "source": "get-intrinsic@1.3.0",
+      "target": "has-symbols@1.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> hasown@2.0.4",
+      "source": "get-intrinsic@1.3.0",
+      "target": "hasown@2.0.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-intrinsic@1.3.0 -> math-intrinsics@1.1.0",
+      "source": "get-intrinsic@1.3.0",
+      "target": "math-intrinsics@1.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-proto@1.0.1 -> dunder-proto@1.0.1",
+      "source": "get-proto@1.0.1",
+      "target": "dunder-proto@1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "get-proto@1.0.1 -> es-object-atoms@1.1.2",
+      "source": "get-proto@1.0.1",
+      "target": "es-object-atoms@1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "hasown@2.0.4 -> function-bind@1.1.2",
+      "source": "hasown@2.0.4",
+      "target": "function-bind@1.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "http-errors@2.0.1 -> depd@2.0.0",
+      "source": "http-errors@2.0.1",
+      "target": "depd@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "http-errors@2.0.1 -> inherits@2.0.4",
+      "source": "http-errors@2.0.1",
+      "target": "inherits@2.0.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "http-errors@2.0.1 -> setprototypeof@1.2.0",
+      "source": "http-errors@2.0.1",
+      "target": "setprototypeof@1.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "http-errors@2.0.1 -> statuses@2.0.2",
+      "source": "http-errors@2.0.1",
+      "target": "statuses@2.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "http-errors@2.0.1 -> toidentifier@1.0.1",
+      "source": "http-errors@2.0.1",
+      "target": "toidentifier@1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "iconv-lite@0.7.3 -> safer-buffer@2.1.2",
+      "source": "iconv-lite@0.7.3",
+      "target": "safer-buffer@2.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "mime-types@3.0.2 -> mime-db@1.54.0",
+      "source": "mime-types@3.0.2",
+      "target": "mime-db@1.54.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "morgan@1.12.1 -> basic-auth@2.0.1",
+      "source": "morgan@1.12.1",
+      "target": "basic-auth@2.0.1",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P3": 1
+      }
+    },
+    {
+      "edge": "morgan@1.12.1 -> debug@2.6.9",
+      "source": "morgan@1.12.1",
+      "target": "debug@2.6.9",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P3": 1
+      }
+    },
+    {
+      "edge": "morgan@1.12.1 -> depd@2.0.0",
+      "source": "morgan@1.12.1",
+      "target": "depd@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P3": 1
+      }
+    },
+    {
+      "edge": "morgan@1.12.1 -> on-finished@2.4.1",
+      "source": "morgan@1.12.1",
+      "target": "on-finished@2.4.1",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P3": 1
+      }
+    },
+    {
+      "edge": "morgan@1.12.1 -> on-headers@1.1.0",
+      "source": "morgan@1.12.1",
+      "target": "on-headers@1.1.0",
+      "productCount": 1,
+      "products": [
+        "Morgan"
+      ],
+      "productIds": [
+        "P3"
+      ],
+      "occurrencesByProduct": {
+        "P3": 1
+      }
+    },
+    {
+      "edge": "negotiator@1.1.0 -> content-type@2.1.0",
+      "source": "negotiator@1.1.0",
+      "target": "content-type@2.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "once@1.4.0 -> wrappy@1.0.2",
+      "source": "once@1.4.0",
+      "target": "wrappy@1.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "proxy-addr@2.0.7 -> forwarded@0.2.0",
+      "source": "proxy-addr@2.0.7",
+      "target": "forwarded@0.2.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "proxy-addr@2.0.7 -> ipaddr.js@1.9.1",
+      "source": "proxy-addr@2.0.7",
+      "target": "ipaddr.js@1.9.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "qs@6.16.0 -> es-define-property@1.0.1",
+      "source": "qs@6.16.0",
+      "target": "es-define-property@1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "qs@6.16.0 -> side-channel@1.1.1",
+      "source": "qs@6.16.0",
+      "target": "side-channel@1.1.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "raw-body@3.0.2 -> bytes@3.1.2",
+      "source": "raw-body@3.0.2",
+      "target": "bytes@3.1.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "raw-body@3.0.2 -> http-errors@2.0.1",
+      "source": "raw-body@3.0.2",
+      "target": "http-errors@2.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "raw-body@3.0.2 -> iconv-lite@0.7.3",
+      "source": "raw-body@3.0.2",
+      "target": "iconv-lite@0.7.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "raw-body@3.0.2 -> unpipe@1.0.0",
+      "source": "raw-body@3.0.2",
+      "target": "unpipe@1.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "router@2.2.0 -> debug@4.4.3",
+      "source": "router@2.2.0",
+      "target": "debug@4.4.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "router@2.2.0 -> depd@2.0.0",
+      "source": "router@2.2.0",
+      "target": "depd@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "router@2.2.0 -> is-promise@4.0.0",
+      "source": "router@2.2.0",
+      "target": "is-promise@4.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "router@2.2.0 -> parseurl@1.3.3",
+      "source": "router@2.2.0",
+      "target": "parseurl@1.3.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "router@2.2.0 -> path-to-regexp@8.4.2",
+      "source": "router@2.2.0",
+      "target": "path-to-regexp@8.4.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> debug@4.4.3",
+      "source": "send@1.2.1",
+      "target": "debug@4.4.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> encodeurl@2.0.0",
+      "source": "send@1.2.1",
+      "target": "encodeurl@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> escape-html@1.0.3",
+      "source": "send@1.2.1",
+      "target": "escape-html@1.0.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> etag@1.8.1",
+      "source": "send@1.2.1",
+      "target": "etag@1.8.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> fresh@2.0.0",
+      "source": "send@1.2.1",
+      "target": "fresh@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> http-errors@2.0.1",
+      "source": "send@1.2.1",
+      "target": "http-errors@2.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> mime-types@3.0.2",
+      "source": "send@1.2.1",
+      "target": "mime-types@3.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> ms@2.1.3",
+      "source": "send@1.2.1",
+      "target": "ms@2.1.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> on-finished@2.4.1",
+      "source": "send@1.2.1",
+      "target": "on-finished@2.4.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> range-parser@1.3.0",
+      "source": "send@1.2.1",
+      "target": "range-parser@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "send@1.2.1 -> statuses@2.0.2",
+      "source": "send@1.2.1",
+      "target": "statuses@2.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "serve-static@2.2.1 -> encodeurl@2.0.0",
+      "source": "serve-static@2.2.1",
+      "target": "encodeurl@2.0.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "serve-static@2.2.1 -> escape-html@1.0.3",
+      "source": "serve-static@2.2.1",
+      "target": "escape-html@1.0.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "serve-static@2.2.1 -> parseurl@1.3.3",
+      "source": "serve-static@2.2.1",
+      "target": "parseurl@1.3.3",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "serve-static@2.2.1 -> send@1.2.1",
+      "source": "serve-static@2.2.1",
+      "target": "send@1.2.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-list@1.0.1 -> es-errors@1.3.0",
+      "source": "side-channel-list@1.0.1",
+      "target": "es-errors@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-list@1.0.1 -> object-inspect@1.13.4",
+      "source": "side-channel-list@1.0.1",
+      "target": "object-inspect@1.13.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-map@1.0.1 -> call-bound@1.0.4",
+      "source": "side-channel-map@1.0.1",
+      "target": "call-bound@1.0.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-map@1.0.1 -> es-errors@1.3.0",
+      "source": "side-channel-map@1.0.1",
+      "target": "es-errors@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-map@1.0.1 -> get-intrinsic@1.3.0",
+      "source": "side-channel-map@1.0.1",
+      "target": "get-intrinsic@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-map@1.0.1 -> object-inspect@1.13.4",
+      "source": "side-channel-map@1.0.1",
+      "target": "object-inspect@1.13.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-weakmap@1.0.2 -> call-bound@1.0.4",
+      "source": "side-channel-weakmap@1.0.2",
+      "target": "call-bound@1.0.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-weakmap@1.0.2 -> es-errors@1.3.0",
+      "source": "side-channel-weakmap@1.0.2",
+      "target": "es-errors@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-weakmap@1.0.2 -> get-intrinsic@1.3.0",
+      "source": "side-channel-weakmap@1.0.2",
+      "target": "get-intrinsic@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-weakmap@1.0.2 -> object-inspect@1.13.4",
+      "source": "side-channel-weakmap@1.0.2",
+      "target": "object-inspect@1.13.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel-weakmap@1.0.2 -> side-channel-map@1.0.1",
+      "source": "side-channel-weakmap@1.0.2",
+      "target": "side-channel-map@1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel@1.1.1 -> es-errors@1.3.0",
+      "source": "side-channel@1.1.1",
+      "target": "es-errors@1.3.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel@1.1.1 -> object-inspect@1.13.4",
+      "source": "side-channel@1.1.1",
+      "target": "object-inspect@1.13.4",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel@1.1.1 -> side-channel-list@1.0.1",
+      "source": "side-channel@1.1.1",
+      "target": "side-channel-list@1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel@1.1.1 -> side-channel-map@1.0.1",
+      "source": "side-channel@1.1.1",
+      "target": "side-channel-map@1.0.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "side-channel@1.1.1 -> side-channel-weakmap@1.0.2",
+      "source": "side-channel@1.1.1",
+      "target": "side-channel-weakmap@1.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "type-is@2.1.0 -> content-type@2.1.0",
+      "source": "type-is@2.1.0",
+      "target": "content-type@2.1.0",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "type-is@2.1.0 -> media-typer@1.1.1",
+      "source": "type-is@2.1.0",
+      "target": "media-typer@1.1.1",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "type-is@2.1.0 -> mime-types@3.0.2",
+      "source": "type-is@2.1.0",
+      "target": "mime-types@3.0.2",
+      "productCount": 1,
+      "products": [
+        "Express"
+      ],
+      "productIds": [
+        "P1"
+      ],
+      "occurrencesByProduct": {
+        "P1": 1
+      }
+    },
+    {
+      "edge": "uid-safe@2.1.5 -> random-bytes@1.0.0",
+      "source": "uid-safe@2.1.5",
+      "target": "random-bytes@1.0.0",
+      "productCount": 1,
+      "products": [
+        "express-session"
+      ],
+      "productIds": [
+        "P2"
+      ],
+      "occurrencesByProduct": {
+        "P2": 1
+      }
+    }
+  ]
+}

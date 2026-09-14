@@ -1,0 +1,75 @@
+CROSS-PRODUCT SHARED-EDGE RUNTIME ACTIVATION REPORT
+===================================================
+
+Exact shared edge: debug@2.6.9 -> ms@2.0.0
+Products: express-session, Morgan
+
+Definitions:
+  T_e(p)=1 when the exact dependency edge exists in product p.
+  L_e(p,w)=1 when debug loads ms during workload w.
+  D(p,w)=1 when the parent product invokes its debug logger.
+  A_e(p,w)=1 when ms is actually invoked from debug during workload w.
+
+Important: this is controlled runtime activation evidence, not a real-world failure/compromise probability.
+
+P2 express-session
+------------------
+Workload: SESSION_DEBUG_DISABLED_REQUEST
+  DEBUG enabled: NO
+  T_e(p): 1
+  parent->debug loaded: 1 (requests=1)
+  L_e(p,w) debug->ms loaded: 1 (requests=1)
+  D(p,w) debug logger invoked: 1 (calls=1)
+  A_e(p,w) ms invoked from debug: 0 (calls=0)
+  debug load parents: node_modules/express-session/index.js
+  ms load parents: node_modules/debug/src/debug.js
+  HTTP status: 200
+
+Workload: SESSION_DEBUG_ENABLED_REQUEST
+  DEBUG enabled: YES
+  T_e(p): 1
+  parent->debug loaded: 1 (requests=1)
+  L_e(p,w) debug->ms loaded: 1 (requests=1)
+  D(p,w) debug logger invoked: 1 (calls=1)
+  A_e(p,w) ms invoked from debug: 0 (calls=0)
+  debug load parents: node_modules/express-session/index.js
+  ms load parents: node_modules/debug/src/debug.js
+  HTTP status: 200
+
+P3 Morgan
+---------
+Workload: MORGAN_DEBUG_DISABLED_REQUEST
+  DEBUG enabled: NO
+  T_e(p): 1
+  parent->debug loaded: 1 (requests=1)
+  L_e(p,w) debug->ms loaded: 1 (requests=1)
+  D(p,w) debug logger invoked: 1 (calls=1)
+  A_e(p,w) ms invoked from debug: 0 (calls=0)
+  debug load parents: node_modules/morgan/index.js
+  ms load parents: node_modules/debug/src/debug.js
+  HTTP status: 200
+
+Workload: MORGAN_DEBUG_ENABLED_REQUEST
+  DEBUG enabled: YES
+  T_e(p): 1
+  parent->debug loaded: 1 (requests=1)
+  L_e(p,w) debug->ms loaded: 1 (requests=1)
+  D(p,w) debug logger invoked: 1 (calls=1)
+  A_e(p,w) ms invoked from debug: 0 (calls=0)
+  debug load parents: node_modules/morgan/index.js
+  ms load parents: node_modules/debug/src/debug.js
+  HTTP status: 200
+
+SUMMARY
+-------
+Workloads: 4
+Workloads with debug->ms load observed: 4/4
+Workloads with parent debug logger invoked: 4/4
+Workloads with ms invoked from debug: 0/4
+
+MODEL INTERPRETATION
+--------------------
+A shared exact dependency edge can be present and loaded in multiple products without its downstream function being exercised in every workload.
+Runtime edge activation is therefore workload- and configuration-conditioned.
+The DEBUG environment setting is used here as a controlled configuration variable to expose whether parent debug calls drive downstream ms behavior.
+This experiment distinguishes topology, edge loading, parent logger invocation, and downstream edge activation.

@@ -1,0 +1,3863 @@
+{
+  "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+  "repetitions": 5,
+  "delayMs": 50,
+  "products": {
+    "P2": {
+      "label": "express-session",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-session",
+      "parentPackage": "express-session",
+      "debugNamespace": "express-session"
+    },
+    "P3": {
+      "label": "Morgan",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-morgan",
+      "parentPackage": "morgan",
+      "debugNamespace": "morgan"
+    }
+  },
+  "configs": [
+    {
+      "id": "INACTIVE_COLORS_OFF",
+      "debugColors": "0"
+    },
+    {
+      "id": "ACTIVE_COLORS_ON",
+      "debugColors": "1"
+    }
+  ],
+  "perturbations": [
+    "BASELINE",
+    "CORRUPT_HUMANIZE",
+    "EMPTY_HUMANIZE",
+    "DELAY_HUMANIZE"
+  ],
+  "rows": [
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 32.0344,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:54:51 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": 0,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 36.5352,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:54:51 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": 4.500800000000005,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.5212,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:54:51 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -0.5131999999999977,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 32.2256,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:54:51 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": 0.19120000000000203,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.4441,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:54:51 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -0.5902999999999992,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 32.4764,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:54:51 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": 0.44200000000000017,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 32.8463,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:54:51 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": 0.8119000000000014,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 29.9866,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -2.0477999999999987,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.2198,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -0.8145999999999987,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.5488,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -0.48559999999999803,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 34.892,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": 2.857600000000005,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.9366,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -0.09779999999999944,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 29.9981,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -2.036299999999997,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 34.5368,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": 2.5024000000000015,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.198,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -1.8363999999999976,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.5694,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -0.4649999999999963,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.4828,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -0.551599999999997,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.3829,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -0.6514999999999986,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 34.1809,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:54:52 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": 2.146500000000003,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.7149,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:54:53 GMT express-session no SID sent, generating session\n",
+      "baselineMedianMs": 32.0344,
+      "elapsedDeltaMs": -1.319499999999998,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 32.3766,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 0,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 36.1808,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 3.8041999999999945,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.8293,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -0.5473000000000035,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.0204,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -1.3562000000000047,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 33.0908,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 0.7141999999999982,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.2755,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -2.1011000000000024,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 33.0287,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 0.6520999999999972,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.86,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -0.516600000000004,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 60.8701,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 28.493499999999997,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.3697,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -2.0069000000000017,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.8088,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -1.5678000000000019,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.7009,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -0.6757000000000026,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 33.7188,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 1.3421999999999983,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.9197,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -1.4569000000000045,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.3557,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": -2.0209000000000046,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 83.2937,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 50.9171,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 81.1311,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 48.7545,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 79.9433,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 47.56669999999999,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 79.387,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 47.0104,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 80.6475,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "  \u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m\n",
+      "baselineMedianMs": 32.3766,
+      "elapsedDeltaMs": 48.27089999999999,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 26.5057,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 1.2033000000000023,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 25.4,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 0.09759999999999991,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 24.7356,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": -0.5667999999999971,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 25.0085,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": -0.29389999999999716,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 25.3024,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 0,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 28.8927,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 3.5903000000000027,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 27.3125,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 2.0101000000000013,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 25.5211,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 0.2187000000000019,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 26.2838,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:54:55 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 0.9814000000000007,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 26.7396,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 1.4372000000000007,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 25.0525,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": -0.24990000000000023,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 25.2492,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": -0.05320000000000036,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 29.2268,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 3.924400000000002,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.9354,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 6.633000000000003,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.6316,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 6.3292,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 29.008,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 3.7056000000000004,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 36.004,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 10.7016,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.2907,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 4.988300000000002,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 27.7439,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:54:56 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 2.4415000000000013,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 25.9329,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": false,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 0,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:54:57 GMT morgan log request\n",
+      "baselineMedianMs": 25.3024,
+      "elapsedDeltaMs": 0.6305000000000014,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 29.1571,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": -2.0168,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.3618,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 0.18789999999999907,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 29.0118,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": -2.162099999999999,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.1739,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 0,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 36.0698,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 0,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 4.895900000000001,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 36.8321,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 5.658199999999997,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 30.8619,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": -0.31200000000000117,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 35.7092,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 4.535300000000003,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.8294,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 0.6555,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 29.9605,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+CONTROLLED_MS_CORRUPTION\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": -1.2134,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 32.325,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 1.1511000000000031,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 28.4857,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": -2.6881999999999984,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 28.9742,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": -2.1997,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 31.1857,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 0.01180000000000092,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 27.0283,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": -4.145599999999998,
+      "impactObserved": true,
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 79.8229,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 48.649,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 80.2617,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 49.0878,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 77.7074,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 46.533500000000004,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 79.779,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 48.60509999999999,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "elapsedMs": 78.5278,
+      "edgeLoaded": true,
+      "parentDebugCalled": true,
+      "enabledDebugExecution": true,
+      "edgeActivated": true,
+      "parentDebugLoads": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "msLoadsFromDebug": 1,
+      "msCallsFromDebug": 1,
+      "alteredMsCalls": 1,
+      "injectedDelayMs": 50,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "  \u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m\n",
+      "baselineMedianMs": 31.1739,
+      "elapsedDeltaMs": 47.353899999999996,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    }
+  ],
+  "summary": [
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        32.0344,
+        36.5352,
+        31.5212,
+        32.2256,
+        31.4441
+      ],
+      "elapsedDeltaMs": [
+        0,
+        4.500800000000005,
+        -0.5131999999999977,
+        0.19120000000000203,
+        -0.5902999999999992
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 32.0344,
+      "meanElapsedDeltaMs": 0.7177000000000021,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        32.4764,
+        32.8463,
+        29.9866,
+        31.2198,
+        31.5488
+      ],
+      "elapsedDeltaMs": [
+        0.44200000000000017,
+        0.8119000000000014,
+        -2.0477999999999987,
+        -0.8145999999999987,
+        -0.48559999999999803
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 31.5488,
+      "meanElapsedDeltaMs": -0.41881999999999875,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        34.892,
+        31.9366,
+        29.9981,
+        34.5368,
+        30.198
+      ],
+      "elapsedDeltaMs": [
+        2.857600000000005,
+        -0.09779999999999944,
+        -2.036299999999997,
+        2.5024000000000015,
+        -1.8363999999999976
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 31.9366,
+      "meanElapsedDeltaMs": 0.2779000000000025,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        31.5694,
+        31.4828,
+        31.3829,
+        34.1809,
+        30.7149
+      ],
+      "elapsedDeltaMs": [
+        -0.4649999999999963,
+        -0.551599999999997,
+        -0.6514999999999986,
+        2.146500000000003,
+        -1.319499999999998
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 31.4828,
+      "meanElapsedDeltaMs": -0.16821999999999732,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 5,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        32.3766,
+        36.1808,
+        31.8293,
+        31.0204,
+        33.0908
+      ],
+      "elapsedDeltaMs": [
+        0,
+        3.8041999999999945,
+        -0.5473000000000035,
+        -1.3562000000000047,
+        0.7141999999999982
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 1,
+      "qHatConditionalOnActive": 0,
+      "piHat": 0,
+      "medianElapsedMs": 32.3766,
+      "meanElapsedDeltaMs": 0.5229799999999969,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        30.2755,
+        33.0287,
+        31.86,
+        60.8701,
+        30.3697
+      ],
+      "elapsedDeltaMs": [
+        -2.1011000000000024,
+        0.6520999999999972,
+        -0.516600000000004,
+        28.493499999999997,
+        -2.0069000000000017
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 31.86,
+      "meanElapsedDeltaMs": 4.904199999999998,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        30.8088,
+        31.7009,
+        33.7188,
+        30.9197,
+        30.3557
+      ],
+      "elapsedDeltaMs": [
+        -1.5678000000000019,
+        -0.6757000000000026,
+        1.3421999999999983,
+        -1.4569000000000045,
+        -2.0209000000000046
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 30.9197,
+      "meanElapsedDeltaMs": -0.875820000000003,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        83.2937,
+        81.1311,
+        79.9433,
+        79.387,
+        80.6475
+      ],
+      "elapsedDeltaMs": [
+        50.9171,
+        48.7545,
+        47.56669999999999,
+        47.0104,
+        48.27089999999999
+      ],
+      "injectedDelayMs": [
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 80.6475,
+      "meanElapsedDeltaMs": 48.503919999999994,
+      "meanInjectedDelayMs": 50,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        26.5057,
+        25.4,
+        24.7356,
+        25.0085,
+        25.3024
+      ],
+      "elapsedDeltaMs": [
+        1.2033000000000023,
+        0.09759999999999991,
+        -0.5667999999999971,
+        -0.29389999999999716,
+        0
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 25.3024,
+      "meanElapsedDeltaMs": 0.08804000000000159,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        28.8927,
+        27.3125,
+        25.5211,
+        26.2838,
+        26.7396
+      ],
+      "elapsedDeltaMs": [
+        3.5903000000000027,
+        2.0101000000000013,
+        0.2187000000000019,
+        0.9814000000000007,
+        1.4372000000000007
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 26.7396,
+      "meanElapsedDeltaMs": 1.6475400000000016,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        25.0525,
+        25.2492,
+        29.2268,
+        31.9354,
+        31.6316
+      ],
+      "elapsedDeltaMs": [
+        -0.24990000000000023,
+        -0.05320000000000036,
+        3.924400000000002,
+        6.633000000000003,
+        6.3292
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 29.2268,
+      "meanElapsedDeltaMs": 3.316700000000001,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        29.008,
+        36.004,
+        30.2907,
+        27.7439,
+        25.9329
+      ],
+      "elapsedDeltaMs": [
+        3.7056000000000004,
+        10.7016,
+        4.988300000000002,
+        2.4415000000000013,
+        0.6305000000000014
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 29.008,
+      "meanElapsedDeltaMs": 4.493500000000001,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 5,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        29.1571,
+        31.3618,
+        29.0118,
+        31.1739,
+        36.0698
+      ],
+      "elapsedDeltaMs": [
+        -2.0168,
+        0.18789999999999907,
+        -2.162099999999999,
+        0,
+        4.895900000000001
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 1,
+      "qHatConditionalOnActive": 0,
+      "piHat": 0,
+      "medianElapsedMs": 31.1739,
+      "meanElapsedDeltaMs": 0.18098000000000028,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        36.8321,
+        30.8619,
+        35.7092,
+        31.8294,
+        29.9605
+      ],
+      "elapsedDeltaMs": [
+        5.658199999999997,
+        -0.31200000000000117,
+        4.535300000000003,
+        0.6555,
+        -1.2134
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 31.8294,
+      "meanElapsedDeltaMs": 1.8647199999999997,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        32.325,
+        28.4857,
+        28.9742,
+        31.1857,
+        27.0283
+      ],
+      "elapsedDeltaMs": [
+        1.1511000000000031,
+        -2.6881999999999984,
+        -2.1997,
+        0.01180000000000092,
+        -4.145599999999998
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 28.9742,
+      "meanElapsedDeltaMs": -1.5741199999999984,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "config": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "activeTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        79.8229,
+        80.2617,
+        77.7074,
+        79.779,
+        78.5278
+      ],
+      "elapsedDeltaMs": [
+        48.649,
+        49.0878,
+        46.533500000000004,
+        48.60509999999999,
+        47.353899999999996
+      ],
+      "injectedDelayMs": [
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "activationRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 79.779,
+      "meanElapsedDeltaMs": 48.045860000000005,
+      "meanInjectedDelayMs": 50,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "LATENCY"
+    }
+  ]
+}

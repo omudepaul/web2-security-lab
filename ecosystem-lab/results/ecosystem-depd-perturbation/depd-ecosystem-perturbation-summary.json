@@ -1,0 +1,1792 @@
+[
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_REQUIRE_ONLY",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      72.5192,
+      75.7759,
+      73.1388,
+      71.4591,
+      69.1407
+    ],
+    "elapsedDeltaMs": [
+      0,
+      3.256699999999995,
+      0.6196000000000055,
+      -1.0600999999999914,
+      -3.3785000000000025
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 72.40674,
+    "medianElapsedMs": 72.5192,
+    "meanElapsedDeltaMs": -0.11245999999999867,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_REQUIRE_ONLY",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      78.5182,
+      73.0462,
+      73.8183,
+      71.9674,
+      68.7494
+    ],
+    "elapsedDeltaMs": [
+      5.998999999999995,
+      0.527000000000001,
+      1.2990999999999957,
+      -0.5518000000000001,
+      -3.7698000000000036
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 73.2199,
+    "medianElapsedMs": 73.0462,
+    "meanElapsedDeltaMs": 0.7006999999999977,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_REQUIRE_ONLY",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      69.1577,
+      75.5998,
+      73.6309,
+      69.6693,
+      70.8043
+    ],
+    "elapsedDeltaMs": [
+      -3.3614999999999924,
+      3.080600000000004,
+      1.111699999999999,
+      -2.849899999999991,
+      -1.7149
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 71.7724,
+    "medianElapsedMs": 70.8043,
+    "meanElapsedDeltaMs": -0.7467999999999961,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_REQUIRE_ONLY",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      74.6246,
+      75.3772,
+      122.2674,
+      76.7256,
+      119.9014
+    ],
+    "elapsedDeltaMs": [
+      2.105400000000003,
+      2.858000000000004,
+      49.7482,
+      4.206400000000002,
+      47.3822
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 93.77924,
+    "medianElapsedMs": 76.7256,
+    "meanElapsedDeltaMs": 21.26004,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_REQUIRE_ONLY",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      89.4803,
+      75.4703,
+      69.7147,
+      72.2379,
+      77.3902
+    ],
+    "elapsedDeltaMs": [
+      16.961100000000002,
+      2.9510999999999967,
+      -2.8045000000000044,
+      -0.28130000000000166,
+      4.870999999999995
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 76.85867999999999,
+    "medianElapsedMs": 75.4703,
+    "meanElapsedDeltaMs": 4.339479999999997,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_NORMAL_REDIRECT",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      92.5208,
+      114.285,
+      112.0003,
+      94.8174,
+      112.7493
+    ],
+    "elapsedDeltaMs": [
+      -19.4795,
+      2.284700000000001,
+      0,
+      -17.18289999999999,
+      0.7490000000000094
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 105.27456,
+    "medianElapsedMs": 112.0003,
+    "meanElapsedDeltaMs": -6.7257399999999965,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_NORMAL_REDIRECT",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      96.775,
+      95.8395,
+      125.712,
+      160.4518,
+      107.9029
+    ],
+    "elapsedDeltaMs": [
+      -15.22529999999999,
+      -16.160799999999995,
+      13.711700000000008,
+      48.451499999999996,
+      -4.097399999999993
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 117.33624,
+    "medianElapsedMs": 107.9029,
+    "meanElapsedDeltaMs": 5.335940000000005,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_NORMAL_REDIRECT",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      103.3698,
+      99.3938,
+      118.3003,
+      100.8898,
+      102.4468
+    ],
+    "elapsedDeltaMs": [
+      -8.630499999999998,
+      -12.606499999999997,
+      6.299999999999997,
+      -11.110500000000002,
+      -9.5535
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 104.8801,
+    "medianElapsedMs": 102.4468,
+    "meanElapsedDeltaMs": -7.1202,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_NORMAL_REDIRECT",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      105.4822,
+      107.2729,
+      100.4744,
+      120.2305,
+      100.5591
+    ],
+    "elapsedDeltaMs": [
+      -6.51809999999999,
+      -4.727399999999989,
+      -11.525899999999993,
+      8.23020000000001,
+      -11.441199999999995
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 106.80382,
+    "medianElapsedMs": 105.4822,
+    "meanElapsedDeltaMs": -5.196479999999991,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_NORMAL_REDIRECT",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      101.0011,
+      117.4696,
+      101.8874,
+      115.322,
+      103.469
+    ],
+    "elapsedDeltaMs": [
+      -10.999200000000002,
+      5.469300000000004,
+      -10.112899999999996,
+      3.321700000000007,
+      -8.531300000000002
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 107.82982,
+    "medianElapsedMs": 103.469,
+    "meanElapsedDeltaMs": -4.170479999999998,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_DEPRECATED_REDIRECT_NO_URL",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      105.3706,
+      128.0679,
+      105.4445,
+      102.0267,
+      115.2418
+    ],
+    "elapsedDeltaMs": [
+      -0.07390000000000896,
+      22.623400000000004,
+      0,
+      -3.4177999999999997,
+      9.797299999999993
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 0,
+    "meanElapsedMs": 111.23030000000001,
+    "medianElapsedMs": 105.4445,
+    "meanElapsedDeltaMs": 5.785799999999997,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_DEPRECATED_REDIRECT_NO_URL",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      94.2587,
+      91.6739,
+      90.3555,
+      87.0295,
+      155.2924
+    ],
+    "elapsedDeltaMs": [
+      -11.1858,
+      -13.770600000000002,
+      -15.088999999999999,
+      -18.415000000000006,
+      49.84789999999998
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 103.72199999999998,
+    "medianElapsedMs": 91.6739,
+    "meanElapsedDeltaMs": -1.722500000000005,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_DEPRECATED_REDIRECT_NO_URL",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      99.3406,
+      94.278,
+      90.1281,
+      90.6362,
+      94.2015
+    ],
+    "elapsedDeltaMs": [
+      -6.10390000000001,
+      -11.1665,
+      -15.316400000000002,
+      -14.808300000000003,
+      -11.24300000000001
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 93.71688000000002,
+    "medianElapsedMs": 94.2015,
+    "meanElapsedDeltaMs": -11.727620000000005,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_DEPRECATED_REDIRECT_NO_URL",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      103.1842,
+      93.0596,
+      90.6444,
+      115.3389,
+      106.2045
+    ],
+    "elapsedDeltaMs": [
+      -2.260300000000001,
+      -12.384900000000002,
+      -14.8001,
+      9.89439999999999,
+      0.7599999999999909
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 101.68632000000001,
+    "medianElapsedMs": 103.1842,
+    "meanElapsedDeltaMs": -3.7581800000000043,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P1",
+    "product": "Express",
+    "workload": "EXPRESS_DEPRECATED_REDIRECT_NO_URL",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      187.8287,
+      206.9651,
+      189.5168,
+      222.6447,
+      223.209
+    ],
+    "elapsedDeltaMs": [
+      82.38419999999999,
+      101.5206,
+      84.07229999999998,
+      117.2002,
+      117.7645
+    ],
+    "injectedDelayMs": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "statusCodes": [
+      302,
+      302,
+      302,
+      302,
+      302
+    ],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 206.03286000000003,
+    "medianElapsedMs": 206.9651,
+    "meanElapsedDeltaMs": 100.58836,
+    "meanInjectedDelayMs": 100,
+    "uniqueStatusCodes": [
+      302
+    ]
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_VALID_OPTIONS",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      14.2633,
+      17.9711,
+      14.486,
+      15.9723,
+      14.2054
+    ],
+    "elapsedDeltaMs": [
+      -0.22270000000000145,
+      3.485099999999999,
+      0,
+      1.4863,
+      -0.2806000000000015
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 15.37962,
+    "medianElapsedMs": 14.486,
+    "meanElapsedDeltaMs": 0.8936199999999992,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_VALID_OPTIONS",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      17.7169,
+      14.8027,
+      15.7208,
+      15.898,
+      15.1646
+    ],
+    "elapsedDeltaMs": [
+      3.2308999999999983,
+      0.3166999999999991,
+      1.2348,
+      1.411999999999999,
+      0.6785999999999994
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 15.8606,
+    "medianElapsedMs": 15.7208,
+    "meanElapsedDeltaMs": 1.3745999999999992,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_VALID_OPTIONS",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      18.5044,
+      17.7645,
+      17.2847,
+      17.8867,
+      15.3927
+    ],
+    "elapsedDeltaMs": [
+      4.0184,
+      3.278500000000001,
+      2.7987,
+      3.4007000000000005,
+      0.906699999999999
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 17.366600000000002,
+    "medianElapsedMs": 17.7645,
+    "meanElapsedDeltaMs": 2.8806000000000003,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_VALID_OPTIONS",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      17.6983,
+      18.3891,
+      14.6167,
+      15.9374,
+      19.5293
+    ],
+    "elapsedDeltaMs": [
+      3.212299999999999,
+      3.9030999999999985,
+      0.13069999999999915,
+      1.4513999999999996,
+      5.043299999999999
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 17.234160000000003,
+    "medianElapsedMs": 17.6983,
+    "meanElapsedDeltaMs": 2.748159999999999,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_VALID_OPTIONS",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      20.8297,
+      13.9848,
+      21.234,
+      15.6862,
+      15.8677
+    ],
+    "elapsedDeltaMs": [
+      6.343699999999998,
+      -0.5012000000000008,
+      6.748000000000001,
+      1.2001999999999988,
+      1.3816999999999986
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 17.52048,
+    "medianElapsedMs": 15.8677,
+    "meanElapsedDeltaMs": 3.0344799999999994,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      18.6015,
+      15.7528,
+      15.9705,
+      15.3873,
+      15.4479
+    ],
+    "elapsedDeltaMs": [
+      2.848700000000001,
+      0,
+      0.2176999999999989,
+      -0.3655000000000008,
+      -0.30489999999999995
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 0,
+    "meanElapsedMs": 16.232000000000003,
+    "medianElapsedMs": 15.7528,
+    "meanElapsedDeltaMs": 0.4791999999999998,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      14.8914,
+      14.925,
+      15.2492,
+      20.4455,
+      16.8098
+    ],
+    "elapsedDeltaMs": [
+      -0.8613999999999997,
+      -0.8277999999999999,
+      -0.5036000000000005,
+      4.6926999999999985,
+      1.0569999999999986
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 16.46418,
+    "medianElapsedMs": 15.2492,
+    "meanElapsedDeltaMs": 0.7113799999999995,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      17.4229,
+      15.9617,
+      16.4802,
+      16.1958,
+      29.1665
+    ],
+    "elapsedDeltaMs": [
+      1.670099999999998,
+      0.20889999999999986,
+      0.7273999999999994,
+      0.44299999999999784,
+      13.413699999999999
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 19.04542,
+    "medianElapsedMs": 16.4802,
+    "meanElapsedDeltaMs": 3.2926199999999985,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      16.9786,
+      14.4658,
+      20.4832,
+      16.9758,
+      15.885
+    ],
+    "elapsedDeltaMs": [
+      1.2257999999999996,
+      -1.2870000000000008,
+      4.7303999999999995,
+      1.222999999999999,
+      0.1321999999999992
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 16.957680000000003,
+    "medianElapsedMs": 16.9758,
+    "meanElapsedDeltaMs": 1.2048799999999993,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      114.1503,
+      115.1946,
+      116.308,
+      121.3839,
+      114.6389
+    ],
+    "elapsedDeltaMs": [
+      98.39750000000001,
+      99.4418,
+      100.55520000000001,
+      105.6311,
+      98.8861
+    ],
+    "injectedDelayMs": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 116.33514,
+    "medianElapsedMs": 115.1946,
+    "meanElapsedDeltaMs": 100.58234,
+    "meanInjectedDelayMs": 100,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_SECRET",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      17.0401,
+      15.2849,
+      16.1963,
+      16.7452,
+      20.4113
+    ],
+    "elapsedDeltaMs": [
+      0.2948999999999984,
+      -1.4603000000000002,
+      -0.5488999999999997,
+      0,
+      3.6661
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 0,
+    "meanElapsedMs": 17.13556,
+    "medianElapsedMs": 16.7452,
+    "meanElapsedDeltaMs": 0.3903599999999997,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_SECRET",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      24.8176,
+      14.5936,
+      19.4085,
+      23.7811,
+      14.3986
+    ],
+    "elapsedDeltaMs": [
+      8.072399999999998,
+      -2.1516,
+      2.6632999999999996,
+      7.035899999999998,
+      -2.3466000000000005
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 19.39988,
+    "medianElapsedMs": 19.4085,
+    "meanElapsedDeltaMs": 2.654679999999999,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_SECRET",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      17.209,
+      19.2863,
+      20.9413,
+      15.2376,
+      17.0581
+    ],
+    "elapsedDeltaMs": [
+      0.4637999999999991,
+      2.5411,
+      4.196099999999998,
+      -1.5076,
+      0.31289999999999907
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 17.94646,
+    "medianElapsedMs": 17.209,
+    "meanElapsedDeltaMs": 1.201259999999999,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_SECRET",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      15.2702,
+      15.6945,
+      15.4901,
+      16.5187,
+      14.9842
+    ],
+    "elapsedDeltaMs": [
+      -1.4749999999999996,
+      -1.0507000000000009,
+      -1.2551000000000005,
+      -0.22650000000000148,
+      -1.761000000000001
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 15.59154,
+    "medianElapsedMs": 15.4901,
+    "meanElapsedDeltaMs": -1.1536600000000008,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P2",
+    "product": "express-session",
+    "workload": "SESSION_MISSING_SECRET",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      66.7346,
+      64.4927,
+      69.8717,
+      65.0541,
+      64.5421
+    ],
+    "elapsedDeltaMs": [
+      49.9894,
+      47.7475,
+      53.12650000000001,
+      48.30890000000001,
+      47.79690000000001
+    ],
+    "injectedDelayMs": [
+      50,
+      50,
+      50,
+      50,
+      50
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 66.13904,
+    "medianElapsedMs": 65.0541,
+    "meanElapsedDeltaMs": 49.39384,
+    "meanInjectedDelayMs": 50,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_COMBINED",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      8.5899,
+      8.5491,
+      9.0481,
+      8.0881,
+      8.6419
+    ],
+    "elapsedDeltaMs": [
+      0,
+      -0.040800000000000836,
+      0.4581999999999997,
+      -0.5017999999999994,
+      0.0519999999999996
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 8.58342,
+    "medianElapsedMs": 8.5899,
+    "meanElapsedDeltaMs": -0.006480000000000175,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_COMBINED",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      9.3738,
+      9.0256,
+      10.3531,
+      13.1611,
+      9.0729
+    ],
+    "elapsedDeltaMs": [
+      0.7838999999999992,
+      0.43570000000000064,
+      1.7631999999999994,
+      4.571199999999999,
+      0.48300000000000054
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 10.197299999999998,
+    "medianElapsedMs": 9.3738,
+    "meanElapsedDeltaMs": 1.6073999999999997,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_COMBINED",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      8.7171,
+      8.5122,
+      14.9821,
+      11.3191,
+      9.1546
+    ],
+    "elapsedDeltaMs": [
+      0.1272000000000002,
+      -0.0777000000000001,
+      6.392200000000001,
+      2.7292000000000005,
+      0.5647000000000002
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 10.537020000000002,
+    "medianElapsedMs": 9.1546,
+    "meanElapsedDeltaMs": 1.9471200000000004,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_COMBINED",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      10.973,
+      9.6858,
+      9.4827,
+      11.8872,
+      13.8876
+    ],
+    "elapsedDeltaMs": [
+      2.3831000000000007,
+      1.0959000000000003,
+      0.8927999999999994,
+      3.2973,
+      5.297700000000001
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 11.18326,
+    "medianElapsedMs": 10.973,
+    "meanElapsedDeltaMs": 2.59336,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_COMBINED",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 0,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      14.0535,
+      8.8092,
+      9.8725,
+      10.6173,
+      9.5699
+    ],
+    "elapsedDeltaMs": [
+      5.4636,
+      0.2193000000000005,
+      1.2826000000000004,
+      2.0274,
+      0.9800000000000004
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 0,
+    "qHatConditionalOnActive": null,
+    "meanElapsedMs": 10.58448,
+    "medianElapsedMs": 9.8725,
+    "meanElapsedDeltaMs": 1.9945800000000002,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_UNDEFINED_FORMAT",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      11.5115,
+      10.2423,
+      13.1442,
+      28.7174,
+      9.5507
+    ],
+    "elapsedDeltaMs": [
+      0,
+      -1.2691999999999997,
+      1.6326999999999998,
+      17.2059,
+      -1.960799999999999
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 0,
+    "meanElapsedMs": 14.63322,
+    "medianElapsedMs": 11.5115,
+    "meanElapsedDeltaMs": 3.1217200000000007,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_UNDEFINED_FORMAT",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      11.311,
+      9.7239,
+      9.2838,
+      10.5853,
+      11.3669
+    ],
+    "elapsedDeltaMs": [
+      -0.2004999999999999,
+      -1.7875999999999994,
+      -2.2277000000000005,
+      -0.9261999999999997,
+      -0.1446000000000005
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 10.45418,
+    "medianElapsedMs": 10.5853,
+    "meanElapsedDeltaMs": -1.05732,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_UNDEFINED_FORMAT",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      10.8403,
+      11.3838,
+      14.6446,
+      10.3487,
+      10.4858
+    ],
+    "elapsedDeltaMs": [
+      -0.6712000000000007,
+      -0.12769999999999904,
+      3.1331000000000007,
+      -1.1628000000000007,
+      -1.0257000000000005
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 11.54064,
+    "medianElapsedMs": 10.8403,
+    "meanElapsedDeltaMs": 0.029139999999999944,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_UNDEFINED_FORMAT",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      18.6038,
+      10.5727,
+      9.2638,
+      16.5725,
+      11.5593
+    ],
+    "elapsedDeltaMs": [
+      7.0923,
+      -0.9388000000000005,
+      -2.2477,
+      5.061000000000002,
+      0.04780000000000051
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 13.314420000000002,
+    "medianElapsedMs": 11.5593,
+    "meanElapsedDeltaMs": 1.8029200000000003,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_UNDEFINED_FORMAT",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      63.1711,
+      66.7089,
+      60.907,
+      63.7157,
+      60.7845
+    ],
+    "elapsedDeltaMs": [
+      51.659600000000005,
+      55.1974,
+      49.3955,
+      52.2042,
+      49.273
+    ],
+    "injectedDelayMs": [
+      50,
+      50,
+      50,
+      50,
+      50
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 63.05744,
+    "medianElapsedMs": 63.1711,
+    "meanElapsedDeltaMs": 51.54594000000001,
+    "meanInjectedDelayMs": 50,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_LEGACY_OPTIONS_OBJECT",
+    "perturbation": "BASELINE",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 0,
+    "elapsedMs": [
+      10.4561,
+      10.9611,
+      11.6121,
+      10.7482,
+      10.9367
+    ],
+    "elapsedDeltaMs": [
+      -0.4806000000000008,
+      0.024399999999999977,
+      0.6753999999999998,
+      -0.18849999999999945,
+      0
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 0,
+    "meanElapsedMs": 10.94284,
+    "medianElapsedMs": 10.9367,
+    "meanElapsedDeltaMs": 0.006139999999999901,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_LEGACY_OPTIONS_OBJECT",
+    "perturbation": "DROP_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      9.3273,
+      8.5975,
+      9.3394,
+      8.0874,
+      8.009
+    ],
+    "elapsedDeltaMs": [
+      -1.6094000000000008,
+      -2.3392,
+      -1.5973000000000006,
+      -2.8492999999999995,
+      -2.9276999999999997
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 8.67212,
+    "medianElapsedMs": 8.5975,
+    "meanElapsedDeltaMs": -2.26458,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_LEGACY_OPTIONS_OBJECT",
+    "perturbation": "CORRUPT_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      9.7326,
+      9.7935,
+      9.7884,
+      9.8479,
+      9.3664
+    ],
+    "elapsedDeltaMs": [
+      -1.2041000000000004,
+      -1.1432000000000002,
+      -1.1483000000000008,
+      -1.0888000000000009,
+      -1.5702999999999996
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 9.70576,
+    "medianElapsedMs": 9.7884,
+    "meanElapsedDeltaMs": -1.2309400000000004,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_LEGACY_OPTIONS_OBJECT",
+    "perturbation": "DUPLICATE_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      8.925,
+      11.9461,
+      10.0354,
+      9.6355,
+      9.7428
+    ],
+    "elapsedDeltaMs": [
+      -2.0116999999999994,
+      1.0093999999999994,
+      -0.9013000000000009,
+      -1.3011999999999997,
+      -1.1938999999999993
+    ],
+    "injectedDelayMs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 10.05696,
+    "medianElapsedMs": 9.7428,
+    "meanElapsedDeltaMs": -0.87974,
+    "meanInjectedDelayMs": 0,
+    "uniqueStatusCodes": []
+  },
+  {
+    "productId": "P3",
+    "product": "Morgan",
+    "workload": "MORGAN_LEGACY_OPTIONS_OBJECT",
+    "perturbation": "DELAY_WARNING",
+    "trials": 5,
+    "activeTrials": 5,
+    "impactedTrials": 5,
+    "elapsedMs": [
+      61.6129,
+      59.5661,
+      59.6281,
+      59.8968,
+      59.7367
+    ],
+    "elapsedDeltaMs": [
+      50.6762,
+      48.6294,
+      48.6914,
+      48.9601,
+      48.8
+    ],
+    "injectedDelayMs": [
+      50,
+      50,
+      50,
+      50,
+      50
+    ],
+    "statusCodes": [],
+    "activationRate": 1,
+    "qHatConditionalOnActive": 1,
+    "meanElapsedMs": 60.08811999999999,
+    "medianElapsedMs": 59.7367,
+    "meanElapsedDeltaMs": 49.15142000000001,
+    "meanInjectedDelayMs": 50,
+    "uniqueStatusCodes": []
+  }
+]

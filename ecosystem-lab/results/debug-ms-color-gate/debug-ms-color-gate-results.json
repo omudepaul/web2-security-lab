@@ -1,0 +1,1293 @@
+{
+  "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+  "repetitions": 5,
+  "products": {
+    "P2": {
+      "label": "express-session",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-session",
+      "parentPackage": "express-session",
+      "debugNamespace": "express-session"
+    },
+    "P3": {
+      "label": "Morgan",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-morgan",
+      "parentPackage": "morgan",
+      "debugNamespace": "morgan"
+    }
+  },
+  "conditions": [
+    {
+      "id": "DEBUG_OFF_COLORS_ON",
+      "debugEnabled": false,
+      "debugColors": "1"
+    },
+    {
+      "id": "DEBUG_ON_COLORS_OFF",
+      "debugEnabled": true,
+      "debugColors": "0"
+    },
+    {
+      "id": "DEBUG_ON_COLORS_ON",
+      "debugEnabled": true,
+      "debugColors": "1"
+    }
+  ],
+  "rows": [
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:51:36 GMT express-session no SID sent, generating session"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:51:37 GMT express-session no SID sent, generating session"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:51:37 GMT express-session no SID sent, generating session"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:51:37 GMT express-session no SID sent, generating session"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:51:37 GMT express-session no SID sent, generating session"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "\u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "\u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "\u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "\u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "\u001b[34;1mexpress-session \u001b[0mno SID sent, generating session \u001b[34m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "debugConfigured": false,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": false,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 0,
+      "disabledDebugLoggerCalls": 1,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "Mon, 14 Sep 2026 16:51:38 GMT morgan log request"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "Mon, 14 Sep 2026 16:51:38 GMT morgan log request"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "Mon, 14 Sep 2026 16:51:38 GMT morgan log request"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "Mon, 14 Sep 2026 16:51:38 GMT morgan log request"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "debugConfigured": true,
+      "debugColors": "0",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": false,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "Mon, 14 Sep 2026 16:51:38 GMT morgan log request"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 1,
+      "childStderr": "\u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 2,
+      "childStderr": "\u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 3,
+      "childStderr": "\u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 4,
+      "childStderr": "\u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "debugConfigured": true,
+      "debugColors": "1",
+      "topologyPresent": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "parentDebugLoaded": true,
+      "debugToMsLoaded": true,
+      "parentDebugCalled": true,
+      "debugEnabledExecution": true,
+      "msInvokedFromDebug": true,
+      "parentDebugLoadRequests": 1,
+      "debugFactoryCalls": 1,
+      "debugLoggerCalls": 1,
+      "enabledDebugLoggerCalls": 1,
+      "disabledDebugLoggerCalls": 0,
+      "msLoadRequestsFromDebug": 1,
+      "msInvocationsFromDebug": 1,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "msArguments": [
+        [
+          0
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "repetition": 5,
+      "childStderr": "\u001b[33;1mmorgan \u001b[0mlog request \u001b[33m+0ms\u001b[0m"
+    }
+  ],
+  "summary": [
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 0,
+      "msActivatedTrials": 0,
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 0,
+      "edgeActivationRate": 0
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "msActivatedTrials": 0,
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "edgeActivationRate": 0
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "msActivatedTrials": 5,
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "edgeActivationRate": 1
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_OFF_COLORS_ON",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 0,
+      "msActivatedTrials": 0,
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 0,
+      "edgeActivationRate": 0
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_OFF",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "msActivatedTrials": 0,
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "edgeActivationRate": 0
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "condition": "DEBUG_ON_COLORS_ON",
+      "trials": 5,
+      "edgeLoadedTrials": 5,
+      "parentCallTrials": 5,
+      "enabledExecutionTrials": 5,
+      "msActivatedTrials": 5,
+      "edgeLoadRate": 1,
+      "parentCallRate": 1,
+      "enabledExecutionRate": 1,
+      "edgeActivationRate": 1
+    }
+  ]
+}

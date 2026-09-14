@@ -1,0 +1,285 @@
+{
+  "dependency": "depd@2.0.0",
+  "products": {
+    "P1": {
+      "label": "Express",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-express"
+    },
+    "P2": {
+      "label": "express-session",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-session"
+    },
+    "P3": {
+      "label": "Morgan",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-morgan"
+    }
+  },
+  "workloads": [
+    {
+      "product": "P1",
+      "id": "EXPRESS_REQUIRE_ONLY"
+    },
+    {
+      "product": "P1",
+      "id": "EXPRESS_NORMAL_REDIRECT"
+    },
+    {
+      "product": "P1",
+      "id": "EXPRESS_DEPRECATED_REDIRECT_NO_URL"
+    },
+    {
+      "product": "P2",
+      "id": "SESSION_VALID_OPTIONS"
+    },
+    {
+      "product": "P2",
+      "id": "SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED"
+    },
+    {
+      "product": "P2",
+      "id": "SESSION_MISSING_SECRET"
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_COMBINED"
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_UNDEFINED_FORMAT"
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_LEGACY_OPTIONS_OBJECT"
+    }
+  ],
+  "results": [
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_REQUIRE_ONLY",
+      "depdLoaded": true,
+      "depdLoadRequests": 4,
+      "depdFactoryCalls": 4,
+      "depdInvoked": false,
+      "deprecationInvocations": 0,
+      "loadParents": [
+        "node_modules/http-errors/index.js",
+        "node_modules/router/lib/layer.js",
+        "node_modules/router/index.js",
+        "node_modules/express/lib/response.js"
+      ],
+      "namespaces": [
+        "http-errors",
+        "router",
+        "express"
+      ],
+      "messages": [],
+      "workloadOutcome": {
+        "action": "require(express)"
+      },
+      "error": null
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_NORMAL_REDIRECT",
+      "depdLoaded": true,
+      "depdLoadRequests": 4,
+      "depdFactoryCalls": 4,
+      "depdInvoked": false,
+      "deprecationInvocations": 0,
+      "loadParents": [
+        "node_modules/http-errors/index.js",
+        "node_modules/router/lib/layer.js",
+        "node_modules/router/index.js",
+        "node_modules/express/lib/response.js"
+      ],
+      "namespaces": [
+        "http-errors",
+        "router",
+        "express"
+      ],
+      "messages": [],
+      "workloadOutcome": {
+        "statusCode": 302,
+        "location": "/target",
+        "bodyLength": 29
+      },
+      "error": null
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_DEPRECATED_REDIRECT_NO_URL",
+      "depdLoaded": true,
+      "depdLoadRequests": 4,
+      "depdFactoryCalls": 4,
+      "depdInvoked": true,
+      "deprecationInvocations": 2,
+      "loadParents": [
+        "node_modules/http-errors/index.js",
+        "node_modules/router/lib/layer.js",
+        "node_modules/router/index.js",
+        "node_modules/express/lib/response.js"
+      ],
+      "namespaces": [
+        "http-errors",
+        "router",
+        "express"
+      ],
+      "messages": [
+        "Provide a url argument",
+        "Url must be a string"
+      ],
+      "workloadOutcome": {
+        "statusCode": 302,
+        "location": "undefined",
+        "bodyLength": 31
+      },
+      "error": null,
+      "childStderr": "Mon, 14 Sep 2026 16:25:59 GMT express deprecated Provide a url argument at product-express\\node_modules\\express\\lib\\response.js:831:5\nMon, 14 Sep 2026 16:25:59 GMT express deprecated Url must be a string at product-express\\node_modules\\express\\lib\\response.js:835:5"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "workload": "SESSION_VALID_OPTIONS",
+      "depdLoaded": true,
+      "depdLoadRequests": 2,
+      "depdFactoryCalls": 2,
+      "depdInvoked": false,
+      "deprecationInvocations": 0,
+      "loadParents": [
+        "node_modules/express-session/index.js",
+        "node_modules/express-session/session/cookie.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "messages": [],
+      "workloadOutcome": {
+        "action": "construct middleware with explicit options"
+      },
+      "error": null
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "workload": "SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED",
+      "depdLoaded": true,
+      "depdLoadRequests": 2,
+      "depdFactoryCalls": 2,
+      "depdInvoked": true,
+      "deprecationInvocations": 2,
+      "loadParents": [
+        "node_modules/express-session/index.js",
+        "node_modules/express-session/session/cookie.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "messages": [
+        "undefined resave option; provide resave option",
+        "undefined saveUninitialized option; provide saveUninitialized option"
+      ],
+      "workloadOutcome": {
+        "action": "construct middleware with resave/saveUninitialized omitted"
+      },
+      "error": null,
+      "childStderr": "Mon, 14 Sep 2026 16:26:00 GMT express-session deprecated undefined resave option; provide resave option at product-session\\node_modules\\express-session\\index.js:122:5\nMon, 14 Sep 2026 16:26:00 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at product-session\\node_modules\\express-session\\index.js:127:5"
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "workload": "SESSION_MISSING_SECRET",
+      "depdLoaded": true,
+      "depdLoadRequests": 2,
+      "depdFactoryCalls": 2,
+      "depdInvoked": true,
+      "deprecationInvocations": 1,
+      "loadParents": [
+        "node_modules/express-session/index.js",
+        "node_modules/express-session/session/cookie.js"
+      ],
+      "namespaces": [
+        "express-session"
+      ],
+      "messages": [
+        "req.secret; provide secret option"
+      ],
+      "workloadOutcome": {
+        "action": "construct middleware with secret omitted"
+      },
+      "error": null,
+      "childStderr": "Mon, 14 Sep 2026 16:26:00 GMT express-session deprecated req.secret; provide secret option at product-session\\node_modules\\express-session\\index.js:147:5"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_COMBINED",
+      "depdLoaded": true,
+      "depdLoadRequests": 1,
+      "depdFactoryCalls": 1,
+      "depdInvoked": false,
+      "deprecationInvocations": 0,
+      "loadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "messages": [],
+      "workloadOutcome": {
+        "action": "morgan('combined')"
+      },
+      "error": null
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_UNDEFINED_FORMAT",
+      "depdLoaded": true,
+      "depdLoadRequests": 1,
+      "depdFactoryCalls": 1,
+      "depdInvoked": true,
+      "deprecationInvocations": 1,
+      "loadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "messages": [
+        "undefined format: specify a format"
+      ],
+      "workloadOutcome": {
+        "action": "morgan()"
+      },
+      "error": null,
+      "childStderr": "Mon, 14 Sep 2026 16:26:00 GMT morgan deprecated undefined format: specify a format at product-morgan\\node_modules\\morgan\\index.js:101:5\nMon, 14 Sep 2026 16:26:00 GMT morgan deprecated default format: use combined format at product-morgan\\node_modules\\morgan\\index.js:516:44"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_LEGACY_OPTIONS_OBJECT",
+      "depdLoaded": true,
+      "depdLoadRequests": 1,
+      "depdFactoryCalls": 1,
+      "depdInvoked": true,
+      "deprecationInvocations": 1,
+      "loadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "namespaces": [
+        "morgan"
+      ],
+      "messages": [
+        "morgan(options): use morgan(\"combined\", options) instead"
+      ],
+      "workloadOutcome": {
+        "action": "morgan({ format: 'combined' })"
+      },
+      "error": null,
+      "childStderr": "Mon, 14 Sep 2026 16:26:00 GMT morgan deprecated morgan(options): use morgan(\"combined\", options) instead at product-morgan\\node_modules\\morgan\\index.js:97:5"
+    }
+  ]
+}

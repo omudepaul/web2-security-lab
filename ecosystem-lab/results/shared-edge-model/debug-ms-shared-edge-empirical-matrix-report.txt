@@ -1,0 +1,56 @@
+SHARED-EDGE EMPIRICAL MATRIX REPORT
+==================================
+
+Target exact shared edge: debug@2.6.9 -> ms@2.0.0
+Products: express-session, Morgan
+
+MODEL
+-----
+T_e(p)       = exact edge topology membership
+L_e(p,c)     = workload/configuration-conditioned edge load rate
+D(p,c)       = parent debug-call rate
+E(p,c)       = enabled debug-execution rate
+A_e(p,c)     = downstream edge activation rate
+q_e(p,c,s)   = impacted active trials / active trials
+pi_e(p,c,s)  = A_e(p,c) * q_e(p,c,s)
+
+Important: q_e and pi_e are controlled experimental quantities, not natural vulnerability, compromise, or failure probabilities.
+
+TOPOLOGY MEMBERSHIP
+-------------------
+P2: T_e=1
+P3: T_e=1
+
+SELECTED MATRIX ROWS
+--------------------
+P2 | ACTIVE_COLORS_ON | BASELINE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=1.000 | q=0.000 | pi=0.000 | impact=NONE
+P2 | ACTIVE_COLORS_ON | CORRUPT_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_CORRUPTION
+P2 | ACTIVE_COLORS_ON | DELAY_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=LATENCY
+P2 | ACTIVE_COLORS_ON | EMPTY_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_SUPPRESSION
+P2 | INACTIVE_COLORS_OFF | BASELINE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P2 | INACTIVE_COLORS_OFF | CORRUPT_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P2 | INACTIVE_COLORS_OFF | DELAY_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P2 | INACTIVE_COLORS_OFF | EMPTY_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | ACTIVE_COLORS_ON | BASELINE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=1.000 | q=0.000 | pi=0.000 | impact=NONE
+P3 | ACTIVE_COLORS_ON | CORRUPT_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_CORRUPTION
+P3 | ACTIVE_COLORS_ON | DELAY_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=LATENCY
+P3 | ACTIVE_COLORS_ON | EMPTY_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_SUPPRESSION
+P3 | INACTIVE_COLORS_OFF | BASELINE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | INACTIVE_COLORS_OFF | CORRUPT_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | INACTIVE_COLORS_OFF | DELAY_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | INACTIVE_COLORS_OFF | EMPTY_HUMANIZE | T=1 | L=1.000 | D=1.000 | E=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+
+CONSISTENCY CHECKS
+------------------
+Max |edge activation rate - color-gate experiment rate| = 0.0000
+Max |pi - A*q| = 0.0000
+
+INTERPRETATION
+--------------
+The same exact dependency edge is present in both products.
+Topology and loading alone do not imply downstream execution.
+The edge activates only under the tested enabled-color configuration.
+Inactive color-gated configurations have A=0, q=NA, and pi=0.
+Active deterministic perturbations have q=1 in this controlled experiment, so pi reduces to the edge activation rate.
+This provides internal consistency evidence for the topology -> loading -> parent call -> enabled execution -> edge activation -> propagation decomposition.
+It is not independent evidence of real-world security risk.

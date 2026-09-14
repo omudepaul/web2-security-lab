@@ -1,0 +1,112 @@
+CROSS-PRODUCT depd@2.0.0 RUNTIME ACTIVATION REPORT
+===================================================
+
+Purpose:
+  Distinguish ecosystem topology presence from runtime loading and actual deprecation-function invocation.
+
+Definitions:
+  L(p,w)=1 when product code requests/loads depd during workload w.
+  A(p,w)=1 when the deprecation function returned by depd is actually invoked.
+
+Important: this is controlled runtime activation evidence, not a real-world failure or compromise probability.
+
+P1 Express
+----------
+Workload: EXPRESS_REQUIRE_ONLY
+  L(p,w) loaded: 1  (load requests=4)
+  A(p,w) invoked: 0  (invocations=0)
+  factory calls: 4
+  load parents: node_modules/http-errors/index.js; node_modules/router/lib/layer.js; node_modules/router/index.js; node_modules/express/lib/response.js
+  namespaces: http-errors; router; express
+  deprecation messages: none
+
+Workload: EXPRESS_NORMAL_REDIRECT
+  L(p,w) loaded: 1  (load requests=4)
+  A(p,w) invoked: 0  (invocations=0)
+  factory calls: 4
+  load parents: node_modules/http-errors/index.js; node_modules/router/lib/layer.js; node_modules/router/index.js; node_modules/express/lib/response.js
+  namespaces: http-errors; router; express
+  deprecation messages: none
+  HTTP status: 302
+
+Workload: EXPRESS_DEPRECATED_REDIRECT_NO_URL
+  L(p,w) loaded: 1  (load requests=4)
+  A(p,w) invoked: 1  (invocations=2)
+  factory calls: 4
+  load parents: node_modules/http-errors/index.js; node_modules/router/lib/layer.js; node_modules/router/index.js; node_modules/express/lib/response.js
+  namespaces: http-errors; router; express
+  deprecation messages: Provide a url argument | Url must be a string
+  HTTP status: 302
+
+P2 express-session
+------------------
+Workload: SESSION_VALID_OPTIONS
+  L(p,w) loaded: 1  (load requests=2)
+  A(p,w) invoked: 0  (invocations=0)
+  factory calls: 2
+  load parents: node_modules/express-session/index.js; node_modules/express-session/session/cookie.js
+  namespaces: express-session
+  deprecation messages: none
+
+Workload: SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED
+  L(p,w) loaded: 1  (load requests=2)
+  A(p,w) invoked: 1  (invocations=2)
+  factory calls: 2
+  load parents: node_modules/express-session/index.js; node_modules/express-session/session/cookie.js
+  namespaces: express-session
+  deprecation messages: undefined resave option; provide resave option | undefined saveUninitialized option; provide saveUninitialized option
+
+Workload: SESSION_MISSING_SECRET
+  L(p,w) loaded: 1  (load requests=2)
+  A(p,w) invoked: 1  (invocations=1)
+  factory calls: 2
+  load parents: node_modules/express-session/index.js; node_modules/express-session/session/cookie.js
+  namespaces: express-session
+  deprecation messages: req.secret; provide secret option
+
+P3 Morgan
+---------
+Workload: MORGAN_COMBINED
+  L(p,w) loaded: 1  (load requests=1)
+  A(p,w) invoked: 0  (invocations=0)
+  factory calls: 1
+  load parents: node_modules/morgan/index.js
+  namespaces: morgan
+  deprecation messages: none
+
+Workload: MORGAN_UNDEFINED_FORMAT
+  L(p,w) loaded: 1  (load requests=1)
+  A(p,w) invoked: 1  (invocations=1)
+  factory calls: 1
+  load parents: node_modules/morgan/index.js
+  namespaces: morgan
+  deprecation messages: undefined format: specify a format
+
+Workload: MORGAN_LEGACY_OPTIONS_OBJECT
+  L(p,w) loaded: 1  (load requests=1)
+  A(p,w) invoked: 1  (invocations=1)
+  factory calls: 1
+  load parents: node_modules/morgan/index.js
+  namespaces: morgan
+  deprecation messages: morgan(options): use morgan("combined", options) instead
+
+SUMMARY
+-------
+Workloads: 9
+Workloads with depd loaded: 9/9
+Workloads with depd deprecation invoked: 5/9
+Observed product source files loading depd: 7
+  - node_modules/express-session/index.js
+  - node_modules/express-session/session/cookie.js
+  - node_modules/express/lib/response.js
+  - node_modules/http-errors/index.js
+  - node_modules/morgan/index.js
+  - node_modules/router/index.js
+  - node_modules/router/lib/layer.js
+
+MODEL INTERPRETATION
+--------------------
+Topology membership alone establishes potential exposure, not runtime use.
+L(p,w) captures workload-conditioned loading of the shared package node.
+A(p,w) captures workload-conditioned invocation of depd's deprecation behavior.
+The same exact package-version can therefore have different activation behavior across products and workloads.

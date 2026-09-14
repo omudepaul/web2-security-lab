@@ -1,0 +1,84 @@
+MULTI-PRODUCT OPEN-SOURCE ECOSYSTEM TOPOLOGY REPORT
+==================================================
+
+Model: G_E = (union_k V_k, union_k E_k)
+Exact node identity: package-name@installed-version
+Direction: source -> target means source depends on target
+
+PRODUCT GRAPHS
+--------------
+P1 Express: nodes=68, edges=125, max-depth=7, DAG=YES
+P2 express-session: nodes=11, edges=11, max-depth=3, DAG=YES
+P3 Morgan: nodes=9, edges=9, max-depth=3, DAG=YES
+
+ECOSYSTEM SUMMARY
+-----------------
+Products: 3
+Sum of individual package-node instances: 88
+Unique exact package-version nodes in union: 77
+Exact nodes shared by >=2 products: 8
+Exact nodes shared by all 3 products: 1
+Unique exact non-root edges in union: 140
+Exact edges shared by >=2 products: 2
+Exact edges shared by all 3 products: 0
+Same-name/different-version overlaps: 4
+
+PAIRWISE EXACT NODE INTERSECTIONS
+---------------------------------
+P1 Express ∩ P2 express-session: 3 exact nodes
+  - cookie@0.7.2
+  - depd@2.0.0
+  - parseurl@1.3.3
+P1 Express ∩ P3 Morgan: 3 exact nodes
+  - depd@2.0.0
+  - ee-first@1.1.1
+  - on-finished@2.4.1
+P2 express-session ∩ P3 Morgan: 4 exact nodes
+  - debug@2.6.9
+  - depd@2.0.0
+  - ms@2.0.0
+  - on-headers@1.1.0
+
+EXACT NODES SHARED BY >=2 PRODUCTS
+----------------------------------
+depd@2.0.0 | products=P1,P2,P3 | count=3
+cookie@0.7.2 | products=P1,P2 | count=2
+debug@2.6.9 | products=P2,P3 | count=2
+ee-first@1.1.1 | products=P1,P3 | count=2
+ms@2.0.0 | products=P2,P3 | count=2
+on-finished@2.4.1 | products=P1,P3 | count=2
+on-headers@1.1.0 | products=P2,P3 | count=2
+parseurl@1.3.3 | products=P1,P2 | count=2
+
+EXACT NODES SHARED BY ALL 3 PRODUCTS
+------------------------------------
+  - depd@2.0.0
+
+EXACT EDGES SHARED BY >=2 PRODUCTS
+----------------------------------
+debug@2.6.9 -> ms@2.0.0 | products=P2,P3 | count=2
+on-finished@2.4.1 -> ee-first@1.1.1 | products=P1,P3 | count=2
+
+SAME PACKAGE NAME, DIFFERENT VERSION
+------------------------------------
+debug | versions=2.6.9, 4.4.3 | products=P1, P2, P3
+  P1 Express: 4.4.3
+  P2 express-session: 2.6.9
+  P3 Morgan: 2.6.9
+ms | versions=2.0.0, 2.1.3 | products=P1, P2, P3
+  P1 Express: 2.1.3
+  P2 express-session: 2.0.0
+  P3 Morgan: 2.0.0
+cookie-signature | versions=1.0.7, 1.2.2 | products=P1, P2
+  P1 Express: 1.2.2
+  P2 express-session: 1.0.7
+safe-buffer | versions=5.1.2, 5.2.1 | products=P2, P3
+  P2 express-session: 5.2.1
+  P3 Morgan: 5.1.2
+
+INTERPRETATION
+--------------
+A package-version node shared across products represents exact dependency reuse.
+A package name shared with different installed versions represents logical package overlap but not an identical executable dependency node.
+Shared exact edges identify dependency relationships reused across multiple products.
+These shared nodes and edges provide candidate ecosystem-level propagation points for later runtime/security experiments.

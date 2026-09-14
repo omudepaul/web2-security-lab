@@ -1,0 +1,119 @@
+CROSS-PRODUCT depd@2.0.0 CONTROLLED PERTURBATION REPORT
+========================================================
+
+Products: Express, express-session, Morgan
+Repetitions per workload/condition: 5
+Delay injection: 50 ms per depd invocation
+
+Perturbations:
+  BASELINE
+  DROP_WARNING
+  CORRUPT_WARNING
+  DUPLICATE_WARNING
+  DELAY_WARNING
+
+Definitions:
+  A(p,w)=1 when depd deprecation behavior is invoked.
+  q_hat = impacted active trials / active trials for a controlled perturbation.
+
+Important: q_hat here is a controlled workload-conditioned propagation quantity, not real-world compromise/failure probability.
+
+P1 Express
+----------
+Workload: EXPRESS_REQUIRE_ONLY
+  BASELINE: active=0/5, impacted=0/5, q|active=NA, median=72.519 ms, mean-delta=-0.112 ms
+  DROP_WARNING: active=0/5, impacted=0/5, q|active=NA, median=73.046 ms, mean-delta=0.701 ms
+  CORRUPT_WARNING: active=0/5, impacted=0/5, q|active=NA, median=70.804 ms, mean-delta=-0.747 ms
+  DUPLICATE_WARNING: active=0/5, impacted=0/5, q|active=NA, median=76.726 ms, mean-delta=21.260 ms
+  DELAY_WARNING: active=0/5, impacted=0/5, q|active=NA, median=75.470 ms, mean-delta=4.339 ms
+
+Workload: EXPRESS_NORMAL_REDIRECT
+  BASELINE: active=0/5, impacted=0/5, q|active=NA, median=112.000 ms, mean-delta=-6.726 ms
+  DROP_WARNING: active=0/5, impacted=0/5, q|active=NA, median=107.903 ms, mean-delta=5.336 ms
+  CORRUPT_WARNING: active=0/5, impacted=0/5, q|active=NA, median=102.447 ms, mean-delta=-7.120 ms
+  DUPLICATE_WARNING: active=0/5, impacted=0/5, q|active=NA, median=105.482 ms, mean-delta=-5.196 ms
+  DELAY_WARNING: active=0/5, impacted=0/5, q|active=NA, median=103.469 ms, mean-delta=-4.170 ms
+
+Workload: EXPRESS_DEPRECATED_REDIRECT_NO_URL
+  BASELINE: active=5/5, impacted=0/5, q|active=0.000, median=105.445 ms, mean-delta=5.786 ms
+  DROP_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=91.674 ms, mean-delta=-1.723 ms
+  CORRUPT_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=94.201 ms, mean-delta=-11.728 ms
+  DUPLICATE_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=103.184 ms, mean-delta=-3.758 ms
+  DELAY_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=206.965 ms, mean-delta=100.588 ms
+
+P2 express-session
+------------------
+Workload: SESSION_VALID_OPTIONS
+  BASELINE: active=0/5, impacted=0/5, q|active=NA, median=14.486 ms, mean-delta=0.894 ms
+  DROP_WARNING: active=0/5, impacted=0/5, q|active=NA, median=15.721 ms, mean-delta=1.375 ms
+  CORRUPT_WARNING: active=0/5, impacted=0/5, q|active=NA, median=17.765 ms, mean-delta=2.881 ms
+  DUPLICATE_WARNING: active=0/5, impacted=0/5, q|active=NA, median=17.698 ms, mean-delta=2.748 ms
+  DELAY_WARNING: active=0/5, impacted=0/5, q|active=NA, median=15.868 ms, mean-delta=3.034 ms
+
+Workload: SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED
+  BASELINE: active=5/5, impacted=0/5, q|active=0.000, median=15.753 ms, mean-delta=0.479 ms
+  DROP_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=15.249 ms, mean-delta=0.711 ms
+  CORRUPT_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=16.480 ms, mean-delta=3.293 ms
+  DUPLICATE_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=16.976 ms, mean-delta=1.205 ms
+  DELAY_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=115.195 ms, mean-delta=100.582 ms
+
+Workload: SESSION_MISSING_SECRET
+  BASELINE: active=5/5, impacted=0/5, q|active=0.000, median=16.745 ms, mean-delta=0.390 ms
+  DROP_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=19.409 ms, mean-delta=2.655 ms
+  CORRUPT_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=17.209 ms, mean-delta=1.201 ms
+  DUPLICATE_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=15.490 ms, mean-delta=-1.154 ms
+  DELAY_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=65.054 ms, mean-delta=49.394 ms
+
+P3 Morgan
+---------
+Workload: MORGAN_COMBINED
+  BASELINE: active=0/5, impacted=0/5, q|active=NA, median=8.590 ms, mean-delta=-0.006 ms
+  DROP_WARNING: active=0/5, impacted=0/5, q|active=NA, median=9.374 ms, mean-delta=1.607 ms
+  CORRUPT_WARNING: active=0/5, impacted=0/5, q|active=NA, median=9.155 ms, mean-delta=1.947 ms
+  DUPLICATE_WARNING: active=0/5, impacted=0/5, q|active=NA, median=10.973 ms, mean-delta=2.593 ms
+  DELAY_WARNING: active=0/5, impacted=0/5, q|active=NA, median=9.873 ms, mean-delta=1.995 ms
+
+Workload: MORGAN_UNDEFINED_FORMAT
+  BASELINE: active=5/5, impacted=0/5, q|active=0.000, median=11.511 ms, mean-delta=3.122 ms
+  DROP_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=10.585 ms, mean-delta=-1.057 ms
+  CORRUPT_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=10.840 ms, mean-delta=0.029 ms
+  DUPLICATE_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=11.559 ms, mean-delta=1.803 ms
+  DELAY_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=63.171 ms, mean-delta=51.546 ms
+
+Workload: MORGAN_LEGACY_OPTIONS_OBJECT
+  BASELINE: active=5/5, impacted=0/5, q|active=0.000, median=10.937 ms, mean-delta=0.006 ms
+  DROP_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=8.598 ms, mean-delta=-2.265 ms
+  CORRUPT_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=9.788 ms, mean-delta=-1.231 ms
+  DUPLICATE_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=9.743 ms, mean-delta=-0.880 ms
+  DELAY_WARNING: active=5/5, impacted=5/5, q|active=1.000, median=59.737 ms, mean-delta=49.151 ms
+
+CROSS-PRODUCT SUMMARY
+---------------------
+Total trial rows: 225
+Active perturbation workload/condition groups: 20
+Inactive perturbation workload/condition groups: 16
+DROP_WARNING: active-trials=25, impacted=25, overall q|active=1.000
+CORRUPT_WARNING: active-trials=25, impacted=25, overall q|active=1.000
+DUPLICATE_WARNING: active-trials=25, impacted=25, overall q|active=1.000
+DELAY_WARNING: active-trials=25, impacted=25, overall q|active=1.000
+
+APPLICATION-LEVEL STATUS CHECK
+------------------------------
+EXPRESS_NORMAL_REDIRECT / BASELINE: HTTP status=302
+EXPRESS_NORMAL_REDIRECT / DROP_WARNING: HTTP status=302
+EXPRESS_NORMAL_REDIRECT / CORRUPT_WARNING: HTTP status=302
+EXPRESS_NORMAL_REDIRECT / DUPLICATE_WARNING: HTTP status=302
+EXPRESS_NORMAL_REDIRECT / DELAY_WARNING: HTTP status=302
+EXPRESS_DEPRECATED_REDIRECT_NO_URL / BASELINE: HTTP status=302
+EXPRESS_DEPRECATED_REDIRECT_NO_URL / DROP_WARNING: HTTP status=302
+EXPRESS_DEPRECATED_REDIRECT_NO_URL / CORRUPT_WARNING: HTTP status=302
+EXPRESS_DEPRECATED_REDIRECT_NO_URL / DUPLICATE_WARNING: HTTP status=302
+EXPRESS_DEPRECATED_REDIRECT_NO_URL / DELAY_WARNING: HTTP status=302
+
+MODEL INTERPRETATION
+--------------------
+The exact shared dependency node depd@2.0.0 is present in all three product graphs.
+Perturbation effects are gated by workload-conditioned invocation: inactive workloads should not exhibit depd-specific propagation.
+DROP/CORRUPT/DUPLICATE primarily test observability integrity, while DELAY tests latency propagation.
+Unchanged HTTP status under warning perturbations would indicate observability impact without corresponding response-status failure.
+Deterministic q values validate the controlled propagation mechanism; they must not be interpreted as natural prevalence or compromise likelihood.

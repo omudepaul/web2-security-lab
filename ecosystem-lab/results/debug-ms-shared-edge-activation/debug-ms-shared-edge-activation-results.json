@@ -1,0 +1,193 @@
+{
+  "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+  "products": {
+    "P2": {
+      "label": "express-session",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-session",
+      "parentPackage": "express-session"
+    },
+    "P3": {
+      "label": "Morgan",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-morgan",
+      "parentPackage": "morgan"
+    }
+  },
+  "workloads": [
+    {
+      "product": "P2",
+      "id": "SESSION_DEBUG_DISABLED_REQUEST",
+      "debugEnabled": false
+    },
+    {
+      "product": "P2",
+      "id": "SESSION_DEBUG_ENABLED_REQUEST",
+      "debugEnabled": true
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_DEBUG_DISABLED_REQUEST",
+      "debugEnabled": false
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_DEBUG_ENABLED_REQUEST",
+      "debugEnabled": true
+    }
+  ],
+  "results": [
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "workload": "SESSION_DEBUG_DISABLED_REQUEST",
+      "debugEnabled": false,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "topologyPresent": true,
+      "debugVersion": "2.6.9",
+      "msVersion": "2.0.0",
+      "debugLoadedFromParent": true,
+      "debugLoadRequestsFromParent": 1,
+      "msLoadedFromDebug": true,
+      "msLoadRequestsFromDebug": 1,
+      "debugLoggerInvoked": true,
+      "debugLoggerInvocations": 1,
+      "msInvokedFromDebug": false,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "debugNamespaces": [
+        "express-session"
+      ],
+      "debugMessages": [
+        [
+          "no SID sent, generating session"
+        ]
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null
+    },
+    {
+      "productId": "P2",
+      "product": "express-session",
+      "workload": "SESSION_DEBUG_ENABLED_REQUEST",
+      "debugEnabled": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "topologyPresent": true,
+      "debugVersion": "2.6.9",
+      "msVersion": "2.0.0",
+      "debugLoadedFromParent": true,
+      "debugLoadRequestsFromParent": 1,
+      "msLoadedFromDebug": true,
+      "msLoadRequestsFromDebug": 1,
+      "debugLoggerInvoked": true,
+      "debugLoggerInvocations": 1,
+      "msInvokedFromDebug": false,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/express-session/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "debugNamespaces": [
+        "express-session"
+      ],
+      "debugMessages": [
+        [
+          "no SID sent, generating session"
+        ]
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "childStderr": "Mon, 14 Sep 2026 16:44:06 GMT express-session no SID sent, generating session"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_DEBUG_DISABLED_REQUEST",
+      "debugEnabled": false,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "topologyPresent": true,
+      "debugVersion": "2.6.9",
+      "msVersion": "2.0.0",
+      "debugLoadedFromParent": true,
+      "debugLoadRequestsFromParent": 1,
+      "msLoadedFromDebug": true,
+      "msLoadRequestsFromDebug": 1,
+      "debugLoggerInvoked": true,
+      "debugLoggerInvocations": 1,
+      "msInvokedFromDebug": false,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "debugNamespaces": [
+        "morgan"
+      ],
+      "debugMessages": [
+        [
+          "log request"
+        ]
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_DEBUG_ENABLED_REQUEST",
+      "debugEnabled": true,
+      "exactEdge": "debug@2.6.9 -> ms@2.0.0",
+      "topologyPresent": true,
+      "debugVersion": "2.6.9",
+      "msVersion": "2.0.0",
+      "debugLoadedFromParent": true,
+      "debugLoadRequestsFromParent": 1,
+      "msLoadedFromDebug": true,
+      "msLoadRequestsFromDebug": 1,
+      "debugLoggerInvoked": true,
+      "debugLoggerInvocations": 1,
+      "msInvokedFromDebug": false,
+      "msInvocationsFromDebug": 0,
+      "debugLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "msLoadParents": [
+        "node_modules/debug/src/debug.js"
+      ],
+      "debugNamespaces": [
+        "morgan"
+      ],
+      "debugMessages": [
+        [
+          "log request"
+        ]
+      ],
+      "msArguments": [],
+      "outcome": {
+        "statusCode": 200,
+        "body": "ok"
+      },
+      "error": null,
+      "childStderr": "Mon, 14 Sep 2026 16:44:06 GMT morgan log request"
+    }
+  ]
+}

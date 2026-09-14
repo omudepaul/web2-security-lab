@@ -1,0 +1,86 @@
+debug@2.6.9 -> ms@2.0.0 SHARED-EDGE PERTURBATION REPORT
+========================================================
+
+Repetitions per product/configuration/condition: 5
+Delay injection: 50 ms per ms invocation
+
+Configurations:
+  INACTIVE_COLORS_OFF: DEBUG enabled, DEBUG_COLORS=0
+  ACTIVE_COLORS_ON:   DEBUG enabled, DEBUG_COLORS=1
+
+Perturbations:
+  BASELINE
+  CORRUPT_HUMANIZE
+  EMPTY_HUMANIZE
+  DELAY_HUMANIZE
+
+Definitions:
+  A_e = edge activation rate (ms invoked from debug).
+  q_hat = impacted active trials / active trials.
+  pi_hat = impacted trials / all trials.
+
+Important: q_hat and pi_hat are controlled propagation quantities, not natural compromise/failure probabilities.
+
+P2 express-session
+------------------
+Configuration: INACTIVE_COLORS_OFF
+  BASELINE: L=1.000 E=1.000 A_e=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=0.718 ms
+  CORRUPT_HUMANIZE: L=1.000 E=1.000 A_e=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=-0.419 ms
+  EMPTY_HUMANIZE: L=1.000 E=1.000 A_e=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=0.278 ms
+  DELAY_HUMANIZE: L=1.000 E=1.000 A_e=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=-0.168 ms
+
+Configuration: ACTIVE_COLORS_ON
+  BASELINE: L=1.000 E=1.000 A_e=1.000 impacted=0/5 q|active=0.000 pi=0.000 impact=NONE mean-delta=0.523 ms
+  CORRUPT_HUMANIZE: L=1.000 E=1.000 A_e=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=OBSERVABILITY_CORRUPTION mean-delta=4.904 ms
+  EMPTY_HUMANIZE: L=1.000 E=1.000 A_e=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=OBSERVABILITY_SUPPRESSION mean-delta=-0.876 ms
+  DELAY_HUMANIZE: L=1.000 E=1.000 A_e=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=LATENCY mean-delta=48.504 ms
+
+P3 Morgan
+---------
+Configuration: INACTIVE_COLORS_OFF
+  BASELINE: L=1.000 E=1.000 A_e=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=0.088 ms
+  CORRUPT_HUMANIZE: L=1.000 E=1.000 A_e=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=1.648 ms
+  EMPTY_HUMANIZE: L=1.000 E=1.000 A_e=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=3.317 ms
+  DELAY_HUMANIZE: L=1.000 E=1.000 A_e=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=4.494 ms
+
+Configuration: ACTIVE_COLORS_ON
+  BASELINE: L=1.000 E=1.000 A_e=1.000 impacted=0/5 q|active=0.000 pi=0.000 impact=NONE mean-delta=0.181 ms
+  CORRUPT_HUMANIZE: L=1.000 E=1.000 A_e=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=OBSERVABILITY_CORRUPTION mean-delta=1.865 ms
+  EMPTY_HUMANIZE: L=1.000 E=1.000 A_e=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=OBSERVABILITY_SUPPRESSION mean-delta=-1.574 ms
+  DELAY_HUMANIZE: L=1.000 E=1.000 A_e=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=LATENCY mean-delta=48.046 ms
+
+CROSS-PRODUCT SUMMARY
+---------------------
+CORRUPT_HUMANIZE: active-trials=10, impacted=10, overall q|active=1.000
+EMPTY_HUMANIZE: active-trials=10, impacted=10, overall q|active=1.000
+DELAY_HUMANIZE: active-trials=10, impacted=10, overall q|active=1.000
+
+INACTIVE-CONTROL CHECK
+----------------------
+Impacted trials while color-gated edge inactive: 0
+
+APPLICATION STATUS CHECK
+------------------------
+P2 INACTIVE_COLORS_OFF BASELINE: HTTP status=200
+P2 INACTIVE_COLORS_OFF CORRUPT_HUMANIZE: HTTP status=200
+P2 INACTIVE_COLORS_OFF EMPTY_HUMANIZE: HTTP status=200
+P2 INACTIVE_COLORS_OFF DELAY_HUMANIZE: HTTP status=200
+P2 ACTIVE_COLORS_ON BASELINE: HTTP status=200
+P2 ACTIVE_COLORS_ON CORRUPT_HUMANIZE: HTTP status=200
+P2 ACTIVE_COLORS_ON EMPTY_HUMANIZE: HTTP status=200
+P2 ACTIVE_COLORS_ON DELAY_HUMANIZE: HTTP status=200
+P3 INACTIVE_COLORS_OFF BASELINE: HTTP status=200
+P3 INACTIVE_COLORS_OFF CORRUPT_HUMANIZE: HTTP status=200
+P3 INACTIVE_COLORS_OFF EMPTY_HUMANIZE: HTTP status=200
+P3 INACTIVE_COLORS_OFF DELAY_HUMANIZE: HTTP status=200
+P3 ACTIVE_COLORS_ON BASELINE: HTTP status=200
+P3 ACTIVE_COLORS_ON CORRUPT_HUMANIZE: HTTP status=200
+P3 ACTIVE_COLORS_ON EMPTY_HUMANIZE: HTTP status=200
+P3 ACTIVE_COLORS_ON DELAY_HUMANIZE: HTTP status=200
+
+MODEL INTERPRETATION
+--------------------
+The exact shared edge is configuration-gated: topology and loading are not sufficient for downstream execution.
+When the color-formatting path is inactive, ms-specific perturbations should not propagate.
+When the edge is active, controlled corruption/suppression test observability propagation and delay tests latency propagation.
+Deterministic q values validate this controlled edge-propagation mechanism; they do not measure natural vulnerability or compromise likelihood.

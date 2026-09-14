@@ -1,0 +1,40 @@
+OPEN-SOURCE DEPENDENCY TOPOLOGY REPORT
+======================================
+Project: product-session@1.0.0
+Lockfile version: 3
+Model: G_P = (V, E, Λ, Q)
+Direction: source -> target means source depends on target
+
+Package nodes: 11
+Direct dependencies: 1
+Transitive dependency instances: 10
+Edges: 11
+Maximum dependency depth: 3
+Directed: YES
+Acyclic (DAG): YES
+Cyclic strongly connected components: 0
+Shared dependency instances (in-degree > 1): 0
+Duplicate package names with multiple installed instances: 0
+
+TOP SHARED DEPENDENCIES
+-----------------------
+None detected.
+
+HIGHEST FAN-OUT NODES
+---------------------
+express-session@1.19.0 | dependencies=8 | depth=1
+debug@2.6.9 | dependencies=1 | depth=2
+uid-safe@2.1.5 | dependencies=1 | depth=2
+cookie@0.7.2 | dependencies=0 | depth=2
+cookie-signature@1.0.7 | dependencies=0 | depth=2
+depd@2.0.0 | dependencies=0 | depth=2
+ms@2.0.0 | dependencies=0 | depth=3
+on-headers@1.1.0 | dependencies=0 | depth=2
+parseurl@1.3.3 | dependencies=0 | depth=2
+random-bytes@1.0.0 | dependencies=0 | depth=3
+safe-buffer@5.2.1 | dependencies=0 | depth=2
+
+NOTE
+----
+Failure rates λ and propagation probabilities q are intentionally left blank.
+They must be estimated from a defined empirical failure/security dataset, not invented.

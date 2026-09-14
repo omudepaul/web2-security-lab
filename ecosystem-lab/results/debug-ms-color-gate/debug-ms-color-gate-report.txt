@@ -1,0 +1,59 @@
+debug@2.6.9 -> ms@2.0.0 COLOR-GATED EDGE ACTIVATION REPORT
+============================================================
+
+Repetitions per product/configuration: 5
+
+Controlled configurations:
+  C1 DEBUG_OFF_COLORS_ON : DEBUG disabled, DEBUG_COLORS=1
+  C2 DEBUG_ON_COLORS_OFF : DEBUG enabled,  DEBUG_COLORS=0
+  C3 DEBUG_ON_COLORS_ON  : DEBUG enabled,  DEBUG_COLORS=1
+
+Definitions:
+  T_e=1: exact shared edge exists topologically.
+  L_e=1: debug loads ms.
+  D=1: parent product calls its debug logger.
+  E=1: the debug logger is enabled when called.
+  A_e=1: ms is actually invoked by debug.
+
+Important: these are controlled activation measurements, not real-world failure/compromise probabilities.
+
+P2 express-session
+------------------
+Condition: DEBUG_OFF_COLORS_ON
+  T_e=1 | L_e=1.000 | D=1.000 | E=0.000 | A_e=0.000
+  trials=5, edge-loaded=5, parent-called=5, enabled-execution=0, ms-activated=0
+
+Condition: DEBUG_ON_COLORS_OFF
+  T_e=1 | L_e=1.000 | D=1.000 | E=1.000 | A_e=0.000
+  trials=5, edge-loaded=5, parent-called=5, enabled-execution=5, ms-activated=0
+
+Condition: DEBUG_ON_COLORS_ON
+  T_e=1 | L_e=1.000 | D=1.000 | E=1.000 | A_e=1.000
+  trials=5, edge-loaded=5, parent-called=5, enabled-execution=5, ms-activated=5
+
+P3 Morgan
+---------
+Condition: DEBUG_OFF_COLORS_ON
+  T_e=1 | L_e=1.000 | D=1.000 | E=0.000 | A_e=0.000
+  trials=5, edge-loaded=5, parent-called=5, enabled-execution=0, ms-activated=0
+
+Condition: DEBUG_ON_COLORS_OFF
+  T_e=1 | L_e=1.000 | D=1.000 | E=1.000 | A_e=0.000
+  trials=5, edge-loaded=5, parent-called=5, enabled-execution=5, ms-activated=0
+
+Condition: DEBUG_ON_COLORS_ON
+  T_e=1 | L_e=1.000 | D=1.000 | E=1.000 | A_e=1.000
+  trials=5, edge-loaded=5, parent-called=5, enabled-execution=5, ms-activated=5
+
+EXPECTED CONFIGURATION-GATING TEST
+----------------------------------
+If the source-code hypothesis is correct, ms activation should occur only when DEBUG is enabled AND DEBUG_COLORS is enabled.
+
+Products with A_e>0 under DEBUG_ON_COLORS_ON: 2/2
+Non-C3 product/config groups with A_e>0: 0
+
+MODEL INTERPRETATION
+--------------------
+The shared edge can be topologically present and loaded even when its downstream function is not executed.
+Parent debug calls are not sufficient by themselves to activate debug->ms.
+The experiment explicitly tests whether enabled debug execution plus color formatting is the configuration gate for downstream ms invocation.

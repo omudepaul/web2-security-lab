@@ -1,0 +1,73 @@
+ECOSYSTEM EMPIRICAL DEPENDENCY MATRIX REPORT
+============================================
+
+Target exact shared node: depd@2.0.0
+Products: Express, express-session, Morgan
+
+MODEL
+-----
+T(p)      = exact package-version topology membership
+L(p,w)    = workload-conditioned load rate
+A(p,w)    = workload-conditioned invocation rate
+q(p,w,s)  = impacted active trials / active trials
+pi(p,w,s) = A(p,w) * q(p,w,s)
+
+Important: q and pi are controlled experimental quantities, not natural compromise/failure probabilities.
+
+TOPOLOGY MEMBERSHIP
+-------------------
+P1: T=1
+P2: T=1
+P3: T=1
+
+SELECTED MATRIX ROWS
+--------------------
+P1 | EXPRESS_DEPRECATED_REDIRECT_NO_URL | CORRUPT_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_CORRUPTION
+P1 | EXPRESS_DEPRECATED_REDIRECT_NO_URL | DELAY_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=LATENCY
+P1 | EXPRESS_DEPRECATED_REDIRECT_NO_URL | DROP_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DROP
+P1 | EXPRESS_DEPRECATED_REDIRECT_NO_URL | DUPLICATE_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DUPLICATION
+P1 | EXPRESS_NORMAL_REDIRECT | CORRUPT_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P1 | EXPRESS_NORMAL_REDIRECT | DELAY_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P1 | EXPRESS_NORMAL_REDIRECT | DROP_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P1 | EXPRESS_NORMAL_REDIRECT | DUPLICATE_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P1 | EXPRESS_REQUIRE_ONLY | CORRUPT_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P1 | EXPRESS_REQUIRE_ONLY | DELAY_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P1 | EXPRESS_REQUIRE_ONLY | DROP_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P1 | EXPRESS_REQUIRE_ONLY | DUPLICATE_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P2 | SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED | CORRUPT_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_CORRUPTION
+P2 | SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED | DELAY_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=LATENCY
+P2 | SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED | DROP_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DROP
+P2 | SESSION_MISSING_RESAVE_AND_SAVEUNINITIALIZED | DUPLICATE_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DUPLICATION
+P2 | SESSION_MISSING_SECRET | CORRUPT_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_CORRUPTION
+P2 | SESSION_MISSING_SECRET | DELAY_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=LATENCY
+P2 | SESSION_MISSING_SECRET | DROP_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DROP
+P2 | SESSION_MISSING_SECRET | DUPLICATE_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DUPLICATION
+P2 | SESSION_VALID_OPTIONS | CORRUPT_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P2 | SESSION_VALID_OPTIONS | DELAY_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P2 | SESSION_VALID_OPTIONS | DROP_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P2 | SESSION_VALID_OPTIONS | DUPLICATE_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | MORGAN_COMBINED | CORRUPT_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | MORGAN_COMBINED | DELAY_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | MORGAN_COMBINED | DROP_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | MORGAN_COMBINED | DUPLICATE_WARNING | T=1 | L=1.000 | A=0.000 | q=NA | pi=0.000 | impact=NONE
+P3 | MORGAN_LEGACY_OPTIONS_OBJECT | CORRUPT_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_CORRUPTION
+P3 | MORGAN_LEGACY_OPTIONS_OBJECT | DELAY_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=LATENCY
+P3 | MORGAN_LEGACY_OPTIONS_OBJECT | DROP_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DROP
+P3 | MORGAN_LEGACY_OPTIONS_OBJECT | DUPLICATE_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DUPLICATION
+P3 | MORGAN_UNDEFINED_FORMAT | CORRUPT_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_CORRUPTION
+P3 | MORGAN_UNDEFINED_FORMAT | DELAY_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=LATENCY
+P3 | MORGAN_UNDEFINED_FORMAT | DROP_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DROP
+P3 | MORGAN_UNDEFINED_FORMAT | DUPLICATE_WARNING | T=1 | L=1.000 | A=1.000 | q=1.000 | pi=1.000 | impact=OBSERVABILITY_DUPLICATION
+
+CONSISTENCY CHECKS
+------------------
+Max |activation rate - activation-experiment rate| = 0.0000
+Max |pi - direct observed controlled impact rate| = 0.0000
+
+INTERPRETATION
+--------------
+All three products contain the exact shared dependency node depd@2.0.0, so T=1 for P1, P2, and P3.
+Loading can occur without invocation, and invocation is workload dependent.
+Controlled propagation is gated by activation: inactive workloads have q=NA and pi=0.
+For deterministic active perturbations in this experiment, q=1 by construction/observation, so pi reduces to the activation rate.
+This validates the topology -> loading -> invocation -> propagation decomposition internally; it is not independent evidence of natural security risk.
