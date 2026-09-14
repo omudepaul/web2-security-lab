@@ -1,0 +1,83 @@
+DEBUG@4.4.3 SHARED-NODE RUNTIME ACTIVATION REPORT
+================================================
+
+Resolved package instances:
+  shared node: debug@4.4.3
+  path: C:\Users\omude\Documents\research-app\node_modules\debug\package.json
+  separate nested instance: debug@2.6.9
+  path: C:\Users\omude\Documents\research-app\node_modules\express-session\node_modules\debug\package.json
+
+Topological parents of debug@4.4.3:
+  - body-parser
+  - express
+  - finalhandler
+  - router
+  - send
+
+Total trials: 100
+Repetitions per workload: 20
+Observed runtime parents: 4/5
+Runtime parent-edge coverage: 0.8000
+
+WORKLOAD-CONDITIONED PARENT ACTIVATION
+--------------------------------------
+
+BASIC_ROUTE: total debug invocations=20
+  HTTP statuses: {"200":20}
+  body-parser  activated= 0/20 rate=0.0000 invocations=0
+  express      activated= 0/20 rate=0.0000 invocations=0
+  finalhandler activated= 0/20 rate=0.0000 invocations=0
+  router       activated=20/20 rate=1.0000 invocations=20
+  send         activated= 0/20 rate=0.0000 invocations=0
+  top namespaces: router(20)
+
+FORM_BODY: total debug invocations=120
+  HTTP statuses: {"200":20}
+  body-parser  activated=20/20 rate=1.0000 invocations=100
+  express      activated= 0/20 rate=0.0000 invocations=0
+  finalhandler activated= 0/20 rate=0.0000 invocations=0
+  router       activated=20/20 rate=1.0000 invocations=20
+  send         activated= 0/20 rate=0.0000 invocations=0
+  top namespaces: body-parser:urlencoded(100), router(20)
+
+STATIC_FILE: total debug invocations=200
+  HTTP statuses: {"200":20}
+  body-parser  activated= 0/20 rate=0.0000 invocations=0
+  express      activated= 0/20 rate=0.0000 invocations=0
+  finalhandler activated= 0/20 rate=0.0000 invocations=0
+  router       activated=20/20 rate=1.0000 invocations=60
+  send         activated=20/20 rate=1.0000 invocations=140
+  top namespaces: send(140), router(60)
+
+MISSING_ROUTE: total debug invocations=40
+  HTTP statuses: {"404":20}
+  body-parser  activated= 0/20 rate=0.0000 invocations=0
+  express      activated= 0/20 rate=0.0000 invocations=0
+  finalhandler activated=20/20 rate=1.0000 invocations=20
+  router       activated=20/20 rate=1.0000 invocations=20
+  send         activated= 0/20 rate=0.0000 invocations=0
+  top namespaces: router(20), finalhandler(20)
+
+ERROR_ROUTE: total debug invocations=40
+  HTTP statuses: {"500":20}
+  body-parser  activated= 0/20 rate=0.0000 invocations=0
+  express      activated= 0/20 rate=0.0000 invocations=0
+  finalhandler activated=20/20 rate=1.0000 invocations=20
+  router       activated=20/20 rate=1.0000 invocations=20
+  send         activated= 0/20 rate=0.0000 invocations=0
+  top namespaces: router(20), finalhandler(20)
+
+OBSERVED VS TOPOLOGICAL EDGES
+-----------------------------
+Observed parents: body-parser, finalhandler, router, send
+Not observed in these workloads: express
+
+INTERPRETATION
+--------------
+A topological dependency edge indicates potential exposure, but
+runtime activation is workload-dependent. An unobserved parent edge
+in this experiment is not proof that the edge can never be active;
+it means these defined workloads did not exercise it.
+The nested debug@2.6.9 used by express-session is a distinct package
+instance and is intentionally excluded from the debug@4.4.3 shared-node
+measurements.
