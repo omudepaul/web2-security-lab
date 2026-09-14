@@ -1,0 +1,83 @@
+on-finished@2.4.1 -> ee-first@1.1.1 SHARED-EDGE PERTURBATION REPORT
+=====================================================================
+
+Repetitions per workload/condition: 5
+Delay injection: 50 ms per ee-first completion signal
+
+Perturbations:
+  BASELINE
+  DROP_COMPLETION
+  CORRUPT_ERROR
+  DELAY_COMPLETION
+
+Definitions:
+  A_e = edge activation rate (ee-first invoked by on-finished).
+  C = parent-visible on-finished callback rate.
+  q_hat = impacted active trials / active trials.
+  pi_hat = impacted trials / all trials.
+
+Important: q_hat and pi_hat are controlled propagation quantities, not natural compromise/failure probabilities.
+
+P1 Express
+----------
+Workload: EXPRESS_SIMPLE_SEND
+  BASELINE: A_e=0.000 C=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=-1.257 ms
+  DROP_COMPLETION: A_e=0.000 C=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=-4.035 ms
+  CORRUPT_ERROR: A_e=0.000 C=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=-4.090 ms
+  DELAY_COMPLETION: A_e=0.000 C=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=-0.706 ms
+
+Workload: EXPRESS_SEND_FILE
+  BASELINE: A_e=1.000 C=1.000 impacted=0/5 q|active=0.000 pi=0.000 impact=NONE mean-delta=-3.686 ms
+  DROP_COMPLETION: A_e=1.000 C=0.000 impacted=5/5 q|active=1.000 pi=1.000 impact=COMPLETION_SUPPRESSION mean-delta=-7.331 ms
+  CORRUPT_ERROR: A_e=1.000 C=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=ERROR_CORRUPTION mean-delta=-4.973 ms
+  DELAY_COMPLETION: A_e=1.000 C=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=LATENCY mean-delta=46.942 ms
+
+P3 Morgan
+---------
+Workload: MORGAN_NORMAL_REQUEST
+  BASELINE: A_e=1.000 C=1.000 impacted=0/5 q|active=0.000 pi=0.000 impact=NONE mean-delta=-1.296 ms
+  DROP_COMPLETION: A_e=1.000 C=0.000 impacted=5/5 q|active=1.000 pi=1.000 impact=COMPLETION_SUPPRESSION mean-delta=-1.448 ms
+  CORRUPT_ERROR: A_e=1.000 C=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=ERROR_CORRUPTION mean-delta=-3.606 ms
+  DELAY_COMPLETION: A_e=1.000 C=1.000 impacted=5/5 q|active=1.000 pi=1.000 impact=LATENCY mean-delta=47.443 ms
+
+Workload: MORGAN_IMMEDIATE_REQUEST
+  BASELINE: A_e=0.000 C=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=2.362 ms
+  DROP_COMPLETION: A_e=0.000 C=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=2.459 ms
+  CORRUPT_ERROR: A_e=0.000 C=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=6.430 ms
+  DELAY_COMPLETION: A_e=0.000 C=0.000 impacted=0/5 q|active=NA pi=0.000 impact=NONE mean-delta=-0.339 ms
+
+CROSS-PRODUCT ACTIVE-WORKLOAD SUMMARY
+-------------------------------------
+DROP_COMPLETION: active-trials=10, impacted=10, overall q|active=1.000
+CORRUPT_ERROR: active-trials=10, impacted=10, overall q|active=1.000
+DELAY_COMPLETION: active-trials=10, impacted=10, overall q|active=1.000
+
+INACTIVE-CONTROL CHECK
+----------------------
+Impacted trials while shared edge inactive: 0
+
+APPLICATION STATUS CHECK
+------------------------
+P1 EXPRESS_SIMPLE_SEND BASELINE: HTTP status=200
+P1 EXPRESS_SIMPLE_SEND DROP_COMPLETION: HTTP status=200
+P1 EXPRESS_SIMPLE_SEND CORRUPT_ERROR: HTTP status=200
+P1 EXPRESS_SIMPLE_SEND DELAY_COMPLETION: HTTP status=200
+P1 EXPRESS_SEND_FILE BASELINE: HTTP status=200
+P1 EXPRESS_SEND_FILE DROP_COMPLETION: HTTP status=200
+P1 EXPRESS_SEND_FILE CORRUPT_ERROR: HTTP status=200
+P1 EXPRESS_SEND_FILE DELAY_COMPLETION: HTTP status=200
+P3 MORGAN_NORMAL_REQUEST BASELINE: HTTP status=200
+P3 MORGAN_NORMAL_REQUEST DROP_COMPLETION: HTTP status=200
+P3 MORGAN_NORMAL_REQUEST CORRUPT_ERROR: HTTP status=200
+P3 MORGAN_NORMAL_REQUEST DELAY_COMPLETION: HTTP status=200
+P3 MORGAN_IMMEDIATE_REQUEST BASELINE: HTTP status=200
+P3 MORGAN_IMMEDIATE_REQUEST DROP_COMPLETION: HTTP status=200
+P3 MORGAN_IMMEDIATE_REQUEST CORRUPT_ERROR: HTTP status=200
+P3 MORGAN_IMMEDIATE_REQUEST DELAY_COMPLETION: HTTP status=200
+
+MODEL INTERPRETATION
+--------------------
+The exact shared edge is workload-conditioned: package loading alone does not imply ee-first execution.
+Inactive workloads provide a negative control for ee-first-specific perturbations.
+DROP_COMPLETION tests completion-signal suppression, CORRUPT_ERROR tests error-channel corruption, and DELAY_COMPLETION tests latency propagation.
+Any deterministic q values validate only the controlled propagation mechanism and must not be interpreted as natural vulnerability or compromise likelihood.

@@ -1,0 +1,72 @@
+CROSS-PRODUCT on-finished -> ee-first SHARED-EDGE ACTIVATION REPORT
+====================================================================
+
+Exact shared edge: on-finished@2.4.1 -> ee-first@1.1.1
+Products: Express, Morgan
+
+Definitions:
+  T_e(p)=1 when the exact dependency edge exists in product p.
+  L_o(p,w)=1 when the product/runtime loads on-finished.
+  O(p,w)=1 when the on-finished exported function is invoked.
+  L_e(p,w)=1 when on-finished loads ee-first.
+  A_e(p,w)=1 when ee-first is actually invoked by on-finished.
+
+Important: this is controlled runtime activation evidence, not a real-world failure/compromise probability.
+
+P1 Express
+----------
+Workload: EXPRESS_SIMPLE_SEND
+  T_e(p): 1
+  L_o(p,w) on-finished loaded: 1 (requests=4)
+  O(p,w) on-finished invoked: 0 (calls=0)
+  L_e(p,w) ee-first loaded from on-finished: 1 (requests=1)
+  A_e(p,w) ee-first invoked from on-finished: 0 (calls=0)
+  on-finished load parents: node_modules/body-parser/lib/read.js; node_modules/finalhandler/index.js; node_modules/express/lib/response.js; node_modules/send/index.js
+  ee-first load parents: node_modules/on-finished/index.js
+  HTTP status: 200
+
+Workload: EXPRESS_SEND_FILE
+  T_e(p): 1
+  L_o(p,w) on-finished loaded: 1 (requests=4)
+  O(p,w) on-finished invoked: 1 (calls=2)
+  L_e(p,w) ee-first loaded from on-finished: 1 (requests=1)
+  A_e(p,w) ee-first invoked from on-finished: 1 (calls=2)
+  on-finished load parents: node_modules/body-parser/lib/read.js; node_modules/finalhandler/index.js; node_modules/express/lib/response.js; node_modules/send/index.js
+  ee-first load parents: node_modules/on-finished/index.js
+  HTTP status: 200
+
+P3 Morgan
+---------
+Workload: MORGAN_NORMAL_REQUEST
+  T_e(p): 1
+  L_o(p,w) on-finished loaded: 1 (requests=1)
+  O(p,w) on-finished invoked: 1 (calls=1)
+  L_e(p,w) ee-first loaded from on-finished: 1 (requests=1)
+  A_e(p,w) ee-first invoked from on-finished: 1 (calls=2)
+  on-finished load parents: node_modules/morgan/index.js
+  ee-first load parents: node_modules/on-finished/index.js
+  HTTP status: 200
+
+Workload: MORGAN_IMMEDIATE_REQUEST
+  T_e(p): 1
+  L_o(p,w) on-finished loaded: 1 (requests=1)
+  O(p,w) on-finished invoked: 0 (calls=0)
+  L_e(p,w) ee-first loaded from on-finished: 1 (requests=1)
+  A_e(p,w) ee-first invoked from on-finished: 0 (calls=0)
+  on-finished load parents: node_modules/morgan/index.js
+  ee-first load parents: node_modules/on-finished/index.js
+  HTTP status: 200
+
+SUMMARY
+-------
+Workloads: 4
+Workloads with on-finished loaded: 4/4
+Workloads with on-finished invoked: 2/4
+Workloads with on-finished->ee-first load observed: 4/4
+Workloads with ee-first invoked from on-finished: 2/4
+
+MODEL INTERPRETATION
+--------------------
+This experiment separates exact-edge topology membership, module loading, on-finished API invocation, and downstream ee-first execution.
+If A_e differs across workloads, the same shared edge has workload-conditioned runtime activation.
+Topology presence and package loading alone must not be interpreted as downstream execution.

@@ -1,0 +1,62 @@
+on-finished@2.4.1 -> ee-first@1.1.1 EMPIRICAL SHARED-EDGE MATRIX
+======================================================================
+
+Model chain:
+Topology -> Load on-finished -> Invoke on-finished -> Load ee-first -> Activate edge -> Propagation -> Impact
+
+Definitions:
+  T_e : exact shared-edge topology membership
+  L_o : on-finished load indicator
+  O   : on-finished invocation indicator
+  L_e : ee-first load from on-finished
+  A_e : ee-first activation rate
+  C   : parent-visible callback rate
+  q   : impacted active trials / active trials
+  pi  : A_e * q
+
+P1 Express | EXPRESS_SIMPLE_SEND | BASELINE
+  T=1 L_o=1 O=0 L_e=1 A=0.000 C=0.000 q=NA pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P1 Express | EXPRESS_SIMPLE_SEND | DROP_COMPLETION
+  T=1 L_o=1 O=0 L_e=1 A=0.000 C=0.000 q=NA pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P1 Express | EXPRESS_SIMPLE_SEND | CORRUPT_ERROR
+  T=1 L_o=1 O=0 L_e=1 A=0.000 C=0.000 q=NA pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P1 Express | EXPRESS_SIMPLE_SEND | DELAY_COMPLETION
+  T=1 L_o=1 O=0 L_e=1 A=0.000 C=0.000 q=NA pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P1 Express | EXPRESS_SEND_FILE | BASELINE
+  T=1 L_o=1 O=1 L_e=1 A=1.000 C=1.000 q=0.000 pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P1 Express | EXPRESS_SEND_FILE | DROP_COMPLETION
+  T=1 L_o=1 O=1 L_e=1 A=1.000 C=0.000 q=1.000 pi(model)=1.000 pi(direct)=1.000 impact=COMPLETION_SUPPRESSION
+P1 Express | EXPRESS_SEND_FILE | CORRUPT_ERROR
+  T=1 L_o=1 O=1 L_e=1 A=1.000 C=1.000 q=1.000 pi(model)=1.000 pi(direct)=1.000 impact=ERROR_CORRUPTION
+P1 Express | EXPRESS_SEND_FILE | DELAY_COMPLETION
+  T=1 L_o=1 O=1 L_e=1 A=1.000 C=1.000 q=1.000 pi(model)=1.000 pi(direct)=1.000 impact=LATENCY
+P3 Morgan | MORGAN_NORMAL_REQUEST | BASELINE
+  T=1 L_o=1 O=1 L_e=1 A=1.000 C=1.000 q=0.000 pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P3 Morgan | MORGAN_NORMAL_REQUEST | DROP_COMPLETION
+  T=1 L_o=1 O=1 L_e=1 A=1.000 C=0.000 q=1.000 pi(model)=1.000 pi(direct)=1.000 impact=COMPLETION_SUPPRESSION
+P3 Morgan | MORGAN_NORMAL_REQUEST | CORRUPT_ERROR
+  T=1 L_o=1 O=1 L_e=1 A=1.000 C=1.000 q=1.000 pi(model)=1.000 pi(direct)=1.000 impact=ERROR_CORRUPTION
+P3 Morgan | MORGAN_NORMAL_REQUEST | DELAY_COMPLETION
+  T=1 L_o=1 O=1 L_e=1 A=1.000 C=1.000 q=1.000 pi(model)=1.000 pi(direct)=1.000 impact=LATENCY
+P3 Morgan | MORGAN_IMMEDIATE_REQUEST | BASELINE
+  T=1 L_o=1 O=0 L_e=1 A=0.000 C=0.000 q=NA pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P3 Morgan | MORGAN_IMMEDIATE_REQUEST | DROP_COMPLETION
+  T=1 L_o=1 O=0 L_e=1 A=0.000 C=0.000 q=NA pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P3 Morgan | MORGAN_IMMEDIATE_REQUEST | CORRUPT_ERROR
+  T=1 L_o=1 O=0 L_e=1 A=0.000 C=0.000 q=NA pi(model)=0.000 pi(direct)=0.000 impact=NONE
+P3 Morgan | MORGAN_IMMEDIATE_REQUEST | DELAY_COMPLETION
+  T=1 L_o=1 O=0 L_e=1 A=0.000 C=0.000 q=NA pi(model)=0.000 pi(direct)=0.000 impact=NONE
+
+CONSISTENCY CHECKS
+------------------
+Max |A_activation - A_perturbation| = 0.0000
+Max |pi_model - pi_direct| = 0.0000
+
+INTERPRETATION
+--------------
+The same exact shared dependency edge is present in both products.
+Topology and loading alone do not imply downstream execution.
+Runtime activation is workload-conditioned.
+Inactive workloads have A_e=0, q=NA, and pi=0.
+For deterministic active perturbations with q=1, pi reduces to the edge activation rate.
+This is internal consistency evidence for the decomposition, not independent evidence of real-world security risk.

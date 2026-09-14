@@ -1,0 +1,4167 @@
+{
+  "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+  "repetitions": 5,
+  "delayMs": 50,
+  "products": {
+    "P1": {
+      "label": "Express",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-express"
+    },
+    "P3": {
+      "label": "Morgan",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-morgan"
+    }
+  },
+  "workloads": [
+    {
+      "product": "P1",
+      "id": "EXPRESS_SIMPLE_SEND",
+      "expectedActive": false
+    },
+    {
+      "product": "P1",
+      "id": "EXPRESS_SEND_FILE",
+      "expectedActive": true
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_NORMAL_REQUEST",
+      "expectedActive": true
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_IMMEDIATE_REQUEST",
+      "expectedActive": false
+    }
+  ],
+  "perturbations": [
+    "BASELINE",
+    "DROP_COMPLETION",
+    "CORRUPT_ERROR",
+    "DELAY_COMPLETION"
+  ],
+  "rows": [
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 147.2703,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 5.862300000000005,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 149.893,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 8.485000000000014,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 141.408,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 0,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 125.9793,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -15.428699999999992,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 136.204,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -5.203999999999979,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 145.4258,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 4.0178000000000225,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 146.0493,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 4.641300000000001,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 143.1064,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 1.6984000000000208,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 127.1671,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -14.240899999999982,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 125.1165,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -16.291499999999985,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 138.77,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -2.637999999999977,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 128.8095,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -12.598499999999973,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 135.1596,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -6.248399999999975,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 142.9591,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 1.5511000000000195,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 140.8903,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -0.5176999999999907,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 134.3416,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -7.066399999999987,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 151.5066,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 10.098600000000005,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 143.5609,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": 2.1529000000000167,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 133.6814,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -7.726599999999991,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 140.4197,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 141.408,
+      "elapsedDeltaMs": -0.9882999999999811,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 147.4095,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 2.8833000000000197,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 132.7136,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -11.812599999999975,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 144.5262,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 0,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 145.3478,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 0.8216000000000179,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 134.2042,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -10.322000000000003,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 131.2718,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -13.254399999999976,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 139.6181,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -4.90809999999999,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 146.5379,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 2.011700000000019,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 131.0975,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -13.428699999999992,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 137.4497,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -7.076499999999982,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 140.35,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 2,
+      "controlledErrorsSeenByParent": 2,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -4.176199999999994,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 145.4035,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 2,
+      "controlledErrorsSeenByParent": 2,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 0.8773000000000195,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 135.7075,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 2,
+      "controlledErrorsSeenByParent": 2,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -8.818699999999978,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 136.2898,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 2,
+      "controlledErrorsSeenByParent": 2,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -8.236399999999975,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 140.0176,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 2,
+      "controlledErrorsSeenByParent": 2,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": -4.508600000000001,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 198.9009,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 54.37470000000002,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 179.2654,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 34.73920000000001,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 201.4277,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 56.9015,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 183.0547,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 38.52850000000001,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 194.6937,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 2,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 144.5262,
+      "elapsedDeltaMs": 50.16750000000002,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 65.5073,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": -9.9131,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 77.7833,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 2.3628999999999962,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 70.4308,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": -4.989599999999996,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 75.4204,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 0,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 81.4785,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 6.058099999999996,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 80.5988,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 5.178399999999996,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 66.133,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": -9.287400000000005,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 76.782,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 1.3615999999999957,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 66.2446,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": -9.175799999999995,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 80.1046,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 2,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 4.684200000000004,
+      "impactObserved": true,
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 70.5951,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 1,
+      "controlledErrorsSeenByParent": 1,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": -4.825299999999999,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 64.8174,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 1,
+      "controlledErrorsSeenByParent": 1,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": -10.602999999999994,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 74.9777,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 1,
+      "controlledErrorsSeenByParent": 1,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": -0.4427000000000021,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 79.3816,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 1,
+      "controlledErrorsSeenByParent": 1,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 3.961200000000005,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 69.2999,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 1,
+      "controlledErrorsSeenByParent": 1,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 1,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": -6.120500000000007,
+      "impactObserved": true,
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 123.2363,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 47.8159,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 131.8019,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 56.38149999999999,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 115.4587,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 40.03829999999999,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 125.9311,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 50.5107,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 117.8895,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": true,
+      "edgeLoaded": true,
+      "edgeActivated": true,
+      "parentCallbackObserved": true,
+      "parentVisibleCallbackInvocations": 1,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "eeFirstCompletionSignals": 1,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 1,
+      "injectedDelayMs": 50,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 75.4204,
+      "elapsedDeltaMs": 42.4691,
+      "impactObserved": true,
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 79.4786,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 6.639399999999995,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 72.3766,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": -0.462600000000009,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 72.7385,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": -0.10070000000000334,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 72.8392,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 0,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "BASELINE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 78.5756,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 5.736399999999989,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 76.1452,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 3.3059999999999974,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 77.6283,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 4.789099999999991,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 76.8837,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 4.044499999999999,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 79.2511,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 6.411899999999989,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 66.5839,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": -6.255300000000005,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 76.0583,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 3.2190999999999974,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 81.173,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 8.333799999999997,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 81.4924,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 8.653199999999998,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 80.1387,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 7.299499999999995,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 77.4831,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 4.643899999999988,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 80.7761,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 1,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 7.936899999999994,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 64.1057,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 2,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": -8.733500000000006,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 69.8081,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 3,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": -3.0311000000000092,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 75.6087,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 4,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": 2.7694999999999936,
+      "impactObserved": false,
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "elapsedMs": 72.2,
+      "onFinishedLoaded": true,
+      "onFinishedInvoked": false,
+      "edgeLoaded": true,
+      "edgeActivated": false,
+      "parentCallbackObserved": false,
+      "parentVisibleCallbackInvocations": 0,
+      "parentVisibleCallbackErrors": 0,
+      "controlledErrorsSeenByParent": 0,
+      "eeFirstLoadsFromOnFinished": 1,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "eeFirstCompletionSignals": 0,
+      "droppedEeFirstRegistrations": 0,
+      "corruptedCompletionSignals": 0,
+      "delayedCompletionSignals": 0,
+      "injectedDelayMs": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null,
+      "repetition": 5,
+      "baselineMedianMs": 72.8392,
+      "elapsedDeltaMs": -0.6392000000000024,
+      "impactObserved": false,
+      "impactType": "NONE"
+    }
+  ],
+  "summary": [
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "BASELINE",
+      "trials": 5,
+      "activeTrials": 0,
+      "callbackTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        147.2703,
+        149.893,
+        141.408,
+        125.9793,
+        136.204
+      ],
+      "elapsedDeltaMs": [
+        5.862300000000005,
+        8.485000000000014,
+        0,
+        -15.428699999999992,
+        -5.203999999999979
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 0,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 141.408,
+      "meanElapsedDeltaMs": -1.2570799999999906,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DROP_COMPLETION",
+      "trials": 5,
+      "activeTrials": 0,
+      "callbackTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        145.4258,
+        146.0493,
+        143.1064,
+        127.1671,
+        125.1165
+      ],
+      "elapsedDeltaMs": [
+        4.0178000000000225,
+        4.641300000000001,
+        1.6984000000000208,
+        -14.240899999999982,
+        -16.291499999999985
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 0,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 143.1064,
+      "meanElapsedDeltaMs": -4.034979999999985,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "CORRUPT_ERROR",
+      "trials": 5,
+      "activeTrials": 0,
+      "callbackTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        138.77,
+        128.8095,
+        135.1596,
+        142.9591,
+        140.8903
+      ],
+      "elapsedDeltaMs": [
+        -2.637999999999977,
+        -12.598499999999973,
+        -6.248399999999975,
+        1.5511000000000195,
+        -0.5176999999999907
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 0,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 138.77,
+      "meanElapsedDeltaMs": -4.09029999999998,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "perturbation": "DELAY_COMPLETION",
+      "trials": 5,
+      "activeTrials": 0,
+      "callbackTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        134.3416,
+        151.5066,
+        143.5609,
+        133.6814,
+        140.4197
+      ],
+      "elapsedDeltaMs": [
+        -7.066399999999987,
+        10.098600000000005,
+        2.1529000000000167,
+        -7.726599999999991,
+        -0.9882999999999811
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 0,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 140.4197,
+      "meanElapsedDeltaMs": -0.7059599999999875,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "BASELINE",
+      "trials": 5,
+      "activeTrials": 5,
+      "callbackTrials": 5,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        147.4095,
+        132.7136,
+        144.5262,
+        145.3478,
+        134.2042
+      ],
+      "elapsedDeltaMs": [
+        2.8833000000000197,
+        -11.812599999999975,
+        0,
+        0.8216000000000179,
+        -10.322000000000003
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 1,
+      "parentCallbackRate": 1,
+      "qHatConditionalOnActive": 0,
+      "piHat": 0,
+      "medianElapsedMs": 144.5262,
+      "meanElapsedDeltaMs": -3.685939999999988,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DROP_COMPLETION",
+      "trials": 5,
+      "activeTrials": 5,
+      "callbackTrials": 0,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        131.2718,
+        139.6181,
+        146.5379,
+        131.0975,
+        137.4497
+      ],
+      "elapsedDeltaMs": [
+        -13.254399999999976,
+        -4.90809999999999,
+        2.011700000000019,
+        -13.428699999999992,
+        -7.076499999999982
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 1,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 137.4497,
+      "meanElapsedDeltaMs": -7.331199999999984,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "CORRUPT_ERROR",
+      "trials": 5,
+      "activeTrials": 5,
+      "callbackTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        140.35,
+        145.4035,
+        135.7075,
+        136.2898,
+        140.0176
+      ],
+      "elapsedDeltaMs": [
+        -4.176199999999994,
+        0.8773000000000195,
+        -8.818699999999978,
+        -8.236399999999975,
+        -4.508600000000001
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 1,
+      "parentCallbackRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 140.0176,
+      "meanElapsedDeltaMs": -4.972519999999986,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "perturbation": "DELAY_COMPLETION",
+      "trials": 5,
+      "activeTrials": 5,
+      "callbackTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        198.9009,
+        179.2654,
+        201.4277,
+        183.0547,
+        194.6937
+      ],
+      "elapsedDeltaMs": [
+        54.37470000000002,
+        34.73920000000001,
+        56.9015,
+        38.52850000000001,
+        50.16750000000002
+      ],
+      "injectedDelayMs": [
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 1,
+      "parentCallbackRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 194.6937,
+      "meanElapsedDeltaMs": 46.94228000000001,
+      "meanInjectedDelayMs": 50,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "BASELINE",
+      "trials": 5,
+      "activeTrials": 5,
+      "callbackTrials": 5,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        65.5073,
+        77.7833,
+        70.4308,
+        75.4204,
+        81.4785
+      ],
+      "elapsedDeltaMs": [
+        -9.9131,
+        2.3628999999999962,
+        -4.989599999999996,
+        0,
+        6.058099999999996
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 1,
+      "parentCallbackRate": 1,
+      "qHatConditionalOnActive": 0,
+      "piHat": 0,
+      "medianElapsedMs": 75.4204,
+      "meanElapsedDeltaMs": -1.2963400000000007,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "trials": 5,
+      "activeTrials": 5,
+      "callbackTrials": 0,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        80.5988,
+        66.133,
+        76.782,
+        66.2446,
+        80.1046
+      ],
+      "elapsedDeltaMs": [
+        5.178399999999996,
+        -9.287400000000005,
+        1.3615999999999957,
+        -9.175799999999995,
+        4.684200000000004
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 1,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 76.782,
+      "meanElapsedDeltaMs": -1.4478000000000009,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "COMPLETION_SUPPRESSION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "trials": 5,
+      "activeTrials": 5,
+      "callbackTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        70.5951,
+        64.8174,
+        74.9777,
+        79.3816,
+        69.2999
+      ],
+      "elapsedDeltaMs": [
+        -4.825299999999999,
+        -10.602999999999994,
+        -0.4427000000000021,
+        3.961200000000005,
+        -6.120500000000007
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 1,
+      "parentCallbackRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 70.5951,
+      "meanElapsedDeltaMs": -3.6060599999999994,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "trials": 5,
+      "activeTrials": 5,
+      "callbackTrials": 5,
+      "impactedTrials": 5,
+      "elapsedMs": [
+        123.2363,
+        131.8019,
+        115.4587,
+        125.9311,
+        117.8895
+      ],
+      "elapsedDeltaMs": [
+        47.8159,
+        56.38149999999999,
+        40.03829999999999,
+        50.5107,
+        42.4691
+      ],
+      "injectedDelayMs": [
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 1,
+      "parentCallbackRate": 1,
+      "qHatConditionalOnActive": 1,
+      "piHat": 1,
+      "medianElapsedMs": 123.2363,
+      "meanElapsedDeltaMs": 47.4431,
+      "meanInjectedDelayMs": 50,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "LATENCY"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "BASELINE",
+      "trials": 5,
+      "activeTrials": 0,
+      "callbackTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        79.4786,
+        72.3766,
+        72.7385,
+        72.8392,
+        78.5756
+      ],
+      "elapsedDeltaMs": [
+        6.639399999999995,
+        -0.462600000000009,
+        -0.10070000000000334,
+        0,
+        5.736399999999989
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 0,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 72.8392,
+      "meanElapsedDeltaMs": 2.3624999999999945,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "trials": 5,
+      "activeTrials": 0,
+      "callbackTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        76.1452,
+        77.6283,
+        76.8837,
+        79.2511,
+        66.5839
+      ],
+      "elapsedDeltaMs": [
+        3.3059999999999974,
+        4.789099999999991,
+        4.044499999999999,
+        6.411899999999989,
+        -6.255300000000005
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 0,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 76.8837,
+      "meanElapsedDeltaMs": 2.459239999999994,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "trials": 5,
+      "activeTrials": 0,
+      "callbackTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        76.0583,
+        81.173,
+        81.4924,
+        80.1387,
+        77.4831
+      ],
+      "elapsedDeltaMs": [
+        3.2190999999999974,
+        8.333799999999997,
+        8.653199999999998,
+        7.299499999999995,
+        4.643899999999988
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 0,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 80.1387,
+      "meanElapsedDeltaMs": 6.429899999999995,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "trials": 5,
+      "activeTrials": 0,
+      "callbackTrials": 0,
+      "impactedTrials": 0,
+      "elapsedMs": [
+        80.7761,
+        64.1057,
+        69.8081,
+        75.6087,
+        72.2
+      ],
+      "elapsedDeltaMs": [
+        7.936899999999994,
+        -8.733500000000006,
+        -3.0311000000000092,
+        2.7694999999999936,
+        -0.6392000000000024
+      ],
+      "injectedDelayMs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "statusCodes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "impactTypes": {},
+      "activationRate": 0,
+      "parentCallbackRate": 0,
+      "qHatConditionalOnActive": null,
+      "piHat": 0,
+      "medianElapsedMs": 72.2,
+      "meanElapsedDeltaMs": -0.33948000000000605,
+      "meanInjectedDelayMs": 0,
+      "uniqueStatusCodes": [
+        200
+      ],
+      "impactType": "NONE"
+    }
+  ]
+}

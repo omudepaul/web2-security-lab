@@ -1,0 +1,67 @@
+GENERALIZED ECOSYSTEM SHARED-DEPENDENCY MODEL
+==============================================
+
+Shared edges studied:
+  E1: debug@2.6.9 -> ms@2.0.0
+      activation mechanism: configuration-conditioned (DEBUG enabled + color formatting enabled)
+  E2: on-finished@2.4.1 -> ee-first@1.1.1
+      activation mechanism: workload-conditioned (parent API/path actually invokes downstream edge)
+
+GENERAL SYMBOLIC MODEL
+----------------------
+For product p, shared edge e, execution context x=(workload, configuration),
+and controlled perturbation/failure mode s:
+
+  T_e(p) in {0,1}
+      exact shared edge exists topologically in product p
+
+  alpha_e(p,x) = P(A_e=1 | T_e(p)=1, x)
+      context-conditioned edge activation
+
+  q_e(p,x,s) = P(I_e=1 | A_e=1, p, x, s)
+      conditional propagation given actual edge activation
+
+  pi_e(p,x,s) = alpha_e(p,x) * q_e(p,x,s)
+      effective controlled impact under the tested context
+
+If a defensible external occurrence/failure rate later becomes available:
+
+  R_e(p,x,s) = lambda_e(s) * alpha_e(p,x) * q_e(p,x,s)
+
+Current experiments do NOT estimate lambda_e as a natural compromise/failure rate.
+
+EDGE-LEVEL EVIDENCE
+-------------------
+E1: debug@2.6.9 -> ms@2.0.0
+  mechanism: configuration-conditioned (DEBUG enabled + color formatting enabled)
+  normalized rows: 16
+  active rows: 8
+  inactive rows: 8
+  impacted rows: 6
+  alpha range: 0.000 to 1.000
+  q range (defined rows): 0.000 to 1.000
+  pi range: 0.000 to 1.000
+
+E2: on-finished@2.4.1 -> ee-first@1.1.1
+  mechanism: workload-conditioned (parent API/path actually invokes downstream edge)
+  normalized rows: 16
+  active rows: 8
+  inactive rows: 8
+  impacted rows: 6
+  alpha range: 0.000 to 1.000
+  q range (defined rows): 0.000 to 1.000
+  pi range: 0.000 to 1.000
+
+GENERALIZED FINDING
+-------------------
+The two exact shared edges exhibit different activation mechanisms:
+  - debug@2.6.9 -> ms@2.0.0 is configuration-conditioned.
+  - on-finished@2.4.1 -> ee-first@1.1.1 is workload-conditioned.
+
+Therefore, exact topological sharing alone is insufficient to infer runtime propagation.
+A shared edge must first become active in the current execution context before a downstream perturbation can propagate.
+
+The ecosystem model therefore separates:
+  Static topology -> context-conditioned activation -> conditional propagation -> effective impact
+
+This is a controlled empirical decomposition, not a direct estimate of real-world vulnerability likelihood.

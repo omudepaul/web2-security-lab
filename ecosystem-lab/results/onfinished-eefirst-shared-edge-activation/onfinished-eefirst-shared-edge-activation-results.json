@@ -1,0 +1,191 @@
+{
+  "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+  "products": {
+    "P1": {
+      "label": "Express",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-express"
+    },
+    "P3": {
+      "label": "Morgan",
+      "dir": "C:\\Users\\omude\\Documents\\ecosystem-lab\\product-morgan"
+    }
+  },
+  "workloads": [
+    {
+      "product": "P1",
+      "id": "EXPRESS_SIMPLE_SEND"
+    },
+    {
+      "product": "P1",
+      "id": "EXPRESS_SEND_FILE"
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_NORMAL_REQUEST"
+    },
+    {
+      "product": "P3",
+      "id": "MORGAN_IMMEDIATE_REQUEST"
+    }
+  ],
+  "results": [
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SIMPLE_SEND",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "onFinishedVersion": "2.4.1",
+      "eeFirstVersion": "1.1.1",
+      "onFinishedLoaded": true,
+      "onFinishedLoadRequests": 4,
+      "onFinishedInvoked": false,
+      "onFinishedInvocations": 0,
+      "eeFirstLoadedFromOnFinished": true,
+      "eeFirstLoadRequestsFromOnFinished": 1,
+      "edgeActivated": false,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "onFinishedArgumentTypes": [],
+      "eeFirstArgumentSummaries": [],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null
+    },
+    {
+      "productId": "P1",
+      "product": "Express",
+      "workload": "EXPRESS_SEND_FILE",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "onFinishedVersion": "2.4.1",
+      "eeFirstVersion": "1.1.1",
+      "onFinishedLoaded": true,
+      "onFinishedLoadRequests": 4,
+      "onFinishedInvoked": true,
+      "onFinishedInvocations": 2,
+      "eeFirstLoadedFromOnFinished": true,
+      "eeFirstLoadRequestsFromOnFinished": 1,
+      "edgeActivated": true,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "onFinishedLoadParents": [
+        "node_modules/body-parser/lib/read.js",
+        "node_modules/finalhandler/index.js",
+        "node_modules/express/lib/response.js",
+        "node_modules/send/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "onFinishedArgumentTypes": [
+        [
+          "object",
+          "function"
+        ],
+        [
+          "object",
+          "function"
+        ]
+      ],
+      "eeFirstArgumentSummaries": [
+        [
+          "array(len=1)",
+          "function"
+        ],
+        [
+          "array(len=1)",
+          "function"
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 24
+      },
+      "error": null
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_NORMAL_REQUEST",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "onFinishedVersion": "2.4.1",
+      "eeFirstVersion": "1.1.1",
+      "onFinishedLoaded": true,
+      "onFinishedLoadRequests": 1,
+      "onFinishedInvoked": true,
+      "onFinishedInvocations": 1,
+      "eeFirstLoadedFromOnFinished": true,
+      "eeFirstLoadRequestsFromOnFinished": 1,
+      "edgeActivated": true,
+      "eeFirstInvocationsFromOnFinished": 2,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "onFinishedArgumentTypes": [
+        [
+          "object",
+          "function"
+        ]
+      ],
+      "eeFirstArgumentSummaries": [
+        [
+          "array(len=1)",
+          "function"
+        ],
+        [
+          "array(len=1)",
+          "function"
+        ]
+      ],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null
+    },
+    {
+      "productId": "P3",
+      "product": "Morgan",
+      "workload": "MORGAN_IMMEDIATE_REQUEST",
+      "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "topologyPresent": true,
+      "onFinishedVersion": "2.4.1",
+      "eeFirstVersion": "1.1.1",
+      "onFinishedLoaded": true,
+      "onFinishedLoadRequests": 1,
+      "onFinishedInvoked": false,
+      "onFinishedInvocations": 0,
+      "eeFirstLoadedFromOnFinished": true,
+      "eeFirstLoadRequestsFromOnFinished": 1,
+      "edgeActivated": false,
+      "eeFirstInvocationsFromOnFinished": 0,
+      "onFinishedLoadParents": [
+        "node_modules/morgan/index.js"
+      ],
+      "eeFirstLoadParents": [
+        "node_modules/on-finished/index.js"
+      ],
+      "onFinishedArgumentTypes": [],
+      "eeFirstArgumentSummaries": [],
+      "outcome": {
+        "statusCode": 200,
+        "bodyLength": 2
+      },
+      "error": null
+    }
+  ]
+}
