@@ -1,0 +1,52 @@
+QS PROBABILISTIC PROPAGATION CALIBRATION REPORT
+===============================================
+
+Purpose: validate q_hat against known synthetic containment probabilities.
+Total trials: 1600
+Repetitions per condition: 50
+Seed: 0x5eeda11
+Mean absolute estimation error: 0.0488
+
+q* = 1 - containment probability; q_hat = observed impacted fraction
+
+PERTURBATION | PATH  | CONTAIN | q*     | q_hat  | ABS_ERR
+-------------|-------|---------|--------|--------|--------
+CORRUPTION   | query | 0.00    | 1.0000 | 1.0000 | 0.0000
+CORRUPTION   | query | 0.25    | 0.7500 | 0.8000 | 0.0500
+CORRUPTION   | query | 0.50    | 0.5000 | 0.5200 | 0.0200
+CORRUPTION   | query | 0.75    | 0.2500 | 0.2200 | 0.0300
+CORRUPTION   | body  | 0.00    | 1.0000 | 1.0000 | 0.0000
+CORRUPTION   | body  | 0.25    | 0.7500 | 0.6800 | 0.0700
+CORRUPTION   | body  | 0.50    | 0.5000 | 0.4400 | 0.0600
+CORRUPTION   | body  | 0.75    | 0.2500 | 0.2400 | 0.0100
+EXCEPTION    | query | 0.00    | 1.0000 | 1.0000 | 0.0000
+EXCEPTION    | query | 0.25    | 0.7500 | 0.8200 | 0.0700
+EXCEPTION    | query | 0.50    | 0.5000 | 0.4400 | 0.0600
+EXCEPTION    | query | 0.75    | 0.2500 | 0.3800 | 0.1300
+EXCEPTION    | body  | 0.00    | 1.0000 | 1.0000 | 0.0000
+EXCEPTION    | body  | 0.25    | 0.7500 | 0.6400 | 0.1100
+EXCEPTION    | body  | 0.50    | 0.5000 | 0.4600 | 0.0400
+EXCEPTION    | body  | 0.75    | 0.2500 | 0.2600 | 0.0100
+DELAY        | query | 0.00    | 1.0000 | 1.0000 | 0.0000
+DELAY        | query | 0.25    | 0.7500 | 0.8600 | 0.1100
+DELAY        | query | 0.50    | 0.5000 | 0.5200 | 0.0200
+DELAY        | query | 0.75    | 0.2500 | 0.2400 | 0.0100
+DELAY        | body  | 0.00    | 1.0000 | 1.0000 | 0.0000
+DELAY        | body  | 0.25    | 0.7500 | 0.6800 | 0.0700
+DELAY        | body  | 0.50    | 0.5000 | 0.4000 | 0.1000
+DELAY        | body  | 0.75    | 0.2500 | 0.4400 | 0.1900
+MALFORMED    | query | 0.00    | 1.0000 | 1.0000 | 0.0000
+MALFORMED    | query | 0.25    | 0.7500 | 0.8200 | 0.0700
+MALFORMED    | query | 0.50    | 0.5000 | 0.5800 | 0.0800
+MALFORMED    | query | 0.75    | 0.2500 | 0.2800 | 0.0300
+MALFORMED    | body  | 0.00    | 1.0000 | 1.0000 | 0.0000
+MALFORMED    | body  | 0.25    | 0.7500 | 0.7400 | 0.0100
+MALFORMED    | body  | 0.50    | 0.5000 | 0.3400 | 0.1600
+MALFORMED    | body  | 0.75    | 0.2500 | 0.3000 | 0.0500
+
+INTERPRETATION
+--------------
+Intermediate q_hat values arise because a known fraction of synthetic
+dependency perturbations are contained before reaching the application.
+Agreement between q_hat and q* validates the estimator in a controlled setting.
+These are calibration results, not natural compromise rates.
