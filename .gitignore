@@ -16,3 +16,5 @@ results/propagation-multitype/qs-multitype-results.csv
 results/propagation-multitype/qs-multitype-results.json
 results/propagation-probabilistic/qs-probabilistic-results.csv
 results/propagation-probabilistic/qs-probabilistic-results.json
+results/body-parser-propagation/body-parser-multitype-results.csv
+results/body-parser-propagation/body-parser-multitype-results.json

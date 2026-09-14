@@ -1,0 +1,38 @@
+BODY-PARSER MULTI-TYPE PROPAGATION REPORT
+========================================
+
+Real dependency path:
+  research-app -> express -> body-parser
+
+Impact direction studied:
+  body-parser -> express/application
+
+Synthetic perturbations:
+  CORRUPTION : probe=healthy becomes probe=corrupted
+  EXCEPTION  : controlled exception at body-parser boundary
+  DELAY      : controlled 100 ms delay
+  MALFORMED  : expected probe field is removed
+
+Total trials: 150
+Baseline runs with any impact: 0
+
+TRIGGERED WORKLOAD PROPAGATION
+------------------------------
+CORRUPTION | integrityImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.296
+EXCEPTION  | availabilityImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.313
+DELAY      | latencyImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=110.163
+MALFORMED  | malformedImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.727
+
+BENIGN WORKLOAD CONTROL
+-----------------------
+CORRUPTION | integrityImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.357
+EXCEPTION  | availabilityImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.330
+DELAY      | latencyImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.321
+MALFORMED  | malformedImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.999
+
+INTERPRETATION
+--------------
+These q_hat values measure controlled propagation from body-parser
+to the application under a defined workload and perturbation type.
+They are experimental propagation measurements, not real-world
+compromise probabilities.
