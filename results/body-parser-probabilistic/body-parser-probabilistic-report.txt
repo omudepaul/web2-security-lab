@@ -1,0 +1,42 @@
+BODY-PARSER PROBABILISTIC PROPAGATION REPORT
+===========================================
+
+Real dependency path:
+  research-app -> express -> body-parser
+
+Purpose:
+  Validate q_hat against known synthetic containment probabilities.
+
+Total trials: 800
+Repetitions per condition: 50
+Seed: 0x51b0d1a
+Mean absolute estimation error: 0.0350
+
+q* = 1 - containment probability; q_hat = observed impacted fraction
+
+PERTURBATION | CONTAIN | q*     | q_hat  | ABS_ERR
+-------------|---------|--------|--------|--------
+CORRUPTION   | 0.00    | 1.0000 | 1.0000 | 0.0000
+CORRUPTION   | 0.25    | 0.7500 | 0.6800 | 0.0700
+CORRUPTION   | 0.50    | 0.5000 | 0.5000 | 0.0000
+CORRUPTION   | 0.75    | 0.2500 | 0.3400 | 0.0900
+EXCEPTION    | 0.00    | 1.0000 | 1.0000 | 0.0000
+EXCEPTION    | 0.25    | 0.7500 | 0.7800 | 0.0300
+EXCEPTION    | 0.50    | 0.5000 | 0.5000 | 0.0000
+EXCEPTION    | 0.75    | 0.2500 | 0.2000 | 0.0500
+DELAY        | 0.00    | 1.0000 | 1.0000 | 0.0000
+DELAY        | 0.25    | 0.7500 | 0.7400 | 0.0100
+DELAY        | 0.50    | 0.5000 | 0.4800 | 0.0200
+DELAY        | 0.75    | 0.2500 | 0.2600 | 0.0100
+MALFORMED    | 0.00    | 1.0000 | 1.0000 | 0.0000
+MALFORMED    | 0.25    | 0.7500 | 0.6200 | 0.1300
+MALFORMED    | 0.50    | 0.5000 | 0.6400 | 0.1400
+MALFORMED    | 0.75    | 0.2500 | 0.2600 | 0.0100
+
+INTERPRETATION
+--------------
+Intermediate q_hat values occur because a controlled fraction of
+synthetic body-parser perturbations are contained before reaching
+the application. Agreement between q_hat and q* validates the
+estimator in this controlled setting.
+These are calibration results, not real-world compromise rates.

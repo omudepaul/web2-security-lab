@@ -18,3 +18,5 @@ results/propagation-probabilistic/qs-probabilistic-results.csv
 results/propagation-probabilistic/qs-probabilistic-results.json
 results/body-parser-propagation/body-parser-multitype-results.csv
 results/body-parser-propagation/body-parser-multitype-results.json
+results/body-parser-probabilistic/body-parser-probabilistic-results.csv
+results/body-parser-probabilistic/body-parser-probabilistic-results.json
