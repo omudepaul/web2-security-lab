@@ -1,0 +1,44 @@
+QS MULTI-TYPE DEPENDENCY PROPAGATION REPORT
+===========================================
+
+Controlled paths:
+  W1: research-app -> express -> qs
+  W2: research-app -> express -> body-parser -> qs
+
+Synthetic perturbations:
+  CORRUPTION : probe=healthy becomes probe=corrupted
+  EXCEPTION  : controlled exception inside qs.parse()
+  DELAY      : controlled 100 ms parsing delay
+  MALFORMED  : expected probe field is removed
+
+Total trials: 300
+Baseline runs with any measured impact: 0
+
+TRIGGERED WORKLOAD PROPAGATION ESTIMATES
+----------------------------------------
+CORRUPTION | query | integrityImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.213
+CORRUPTION | body  | integrityImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.332
+EXCEPTION  | query | availabilityImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.283
+EXCEPTION  | body  | availabilityImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.333
+DELAY      | query | latencyImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=112.234
+DELAY      | body  | latencyImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=111.798
+MALFORMED  | query | malformedImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.626
+MALFORMED  | body  | malformedImpact | impacted=15/15 | q_hat=1.0000 | avg_ms=0.314
+
+BENIGN WORKLOAD CONTROL
+-----------------------
+CORRUPTION | query | integrityImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.541
+CORRUPTION | body  | integrityImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.261
+EXCEPTION  | query | availabilityImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.240
+EXCEPTION  | body  | availabilityImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.218
+DELAY      | query | latencyImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.196
+DELAY      | body  | latencyImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.938
+MALFORMED  | query | malformedImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.947
+MALFORMED  | body  | malformedImpact | impacted=0/15 | q_hat=0.0000 | avg_ms=0.426
+
+INTERPRETATION
+--------------
+Each q_hat is conditioned on a specific synthetic perturbation,
+dependency path, workload, and measurement definition.
+These values validate propagation behavior in this controlled
+environment; they are not universal compromise probabilities.

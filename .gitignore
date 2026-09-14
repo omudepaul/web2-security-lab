@@ -12,3 +12,5 @@ dependency-edges.csv
 index-backup.js
 results/propagation/qs-propagation-results.csv
 results/propagation/qs-propagation-results.json
+results/propagation-multitype/qs-multitype-results.csv
+results/propagation-multitype/qs-multitype-results.json
