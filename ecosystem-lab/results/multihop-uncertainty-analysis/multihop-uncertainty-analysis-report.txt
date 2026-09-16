@@ -1,0 +1,124 @@
+MULTI-HOP CONTROLLED-LAMBDA UNCERTAINTY ANALYSIS
+================================================
+
+METHOD
+------
+95% Wilson score confidence intervals for binomial proportions.
+
+Intervals are reported for lambda_hat, joint path activation alpha_P, conditional propagation q_P, and observed impact rate R_obs.
+
+IMPORTANT: these intervals quantify sampling uncertainty in the controlled experiment only.
+They do NOT estimate a natural real-world vulnerability, compromise, incident, or failure probability.
+
+PA: morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0
+--------------------------------------------
+lambda_ctrl=0.00 | ACTIVE | ACTIVE_COLORS_ON
+  lambda_hat=0.0000 95% CI [0.0000, 0.1611]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=0.00 | INACTIVE | INACTIVE_COLORS_OFF
+  lambda_hat=0.0000 95% CI [0.0000, 0.1611]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=0.25 | ACTIVE | ACTIVE_COLORS_ON
+  lambda_hat=0.2000 95% CI [0.0807, 0.4160]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=1.0000 95% CI [0.5101, 1.0000] n_active_injected=4
+  R_obs=0.2000 95% CI [0.0807, 0.4160]
+lambda_ctrl=0.25 | INACTIVE | INACTIVE_COLORS_OFF
+  lambda_hat=0.2000 95% CI [0.0807, 0.4160]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=0.50 | ACTIVE | ACTIVE_COLORS_ON
+  lambda_hat=0.7500 95% CI [0.5313, 0.8881]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=1.0000 95% CI [0.7961, 1.0000] n_active_injected=15
+  R_obs=0.7500 95% CI [0.5313, 0.8881]
+lambda_ctrl=0.50 | INACTIVE | INACTIVE_COLORS_OFF
+  lambda_hat=0.6500 95% CI [0.4329, 0.8188]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=0.75 | ACTIVE | ACTIVE_COLORS_ON
+  lambda_hat=0.8000 95% CI [0.5840, 0.9193]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=1.0000 95% CI [0.8064, 1.0000] n_active_injected=16
+  R_obs=0.8000 95% CI [0.5840, 0.9193]
+lambda_ctrl=0.75 | INACTIVE | INACTIVE_COLORS_OFF
+  lambda_hat=0.7000 95% CI [0.4810, 0.8545]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=1.00 | ACTIVE | ACTIVE_COLORS_ON
+  lambda_hat=1.0000 95% CI [0.8389, 1.0000]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=1.0000 95% CI [0.8389, 1.0000] n_active_injected=20
+  R_obs=1.0000 95% CI [0.8389, 1.0000]
+lambda_ctrl=1.00 | INACTIVE | INACTIVE_COLORS_OFF
+  lambda_hat=1.0000 95% CI [0.8389, 1.0000]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+
+PB: morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1
+--------------------------------------------------------
+lambda_ctrl=0.00 | ACTIVE | MORGAN_NORMAL_REQUEST
+  lambda_hat=0.0000 95% CI [0.0000, 0.1611]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=0.00 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+  lambda_hat=0.0000 95% CI [0.0000, 0.1611]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=0.25 | ACTIVE | MORGAN_NORMAL_REQUEST
+  lambda_hat=0.3500 95% CI [0.1812, 0.5671]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=1.0000 95% CI [0.6457, 1.0000] n_active_injected=7
+  R_obs=0.3500 95% CI [0.1812, 0.5671]
+lambda_ctrl=0.25 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+  lambda_hat=0.2000 95% CI [0.0807, 0.4160]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=0.50 | ACTIVE | MORGAN_NORMAL_REQUEST
+  lambda_hat=0.6000 95% CI [0.3866, 0.7812]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=1.0000 95% CI [0.7575, 1.0000] n_active_injected=12
+  R_obs=0.6000 95% CI [0.3866, 0.7812]
+lambda_ctrl=0.50 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+  lambda_hat=0.6500 95% CI [0.4329, 0.8188]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=0.75 | ACTIVE | MORGAN_NORMAL_REQUEST
+  lambda_hat=0.7500 95% CI [0.5313, 0.8881]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=1.0000 95% CI [0.7961, 1.0000] n_active_injected=15
+  R_obs=0.7500 95% CI [0.5313, 0.8881]
+lambda_ctrl=0.75 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+  lambda_hat=0.8500 95% CI [0.6396, 0.9476]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+lambda_ctrl=1.00 | ACTIVE | MORGAN_NORMAL_REQUEST
+  lambda_hat=1.0000 95% CI [0.8389, 1.0000]
+  alpha_P=1.0000 95% CI [0.8389, 1.0000]
+  q_P=1.0000 95% CI [0.8389, 1.0000] n_active_injected=20
+  R_obs=1.0000 95% CI [0.8389, 1.0000]
+lambda_ctrl=1.00 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+  lambda_hat=1.0000 95% CI [0.8389, 1.0000]
+  alpha_P=0.0000 95% CI [0.0000, 0.1611]
+  q_P=NA 95% CI [NA, NA] n_active_injected=0
+  R_obs=0.0000 95% CI [0.0000, 0.1611]
+
+INTERPRETATION
+--------------
+Point estimates such as q_P=1.0000 should not be interpreted as certainty.
+With small samples, the confidence interval remains wider even when every observed active/injected trial is impacted.
+This analysis therefore makes the controlled path results statistically more defensible and explicitly exposes sample-size uncertainty.
+Increasing repetitions in future experiments will narrow these intervals if the underlying behavior remains stable.
