@@ -1,0 +1,153 @@
+MULTI-HOP CONTROLLED OCCURRENCE-RATE VALIDATION
+================================================
+
+MODEL
+-----
+R_P,ctrl(p,x,s) = lambda_P,ctrl * alpha_P(p,x) * q_P(p,x,s)
+
+lambda_P,ctrl : assigned controlled perturbation occurrence probability
+alpha_P       : observed JOINT path activation rate
+q_P           : path-level impact conditional on injection + full path activation
+R_P,ctrl      : observed path-impact rate
+
+IMPORTANT: lambda_P,ctrl is NOT a measured natural vulnerability, compromise, incident, or failure rate.
+
+PA: morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0
+  controlled perturbation: CORRUPT_HUMANIZE
+  active context: ACTIVE_COLORS_ON
+  inactive context: INACTIVE_COLORS_OFF
+
+  lambda=0.00 | ACTIVE | ACTIVE_COLORS_ON
+    n=20 injected=0 pathActive=20 active&injected=0 impacted=0
+    lambda_hat=0.0000 alpha_P=1.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=0.00 | INACTIVE | INACTIVE_COLORS_OFF
+    n=20 injected=0 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=0.0000 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=0.25 | ACTIVE | ACTIVE_COLORS_ON
+    n=20 injected=4 pathActive=20 active&injected=4 impacted=4
+    lambda_hat=0.2000 alpha_P=1.0000 q_P=1.0000 R_obs=0.2000 lambda*alpha*q=0.2000
+  lambda=0.25 | INACTIVE | INACTIVE_COLORS_OFF
+    n=20 injected=4 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=0.2000 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=0.50 | ACTIVE | ACTIVE_COLORS_ON
+    n=20 injected=15 pathActive=20 active&injected=15 impacted=15
+    lambda_hat=0.7500 alpha_P=1.0000 q_P=1.0000 R_obs=0.7500 lambda*alpha*q=0.7500
+  lambda=0.50 | INACTIVE | INACTIVE_COLORS_OFF
+    n=20 injected=13 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=0.6500 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=0.75 | ACTIVE | ACTIVE_COLORS_ON
+    n=20 injected=16 pathActive=20 active&injected=16 impacted=16
+    lambda_hat=0.8000 alpha_P=1.0000 q_P=1.0000 R_obs=0.8000 lambda*alpha*q=0.8000
+  lambda=0.75 | INACTIVE | INACTIVE_COLORS_OFF
+    n=20 injected=14 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=0.7000 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=1.00 | ACTIVE | ACTIVE_COLORS_ON
+    n=20 injected=20 pathActive=20 active&injected=20 impacted=20
+    lambda_hat=1.0000 alpha_P=1.0000 q_P=1.0000 R_obs=1.0000 lambda*alpha*q=1.0000
+  lambda=1.00 | INACTIVE | INACTIVE_COLORS_OFF
+    n=20 injected=20 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=1.0000 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+
+PB: morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1
+  controlled perturbation: CORRUPT_ERROR
+  active context: MORGAN_NORMAL_REQUEST
+  inactive context: MORGAN_IMMEDIATE_REQUEST
+
+  lambda=0.00 | ACTIVE | MORGAN_NORMAL_REQUEST
+    n=20 injected=0 pathActive=20 active&injected=0 impacted=0
+    lambda_hat=0.0000 alpha_P=1.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=0.00 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+    n=20 injected=0 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=0.0000 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=0.25 | ACTIVE | MORGAN_NORMAL_REQUEST
+    n=20 injected=7 pathActive=20 active&injected=7 impacted=7
+    lambda_hat=0.3500 alpha_P=1.0000 q_P=1.0000 R_obs=0.3500 lambda*alpha*q=0.3500
+  lambda=0.25 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+    n=20 injected=4 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=0.2000 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=0.50 | ACTIVE | MORGAN_NORMAL_REQUEST
+    n=20 injected=12 pathActive=20 active&injected=12 impacted=12
+    lambda_hat=0.6000 alpha_P=1.0000 q_P=1.0000 R_obs=0.6000 lambda*alpha*q=0.6000
+  lambda=0.50 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+    n=20 injected=13 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=0.6500 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=0.75 | ACTIVE | MORGAN_NORMAL_REQUEST
+    n=20 injected=15 pathActive=20 active&injected=15 impacted=15
+    lambda_hat=0.7500 alpha_P=1.0000 q_P=1.0000 R_obs=0.7500 lambda*alpha*q=0.7500
+  lambda=0.75 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+    n=20 injected=17 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=0.8500 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+  lambda=1.00 | ACTIVE | MORGAN_NORMAL_REQUEST
+    n=20 injected=20 pathActive=20 active&injected=20 impacted=20
+    lambda_hat=1.0000 alpha_P=1.0000 q_P=1.0000 R_obs=1.0000 lambda*alpha*q=1.0000
+  lambda=1.00 | INACTIVE | MORGAN_IMMEDIATE_REQUEST
+    n=20 injected=20 pathActive=0 active&injected=0 impacted=0
+    lambda_hat=1.0000 alpha_P=0.0000 q_P=NA R_obs=0.0000 lambda*alpha*q=0.0000
+
+PATH-AGGREGATE COMPARISON
+-------------------------
+PA lambda=0.00
+  observed=0.0000
+  product-of-global-averages=0.0000 error=0.0000
+  context-stratified=0.0000 error=0.0000
+  joint-exposure prediction=0.0000 error=0.0000
+PA lambda=0.25
+  observed=0.1000
+  product-of-global-averages=0.1000 error=0.0000
+  context-stratified=0.1000 error=0.0000
+  joint-exposure prediction=0.1000 error=0.0000
+PA lambda=0.50
+  observed=0.3750
+  product-of-global-averages=0.3500 error=0.0250
+  context-stratified=0.3750 error=0.0000
+  joint-exposure prediction=0.3750 error=0.0000
+PA lambda=0.75
+  observed=0.4000
+  product-of-global-averages=0.3750 error=0.0250
+  context-stratified=0.4000 error=0.0000
+  joint-exposure prediction=0.4000 error=0.0000
+PA lambda=1.00
+  observed=0.5000
+  product-of-global-averages=0.5000 error=0.0000
+  context-stratified=0.5000 error=0.0000
+  joint-exposure prediction=0.5000 error=0.0000
+PB lambda=0.00
+  observed=0.0000
+  product-of-global-averages=0.0000 error=0.0000
+  context-stratified=0.0000 error=0.0000
+  joint-exposure prediction=0.0000 error=0.0000
+PB lambda=0.25
+  observed=0.1750
+  product-of-global-averages=0.1375 error=0.0375
+  context-stratified=0.1750 error=0.0000
+  joint-exposure prediction=0.1750 error=0.0000
+PB lambda=0.50
+  observed=0.3000
+  product-of-global-averages=0.3125 error=0.0125
+  context-stratified=0.3000 error=0.0000
+  joint-exposure prediction=0.3000 error=0.0000
+PB lambda=0.75
+  observed=0.3750
+  product-of-global-averages=0.4000 error=0.0250
+  context-stratified=0.3750 error=0.0000
+  joint-exposure prediction=0.3750 error=0.0000
+PB lambda=1.00
+  observed=0.5000
+  product-of-global-averages=0.5000 error=0.0000
+  context-stratified=0.5000 error=0.0000
+  joint-exposure prediction=0.5000 error=0.0000
+
+VALIDATION SUMMARY
+------------------
+Fatal trials: 0
+MAE product-of-global-averages for nonzero lambda: 0.0156
+MAE context-stratified model for nonzero lambda: 0.0000
+MAE direct joint-exposure model for nonzero lambda: 0.0000
+
+INTERPRETATION
+--------------
+The experiment extends the controlled occurrence-rate decomposition from single shared edges to complete 2-hop dependency paths.
+Inactive path contexts are negative controls: injected terminal perturbations should not produce path impact when alpha_P=0.
+Active path contexts should produce impact only on injected trials, with q_P near 1 for the deterministic corruption mechanisms used here.
+At aggregate level, context-stratified prediction is preferred over multiplying pooled averages when execution contexts have different path-activation states.
+This validates model structure only and does not estimate real-world incident frequency.
