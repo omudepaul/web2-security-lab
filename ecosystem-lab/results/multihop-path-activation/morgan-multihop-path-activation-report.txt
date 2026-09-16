@@ -1,0 +1,73 @@
+MORGAN MULTI-HOP JOINT PATH ACTIVATION EXPERIMENT
+================================================
+
+VERIFIED P3 PATHS
+-----------------
+PA: morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0
+PB: morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1
+
+FORMAL PATH MODEL
+-----------------
+For one execution trace t with binary edge activations:
+  A_P(t) = product_{e in P} A_e(t)
+
+At the probability level:
+  alpha_P(x) = P(all edges in P are active | x)
+
+Do NOT generally replace this with product_e alpha_e(x) unless independence is justified.
+
+TOPOLOGY CHECK
+--------------
+PA: PRESENT
+  morgan@1.12.1 -> debug@2.6.9: yes
+  debug@2.6.9 -> ms@2.0.0: yes
+PB: PRESENT
+  morgan@1.12.1 -> on-finished@2.4.1: yes
+  on-finished@2.4.1 -> ee-first@1.1.1: yes
+
+CONDITION RESULTS
+-----------------
+C1_DEBUG_OFF_NORMAL
+  DEBUG=OFF DEBUG_COLORS=1 immediate=false
+  PA edge1=1.000 edge2=0.000 joint alpha_P=0.000 naive-product=0.000
+  PB edge1=1.000 edge2=1.000 joint alpha_P=1.000 naive-product=1.000
+  mean Morgan log writes=1.000
+C2_DEBUG_ON_COLORS_OFF_NORMAL
+  DEBUG=morgan DEBUG_COLORS=0 immediate=false
+  PA edge1=1.000 edge2=0.000 joint alpha_P=0.000 naive-product=0.000
+  PB edge1=1.000 edge2=1.000 joint alpha_P=1.000 naive-product=1.000
+  mean Morgan log writes=1.000
+C3_DEBUG_ON_COLORS_ON_NORMAL
+  DEBUG=morgan DEBUG_COLORS=1 immediate=false
+  PA edge1=1.000 edge2=1.000 joint alpha_P=1.000 naive-product=1.000
+  PB edge1=1.000 edge2=1.000 joint alpha_P=1.000 naive-product=1.000
+  mean Morgan log writes=1.000
+C4_DEBUG_ON_COLORS_ON_IMMEDIATE
+  DEBUG=morgan DEBUG_COLORS=1 immediate=true
+  PA edge1=1.000 edge2=1.000 joint alpha_P=1.000 naive-product=1.000
+  PB edge1=0.000 edge2=0.000 joint alpha_P=0.000 naive-product=0.000
+  mean Morgan log writes=1.000
+C5_DEBUG_OFF_IMMEDIATE
+  DEBUG=OFF DEBUG_COLORS=1 immediate=true
+  PA edge1=1.000 edge2=0.000 joint alpha_P=0.000 naive-product=0.000
+  PB edge1=0.000 edge2=0.000 joint alpha_P=0.000 naive-product=0.000
+  mean Morgan log writes=1.000
+
+POOLED COMPARISON
+-----------------
+PA observed joint activation: 0.400
+PA product of pooled edge marginals: 0.400
+PA absolute difference: 0.000
+
+PB observed joint activation: 0.600
+PB product of pooled edge marginals: 0.360
+PB absolute difference: 0.240
+
+INTERPRETATION
+--------------
+This experiment estimates multi-hop path activation directly from joint runtime traces.
+It distinguishes topological path existence from actual traversal of every edge in the path.
+The two Morgan paths are intentionally useful because one is configuration-conditioned (debug -> ms) while the other is workload-conditioned (on-finished -> ee-first).
+Any equality between joint path activation and a product of marginal edge rates inside a deterministic condition is not evidence of edge independence.
+The pooled comparison is included to reveal whether naive multiplication can misrepresent joint path activation across heterogeneous contexts.
+Fatal trials: 0

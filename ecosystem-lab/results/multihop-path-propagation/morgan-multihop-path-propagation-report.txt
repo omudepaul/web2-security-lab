@@ -1,0 +1,98 @@
+MORGAN MULTI-HOP CONTROLLED PATH PROPAGATION EXPERIMENT
+=======================================================
+
+PATHS
+-----
+PA: morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0
+PB: morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1
+
+PATH-LEVEL MODEL
+----------------
+alpha_P(p,x) = P(all path edges active | p,x)
+q_P(p,x,s) = P(path-level impact | path active,p,x,s)
+pi_P(p,x,s) = alpha_P(p,x) * q_P(p,x,s)
+
+alpha_P is measured from JOINT path activation; independence among path edges is not assumed.
+
+RESULTS
+-------
+PA: morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0
+  INACTIVE_COLORS_OFF | BASELINE
+    edge1=1.000 edge2=0.000 alpha_P=0.000
+    active=0/5 impacted=0/5 q_P=NA pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  INACTIVE_COLORS_OFF | CORRUPT_HUMANIZE
+    edge1=1.000 edge2=0.000 alpha_P=0.000
+    active=0/5 impacted=0/5 q_P=NA pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  INACTIVE_COLORS_OFF | EMPTY_HUMANIZE
+    edge1=1.000 edge2=0.000 alpha_P=0.000
+    active=0/5 impacted=0/5 q_P=NA pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  INACTIVE_COLORS_OFF | DELAY_HUMANIZE
+    edge1=1.000 edge2=0.000 alpha_P=0.000
+    active=0/5 impacted=0/5 q_P=NA pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  ACTIVE_COLORS_ON | BASELINE
+    edge1=1.000 edge2=1.000 alpha_P=1.000
+    active=5/5 impacted=0/5 q_P=0.000 pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  ACTIVE_COLORS_ON | CORRUPT_HUMANIZE
+    edge1=1.000 edge2=1.000 alpha_P=1.000
+    active=5/5 impacted=5/5 q_P=1.000 pi_direct=1.000 alpha*q=1.000
+    impact=OBSERVABILITY_CORRUPTION HTTP=200
+  ACTIVE_COLORS_ON | EMPTY_HUMANIZE
+    edge1=1.000 edge2=1.000 alpha_P=1.000
+    active=5/5 impacted=5/5 q_P=1.000 pi_direct=1.000 alpha*q=1.000
+    impact=OBSERVABILITY_SUPPRESSION HTTP=200
+  ACTIVE_COLORS_ON | DELAY_HUMANIZE
+    edge1=1.000 edge2=1.000 alpha_P=1.000
+    active=5/5 impacted=5/5 q_P=1.000 pi_direct=1.000 alpha*q=1.000
+    impact=LATENCY HTTP=200
+
+PB: morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1
+  MORGAN_IMMEDIATE_REQUEST | BASELINE
+    edge1=0.000 edge2=0.000 alpha_P=0.000
+    active=0/5 impacted=0/5 q_P=NA pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  MORGAN_IMMEDIATE_REQUEST | DROP_COMPLETION
+    edge1=0.000 edge2=0.000 alpha_P=0.000
+    active=0/5 impacted=0/5 q_P=NA pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  MORGAN_IMMEDIATE_REQUEST | CORRUPT_ERROR
+    edge1=0.000 edge2=0.000 alpha_P=0.000
+    active=0/5 impacted=0/5 q_P=NA pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  MORGAN_IMMEDIATE_REQUEST | DELAY_COMPLETION
+    edge1=0.000 edge2=0.000 alpha_P=0.000
+    active=0/5 impacted=0/5 q_P=NA pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  MORGAN_NORMAL_REQUEST | BASELINE
+    edge1=1.000 edge2=1.000 alpha_P=1.000
+    active=5/5 impacted=0/5 q_P=0.000 pi_direct=0.000 alpha*q=0.000
+    impact=NONE HTTP=200
+  MORGAN_NORMAL_REQUEST | DROP_COMPLETION
+    edge1=1.000 edge2=1.000 alpha_P=1.000
+    active=5/5 impacted=5/5 q_P=1.000 pi_direct=1.000 alpha*q=1.000
+    impact=COMPLETION_SUPPRESSION HTTP=200
+  MORGAN_NORMAL_REQUEST | CORRUPT_ERROR
+    edge1=1.000 edge2=1.000 alpha_P=1.000
+    active=5/5 impacted=5/5 q_P=1.000 pi_direct=1.000 alpha*q=1.000
+    impact=ERROR_CORRUPTION HTTP=200
+  MORGAN_NORMAL_REQUEST | DELAY_COMPLETION
+    edge1=1.000 edge2=1.000 alpha_P=1.000
+    active=5/5 impacted=5/5 q_P=1.000 pi_direct=1.000 alpha*q=1.000
+    impact=LATENCY HTTP=200
+
+CONSISTENCY
+-----------
+max |pi_direct - alpha_P*q_P| = 0.0000
+
+INTERPRETATION
+--------------
+A topologically present multi-hop dependency path produces controlled impact only when the entire relevant runtime path is jointly active.
+Inactive path contexts provide negative controls: terminal perturbations do not create measured path impact when joint path activation is zero.
+For active contexts, q_P characterizes propagation conditional on observed traversal of the complete 2-hop path.
+The equality pi_P = alpha_P*q_P is an internal decomposition identity for these grouped observations, not evidence that individual path edges are statistically independent.
+The perturbations are controlled mechanisms and do not estimate natural vulnerability or compromise frequency.
+Fatal trials: 0

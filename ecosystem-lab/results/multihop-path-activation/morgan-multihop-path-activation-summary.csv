@@ -1,0 +1,6 @@
+condition,debug,debugColors,immediate,trials,edgeA1Rate,edgeA2Rate,pathAObservedJointRate,pathANaiveMarginalProduct,edgeB1Rate,edgeB2Rate,pathBObservedJointRate,pathBNaiveMarginalProduct,meanMorganWrites
+C1_DEBUG_OFF_NORMAL,OFF,1,false,10,1,0,0,0,1,1,1,1,1
+C2_DEBUG_ON_COLORS_OFF_NORMAL,morgan,0,false,10,1,0,0,0,1,1,1,1,1
+C3_DEBUG_ON_COLORS_ON_NORMAL,morgan,1,false,10,1,1,1,1,1,1,1,1,1
+C4_DEBUG_ON_COLORS_ON_IMMEDIATE,morgan,1,true,10,1,1,1,1,0,0,0,0,1
+C5_DEBUG_OFF_IMMEDIATE,OFF,1,true,10,1,0,0,0,0,0,0,0,1
