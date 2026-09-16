@@ -1,0 +1,326 @@
+{
+  "formalExtension": {
+    "modelName": "Context-Stratified OSS Ecosystem Propagation Model",
+    "baseModel": {
+      "name": "Unified Context-Conditioned OSS Ecosystem Propagation Model",
+      "ecosystem": "M_E = ({G_p}_{p=1..K}, C_s, mu, X, S, Lambda, Alpha, Q, Pi)",
+      "definitions": {
+        "G_p": "Directed dependency graph for product p.",
+        "C_s": "Set of empirically studied shared components; components may be shared nodes or shared exact dependency edges.",
+        "mu": "mu(c) is the set of products containing shared component c.",
+        "rho": "rho_c = |mu(c)| / K, the topological ecosystem reach of component c.",
+        "x": "Execution context, including workload and/or configuration.",
+        "s": "Controlled perturbation/failure mode.",
+        "lambda": "lambda_c(s) is a natural occurrence/failure rate if defensibly estimated from external or longitudinal evidence; currently unestimated.",
+        "alpha": "alpha_c(p,x) = P(A_c=1 | T_c(p)=1, x), context-conditioned activation.",
+        "q": "q_c(p,x,s) = P(I_c=1 | A_c=1,p,x,s), propagation conditional on activation.",
+        "pi": "pi_c(p,x,s) = alpha_c(p,x) * q_c(p,x,s), effective controlled impact."
+      },
+      "optionalFutureRateModel": "R_c(p,x,s) = lambda_c(s) * alpha_c(p,x) * q_c(p,x,s)",
+      "noScalarRiskYet": "No single ecosystem risk scalar is claimed because lambda is unestimated and the current perturbations are controlled mechanisms rather than natural incident frequencies."
+    },
+    "componentLevel": {
+      "topology": "T_c(p) in {0,1}",
+      "activation": "alpha_c(p,x) = P(A_c=1 | T_c(p)=1, x)",
+      "conditionalPropagation": "q_c(p,x,s) = P(I_c=1 | A_c=1, p, x, s)",
+      "controlledImpact": "pi_c(p,x,s) = alpha_c(p,x) * q_c(p,x,s)",
+      "occurrenceWeightedImpact": "R_c(p,x,s) = lambda_c(p,x,s) * alpha_c(p,x) * q_c(p,x,s)"
+    },
+    "ecosystemAggregation": {
+      "equation": "R_E(c,s) = sum_{p,x} w_{p,x} * lambda_c(p,x,s) * alpha_c(p,x) * q_c(p,x,s)",
+      "weightConstraint": "sum_{p,x} w_{p,x} = 1",
+      "interpretation": "w_{p,x} represents the share/probability of execution context (p,x) in the ecosystem population of interest."
+    },
+    "keyStatisticalPoint": "In general, E[lambda * alpha * q] is not equal to E[lambda] * E[alpha] * E[q]. Context-stratified aggregation avoids an independence assumption that may be false.",
+    "currentWeighting": "Equal weights across the four tested product-workload contexts are used only for the controlled validation. Real deployment weights should come from defensible workload/telemetry data.",
+    "lambdaCaution": "The current lambda_ctrl is experimentally assigned. It is not a measured natural failure, vulnerability, compromise, or incident rate."
+  },
+  "validation": {
+    "targetEdge": "on-finished@2.4.1 -> ee-first@1.1.1",
+    "controlledPerturbation": "CORRUPT_ERROR",
+    "validationRows": [
+      {
+        "lambdaCtrl": 0,
+        "contextCount": 4,
+        "equalWeight": 0.25,
+        "stratifiedPrediction": 0,
+        "observedImpactRate": 0,
+        "stratifiedAbsoluteError": 0,
+        "globalProductPrediction": 0,
+        "globalProductAbsoluteError": 0,
+        "contexts": [
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SIMPLE_SEND",
+            "weight": 0.25,
+            "lambdaHat": 0,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          },
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SEND_FILE",
+            "weight": 0.25,
+            "lambdaHat": 0,
+            "alphaHat": 1,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_NORMAL_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 0,
+            "alphaHat": 1,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_IMMEDIATE_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 0,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          }
+        ]
+      },
+      {
+        "lambdaCtrl": 0.25,
+        "contextCount": 4,
+        "equalWeight": 0.25,
+        "stratifiedPrediction": 0.1,
+        "observedImpactRate": 0.1,
+        "stratifiedAbsoluteError": 0,
+        "globalProductPrediction": 0.13125,
+        "globalProductAbsoluteError": 0.03125,
+        "contexts": [
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SIMPLE_SEND",
+            "weight": 0.25,
+            "lambdaHat": 0.4,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          },
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SEND_FILE",
+            "weight": 0.25,
+            "lambdaHat": 0.2,
+            "alphaHat": 1,
+            "qHat": 1,
+            "contextProduct": 0.2,
+            "observedImpactRate": 0.2
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_NORMAL_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 0.2,
+            "alphaHat": 1,
+            "qHat": 1,
+            "contextProduct": 0.2,
+            "observedImpactRate": 0.2
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_IMMEDIATE_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 0.25,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          }
+        ]
+      },
+      {
+        "lambdaCtrl": 0.5,
+        "contextCount": 4,
+        "equalWeight": 0.25,
+        "stratifiedPrediction": 0.225,
+        "observedImpactRate": 0.225,
+        "stratifiedAbsoluteError": 0,
+        "globalProductPrediction": 0.2375,
+        "globalProductAbsoluteError": 0.012499999999999983,
+        "contexts": [
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SIMPLE_SEND",
+            "weight": 0.25,
+            "lambdaHat": 0.55,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          },
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SEND_FILE",
+            "weight": 0.25,
+            "lambdaHat": 0.5,
+            "alphaHat": 1,
+            "qHat": 1,
+            "contextProduct": 0.5,
+            "observedImpactRate": 0.5
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_NORMAL_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 0.4,
+            "alphaHat": 1,
+            "qHat": 1,
+            "contextProduct": 0.4,
+            "observedImpactRate": 0.4
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_IMMEDIATE_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 0.45,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          }
+        ]
+      },
+      {
+        "lambdaCtrl": 0.75,
+        "contextCount": 4,
+        "equalWeight": 0.25,
+        "stratifiedPrediction": 0.4,
+        "observedImpactRate": 0.4,
+        "stratifiedAbsoluteError": 0,
+        "globalProductPrediction": 0.3875,
+        "globalProductAbsoluteError": 0.012500000000000011,
+        "contexts": [
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SIMPLE_SEND",
+            "weight": 0.25,
+            "lambdaHat": 0.8,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          },
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SEND_FILE",
+            "weight": 0.25,
+            "lambdaHat": 0.9,
+            "alphaHat": 1,
+            "qHat": 1,
+            "contextProduct": 0.9,
+            "observedImpactRate": 0.9
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_NORMAL_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 0.7,
+            "alphaHat": 1,
+            "qHat": 1,
+            "contextProduct": 0.7,
+            "observedImpactRate": 0.7
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_IMMEDIATE_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 0.7,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          }
+        ]
+      },
+      {
+        "lambdaCtrl": 1,
+        "contextCount": 4,
+        "equalWeight": 0.25,
+        "stratifiedPrediction": 0.5,
+        "observedImpactRate": 0.5,
+        "stratifiedAbsoluteError": 0,
+        "globalProductPrediction": 0.5,
+        "globalProductAbsoluteError": 0,
+        "contexts": [
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SIMPLE_SEND",
+            "weight": 0.25,
+            "lambdaHat": 1,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          },
+          {
+            "productId": "P1",
+            "product": "Express",
+            "workload": "EXPRESS_SEND_FILE",
+            "weight": 0.25,
+            "lambdaHat": 1,
+            "alphaHat": 1,
+            "qHat": 1,
+            "contextProduct": 1,
+            "observedImpactRate": 1
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_NORMAL_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 1,
+            "alphaHat": 1,
+            "qHat": 1,
+            "contextProduct": 1,
+            "observedImpactRate": 1
+          },
+          {
+            "productId": "P3",
+            "product": "Morgan",
+            "workload": "MORGAN_IMMEDIATE_REQUEST",
+            "weight": 0.25,
+            "lambdaHat": 1,
+            "alphaHat": 0,
+            "qHat": 0,
+            "contextProduct": 0,
+            "observedImpactRate": 0
+          }
+        ]
+      }
+    ],
+    "nonzeroLambdaStratifiedMAE": 0,
+    "nonzeroLambdaGlobalProductMAE": 0.014062499999999999
+  }
+}

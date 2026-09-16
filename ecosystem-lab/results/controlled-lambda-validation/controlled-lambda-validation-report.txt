@@ -1,0 +1,103 @@
+CONTROLLED OCCURRENCE-RATE (lambda_ctrl) VALIDATION
+==================================================
+
+Target edge: on-finished@2.4.1 -> ee-first@1.1.1
+Controlled perturbation: CORRUPT_ERROR
+Repetitions per workload/lambda: 20
+Reproducible PRNG seed: 20260914
+
+MODEL
+-----
+R_ctrl(p,x,s) ~= lambda_ctrl * alpha(p,x) * q(p,x,s)
+
+lambda_ctrl : assigned experimental perturbation occurrence probability
+alpha       : observed edge activation rate
+q           : observed impact conditional on injection + activation
+R_ctrl      : observed impacted-trial rate
+
+IMPORTANT: lambda_ctrl is NOT a measured natural failure, vulnerability, or compromise rate.
+
+WORKLOAD-LEVEL RESULTS
+----------------------
+lambda=0.00 | P1 EXPRESS_SIMPLE_SEND
+  n=20 injected=0 active=0 active&injected=0 impacted=0
+  lambda_hat=0.0000 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.00 | P1 EXPRESS_SEND_FILE
+  n=20 injected=0 active=20 active&injected=0 impacted=0
+  lambda_hat=0.0000 alpha_hat=1.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.00 | P3 MORGAN_NORMAL_REQUEST
+  n=20 injected=0 active=20 active&injected=0 impacted=0
+  lambda_hat=0.0000 alpha_hat=1.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.00 | P3 MORGAN_IMMEDIATE_REQUEST
+  n=20 injected=0 active=0 active&injected=0 impacted=0
+  lambda_hat=0.0000 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.25 | P1 EXPRESS_SIMPLE_SEND
+  n=20 injected=8 active=0 active&injected=0 impacted=0
+  lambda_hat=0.4000 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.25 | P1 EXPRESS_SEND_FILE
+  n=20 injected=4 active=20 active&injected=4 impacted=4
+  lambda_hat=0.2000 alpha_hat=1.0000 q_hat=1.0000 R_observed=0.2000 lambda*alpha*q=0.2000
+lambda=0.25 | P3 MORGAN_NORMAL_REQUEST
+  n=20 injected=4 active=20 active&injected=4 impacted=4
+  lambda_hat=0.2000 alpha_hat=1.0000 q_hat=1.0000 R_observed=0.2000 lambda*alpha*q=0.2000
+lambda=0.25 | P3 MORGAN_IMMEDIATE_REQUEST
+  n=20 injected=5 active=0 active&injected=0 impacted=0
+  lambda_hat=0.2500 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.50 | P1 EXPRESS_SIMPLE_SEND
+  n=20 injected=11 active=0 active&injected=0 impacted=0
+  lambda_hat=0.5500 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.50 | P1 EXPRESS_SEND_FILE
+  n=20 injected=10 active=20 active&injected=10 impacted=10
+  lambda_hat=0.5000 alpha_hat=1.0000 q_hat=1.0000 R_observed=0.5000 lambda*alpha*q=0.5000
+lambda=0.50 | P3 MORGAN_NORMAL_REQUEST
+  n=20 injected=8 active=20 active&injected=8 impacted=8
+  lambda_hat=0.4000 alpha_hat=1.0000 q_hat=1.0000 R_observed=0.4000 lambda*alpha*q=0.4000
+lambda=0.50 | P3 MORGAN_IMMEDIATE_REQUEST
+  n=20 injected=9 active=0 active&injected=0 impacted=0
+  lambda_hat=0.4500 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.75 | P1 EXPRESS_SIMPLE_SEND
+  n=20 injected=16 active=0 active&injected=0 impacted=0
+  lambda_hat=0.8000 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=0.75 | P1 EXPRESS_SEND_FILE
+  n=20 injected=18 active=20 active&injected=18 impacted=18
+  lambda_hat=0.9000 alpha_hat=1.0000 q_hat=1.0000 R_observed=0.9000 lambda*alpha*q=0.9000
+lambda=0.75 | P3 MORGAN_NORMAL_REQUEST
+  n=20 injected=14 active=20 active&injected=14 impacted=14
+  lambda_hat=0.7000 alpha_hat=1.0000 q_hat=1.0000 R_observed=0.7000 lambda*alpha*q=0.7000
+lambda=0.75 | P3 MORGAN_IMMEDIATE_REQUEST
+  n=20 injected=14 active=0 active&injected=0 impacted=0
+  lambda_hat=0.7000 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=1.00 | P1 EXPRESS_SIMPLE_SEND
+  n=20 injected=20 active=0 active&injected=0 impacted=0
+  lambda_hat=1.0000 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+lambda=1.00 | P1 EXPRESS_SEND_FILE
+  n=20 injected=20 active=20 active&injected=20 impacted=20
+  lambda_hat=1.0000 alpha_hat=1.0000 q_hat=1.0000 R_observed=1.0000 lambda*alpha*q=1.0000
+lambda=1.00 | P3 MORGAN_NORMAL_REQUEST
+  n=20 injected=20 active=20 active&injected=20 impacted=20
+  lambda_hat=1.0000 alpha_hat=1.0000 q_hat=1.0000 R_observed=1.0000 lambda*alpha*q=1.0000
+lambda=1.00 | P3 MORGAN_IMMEDIATE_REQUEST
+  n=20 injected=20 active=0 active&injected=0 impacted=0
+  lambda_hat=1.0000 alpha_hat=0.0000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000
+
+ECOSYSTEM-AGGREGATE RESULTS
+---------------------------
+lambda=0.00 | n=80 lambda_hat=0.0000 alpha_hat=0.5000 q_hat=NA R_observed=0.0000 lambda*alpha*q=0.0000 abs_error=0.0000
+lambda=0.25 | n=80 lambda_hat=0.2625 alpha_hat=0.5000 q_hat=1.0000 R_observed=0.1000 lambda*alpha*q=0.1313 abs_error=0.0313
+lambda=0.50 | n=80 lambda_hat=0.4750 alpha_hat=0.5000 q_hat=1.0000 R_observed=0.2250 lambda*alpha*q=0.2375 abs_error=0.0125
+lambda=0.75 | n=80 lambda_hat=0.7750 alpha_hat=0.5000 q_hat=1.0000 R_observed=0.4000 lambda*alpha*q=0.3875 abs_error=0.0125
+lambda=1.00 | n=80 lambda_hat=1.0000 alpha_hat=0.5000 q_hat=1.0000 R_observed=0.5000 lambda*alpha*q=0.5000 abs_error=0.0000
+
+VALIDATION SUMMARY
+------------------
+Fatal trials: 0
+Aggregate MAE for lambda_hat * alpha_hat * q_hat: 0.0141
+Aggregate MAE using directly observed joint activation+injection exposure: 0.0000
+
+INTERPRETATION
+--------------
+This experiment operationalizes the advisor-requested failure/occurrence-rate term as a CONTROLLED injection probability.
+It tests whether observed controlled impact frequency follows the multiplicative structure lambda_ctrl * alpha * q.
+Inactive workloads should remain unimpacted even when perturbations are assigned, because alpha=0.
+Active workloads should show impact only on injected trials, with q near 1 for this deterministic corruption mechanism.
+The experiment validates model structure only; it does not estimate real-world incident frequency.

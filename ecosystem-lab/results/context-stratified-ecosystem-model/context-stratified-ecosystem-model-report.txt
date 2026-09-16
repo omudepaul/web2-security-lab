@@ -1,0 +1,73 @@
+CONTEXT-STRATIFIED OSS ECOSYSTEM PROPAGATION MODEL
+==================================================
+
+WHY THE MODEL IS BEING REFINED
+------------------------------
+The controlled-lambda experiment showed that multiplying ecosystem-wide average lambda, average alpha, and average q can introduce aggregation error.
+The reason is that activation and perturbation exposure differ by product/workload context.
+
+CORRECT COMPONENT-LEVEL MODEL
+-----------------------------
+R_c(p,x,s) = lambda_c(p,x,s) * alpha_c(p,x) * q_c(p,x,s)
+
+CORRECT ECOSYSTEM AGGREGATION
+-----------------------------
+R_E(c,s) = sum_{p,x} w_{p,x} * lambda_c(p,x,s) * alpha_c(p,x) * q_c(p,x,s)
+subject to: sum_{p,x} w_{p,x} = 1
+
+w_{p,x} is the relative frequency/probability of execution context (product p, context x).
+
+STATISTICAL CAUTION
+-------------------
+In general:
+  E[lambda * alpha * q] != E[lambda] * E[alpha] * E[q]
+unless additional independence/homogeneity assumptions are justified.
+
+CONTROLLED VALIDATION
+---------------------
+Target edge: on-finished@2.4.1 -> ee-first@1.1.1
+Perturbation: CORRUPT_ERROR
+Equal context weights are used for this controlled validation only.
+
+lambda_ctrl=0.00
+  observed ecosystem impact rate: 0.0000
+  context-stratified prediction: 0.0000
+  stratified abs. error: 0.0000
+  product-of-global-averages prediction: 0.0000
+  global-product abs. error: 0.0000
+lambda_ctrl=0.25
+  observed ecosystem impact rate: 0.1000
+  context-stratified prediction: 0.1000
+  stratified abs. error: 0.0000
+  product-of-global-averages prediction: 0.1313
+  global-product abs. error: 0.0313
+lambda_ctrl=0.50
+  observed ecosystem impact rate: 0.2250
+  context-stratified prediction: 0.2250
+  stratified abs. error: 0.0000
+  product-of-global-averages prediction: 0.2375
+  global-product abs. error: 0.0125
+lambda_ctrl=0.75
+  observed ecosystem impact rate: 0.4000
+  context-stratified prediction: 0.4000
+  stratified abs. error: 0.0000
+  product-of-global-averages prediction: 0.3875
+  global-product abs. error: 0.0125
+lambda_ctrl=1.00
+  observed ecosystem impact rate: 0.5000
+  context-stratified prediction: 0.5000
+  stratified abs. error: 0.0000
+  product-of-global-averages prediction: 0.5000
+  global-product abs. error: 0.0000
+
+VALIDATION SUMMARY
+------------------
+MAE of context-stratified model for nonzero lambda: 0.0000
+MAE of product-of-global-averages model for nonzero lambda: 0.0141
+
+RESEARCH INTERPRETATION
+-----------------------
+The component-level multiplicative structure remains useful, but ecosystem aggregation should preserve product/workload context before averaging.
+This avoids silently assuming that occurrence, activation, and propagation are independent across heterogeneous contexts.
+Future deployment weights w_{p,x} should come from real workload frequencies or telemetry, not arbitrary equal weighting.
+The controlled experiment validates mathematical structure only; it does not estimate natural real-world incident probability.

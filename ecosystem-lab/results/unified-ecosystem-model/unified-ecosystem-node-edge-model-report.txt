@@ -1,0 +1,82 @@
+UNIFIED OSS ECOSYSTEM NODE-AND-EDGE PROPAGATION MODEL
+======================================================
+
+FORMAL ECOSYSTEM
+----------------
+M_E = ({G_p}_{p=1..K}, C_s, mu, X, S, Lambda, Alpha, Q, Pi)
+
+G_p     : directed dependency graph for product p
+C_s     : studied shared components (nodes and exact edges)
+mu(c)   : products containing component c
+rho_c   : |mu(c)| / K, topological ecosystem reach
+x       : execution context (workload/configuration)
+s       : controlled perturbation/failure mode
+
+COMPONENT-LEVEL MODEL
+---------------------
+alpha_c(p,x) = P(A_c=1 | T_c(p)=1, x)
+q_c(p,x,s) = P(I_c=1 | A_c=1, p, x, s)
+pi_c(p,x,s) = alpha_c(p,x) * q_c(p,x,s)
+
+If a defensible natural occurrence/failure rate later becomes available:
+R_c(p,x,s) = lambda_c(s) * alpha_c(p,x) * q_c(p,x,s)
+
+lambda_c is intentionally UNESTIMATED in the current controlled experiments.
+
+EMPIRICAL COMPONENT SUMMARIES
+-----------------------------
+N1 [NODE] depd@2.0.0
+  products: P1, P2, P3
+  topology reach rho: 1.000 (3/3 products)
+  activation mechanism: workload-conditioned invocation
+  unique tested contexts: 9
+  active contexts: 5
+  inactive contexts: 4
+  mean activation alpha_bar over tested contexts: 0.556
+  mean q over active perturbed groups: 1.000
+  mean pi over all perturbed groups: 0.556
+  alpha range: 0.000 to 1.000
+  q range on active perturbations: 1.000 to 1.000
+  pi range on perturbed groups: 0.000 to 1.000
+
+E1 [EDGE] debug@2.6.9 -> ms@2.0.0
+  products: P2, P3
+  topology reach rho: 0.667 (2/3 products)
+  activation mechanism: configuration-conditioned downstream execution
+  unique tested contexts: 4
+  active contexts: 2
+  inactive contexts: 2
+  mean activation alpha_bar over tested contexts: 0.500
+  mean q over active perturbed groups: 1.000
+  mean pi over all perturbed groups: 0.500
+  alpha range: 0.000 to 1.000
+  q range on active perturbations: 1.000 to 1.000
+  pi range on perturbed groups: 0.000 to 1.000
+
+E2 [EDGE] on-finished@2.4.1 -> ee-first@1.1.1
+  products: P1, P3
+  topology reach rho: 0.667 (2/3 products)
+  activation mechanism: workload-conditioned downstream execution
+  unique tested contexts: 4
+  active contexts: 2
+  inactive contexts: 2
+  mean activation alpha_bar over tested contexts: 0.500
+  mean q over active perturbed groups: 1.000
+  mean pi over all perturbed groups: 0.500
+  alpha range: 0.000 to 1.000
+  q range on active perturbations: 1.000 to 1.000
+  pi range on perturbed groups: 0.000 to 1.000
+
+GENERALIZED INTERPRETATION
+--------------------------
+1. Shared topology defines where propagation is structurally possible, not where it is guaranteed.
+2. Runtime activation is context-dependent and can be controlled by workload, configuration, or both.
+3. Conditional propagation q is meaningful only after the component is active.
+4. Effective controlled impact pi combines activation with propagation.
+5. Topological reach rho distinguishes a component shared by all products from one shared by only a subset.
+6. A natural failure/compromise rate lambda must come from defensible real occurrence data; it is not inferred from deterministic perturbation experiments.
+
+No single ecosystem risk score is claimed at this stage.
+The current evidence supports a vector-valued component signature:
+  Sigma_c = (rho_c, alpha_c, q_c, pi_c)
+with lambda_c added later when a defensible occurrence model is available.
