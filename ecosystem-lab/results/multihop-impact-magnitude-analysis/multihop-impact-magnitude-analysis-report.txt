@@ -1,0 +1,93 @@
+MULTI-HOP IMPACT MAGNITUDE ANALYSIS
+===================================
+
+PRINCIPLE
+---------
+Impact severity is represented as separate measurable dimensions rather than one arbitrary scalar risk score.
+
+Dimensions include path activation, conditional propagation, HTTP availability, latency, observability alteration, completion suppression, and controlled error behavior.
+
+IMPORTANT: results come from controlled perturbations and do not estimate natural real-world incident frequency.
+
+PA: morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0
+--------------------------------------------
+ACTIVE_COLORS_ON | BASELINE
+  alpha_P=1.000 q_P=0.000 impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  mean altered ms calls=0.000
+ACTIVE_COLORS_ON | CORRUPT_HUMANIZE
+  alpha_P=1.000 q_P=1.000 impactRate=1.000
+  HTTP failure rate=0.000 impact=OBSERVABILITY_CORRUPTION
+  latency delta ms: mean=1.410 median=1.409 min=-0.462 max=3.207
+  mean altered ms calls=1.000
+ACTIVE_COLORS_ON | DELAY_HUMANIZE
+  alpha_P=1.000 q_P=1.000 impactRate=1.000
+  HTTP failure rate=0.000 impact=LATENCY
+  latency delta ms: mean=51.308 median=50.981 min=50.212 max=53.632
+  mean altered ms calls=1.000
+ACTIVE_COLORS_ON | EMPTY_HUMANIZE
+  alpha_P=1.000 q_P=1.000 impactRate=1.000
+  HTTP failure rate=0.000 impact=OBSERVABILITY_SUPPRESSION
+  latency delta ms: mean=1.515 median=0.518 min=-0.123 max=6.358
+  mean altered ms calls=1.000
+INACTIVE_COLORS_OFF | BASELINE
+  alpha_P=0.000 q_P=NA impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  mean altered ms calls=0.000
+INACTIVE_COLORS_OFF | CORRUPT_HUMANIZE
+  alpha_P=0.000 q_P=NA impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  mean altered ms calls=0.000
+INACTIVE_COLORS_OFF | DELAY_HUMANIZE
+  alpha_P=0.000 q_P=NA impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  mean altered ms calls=0.000
+INACTIVE_COLORS_OFF | EMPTY_HUMANIZE
+  alpha_P=0.000 q_P=NA impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  mean altered ms calls=0.000
+
+PB: morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1
+--------------------------------------------------------
+MORGAN_IMMEDIATE_REQUEST | BASELINE
+  alpha_P=0.000 q_P=NA impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  completion/error metrics: droppedRegistrations=0.000 controlledErrors=0.000 parentCallbacks=0.000
+MORGAN_IMMEDIATE_REQUEST | CORRUPT_ERROR
+  alpha_P=0.000 q_P=NA impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  completion/error metrics: droppedRegistrations=0.000 controlledErrors=0.000 parentCallbacks=0.000
+MORGAN_IMMEDIATE_REQUEST | DELAY_COMPLETION
+  alpha_P=0.000 q_P=NA impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  completion/error metrics: droppedRegistrations=0.000 controlledErrors=0.000 parentCallbacks=0.000
+MORGAN_IMMEDIATE_REQUEST | DROP_COMPLETION
+  alpha_P=0.000 q_P=NA impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  completion/error metrics: droppedRegistrations=0.000 controlledErrors=0.000 parentCallbacks=0.000
+MORGAN_NORMAL_REQUEST | BASELINE
+  alpha_P=1.000 q_P=0.000 impactRate=0.000
+  HTTP failure rate=0.000 impact=NONE
+  completion/error metrics: droppedRegistrations=0.000 controlledErrors=0.000 parentCallbacks=1.000
+MORGAN_NORMAL_REQUEST | CORRUPT_ERROR
+  alpha_P=1.000 q_P=1.000 impactRate=1.000
+  HTTP failure rate=0.000 impact=ERROR_CORRUPTION
+  latency delta ms: mean=-7.560 median=-8.218 min=-10.133 max=-2.712
+  completion/error metrics: droppedRegistrations=0.000 controlledErrors=1.000 parentCallbacks=1.000
+MORGAN_NORMAL_REQUEST | DELAY_COMPLETION
+  alpha_P=1.000 q_P=1.000 impactRate=1.000
+  HTTP failure rate=0.000 impact=LATENCY
+  latency delta ms: mean=50.209 median=49.802 min=46.820 max=55.035
+  completion/error metrics: droppedRegistrations=0.000 controlledErrors=0.000 parentCallbacks=1.000
+MORGAN_NORMAL_REQUEST | DROP_COMPLETION
+  alpha_P=1.000 q_P=1.000 impactRate=1.000
+  HTTP failure rate=0.000 impact=COMPLETION_SUPPRESSION
+  latency delta ms: mean=-2.224 median=-1.472 min=-9.808 max=5.347
+  completion/error metrics: droppedRegistrations=2.000 controlledErrors=0.000 parentCallbacks=0.000
+
+INTERPRETATION
+--------------
+The earlier binary impact variable establishes whether an effect occurred.
+This analysis adds magnitude/type information so two perturbations with the same q_P do not have to be treated as equivalent in consequence.
+HTTP status can remain successful while lower-layer observability, completion semantics, error semantics, or latency are measurably degraded.
+No single cross-dimension scalar score is claimed because defensible weighting among these dimensions has not yet been established.

@@ -1,0 +1,504 @@
+{
+  "experiment": "Multi-hop impact magnitude analysis",
+  "input": "results\\multihop-path-propagation\\morgan-multihop-path-propagation.json",
+  "designPrinciple": "Impact magnitude is represented as a multidimensional profile rather than an arbitrary scalar score.",
+  "caution": "All measurements come from controlled perturbation experiments and do not estimate natural real-world incident frequency or universal severity.",
+  "profiles": [
+    {
+      "pathId": "PA",
+      "path": "morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0",
+      "context": "ACTIVE_COLORS_ON",
+      "perturbation": "BASELINE",
+      "activationDimension": {
+        "alphaPath": 1
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": 0,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": 0
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": null,
+        "meanControlledErrorsSeenByParent": null,
+        "meanParentVisibleCallbackInvocations": null
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PA",
+      "path": "morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0",
+      "context": "ACTIVE_COLORS_ON",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "activationDimension": {
+        "alphaPath": 1
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": 1,
+        "impactRate": 1
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": 1.4100200000000007,
+        "medianDeltaMs": 1.4094000000000015,
+        "minDeltaMs": -0.4616000000000007,
+        "maxDeltaMs": 3.2070000000000007
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": 1
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": null,
+        "meanControlledErrorsSeenByParent": null,
+        "meanParentVisibleCallbackInvocations": null
+      },
+      "impactType": "OBSERVABILITY_CORRUPTION"
+    },
+    {
+      "pathId": "PA",
+      "path": "morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0",
+      "context": "ACTIVE_COLORS_ON",
+      "perturbation": "DELAY_HUMANIZE",
+      "activationDimension": {
+        "alphaPath": 1
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": 1,
+        "impactRate": 1
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": 51.30816,
+        "medianDeltaMs": 50.9808,
+        "minDeltaMs": 50.2115,
+        "maxDeltaMs": 53.631600000000006
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": 1
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": null,
+        "meanControlledErrorsSeenByParent": null,
+        "meanParentVisibleCallbackInvocations": null
+      },
+      "impactType": "LATENCY"
+    },
+    {
+      "pathId": "PA",
+      "path": "morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0",
+      "context": "ACTIVE_COLORS_ON",
+      "perturbation": "EMPTY_HUMANIZE",
+      "activationDimension": {
+        "alphaPath": 1
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": 1,
+        "impactRate": 1
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": 1.515440000000001,
+        "medianDeltaMs": 0.5178000000000011,
+        "minDeltaMs": -0.12269999999999825,
+        "maxDeltaMs": 6.357900000000001
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": 1
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": null,
+        "meanControlledErrorsSeenByParent": null,
+        "meanParentVisibleCallbackInvocations": null
+      },
+      "impactType": "OBSERVABILITY_SUPPRESSION"
+    },
+    {
+      "pathId": "PA",
+      "path": "morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0",
+      "context": "INACTIVE_COLORS_OFF",
+      "perturbation": "BASELINE",
+      "activationDimension": {
+        "alphaPath": 0
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": null,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": 0
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": null,
+        "meanControlledErrorsSeenByParent": null,
+        "meanParentVisibleCallbackInvocations": null
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PA",
+      "path": "morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0",
+      "context": "INACTIVE_COLORS_OFF",
+      "perturbation": "CORRUPT_HUMANIZE",
+      "activationDimension": {
+        "alphaPath": 0
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": null,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": 0
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": null,
+        "meanControlledErrorsSeenByParent": null,
+        "meanParentVisibleCallbackInvocations": null
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PA",
+      "path": "morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0",
+      "context": "INACTIVE_COLORS_OFF",
+      "perturbation": "DELAY_HUMANIZE",
+      "activationDimension": {
+        "alphaPath": 0
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": null,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": 0
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": null,
+        "meanControlledErrorsSeenByParent": null,
+        "meanParentVisibleCallbackInvocations": null
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PA",
+      "path": "morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0",
+      "context": "INACTIVE_COLORS_OFF",
+      "perturbation": "EMPTY_HUMANIZE",
+      "activationDimension": {
+        "alphaPath": 0
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": null,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": 0
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": null,
+        "meanControlledErrorsSeenByParent": null,
+        "meanParentVisibleCallbackInvocations": null
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PB",
+      "path": "morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1",
+      "context": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "BASELINE",
+      "activationDimension": {
+        "alphaPath": 0
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": null,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": null
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": 0,
+        "meanControlledErrorsSeenByParent": 0,
+        "meanParentVisibleCallbackInvocations": 0
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PB",
+      "path": "morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1",
+      "context": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "activationDimension": {
+        "alphaPath": 0
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": null,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": null
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": 0,
+        "meanControlledErrorsSeenByParent": 0,
+        "meanParentVisibleCallbackInvocations": 0
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PB",
+      "path": "morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1",
+      "context": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "activationDimension": {
+        "alphaPath": 0
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": null,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": null
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": 0,
+        "meanControlledErrorsSeenByParent": 0,
+        "meanParentVisibleCallbackInvocations": 0
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PB",
+      "path": "morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1",
+      "context": "MORGAN_IMMEDIATE_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "activationDimension": {
+        "alphaPath": 0
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": null,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": null
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": 0,
+        "meanControlledErrorsSeenByParent": 0,
+        "meanParentVisibleCallbackInvocations": 0
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PB",
+      "path": "morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1",
+      "context": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "BASELINE",
+      "activationDimension": {
+        "alphaPath": 1
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": 0,
+        "impactRate": 0
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": null,
+        "medianDeltaMs": null,
+        "minDeltaMs": null,
+        "maxDeltaMs": null
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": null
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": 0,
+        "meanControlledErrorsSeenByParent": 0,
+        "meanParentVisibleCallbackInvocations": 1
+      },
+      "impactType": "NONE"
+    },
+    {
+      "pathId": "PB",
+      "path": "morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1",
+      "context": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "CORRUPT_ERROR",
+      "activationDimension": {
+        "alphaPath": 1
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": 1,
+        "impactRate": 1
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": -7.560159999999999,
+        "medianDeltaMs": -8.217699999999994,
+        "minDeltaMs": -10.132500000000007,
+        "maxDeltaMs": -2.7116999999999933
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": null
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": 0,
+        "meanControlledErrorsSeenByParent": 1,
+        "meanParentVisibleCallbackInvocations": 1
+      },
+      "impactType": "ERROR_CORRUPTION"
+    },
+    {
+      "pathId": "PB",
+      "path": "morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1",
+      "context": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DELAY_COMPLETION",
+      "activationDimension": {
+        "alphaPath": 1
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": 1,
+        "impactRate": 1
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": 50.20888,
+        "medianDeltaMs": 49.80229999999999,
+        "minDeltaMs": 46.81999999999999,
+        "maxDeltaMs": 55.0355
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": null
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": 0,
+        "meanControlledErrorsSeenByParent": 0,
+        "meanParentVisibleCallbackInvocations": 1
+      },
+      "impactType": "LATENCY"
+    },
+    {
+      "pathId": "PB",
+      "path": "morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1",
+      "context": "MORGAN_NORMAL_REQUEST",
+      "perturbation": "DROP_COMPLETION",
+      "activationDimension": {
+        "alphaPath": 1
+      },
+      "propagationDimension": {
+        "qPathConditionalOnActive": 1,
+        "impactRate": 1
+      },
+      "serviceAvailabilityDimension": {
+        "httpFailureRate": 0
+      },
+      "latencyDimension": {
+        "meanDeltaMs": -2.2240999999999986,
+        "medianDeltaMs": -1.471500000000006,
+        "minDeltaMs": -9.808099999999996,
+        "maxDeltaMs": 5.346900000000005
+      },
+      "observabilityIntegrityDimension": {
+        "meanAlteredMsCalls": null
+      },
+      "completionErrorDimension": {
+        "meanDroppedEeFirstRegistrations": 2,
+        "meanControlledErrorsSeenByParent": 0,
+        "meanParentVisibleCallbackInvocations": 0
+      },
+      "impactType": "COMPLETION_SUPPRESSION"
+    }
+  ]
+}
