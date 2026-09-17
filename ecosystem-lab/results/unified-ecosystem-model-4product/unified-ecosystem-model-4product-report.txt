@@ -1,0 +1,48 @@
+FOUR-PRODUCT UNIFIED ECOSYSTEM MODEL
+====================================
+
+Products K=4
+P1=Express, P2=express-session, P3=Morgan, P4=Connect
+
+FORMAL MODEL
+------------
+M_E = ({G_p}_{p=1..K}, C_s, mu, X, S, Lambda, Alpha, Q, Pi)
+
+rho_c = |mu(c)| / K
+pi_c = alpha_c * q_c
+
+COMPONENT SIGNATURES
+--------------------
+N1 NODE: depd@2.0.0
+  products=P1,P2,P3 count=3/4 rho=0.750
+  tested contexts=9 active=5 inactive=4
+  alpha_bar=0.556 q_controlled=1.000 pi_bar_perturbed=0.556
+  evidence=Existing depd activation/perturbation experiments across P1/P2/P3; P4 does not structurally contain depd@2.0.0.
+E1 EDGE: debug@2.6.9 -> ms@2.0.0
+  products=P2,P3,P4 count=3/4 rho=0.750
+  tested contexts=6 active=3 inactive=3
+  alpha_bar=0.500 q_controlled=1.000 pi_bar_perturbed=0.500
+  evidence=Earlier P2/P3 debug->ms experiments plus pre-specified P4 Connect activation and propagation validation.
+E2 EDGE: on-finished@2.4.1 -> ee-first@1.1.1
+  products=P1,P3 count=2/4 rho=0.500
+  tested contexts=4 active=2 inactive=2
+  alpha_bar=0.500 q_controlled=1.000 pi_bar_perturbed=0.500
+  evidence=Existing P1/P3 on-finished@2.4.1 -> ee-first@1.1.1 experiments. P4 has on-finished@2.3.0, so it is not counted as the same exact edge.
+
+K=3 -> K=4 STRUCTURAL CHANGES
+-----------------------------
+N1 depd@2.0.0: rho changed from 1.000 to 0.750 because P4 does not contain the exact node.
+E1 debug@2.6.9 -> ms@2.0.0: rho changed from 0.667 to 0.750 because P4 contains the exact edge.
+E2 on-finished@2.4.1 -> ee-first@1.1.1: rho changed from 0.667 to 0.500 because P4 contains on-finished@2.3.0, not 2.4.1.
+
+P4 VALIDATION EFFECT ON E1
+--------------------------
+P4 added one inactive and one active pre-specified context for the reused exact debug->ms edge.
+Across the combined tested E1 contexts: active=3, inactive=3, alpha_bar=0.500.
+Under active deterministic controlled perturbations, P4 reproduced q=1 for corruption, suppression, and latency effects.
+
+IMPORTANT
+---------
+rho is structural reach only. It must not be interpreted as runtime activation, conditional propagation, or natural risk.
+q=1 is a controlled deterministic mechanism result, not a natural compromise/failure probability.
+No natural lambda is claimed. Therefore no scalar natural risk score is produced.

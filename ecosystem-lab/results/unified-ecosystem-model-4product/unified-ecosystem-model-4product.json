@@ -1,0 +1,84 @@
+{
+  "name": "Four-product unified ecosystem model",
+  "K": 4,
+  "products": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "formalModel": "M_E = ({G_p}_{p=1..K}, C_s, mu, X, S, Lambda, Alpha, Q, Pi)",
+  "definitions": {
+    "rho": "rho_c = |mu(c)| / K",
+    "alpha": "alpha_c(p,x) = P(A_c=1 | T_c=1,p,x)",
+    "q": "q_c(p,x,s) = P(I_c=1 | A_c=1,p,x,s)",
+    "pi": "pi_c(p,x,s) = alpha_c(p,x) * q_c(p,x,s)",
+    "naturalRisk": "R_c = lambda_c * alpha_c * q_c only when a defensible natural lambda_c is available"
+  },
+  "components": [
+    {
+      "id": "N1",
+      "type": "NODE",
+      "component": "depd@2.0.0",
+      "products": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "productCount": 3,
+      "rho": 0.75,
+      "contextsTested": 9,
+      "activeContexts": 5,
+      "inactiveContexts": 4,
+      "alphaBar": 0.5555555555555556,
+      "qControlledActivePerturbations": 1,
+      "piBarPerturbed": 0.5555555555555556,
+      "evidence": "Existing depd activation/perturbation experiments across P1/P2/P3; P4 does not structurally contain depd@2.0.0."
+    },
+    {
+      "id": "E1",
+      "type": "EDGE",
+      "component": "debug@2.6.9 -> ms@2.0.0",
+      "products": [
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "productCount": 3,
+      "rho": 0.75,
+      "contextsTested": 6,
+      "activeContexts": 3,
+      "inactiveContexts": 3,
+      "alphaBar": 0.5,
+      "qControlledActivePerturbations": 1,
+      "piBarPerturbed": 0.5,
+      "evidence": "Earlier P2/P3 debug->ms experiments plus pre-specified P4 Connect activation and propagation validation."
+    },
+    {
+      "id": "E2",
+      "type": "EDGE",
+      "component": "on-finished@2.4.1 -> ee-first@1.1.1",
+      "products": [
+        "P1",
+        "P3"
+      ],
+      "productCount": 2,
+      "rho": 0.5,
+      "contextsTested": 4,
+      "activeContexts": 2,
+      "inactiveContexts": 2,
+      "alphaBar": 0.5,
+      "qControlledActivePerturbations": 1,
+      "piBarPerturbed": 0.5,
+      "evidence": "Existing P1/P3 on-finished@2.4.1 -> ee-first@1.1.1 experiments. P4 has on-finished@2.3.0, so it is not counted as the same exact edge."
+    }
+  ],
+  "principles": [
+    "Structural reach is not runtime activation.",
+    "Runtime activation is not conditional propagation.",
+    "Controlled q=1 validates the deterministic mechanism under the tested perturbation; it is not a natural compromise/failure probability.",
+    "Natural lambda remains unestimated.",
+    "P4 extends E1 validation to a new parent-product environment.",
+    "Exact package-version identity must remain distinct from physical installed-instance identity."
+  ]
+}
