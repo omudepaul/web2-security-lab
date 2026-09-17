@@ -1,0 +1,53 @@
+P4 CONNECT EXTERNAL-CONTEXT PROPAGATION VALIDATION
+==================================================
+
+Product: connect@3.7.0
+Exact edge: debug@2.6.9 -> ms@2.0.0
+Path: connect@3.7.0 -> debug@2.6.9 -> ms@2.0.0
+
+PRE-SPECIFIED EXPECTATION
+-------------------------
+Inactive colors-off context: A=0, so perturbations should not impact.
+Active colors-on context: A=1.
+For active deterministic perturbations, expected q=1.
+
+RESULTS
+-------
+INACTIVE_COLORS_OFF | BASELINE
+  alpha=0.0000 q=NA impactRate=0.0000 predictedImpact=0.0000 accuracy=1.0000
+  HTTP200=1.0000 meanLatencyDeltaMs=-0.000 meanMsCalls=0.0000 alteredMsCalls=0.0000
+INACTIVE_COLORS_OFF | CORRUPT_HUMANIZE
+  alpha=0.0000 q=NA impactRate=0.0000 predictedImpact=0.0000 accuracy=1.0000
+  HTTP200=1.0000 meanLatencyDeltaMs=0.010 meanMsCalls=0.0000 alteredMsCalls=0.0000
+INACTIVE_COLORS_OFF | EMPTY_HUMANIZE
+  alpha=0.0000 q=NA impactRate=0.0000 predictedImpact=0.0000 accuracy=1.0000
+  HTTP200=1.0000 meanLatencyDeltaMs=-0.036 meanMsCalls=0.0000 alteredMsCalls=0.0000
+INACTIVE_COLORS_OFF | DELAY_HUMANIZE
+  alpha=0.0000 q=NA impactRate=0.0000 predictedImpact=0.0000 accuracy=1.0000
+  HTTP200=1.0000 meanLatencyDeltaMs=-0.036 meanMsCalls=0.0000 alteredMsCalls=0.0000
+ACTIVE_COLORS_ON | BASELINE
+  alpha=1.0000 q=0.0000 impactRate=0.0000 predictedImpact=0.0000 accuracy=1.0000
+  HTTP200=1.0000 meanLatencyDeltaMs=0.000 meanMsCalls=2.0000 alteredMsCalls=0.0000
+ACTIVE_COLORS_ON | CORRUPT_HUMANIZE
+  alpha=1.0000 q=1.0000 impactRate=1.0000 predictedImpact=1.0000 accuracy=1.0000
+  HTTP200=1.0000 meanLatencyDeltaMs=0.584 meanMsCalls=2.0000 alteredMsCalls=2.0000
+ACTIVE_COLORS_ON | EMPTY_HUMANIZE
+  alpha=1.0000 q=1.0000 impactRate=1.0000 predictedImpact=1.0000 accuracy=1.0000
+  HTTP200=1.0000 meanLatencyDeltaMs=0.371 meanMsCalls=2.0000 alteredMsCalls=2.0000
+ACTIVE_COLORS_ON | DELAY_HUMANIZE
+  alpha=1.0000 q=1.0000 impactRate=1.0000 predictedImpact=1.0000 accuracy=1.0000
+  HTTP200=1.0000 meanLatencyDeltaMs=50.057 meanMsCalls=2.0000 alteredMsCalls=2.0000
+
+OVERALL
+-------
+status=PASS
+total trials=80
+fatal trials=0
+overall prediction accuracy=1.0000
+
+INTERPRETATION
+--------------
+A PASS means the earlier activation/conditional-propagation mechanism reproduced in the new Connect parent-product environment.
+Inactive runtime context prevents downstream perturbation impact despite structural path presence.
+Active runtime context permits the controlled perturbation to propagate to observability or latency effects.
+This remains controlled mechanism validation and does not estimate natural real-world incident frequency.
