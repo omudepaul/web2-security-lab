@@ -4,8 +4,8 @@ FIVE-PRODUCT COMPARISON
 PRODUCT STRUCTURE
 -----------------
 P1 Express
-  nodes=68 exactIdentities=67 totalEdgesIncludingRoot=125
-  DAG=YES maxDepth=12 duplicateNames=2 unresolved=0
+  nodes=68 exactIdentities=66 totalEdgesIncludingRoot=125
+  DAG=YES maxDepth=12 duplicateNames=1 unresolved=0
 P2 express-session
   nodes=11 exactIdentities=11 totalEdgesIncludingRoot=11
   DAG=YES maxDepth=3 duplicateNames=0 unresolved=0

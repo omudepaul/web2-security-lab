@@ -34,18 +34,17 @@ function normalizeKey(k) { return String(k || "").replace(/\\/g, "/").replace(/\
 
 function inferPackageName(lockKey, entry) {
   if (entry && entry.name) return entry.name;
+
   const k = normalizeKey(lockKey);
-  const marker = "/node_modules/";
-  let tail;
-  if (k.startsWith("node_modules/")) tail = k.slice("node_modules/".length);
-  else {
-    const i = k.lastIndexOf(marker);
-    tail = i >= 0 ? k.slice(i + marker.length) : k;
-  }
+  const marker = "node_modules/";
+  const i = k.lastIndexOf(marker);
+  const tail = i >= 0 ? k.slice(i + marker.length) : k;
   const parts = tail.split("/");
+
   if (parts[0] && parts[0].startsWith("@") && parts.length >= 2) {
     return `${parts[0]}/${parts[1]}`;
   }
+
   return parts[0] || null;
 }
 
