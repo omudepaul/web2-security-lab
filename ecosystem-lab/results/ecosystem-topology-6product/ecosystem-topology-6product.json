@@ -1,0 +1,3107 @@
+{
+  "analysis": "Six-product ecosystem topology",
+  "modelingBoundary": "Physical installed package instances are used for DAG/cycle analysis; exact name@version identities and exact dependency relations are used for cross-product sharing.",
+  "products": [
+    {
+      "productId": "P1",
+      "label": "Express",
+      "directory": "product-express",
+      "rootName": "product-express",
+      "rootVersion": "1.0.0",
+      "packageNodeInstances": 68,
+      "exactPackageVersionIdentities": 66,
+      "nonRootPhysicalDependencyEdges": 124,
+      "rootDirectEdges": 1,
+      "totalPhysicalEdgesIncludingRoot": 125,
+      "physicalDAG": true,
+      "physicalMaxDepthIncludingRoot": 12,
+      "duplicatePackageNameCount": 1,
+      "duplicatePackageNames": [
+        {
+          "name": "content-type",
+          "count": 4
+        }
+      ],
+      "unresolvedDependencyCount": 0,
+      "unresolvedDependencies": [],
+      "physicalNodes": [
+        {
+          "physicalId": "node_modules/accepts",
+          "name": "accepts",
+          "version": "2.0.0",
+          "exact": "accepts@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/body-parser",
+          "name": "body-parser",
+          "version": "2.3.0",
+          "exact": "body-parser@2.3.0"
+        },
+        {
+          "physicalId": "node_modules/body-parser/node_modules/content-type",
+          "name": "content-type",
+          "version": "2.1.0",
+          "exact": "content-type@2.1.0"
+        },
+        {
+          "physicalId": "node_modules/bytes",
+          "name": "bytes",
+          "version": "3.1.2",
+          "exact": "bytes@3.1.2"
+        },
+        {
+          "physicalId": "node_modules/call-bind-apply-helpers",
+          "name": "call-bind-apply-helpers",
+          "version": "1.0.2",
+          "exact": "call-bind-apply-helpers@1.0.2"
+        },
+        {
+          "physicalId": "node_modules/call-bound",
+          "name": "call-bound",
+          "version": "1.0.4",
+          "exact": "call-bound@1.0.4"
+        },
+        {
+          "physicalId": "node_modules/content-disposition",
+          "name": "content-disposition",
+          "version": "1.1.0",
+          "exact": "content-disposition@1.1.0"
+        },
+        {
+          "physicalId": "node_modules/content-type",
+          "name": "content-type",
+          "version": "1.0.5",
+          "exact": "content-type@1.0.5"
+        },
+        {
+          "physicalId": "node_modules/cookie",
+          "name": "cookie",
+          "version": "0.7.2",
+          "exact": "cookie@0.7.2"
+        },
+        {
+          "physicalId": "node_modules/cookie-signature",
+          "name": "cookie-signature",
+          "version": "1.2.2",
+          "exact": "cookie-signature@1.2.2"
+        },
+        {
+          "physicalId": "node_modules/debug",
+          "name": "debug",
+          "version": "4.4.3",
+          "exact": "debug@4.4.3"
+        },
+        {
+          "physicalId": "node_modules/depd",
+          "name": "depd",
+          "version": "2.0.0",
+          "exact": "depd@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/dunder-proto",
+          "name": "dunder-proto",
+          "version": "1.0.1",
+          "exact": "dunder-proto@1.0.1"
+        },
+        {
+          "physicalId": "node_modules/ee-first",
+          "name": "ee-first",
+          "version": "1.1.1",
+          "exact": "ee-first@1.1.1"
+        },
+        {
+          "physicalId": "node_modules/encodeurl",
+          "name": "encodeurl",
+          "version": "2.0.0",
+          "exact": "encodeurl@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/es-define-property",
+          "name": "es-define-property",
+          "version": "1.0.1",
+          "exact": "es-define-property@1.0.1"
+        },
+        {
+          "physicalId": "node_modules/es-errors",
+          "name": "es-errors",
+          "version": "1.3.0",
+          "exact": "es-errors@1.3.0"
+        },
+        {
+          "physicalId": "node_modules/es-object-atoms",
+          "name": "es-object-atoms",
+          "version": "1.1.2",
+          "exact": "es-object-atoms@1.1.2"
+        },
+        {
+          "physicalId": "node_modules/escape-html",
+          "name": "escape-html",
+          "version": "1.0.3",
+          "exact": "escape-html@1.0.3"
+        },
+        {
+          "physicalId": "node_modules/etag",
+          "name": "etag",
+          "version": "1.8.1",
+          "exact": "etag@1.8.1"
+        },
+        {
+          "physicalId": "node_modules/express",
+          "name": "express",
+          "version": "5.2.1",
+          "exact": "express@5.2.1"
+        },
+        {
+          "physicalId": "node_modules/finalhandler",
+          "name": "finalhandler",
+          "version": "2.1.1",
+          "exact": "finalhandler@2.1.1"
+        },
+        {
+          "physicalId": "node_modules/forwarded",
+          "name": "forwarded",
+          "version": "0.2.0",
+          "exact": "forwarded@0.2.0"
+        },
+        {
+          "physicalId": "node_modules/fresh",
+          "name": "fresh",
+          "version": "2.0.0",
+          "exact": "fresh@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/function-bind",
+          "name": "function-bind",
+          "version": "1.1.2",
+          "exact": "function-bind@1.1.2"
+        },
+        {
+          "physicalId": "node_modules/get-intrinsic",
+          "name": "get-intrinsic",
+          "version": "1.3.0",
+          "exact": "get-intrinsic@1.3.0"
+        },
+        {
+          "physicalId": "node_modules/get-proto",
+          "name": "get-proto",
+          "version": "1.0.1",
+          "exact": "get-proto@1.0.1"
+        },
+        {
+          "physicalId": "node_modules/gopd",
+          "name": "gopd",
+          "version": "1.2.0",
+          "exact": "gopd@1.2.0"
+        },
+        {
+          "physicalId": "node_modules/has-symbols",
+          "name": "has-symbols",
+          "version": "1.1.0",
+          "exact": "has-symbols@1.1.0"
+        },
+        {
+          "physicalId": "node_modules/hasown",
+          "name": "hasown",
+          "version": "2.0.4",
+          "exact": "hasown@2.0.4"
+        },
+        {
+          "physicalId": "node_modules/http-errors",
+          "name": "http-errors",
+          "version": "2.0.1",
+          "exact": "http-errors@2.0.1"
+        },
+        {
+          "physicalId": "node_modules/iconv-lite",
+          "name": "iconv-lite",
+          "version": "0.7.3",
+          "exact": "iconv-lite@0.7.3"
+        },
+        {
+          "physicalId": "node_modules/inherits",
+          "name": "inherits",
+          "version": "2.0.4",
+          "exact": "inherits@2.0.4"
+        },
+        {
+          "physicalId": "node_modules/ipaddr.js",
+          "name": "ipaddr.js",
+          "version": "1.9.1",
+          "exact": "ipaddr.js@1.9.1"
+        },
+        {
+          "physicalId": "node_modules/is-promise",
+          "name": "is-promise",
+          "version": "4.0.0",
+          "exact": "is-promise@4.0.0"
+        },
+        {
+          "physicalId": "node_modules/math-intrinsics",
+          "name": "math-intrinsics",
+          "version": "1.1.0",
+          "exact": "math-intrinsics@1.1.0"
+        },
+        {
+          "physicalId": "node_modules/media-typer",
+          "name": "media-typer",
+          "version": "1.1.1",
+          "exact": "media-typer@1.1.1"
+        },
+        {
+          "physicalId": "node_modules/merge-descriptors",
+          "name": "merge-descriptors",
+          "version": "2.0.0",
+          "exact": "merge-descriptors@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/mime-db",
+          "name": "mime-db",
+          "version": "1.54.0",
+          "exact": "mime-db@1.54.0"
+        },
+        {
+          "physicalId": "node_modules/mime-types",
+          "name": "mime-types",
+          "version": "3.0.2",
+          "exact": "mime-types@3.0.2"
+        },
+        {
+          "physicalId": "node_modules/ms",
+          "name": "ms",
+          "version": "2.1.3",
+          "exact": "ms@2.1.3"
+        },
+        {
+          "physicalId": "node_modules/negotiator",
+          "name": "negotiator",
+          "version": "1.1.0",
+          "exact": "negotiator@1.1.0"
+        },
+        {
+          "physicalId": "node_modules/negotiator/node_modules/content-type",
+          "name": "content-type",
+          "version": "2.1.0",
+          "exact": "content-type@2.1.0"
+        },
+        {
+          "physicalId": "node_modules/object-inspect",
+          "name": "object-inspect",
+          "version": "1.13.4",
+          "exact": "object-inspect@1.13.4"
+        },
+        {
+          "physicalId": "node_modules/on-finished",
+          "name": "on-finished",
+          "version": "2.4.1",
+          "exact": "on-finished@2.4.1"
+        },
+        {
+          "physicalId": "node_modules/once",
+          "name": "once",
+          "version": "1.4.0",
+          "exact": "once@1.4.0"
+        },
+        {
+          "physicalId": "node_modules/parseurl",
+          "name": "parseurl",
+          "version": "1.3.3",
+          "exact": "parseurl@1.3.3"
+        },
+        {
+          "physicalId": "node_modules/path-to-regexp",
+          "name": "path-to-regexp",
+          "version": "8.4.2",
+          "exact": "path-to-regexp@8.4.2"
+        },
+        {
+          "physicalId": "node_modules/proxy-addr",
+          "name": "proxy-addr",
+          "version": "2.0.7",
+          "exact": "proxy-addr@2.0.7"
+        },
+        {
+          "physicalId": "node_modules/qs",
+          "name": "qs",
+          "version": "6.16.0",
+          "exact": "qs@6.16.0"
+        },
+        {
+          "physicalId": "node_modules/range-parser",
+          "name": "range-parser",
+          "version": "1.3.0",
+          "exact": "range-parser@1.3.0"
+        },
+        {
+          "physicalId": "node_modules/raw-body",
+          "name": "raw-body",
+          "version": "3.0.2",
+          "exact": "raw-body@3.0.2"
+        },
+        {
+          "physicalId": "node_modules/router",
+          "name": "router",
+          "version": "2.2.0",
+          "exact": "router@2.2.0"
+        },
+        {
+          "physicalId": "node_modules/safer-buffer",
+          "name": "safer-buffer",
+          "version": "2.1.2",
+          "exact": "safer-buffer@2.1.2"
+        },
+        {
+          "physicalId": "node_modules/send",
+          "name": "send",
+          "version": "1.2.1",
+          "exact": "send@1.2.1"
+        },
+        {
+          "physicalId": "node_modules/serve-static",
+          "name": "serve-static",
+          "version": "2.2.1",
+          "exact": "serve-static@2.2.1"
+        },
+        {
+          "physicalId": "node_modules/setprototypeof",
+          "name": "setprototypeof",
+          "version": "1.2.0",
+          "exact": "setprototypeof@1.2.0"
+        },
+        {
+          "physicalId": "node_modules/side-channel",
+          "name": "side-channel",
+          "version": "1.1.1",
+          "exact": "side-channel@1.1.1"
+        },
+        {
+          "physicalId": "node_modules/side-channel-list",
+          "name": "side-channel-list",
+          "version": "1.0.1",
+          "exact": "side-channel-list@1.0.1"
+        },
+        {
+          "physicalId": "node_modules/side-channel-map",
+          "name": "side-channel-map",
+          "version": "1.0.1",
+          "exact": "side-channel-map@1.0.1"
+        },
+        {
+          "physicalId": "node_modules/side-channel-weakmap",
+          "name": "side-channel-weakmap",
+          "version": "1.0.2",
+          "exact": "side-channel-weakmap@1.0.2"
+        },
+        {
+          "physicalId": "node_modules/statuses",
+          "name": "statuses",
+          "version": "2.0.2",
+          "exact": "statuses@2.0.2"
+        },
+        {
+          "physicalId": "node_modules/toidentifier",
+          "name": "toidentifier",
+          "version": "1.0.1",
+          "exact": "toidentifier@1.0.1"
+        },
+        {
+          "physicalId": "node_modules/type-is",
+          "name": "type-is",
+          "version": "2.1.0",
+          "exact": "type-is@2.1.0"
+        },
+        {
+          "physicalId": "node_modules/type-is/node_modules/content-type",
+          "name": "content-type",
+          "version": "2.1.0",
+          "exact": "content-type@2.1.0"
+        },
+        {
+          "physicalId": "node_modules/unpipe",
+          "name": "unpipe",
+          "version": "1.0.0",
+          "exact": "unpipe@1.0.0"
+        },
+        {
+          "physicalId": "node_modules/vary",
+          "name": "vary",
+          "version": "1.1.2",
+          "exact": "vary@1.1.2"
+        },
+        {
+          "physicalId": "node_modules/wrappy",
+          "name": "wrappy",
+          "version": "1.0.2",
+          "exact": "wrappy@1.0.2"
+        }
+      ],
+      "physicalEdges": [
+        {
+          "sourcePhysical": "node_modules/accepts",
+          "targetPhysical": "node_modules/mime-types",
+          "sourceExact": "accepts@2.0.0",
+          "targetExact": "mime-types@3.0.2",
+          "exactEdge": "accepts@2.0.0 -> mime-types@3.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/accepts",
+          "targetPhysical": "node_modules/negotiator",
+          "sourceExact": "accepts@2.0.0",
+          "targetExact": "negotiator@1.1.0",
+          "exactEdge": "accepts@2.0.0 -> negotiator@1.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/bytes",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "bytes@3.1.2",
+          "exactEdge": "body-parser@2.3.0 -> bytes@3.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/body-parser/node_modules/content-type",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "content-type@2.1.0",
+          "exactEdge": "body-parser@2.3.0 -> content-type@2.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "debug@4.4.3",
+          "exactEdge": "body-parser@2.3.0 -> debug@4.4.3"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/http-errors",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "http-errors@2.0.1",
+          "exactEdge": "body-parser@2.3.0 -> http-errors@2.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/iconv-lite",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "iconv-lite@0.7.3",
+          "exactEdge": "body-parser@2.3.0 -> iconv-lite@0.7.3"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/on-finished",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "on-finished@2.4.1",
+          "exactEdge": "body-parser@2.3.0 -> on-finished@2.4.1"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/qs",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "qs@6.16.0",
+          "exactEdge": "body-parser@2.3.0 -> qs@6.16.0"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/raw-body",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "raw-body@3.0.2",
+          "exactEdge": "body-parser@2.3.0 -> raw-body@3.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/body-parser",
+          "targetPhysical": "node_modules/type-is",
+          "sourceExact": "body-parser@2.3.0",
+          "targetExact": "type-is@2.1.0",
+          "exactEdge": "body-parser@2.3.0 -> type-is@2.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/call-bind-apply-helpers",
+          "targetPhysical": "node_modules/es-errors",
+          "sourceExact": "call-bind-apply-helpers@1.0.2",
+          "targetExact": "es-errors@1.3.0",
+          "exactEdge": "call-bind-apply-helpers@1.0.2 -> es-errors@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/call-bind-apply-helpers",
+          "targetPhysical": "node_modules/function-bind",
+          "sourceExact": "call-bind-apply-helpers@1.0.2",
+          "targetExact": "function-bind@1.1.2",
+          "exactEdge": "call-bind-apply-helpers@1.0.2 -> function-bind@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/call-bound",
+          "targetPhysical": "node_modules/call-bind-apply-helpers",
+          "sourceExact": "call-bound@1.0.4",
+          "targetExact": "call-bind-apply-helpers@1.0.2",
+          "exactEdge": "call-bound@1.0.4 -> call-bind-apply-helpers@1.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/call-bound",
+          "targetPhysical": "node_modules/get-intrinsic",
+          "sourceExact": "call-bound@1.0.4",
+          "targetExact": "get-intrinsic@1.3.0",
+          "exactEdge": "call-bound@1.0.4 -> get-intrinsic@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@4.4.3",
+          "targetExact": "ms@2.1.3",
+          "exactEdge": "debug@4.4.3 -> ms@2.1.3"
+        },
+        {
+          "sourcePhysical": "node_modules/dunder-proto",
+          "targetPhysical": "node_modules/call-bind-apply-helpers",
+          "sourceExact": "dunder-proto@1.0.1",
+          "targetExact": "call-bind-apply-helpers@1.0.2",
+          "exactEdge": "dunder-proto@1.0.1 -> call-bind-apply-helpers@1.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/dunder-proto",
+          "targetPhysical": "node_modules/es-errors",
+          "sourceExact": "dunder-proto@1.0.1",
+          "targetExact": "es-errors@1.3.0",
+          "exactEdge": "dunder-proto@1.0.1 -> es-errors@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/dunder-proto",
+          "targetPhysical": "node_modules/gopd",
+          "sourceExact": "dunder-proto@1.0.1",
+          "targetExact": "gopd@1.2.0",
+          "exactEdge": "dunder-proto@1.0.1 -> gopd@1.2.0"
+        },
+        {
+          "sourcePhysical": "node_modules/es-object-atoms",
+          "targetPhysical": "node_modules/es-errors",
+          "sourceExact": "es-object-atoms@1.1.2",
+          "targetExact": "es-errors@1.3.0",
+          "exactEdge": "es-object-atoms@1.1.2 -> es-errors@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/accepts",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "accepts@2.0.0",
+          "exactEdge": "express@5.2.1 -> accepts@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/body-parser",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "body-parser@2.3.0",
+          "exactEdge": "express@5.2.1 -> body-parser@2.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/content-disposition",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "content-disposition@1.1.0",
+          "exactEdge": "express@5.2.1 -> content-disposition@1.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/content-type",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "content-type@1.0.5",
+          "exactEdge": "express@5.2.1 -> content-type@1.0.5"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/cookie",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "cookie@0.7.2",
+          "exactEdge": "express@5.2.1 -> cookie@0.7.2"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/cookie-signature",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "cookie-signature@1.2.2",
+          "exactEdge": "express@5.2.1 -> cookie-signature@1.2.2"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "debug@4.4.3",
+          "exactEdge": "express@5.2.1 -> debug@4.4.3"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/depd",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "depd@2.0.0",
+          "exactEdge": "express@5.2.1 -> depd@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/encodeurl",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "encodeurl@2.0.0",
+          "exactEdge": "express@5.2.1 -> encodeurl@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/escape-html",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "escape-html@1.0.3",
+          "exactEdge": "express@5.2.1 -> escape-html@1.0.3"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/etag",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "etag@1.8.1",
+          "exactEdge": "express@5.2.1 -> etag@1.8.1"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/finalhandler",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "finalhandler@2.1.1",
+          "exactEdge": "express@5.2.1 -> finalhandler@2.1.1"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/fresh",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "fresh@2.0.0",
+          "exactEdge": "express@5.2.1 -> fresh@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/http-errors",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "http-errors@2.0.1",
+          "exactEdge": "express@5.2.1 -> http-errors@2.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/merge-descriptors",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "merge-descriptors@2.0.0",
+          "exactEdge": "express@5.2.1 -> merge-descriptors@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/mime-types",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "mime-types@3.0.2",
+          "exactEdge": "express@5.2.1 -> mime-types@3.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/on-finished",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "on-finished@2.4.1",
+          "exactEdge": "express@5.2.1 -> on-finished@2.4.1"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/once",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "once@1.4.0",
+          "exactEdge": "express@5.2.1 -> once@1.4.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/parseurl",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "parseurl@1.3.3",
+          "exactEdge": "express@5.2.1 -> parseurl@1.3.3"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/proxy-addr",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "proxy-addr@2.0.7",
+          "exactEdge": "express@5.2.1 -> proxy-addr@2.0.7"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/qs",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "qs@6.16.0",
+          "exactEdge": "express@5.2.1 -> qs@6.16.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/range-parser",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "range-parser@1.3.0",
+          "exactEdge": "express@5.2.1 -> range-parser@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/router",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "router@2.2.0",
+          "exactEdge": "express@5.2.1 -> router@2.2.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/send",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "send@1.2.1",
+          "exactEdge": "express@5.2.1 -> send@1.2.1"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/serve-static",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "serve-static@2.2.1",
+          "exactEdge": "express@5.2.1 -> serve-static@2.2.1"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/statuses",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "statuses@2.0.2",
+          "exactEdge": "express@5.2.1 -> statuses@2.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/type-is",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "type-is@2.1.0",
+          "exactEdge": "express@5.2.1 -> type-is@2.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express",
+          "targetPhysical": "node_modules/vary",
+          "sourceExact": "express@5.2.1",
+          "targetExact": "vary@1.1.2",
+          "exactEdge": "express@5.2.1 -> vary@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "finalhandler@2.1.1",
+          "targetExact": "debug@4.4.3",
+          "exactEdge": "finalhandler@2.1.1 -> debug@4.4.3"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/encodeurl",
+          "sourceExact": "finalhandler@2.1.1",
+          "targetExact": "encodeurl@2.0.0",
+          "exactEdge": "finalhandler@2.1.1 -> encodeurl@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/escape-html",
+          "sourceExact": "finalhandler@2.1.1",
+          "targetExact": "escape-html@1.0.3",
+          "exactEdge": "finalhandler@2.1.1 -> escape-html@1.0.3"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/on-finished",
+          "sourceExact": "finalhandler@2.1.1",
+          "targetExact": "on-finished@2.4.1",
+          "exactEdge": "finalhandler@2.1.1 -> on-finished@2.4.1"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/parseurl",
+          "sourceExact": "finalhandler@2.1.1",
+          "targetExact": "parseurl@1.3.3",
+          "exactEdge": "finalhandler@2.1.1 -> parseurl@1.3.3"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/statuses",
+          "sourceExact": "finalhandler@2.1.1",
+          "targetExact": "statuses@2.0.2",
+          "exactEdge": "finalhandler@2.1.1 -> statuses@2.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/call-bind-apply-helpers",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "call-bind-apply-helpers@1.0.2",
+          "exactEdge": "get-intrinsic@1.3.0 -> call-bind-apply-helpers@1.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/es-define-property",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "es-define-property@1.0.1",
+          "exactEdge": "get-intrinsic@1.3.0 -> es-define-property@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/es-errors",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "es-errors@1.3.0",
+          "exactEdge": "get-intrinsic@1.3.0 -> es-errors@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/es-object-atoms",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "es-object-atoms@1.1.2",
+          "exactEdge": "get-intrinsic@1.3.0 -> es-object-atoms@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/function-bind",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "function-bind@1.1.2",
+          "exactEdge": "get-intrinsic@1.3.0 -> function-bind@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/get-proto",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "get-proto@1.0.1",
+          "exactEdge": "get-intrinsic@1.3.0 -> get-proto@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/gopd",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "gopd@1.2.0",
+          "exactEdge": "get-intrinsic@1.3.0 -> gopd@1.2.0"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/has-symbols",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "has-symbols@1.1.0",
+          "exactEdge": "get-intrinsic@1.3.0 -> has-symbols@1.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/hasown",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "hasown@2.0.4",
+          "exactEdge": "get-intrinsic@1.3.0 -> hasown@2.0.4"
+        },
+        {
+          "sourcePhysical": "node_modules/get-intrinsic",
+          "targetPhysical": "node_modules/math-intrinsics",
+          "sourceExact": "get-intrinsic@1.3.0",
+          "targetExact": "math-intrinsics@1.1.0",
+          "exactEdge": "get-intrinsic@1.3.0 -> math-intrinsics@1.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/get-proto",
+          "targetPhysical": "node_modules/dunder-proto",
+          "sourceExact": "get-proto@1.0.1",
+          "targetExact": "dunder-proto@1.0.1",
+          "exactEdge": "get-proto@1.0.1 -> dunder-proto@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/get-proto",
+          "targetPhysical": "node_modules/es-object-atoms",
+          "sourceExact": "get-proto@1.0.1",
+          "targetExact": "es-object-atoms@1.1.2",
+          "exactEdge": "get-proto@1.0.1 -> es-object-atoms@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/hasown",
+          "targetPhysical": "node_modules/function-bind",
+          "sourceExact": "hasown@2.0.4",
+          "targetExact": "function-bind@1.1.2",
+          "exactEdge": "hasown@2.0.4 -> function-bind@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/http-errors",
+          "targetPhysical": "node_modules/depd",
+          "sourceExact": "http-errors@2.0.1",
+          "targetExact": "depd@2.0.0",
+          "exactEdge": "http-errors@2.0.1 -> depd@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/http-errors",
+          "targetPhysical": "node_modules/inherits",
+          "sourceExact": "http-errors@2.0.1",
+          "targetExact": "inherits@2.0.4",
+          "exactEdge": "http-errors@2.0.1 -> inherits@2.0.4"
+        },
+        {
+          "sourcePhysical": "node_modules/http-errors",
+          "targetPhysical": "node_modules/setprototypeof",
+          "sourceExact": "http-errors@2.0.1",
+          "targetExact": "setprototypeof@1.2.0",
+          "exactEdge": "http-errors@2.0.1 -> setprototypeof@1.2.0"
+        },
+        {
+          "sourcePhysical": "node_modules/http-errors",
+          "targetPhysical": "node_modules/statuses",
+          "sourceExact": "http-errors@2.0.1",
+          "targetExact": "statuses@2.0.2",
+          "exactEdge": "http-errors@2.0.1 -> statuses@2.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/http-errors",
+          "targetPhysical": "node_modules/toidentifier",
+          "sourceExact": "http-errors@2.0.1",
+          "targetExact": "toidentifier@1.0.1",
+          "exactEdge": "http-errors@2.0.1 -> toidentifier@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/iconv-lite",
+          "targetPhysical": "node_modules/safer-buffer",
+          "sourceExact": "iconv-lite@0.7.3",
+          "targetExact": "safer-buffer@2.1.2",
+          "exactEdge": "iconv-lite@0.7.3 -> safer-buffer@2.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/mime-types",
+          "targetPhysical": "node_modules/mime-db",
+          "sourceExact": "mime-types@3.0.2",
+          "targetExact": "mime-db@1.54.0",
+          "exactEdge": "mime-types@3.0.2 -> mime-db@1.54.0"
+        },
+        {
+          "sourcePhysical": "node_modules/negotiator",
+          "targetPhysical": "node_modules/negotiator/node_modules/content-type",
+          "sourceExact": "negotiator@1.1.0",
+          "targetExact": "content-type@2.1.0",
+          "exactEdge": "negotiator@1.1.0 -> content-type@2.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/on-finished",
+          "targetPhysical": "node_modules/ee-first",
+          "sourceExact": "on-finished@2.4.1",
+          "targetExact": "ee-first@1.1.1",
+          "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1"
+        },
+        {
+          "sourcePhysical": "node_modules/once",
+          "targetPhysical": "node_modules/wrappy",
+          "sourceExact": "once@1.4.0",
+          "targetExact": "wrappy@1.0.2",
+          "exactEdge": "once@1.4.0 -> wrappy@1.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/proxy-addr",
+          "targetPhysical": "node_modules/forwarded",
+          "sourceExact": "proxy-addr@2.0.7",
+          "targetExact": "forwarded@0.2.0",
+          "exactEdge": "proxy-addr@2.0.7 -> forwarded@0.2.0"
+        },
+        {
+          "sourcePhysical": "node_modules/proxy-addr",
+          "targetPhysical": "node_modules/ipaddr.js",
+          "sourceExact": "proxy-addr@2.0.7",
+          "targetExact": "ipaddr.js@1.9.1",
+          "exactEdge": "proxy-addr@2.0.7 -> ipaddr.js@1.9.1"
+        },
+        {
+          "sourcePhysical": "node_modules/qs",
+          "targetPhysical": "node_modules/es-define-property",
+          "sourceExact": "qs@6.16.0",
+          "targetExact": "es-define-property@1.0.1",
+          "exactEdge": "qs@6.16.0 -> es-define-property@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/qs",
+          "targetPhysical": "node_modules/side-channel",
+          "sourceExact": "qs@6.16.0",
+          "targetExact": "side-channel@1.1.1",
+          "exactEdge": "qs@6.16.0 -> side-channel@1.1.1"
+        },
+        {
+          "sourcePhysical": "node_modules/raw-body",
+          "targetPhysical": "node_modules/bytes",
+          "sourceExact": "raw-body@3.0.2",
+          "targetExact": "bytes@3.1.2",
+          "exactEdge": "raw-body@3.0.2 -> bytes@3.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/raw-body",
+          "targetPhysical": "node_modules/http-errors",
+          "sourceExact": "raw-body@3.0.2",
+          "targetExact": "http-errors@2.0.1",
+          "exactEdge": "raw-body@3.0.2 -> http-errors@2.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/raw-body",
+          "targetPhysical": "node_modules/iconv-lite",
+          "sourceExact": "raw-body@3.0.2",
+          "targetExact": "iconv-lite@0.7.3",
+          "exactEdge": "raw-body@3.0.2 -> iconv-lite@0.7.3"
+        },
+        {
+          "sourcePhysical": "node_modules/raw-body",
+          "targetPhysical": "node_modules/unpipe",
+          "sourceExact": "raw-body@3.0.2",
+          "targetExact": "unpipe@1.0.0",
+          "exactEdge": "raw-body@3.0.2 -> unpipe@1.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/router",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "router@2.2.0",
+          "targetExact": "debug@4.4.3",
+          "exactEdge": "router@2.2.0 -> debug@4.4.3"
+        },
+        {
+          "sourcePhysical": "node_modules/router",
+          "targetPhysical": "node_modules/depd",
+          "sourceExact": "router@2.2.0",
+          "targetExact": "depd@2.0.0",
+          "exactEdge": "router@2.2.0 -> depd@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/router",
+          "targetPhysical": "node_modules/is-promise",
+          "sourceExact": "router@2.2.0",
+          "targetExact": "is-promise@4.0.0",
+          "exactEdge": "router@2.2.0 -> is-promise@4.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/router",
+          "targetPhysical": "node_modules/parseurl",
+          "sourceExact": "router@2.2.0",
+          "targetExact": "parseurl@1.3.3",
+          "exactEdge": "router@2.2.0 -> parseurl@1.3.3"
+        },
+        {
+          "sourcePhysical": "node_modules/router",
+          "targetPhysical": "node_modules/path-to-regexp",
+          "sourceExact": "router@2.2.0",
+          "targetExact": "path-to-regexp@8.4.2",
+          "exactEdge": "router@2.2.0 -> path-to-regexp@8.4.2"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "debug@4.4.3",
+          "exactEdge": "send@1.2.1 -> debug@4.4.3"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/encodeurl",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "encodeurl@2.0.0",
+          "exactEdge": "send@1.2.1 -> encodeurl@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/escape-html",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "escape-html@1.0.3",
+          "exactEdge": "send@1.2.1 -> escape-html@1.0.3"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/etag",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "etag@1.8.1",
+          "exactEdge": "send@1.2.1 -> etag@1.8.1"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/fresh",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "fresh@2.0.0",
+          "exactEdge": "send@1.2.1 -> fresh@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/http-errors",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "http-errors@2.0.1",
+          "exactEdge": "send@1.2.1 -> http-errors@2.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/mime-types",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "mime-types@3.0.2",
+          "exactEdge": "send@1.2.1 -> mime-types@3.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "ms@2.1.3",
+          "exactEdge": "send@1.2.1 -> ms@2.1.3"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/on-finished",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "on-finished@2.4.1",
+          "exactEdge": "send@1.2.1 -> on-finished@2.4.1"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/range-parser",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "range-parser@1.3.0",
+          "exactEdge": "send@1.2.1 -> range-parser@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/send",
+          "targetPhysical": "node_modules/statuses",
+          "sourceExact": "send@1.2.1",
+          "targetExact": "statuses@2.0.2",
+          "exactEdge": "send@1.2.1 -> statuses@2.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/serve-static",
+          "targetPhysical": "node_modules/encodeurl",
+          "sourceExact": "serve-static@2.2.1",
+          "targetExact": "encodeurl@2.0.0",
+          "exactEdge": "serve-static@2.2.1 -> encodeurl@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/serve-static",
+          "targetPhysical": "node_modules/escape-html",
+          "sourceExact": "serve-static@2.2.1",
+          "targetExact": "escape-html@1.0.3",
+          "exactEdge": "serve-static@2.2.1 -> escape-html@1.0.3"
+        },
+        {
+          "sourcePhysical": "node_modules/serve-static",
+          "targetPhysical": "node_modules/parseurl",
+          "sourceExact": "serve-static@2.2.1",
+          "targetExact": "parseurl@1.3.3",
+          "exactEdge": "serve-static@2.2.1 -> parseurl@1.3.3"
+        },
+        {
+          "sourcePhysical": "node_modules/serve-static",
+          "targetPhysical": "node_modules/send",
+          "sourceExact": "serve-static@2.2.1",
+          "targetExact": "send@1.2.1",
+          "exactEdge": "serve-static@2.2.1 -> send@1.2.1"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel",
+          "targetPhysical": "node_modules/es-errors",
+          "sourceExact": "side-channel@1.1.1",
+          "targetExact": "es-errors@1.3.0",
+          "exactEdge": "side-channel@1.1.1 -> es-errors@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel",
+          "targetPhysical": "node_modules/object-inspect",
+          "sourceExact": "side-channel@1.1.1",
+          "targetExact": "object-inspect@1.13.4",
+          "exactEdge": "side-channel@1.1.1 -> object-inspect@1.13.4"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel",
+          "targetPhysical": "node_modules/side-channel-list",
+          "sourceExact": "side-channel@1.1.1",
+          "targetExact": "side-channel-list@1.0.1",
+          "exactEdge": "side-channel@1.1.1 -> side-channel-list@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel",
+          "targetPhysical": "node_modules/side-channel-map",
+          "sourceExact": "side-channel@1.1.1",
+          "targetExact": "side-channel-map@1.0.1",
+          "exactEdge": "side-channel@1.1.1 -> side-channel-map@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel",
+          "targetPhysical": "node_modules/side-channel-weakmap",
+          "sourceExact": "side-channel@1.1.1",
+          "targetExact": "side-channel-weakmap@1.0.2",
+          "exactEdge": "side-channel@1.1.1 -> side-channel-weakmap@1.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-list",
+          "targetPhysical": "node_modules/es-errors",
+          "sourceExact": "side-channel-list@1.0.1",
+          "targetExact": "es-errors@1.3.0",
+          "exactEdge": "side-channel-list@1.0.1 -> es-errors@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-list",
+          "targetPhysical": "node_modules/object-inspect",
+          "sourceExact": "side-channel-list@1.0.1",
+          "targetExact": "object-inspect@1.13.4",
+          "exactEdge": "side-channel-list@1.0.1 -> object-inspect@1.13.4"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-map",
+          "targetPhysical": "node_modules/call-bound",
+          "sourceExact": "side-channel-map@1.0.1",
+          "targetExact": "call-bound@1.0.4",
+          "exactEdge": "side-channel-map@1.0.1 -> call-bound@1.0.4"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-map",
+          "targetPhysical": "node_modules/es-errors",
+          "sourceExact": "side-channel-map@1.0.1",
+          "targetExact": "es-errors@1.3.0",
+          "exactEdge": "side-channel-map@1.0.1 -> es-errors@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-map",
+          "targetPhysical": "node_modules/get-intrinsic",
+          "sourceExact": "side-channel-map@1.0.1",
+          "targetExact": "get-intrinsic@1.3.0",
+          "exactEdge": "side-channel-map@1.0.1 -> get-intrinsic@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-map",
+          "targetPhysical": "node_modules/object-inspect",
+          "sourceExact": "side-channel-map@1.0.1",
+          "targetExact": "object-inspect@1.13.4",
+          "exactEdge": "side-channel-map@1.0.1 -> object-inspect@1.13.4"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-weakmap",
+          "targetPhysical": "node_modules/call-bound",
+          "sourceExact": "side-channel-weakmap@1.0.2",
+          "targetExact": "call-bound@1.0.4",
+          "exactEdge": "side-channel-weakmap@1.0.2 -> call-bound@1.0.4"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-weakmap",
+          "targetPhysical": "node_modules/es-errors",
+          "sourceExact": "side-channel-weakmap@1.0.2",
+          "targetExact": "es-errors@1.3.0",
+          "exactEdge": "side-channel-weakmap@1.0.2 -> es-errors@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-weakmap",
+          "targetPhysical": "node_modules/get-intrinsic",
+          "sourceExact": "side-channel-weakmap@1.0.2",
+          "targetExact": "get-intrinsic@1.3.0",
+          "exactEdge": "side-channel-weakmap@1.0.2 -> get-intrinsic@1.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-weakmap",
+          "targetPhysical": "node_modules/object-inspect",
+          "sourceExact": "side-channel-weakmap@1.0.2",
+          "targetExact": "object-inspect@1.13.4",
+          "exactEdge": "side-channel-weakmap@1.0.2 -> object-inspect@1.13.4"
+        },
+        {
+          "sourcePhysical": "node_modules/side-channel-weakmap",
+          "targetPhysical": "node_modules/side-channel-map",
+          "sourceExact": "side-channel-weakmap@1.0.2",
+          "targetExact": "side-channel-map@1.0.1",
+          "exactEdge": "side-channel-weakmap@1.0.2 -> side-channel-map@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/type-is",
+          "targetPhysical": "node_modules/type-is/node_modules/content-type",
+          "sourceExact": "type-is@2.1.0",
+          "targetExact": "content-type@2.1.0",
+          "exactEdge": "type-is@2.1.0 -> content-type@2.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/type-is",
+          "targetPhysical": "node_modules/media-typer",
+          "sourceExact": "type-is@2.1.0",
+          "targetExact": "media-typer@1.1.1",
+          "exactEdge": "type-is@2.1.0 -> media-typer@1.1.1"
+        },
+        {
+          "sourcePhysical": "node_modules/type-is",
+          "targetPhysical": "node_modules/mime-types",
+          "sourceExact": "type-is@2.1.0",
+          "targetExact": "mime-types@3.0.2",
+          "exactEdge": "type-is@2.1.0 -> mime-types@3.0.2"
+        }
+      ],
+      "exactNodes": [
+        "accepts@2.0.0",
+        "body-parser@2.3.0",
+        "bytes@3.1.2",
+        "call-bind-apply-helpers@1.0.2",
+        "call-bound@1.0.4",
+        "content-disposition@1.1.0",
+        "content-type@1.0.5",
+        "content-type@2.1.0",
+        "cookie-signature@1.2.2",
+        "cookie@0.7.2",
+        "debug@4.4.3",
+        "depd@2.0.0",
+        "dunder-proto@1.0.1",
+        "ee-first@1.1.1",
+        "encodeurl@2.0.0",
+        "es-define-property@1.0.1",
+        "es-errors@1.3.0",
+        "es-object-atoms@1.1.2",
+        "escape-html@1.0.3",
+        "etag@1.8.1",
+        "express@5.2.1",
+        "finalhandler@2.1.1",
+        "forwarded@0.2.0",
+        "fresh@2.0.0",
+        "function-bind@1.1.2",
+        "get-intrinsic@1.3.0",
+        "get-proto@1.0.1",
+        "gopd@1.2.0",
+        "has-symbols@1.1.0",
+        "hasown@2.0.4",
+        "http-errors@2.0.1",
+        "iconv-lite@0.7.3",
+        "inherits@2.0.4",
+        "ipaddr.js@1.9.1",
+        "is-promise@4.0.0",
+        "math-intrinsics@1.1.0",
+        "media-typer@1.1.1",
+        "merge-descriptors@2.0.0",
+        "mime-db@1.54.0",
+        "mime-types@3.0.2",
+        "ms@2.1.3",
+        "negotiator@1.1.0",
+        "object-inspect@1.13.4",
+        "on-finished@2.4.1",
+        "once@1.4.0",
+        "parseurl@1.3.3",
+        "path-to-regexp@8.4.2",
+        "proxy-addr@2.0.7",
+        "qs@6.16.0",
+        "range-parser@1.3.0",
+        "raw-body@3.0.2",
+        "router@2.2.0",
+        "safer-buffer@2.1.2",
+        "send@1.2.1",
+        "serve-static@2.2.1",
+        "setprototypeof@1.2.0",
+        "side-channel-list@1.0.1",
+        "side-channel-map@1.0.1",
+        "side-channel-weakmap@1.0.2",
+        "side-channel@1.1.1",
+        "statuses@2.0.2",
+        "toidentifier@1.0.1",
+        "type-is@2.1.0",
+        "unpipe@1.0.0",
+        "vary@1.1.2",
+        "wrappy@1.0.2"
+      ],
+      "exactEdges": [
+        "accepts@2.0.0 -> mime-types@3.0.2",
+        "accepts@2.0.0 -> negotiator@1.1.0",
+        "body-parser@2.3.0 -> bytes@3.1.2",
+        "body-parser@2.3.0 -> content-type@2.1.0",
+        "body-parser@2.3.0 -> debug@4.4.3",
+        "body-parser@2.3.0 -> http-errors@2.0.1",
+        "body-parser@2.3.0 -> iconv-lite@0.7.3",
+        "body-parser@2.3.0 -> on-finished@2.4.1",
+        "body-parser@2.3.0 -> qs@6.16.0",
+        "body-parser@2.3.0 -> raw-body@3.0.2",
+        "body-parser@2.3.0 -> type-is@2.1.0",
+        "call-bind-apply-helpers@1.0.2 -> es-errors@1.3.0",
+        "call-bind-apply-helpers@1.0.2 -> function-bind@1.1.2",
+        "call-bound@1.0.4 -> call-bind-apply-helpers@1.0.2",
+        "call-bound@1.0.4 -> get-intrinsic@1.3.0",
+        "debug@4.4.3 -> ms@2.1.3",
+        "dunder-proto@1.0.1 -> call-bind-apply-helpers@1.0.2",
+        "dunder-proto@1.0.1 -> es-errors@1.3.0",
+        "dunder-proto@1.0.1 -> gopd@1.2.0",
+        "es-object-atoms@1.1.2 -> es-errors@1.3.0",
+        "express@5.2.1 -> accepts@2.0.0",
+        "express@5.2.1 -> body-parser@2.3.0",
+        "express@5.2.1 -> content-disposition@1.1.0",
+        "express@5.2.1 -> content-type@1.0.5",
+        "express@5.2.1 -> cookie-signature@1.2.2",
+        "express@5.2.1 -> cookie@0.7.2",
+        "express@5.2.1 -> debug@4.4.3",
+        "express@5.2.1 -> depd@2.0.0",
+        "express@5.2.1 -> encodeurl@2.0.0",
+        "express@5.2.1 -> escape-html@1.0.3",
+        "express@5.2.1 -> etag@1.8.1",
+        "express@5.2.1 -> finalhandler@2.1.1",
+        "express@5.2.1 -> fresh@2.0.0",
+        "express@5.2.1 -> http-errors@2.0.1",
+        "express@5.2.1 -> merge-descriptors@2.0.0",
+        "express@5.2.1 -> mime-types@3.0.2",
+        "express@5.2.1 -> on-finished@2.4.1",
+        "express@5.2.1 -> once@1.4.0",
+        "express@5.2.1 -> parseurl@1.3.3",
+        "express@5.2.1 -> proxy-addr@2.0.7",
+        "express@5.2.1 -> qs@6.16.0",
+        "express@5.2.1 -> range-parser@1.3.0",
+        "express@5.2.1 -> router@2.2.0",
+        "express@5.2.1 -> send@1.2.1",
+        "express@5.2.1 -> serve-static@2.2.1",
+        "express@5.2.1 -> statuses@2.0.2",
+        "express@5.2.1 -> type-is@2.1.0",
+        "express@5.2.1 -> vary@1.1.2",
+        "finalhandler@2.1.1 -> debug@4.4.3",
+        "finalhandler@2.1.1 -> encodeurl@2.0.0",
+        "finalhandler@2.1.1 -> escape-html@1.0.3",
+        "finalhandler@2.1.1 -> on-finished@2.4.1",
+        "finalhandler@2.1.1 -> parseurl@1.3.3",
+        "finalhandler@2.1.1 -> statuses@2.0.2",
+        "get-intrinsic@1.3.0 -> call-bind-apply-helpers@1.0.2",
+        "get-intrinsic@1.3.0 -> es-define-property@1.0.1",
+        "get-intrinsic@1.3.0 -> es-errors@1.3.0",
+        "get-intrinsic@1.3.0 -> es-object-atoms@1.1.2",
+        "get-intrinsic@1.3.0 -> function-bind@1.1.2",
+        "get-intrinsic@1.3.0 -> get-proto@1.0.1",
+        "get-intrinsic@1.3.0 -> gopd@1.2.0",
+        "get-intrinsic@1.3.0 -> has-symbols@1.1.0",
+        "get-intrinsic@1.3.0 -> hasown@2.0.4",
+        "get-intrinsic@1.3.0 -> math-intrinsics@1.1.0",
+        "get-proto@1.0.1 -> dunder-proto@1.0.1",
+        "get-proto@1.0.1 -> es-object-atoms@1.1.2",
+        "hasown@2.0.4 -> function-bind@1.1.2",
+        "http-errors@2.0.1 -> depd@2.0.0",
+        "http-errors@2.0.1 -> inherits@2.0.4",
+        "http-errors@2.0.1 -> setprototypeof@1.2.0",
+        "http-errors@2.0.1 -> statuses@2.0.2",
+        "http-errors@2.0.1 -> toidentifier@1.0.1",
+        "iconv-lite@0.7.3 -> safer-buffer@2.1.2",
+        "mime-types@3.0.2 -> mime-db@1.54.0",
+        "negotiator@1.1.0 -> content-type@2.1.0",
+        "on-finished@2.4.1 -> ee-first@1.1.1",
+        "once@1.4.0 -> wrappy@1.0.2",
+        "proxy-addr@2.0.7 -> forwarded@0.2.0",
+        "proxy-addr@2.0.7 -> ipaddr.js@1.9.1",
+        "qs@6.16.0 -> es-define-property@1.0.1",
+        "qs@6.16.0 -> side-channel@1.1.1",
+        "raw-body@3.0.2 -> bytes@3.1.2",
+        "raw-body@3.0.2 -> http-errors@2.0.1",
+        "raw-body@3.0.2 -> iconv-lite@0.7.3",
+        "raw-body@3.0.2 -> unpipe@1.0.0",
+        "router@2.2.0 -> debug@4.4.3",
+        "router@2.2.0 -> depd@2.0.0",
+        "router@2.2.0 -> is-promise@4.0.0",
+        "router@2.2.0 -> parseurl@1.3.3",
+        "router@2.2.0 -> path-to-regexp@8.4.2",
+        "send@1.2.1 -> debug@4.4.3",
+        "send@1.2.1 -> encodeurl@2.0.0",
+        "send@1.2.1 -> escape-html@1.0.3",
+        "send@1.2.1 -> etag@1.8.1",
+        "send@1.2.1 -> fresh@2.0.0",
+        "send@1.2.1 -> http-errors@2.0.1",
+        "send@1.2.1 -> mime-types@3.0.2",
+        "send@1.2.1 -> ms@2.1.3",
+        "send@1.2.1 -> on-finished@2.4.1",
+        "send@1.2.1 -> range-parser@1.3.0",
+        "send@1.2.1 -> statuses@2.0.2",
+        "serve-static@2.2.1 -> encodeurl@2.0.0",
+        "serve-static@2.2.1 -> escape-html@1.0.3",
+        "serve-static@2.2.1 -> parseurl@1.3.3",
+        "serve-static@2.2.1 -> send@1.2.1",
+        "side-channel-list@1.0.1 -> es-errors@1.3.0",
+        "side-channel-list@1.0.1 -> object-inspect@1.13.4",
+        "side-channel-map@1.0.1 -> call-bound@1.0.4",
+        "side-channel-map@1.0.1 -> es-errors@1.3.0",
+        "side-channel-map@1.0.1 -> get-intrinsic@1.3.0",
+        "side-channel-map@1.0.1 -> object-inspect@1.13.4",
+        "side-channel-weakmap@1.0.2 -> call-bound@1.0.4",
+        "side-channel-weakmap@1.0.2 -> es-errors@1.3.0",
+        "side-channel-weakmap@1.0.2 -> get-intrinsic@1.3.0",
+        "side-channel-weakmap@1.0.2 -> object-inspect@1.13.4",
+        "side-channel-weakmap@1.0.2 -> side-channel-map@1.0.1",
+        "side-channel@1.1.1 -> es-errors@1.3.0",
+        "side-channel@1.1.1 -> object-inspect@1.13.4",
+        "side-channel@1.1.1 -> side-channel-list@1.0.1",
+        "side-channel@1.1.1 -> side-channel-map@1.0.1",
+        "side-channel@1.1.1 -> side-channel-weakmap@1.0.2",
+        "type-is@2.1.0 -> content-type@2.1.0",
+        "type-is@2.1.0 -> media-typer@1.1.1",
+        "type-is@2.1.0 -> mime-types@3.0.2"
+      ]
+    },
+    {
+      "productId": "P2",
+      "label": "express-session",
+      "directory": "product-session",
+      "rootName": "product-session",
+      "rootVersion": "1.0.0",
+      "packageNodeInstances": 11,
+      "exactPackageVersionIdentities": 11,
+      "nonRootPhysicalDependencyEdges": 10,
+      "rootDirectEdges": 1,
+      "totalPhysicalEdgesIncludingRoot": 11,
+      "physicalDAG": true,
+      "physicalMaxDepthIncludingRoot": 3,
+      "duplicatePackageNameCount": 0,
+      "duplicatePackageNames": [],
+      "unresolvedDependencyCount": 0,
+      "unresolvedDependencies": [],
+      "physicalNodes": [
+        {
+          "physicalId": "node_modules/cookie",
+          "name": "cookie",
+          "version": "0.7.2",
+          "exact": "cookie@0.7.2"
+        },
+        {
+          "physicalId": "node_modules/cookie-signature",
+          "name": "cookie-signature",
+          "version": "1.0.7",
+          "exact": "cookie-signature@1.0.7"
+        },
+        {
+          "physicalId": "node_modules/debug",
+          "name": "debug",
+          "version": "2.6.9",
+          "exact": "debug@2.6.9"
+        },
+        {
+          "physicalId": "node_modules/depd",
+          "name": "depd",
+          "version": "2.0.0",
+          "exact": "depd@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/express-session",
+          "name": "express-session",
+          "version": "1.19.0",
+          "exact": "express-session@1.19.0"
+        },
+        {
+          "physicalId": "node_modules/ms",
+          "name": "ms",
+          "version": "2.0.0",
+          "exact": "ms@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/on-headers",
+          "name": "on-headers",
+          "version": "1.1.0",
+          "exact": "on-headers@1.1.0"
+        },
+        {
+          "physicalId": "node_modules/parseurl",
+          "name": "parseurl",
+          "version": "1.3.3",
+          "exact": "parseurl@1.3.3"
+        },
+        {
+          "physicalId": "node_modules/random-bytes",
+          "name": "random-bytes",
+          "version": "1.0.0",
+          "exact": "random-bytes@1.0.0"
+        },
+        {
+          "physicalId": "node_modules/safe-buffer",
+          "name": "safe-buffer",
+          "version": "5.2.1",
+          "exact": "safe-buffer@5.2.1"
+        },
+        {
+          "physicalId": "node_modules/uid-safe",
+          "name": "uid-safe",
+          "version": "2.1.5",
+          "exact": "uid-safe@2.1.5"
+        }
+      ],
+      "physicalEdges": [
+        {
+          "sourcePhysical": "node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@2.6.9",
+          "targetExact": "ms@2.0.0",
+          "exactEdge": "debug@2.6.9 -> ms@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express-session",
+          "targetPhysical": "node_modules/cookie",
+          "sourceExact": "express-session@1.19.0",
+          "targetExact": "cookie@0.7.2",
+          "exactEdge": "express-session@1.19.0 -> cookie@0.7.2"
+        },
+        {
+          "sourcePhysical": "node_modules/express-session",
+          "targetPhysical": "node_modules/cookie-signature",
+          "sourceExact": "express-session@1.19.0",
+          "targetExact": "cookie-signature@1.0.7",
+          "exactEdge": "express-session@1.19.0 -> cookie-signature@1.0.7"
+        },
+        {
+          "sourcePhysical": "node_modules/express-session",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "express-session@1.19.0",
+          "targetExact": "debug@2.6.9",
+          "exactEdge": "express-session@1.19.0 -> debug@2.6.9"
+        },
+        {
+          "sourcePhysical": "node_modules/express-session",
+          "targetPhysical": "node_modules/depd",
+          "sourceExact": "express-session@1.19.0",
+          "targetExact": "depd@2.0.0",
+          "exactEdge": "express-session@1.19.0 -> depd@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express-session",
+          "targetPhysical": "node_modules/on-headers",
+          "sourceExact": "express-session@1.19.0",
+          "targetExact": "on-headers@1.1.0",
+          "exactEdge": "express-session@1.19.0 -> on-headers@1.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/express-session",
+          "targetPhysical": "node_modules/parseurl",
+          "sourceExact": "express-session@1.19.0",
+          "targetExact": "parseurl@1.3.3",
+          "exactEdge": "express-session@1.19.0 -> parseurl@1.3.3"
+        },
+        {
+          "sourcePhysical": "node_modules/express-session",
+          "targetPhysical": "node_modules/safe-buffer",
+          "sourceExact": "express-session@1.19.0",
+          "targetExact": "safe-buffer@5.2.1",
+          "exactEdge": "express-session@1.19.0 -> safe-buffer@5.2.1"
+        },
+        {
+          "sourcePhysical": "node_modules/express-session",
+          "targetPhysical": "node_modules/uid-safe",
+          "sourceExact": "express-session@1.19.0",
+          "targetExact": "uid-safe@2.1.5",
+          "exactEdge": "express-session@1.19.0 -> uid-safe@2.1.5"
+        },
+        {
+          "sourcePhysical": "node_modules/uid-safe",
+          "targetPhysical": "node_modules/random-bytes",
+          "sourceExact": "uid-safe@2.1.5",
+          "targetExact": "random-bytes@1.0.0",
+          "exactEdge": "uid-safe@2.1.5 -> random-bytes@1.0.0"
+        }
+      ],
+      "exactNodes": [
+        "cookie-signature@1.0.7",
+        "cookie@0.7.2",
+        "debug@2.6.9",
+        "depd@2.0.0",
+        "express-session@1.19.0",
+        "ms@2.0.0",
+        "on-headers@1.1.0",
+        "parseurl@1.3.3",
+        "random-bytes@1.0.0",
+        "safe-buffer@5.2.1",
+        "uid-safe@2.1.5"
+      ],
+      "exactEdges": [
+        "debug@2.6.9 -> ms@2.0.0",
+        "express-session@1.19.0 -> cookie-signature@1.0.7",
+        "express-session@1.19.0 -> cookie@0.7.2",
+        "express-session@1.19.0 -> debug@2.6.9",
+        "express-session@1.19.0 -> depd@2.0.0",
+        "express-session@1.19.0 -> on-headers@1.1.0",
+        "express-session@1.19.0 -> parseurl@1.3.3",
+        "express-session@1.19.0 -> safe-buffer@5.2.1",
+        "express-session@1.19.0 -> uid-safe@2.1.5",
+        "uid-safe@2.1.5 -> random-bytes@1.0.0"
+      ]
+    },
+    {
+      "productId": "P3",
+      "label": "Morgan",
+      "directory": "product-morgan",
+      "rootName": "product-morgan",
+      "rootVersion": "1.0.0",
+      "packageNodeInstances": 9,
+      "exactPackageVersionIdentities": 9,
+      "nonRootPhysicalDependencyEdges": 8,
+      "rootDirectEdges": 1,
+      "totalPhysicalEdgesIncludingRoot": 9,
+      "physicalDAG": true,
+      "physicalMaxDepthIncludingRoot": 3,
+      "duplicatePackageNameCount": 0,
+      "duplicatePackageNames": [],
+      "unresolvedDependencyCount": 0,
+      "unresolvedDependencies": [],
+      "physicalNodes": [
+        {
+          "physicalId": "node_modules/basic-auth",
+          "name": "basic-auth",
+          "version": "2.0.1",
+          "exact": "basic-auth@2.0.1"
+        },
+        {
+          "physicalId": "node_modules/debug",
+          "name": "debug",
+          "version": "2.6.9",
+          "exact": "debug@2.6.9"
+        },
+        {
+          "physicalId": "node_modules/depd",
+          "name": "depd",
+          "version": "2.0.0",
+          "exact": "depd@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/ee-first",
+          "name": "ee-first",
+          "version": "1.1.1",
+          "exact": "ee-first@1.1.1"
+        },
+        {
+          "physicalId": "node_modules/morgan",
+          "name": "morgan",
+          "version": "1.12.1",
+          "exact": "morgan@1.12.1"
+        },
+        {
+          "physicalId": "node_modules/ms",
+          "name": "ms",
+          "version": "2.0.0",
+          "exact": "ms@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/on-finished",
+          "name": "on-finished",
+          "version": "2.4.1",
+          "exact": "on-finished@2.4.1"
+        },
+        {
+          "physicalId": "node_modules/on-headers",
+          "name": "on-headers",
+          "version": "1.1.0",
+          "exact": "on-headers@1.1.0"
+        },
+        {
+          "physicalId": "node_modules/safe-buffer",
+          "name": "safe-buffer",
+          "version": "5.1.2",
+          "exact": "safe-buffer@5.1.2"
+        }
+      ],
+      "physicalEdges": [
+        {
+          "sourcePhysical": "node_modules/basic-auth",
+          "targetPhysical": "node_modules/safe-buffer",
+          "sourceExact": "basic-auth@2.0.1",
+          "targetExact": "safe-buffer@5.1.2",
+          "exactEdge": "basic-auth@2.0.1 -> safe-buffer@5.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@2.6.9",
+          "targetExact": "ms@2.0.0",
+          "exactEdge": "debug@2.6.9 -> ms@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/morgan",
+          "targetPhysical": "node_modules/basic-auth",
+          "sourceExact": "morgan@1.12.1",
+          "targetExact": "basic-auth@2.0.1",
+          "exactEdge": "morgan@1.12.1 -> basic-auth@2.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/morgan",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "morgan@1.12.1",
+          "targetExact": "debug@2.6.9",
+          "exactEdge": "morgan@1.12.1 -> debug@2.6.9"
+        },
+        {
+          "sourcePhysical": "node_modules/morgan",
+          "targetPhysical": "node_modules/depd",
+          "sourceExact": "morgan@1.12.1",
+          "targetExact": "depd@2.0.0",
+          "exactEdge": "morgan@1.12.1 -> depd@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/morgan",
+          "targetPhysical": "node_modules/on-finished",
+          "sourceExact": "morgan@1.12.1",
+          "targetExact": "on-finished@2.4.1",
+          "exactEdge": "morgan@1.12.1 -> on-finished@2.4.1"
+        },
+        {
+          "sourcePhysical": "node_modules/morgan",
+          "targetPhysical": "node_modules/on-headers",
+          "sourceExact": "morgan@1.12.1",
+          "targetExact": "on-headers@1.1.0",
+          "exactEdge": "morgan@1.12.1 -> on-headers@1.1.0"
+        },
+        {
+          "sourcePhysical": "node_modules/on-finished",
+          "targetPhysical": "node_modules/ee-first",
+          "sourceExact": "on-finished@2.4.1",
+          "targetExact": "ee-first@1.1.1",
+          "exactEdge": "on-finished@2.4.1 -> ee-first@1.1.1"
+        }
+      ],
+      "exactNodes": [
+        "basic-auth@2.0.1",
+        "debug@2.6.9",
+        "depd@2.0.0",
+        "ee-first@1.1.1",
+        "morgan@1.12.1",
+        "ms@2.0.0",
+        "on-finished@2.4.1",
+        "on-headers@1.1.0",
+        "safe-buffer@5.1.2"
+      ],
+      "exactEdges": [
+        "basic-auth@2.0.1 -> safe-buffer@5.1.2",
+        "debug@2.6.9 -> ms@2.0.0",
+        "morgan@1.12.1 -> basic-auth@2.0.1",
+        "morgan@1.12.1 -> debug@2.6.9",
+        "morgan@1.12.1 -> depd@2.0.0",
+        "morgan@1.12.1 -> on-finished@2.4.1",
+        "morgan@1.12.1 -> on-headers@1.1.0",
+        "on-finished@2.4.1 -> ee-first@1.1.1"
+      ]
+    },
+    {
+      "productId": "P4",
+      "label": "Connect",
+      "directory": "product-connect",
+      "rootName": "product-connect",
+      "rootVersion": "1.0.0",
+      "packageNodeInstances": 12,
+      "exactPackageVersionIdentities": 12,
+      "nonRootPhysicalDependencyEdges": 13,
+      "rootDirectEdges": 1,
+      "totalPhysicalEdgesIncludingRoot": 14,
+      "physicalDAG": true,
+      "physicalMaxDepthIncludingRoot": 4,
+      "duplicatePackageNameCount": 0,
+      "duplicatePackageNames": [],
+      "unresolvedDependencyCount": 0,
+      "unresolvedDependencies": [],
+      "physicalNodes": [
+        {
+          "physicalId": "node_modules/connect",
+          "name": "connect",
+          "version": "3.7.0",
+          "exact": "connect@3.7.0"
+        },
+        {
+          "physicalId": "node_modules/debug",
+          "name": "debug",
+          "version": "2.6.9",
+          "exact": "debug@2.6.9"
+        },
+        {
+          "physicalId": "node_modules/ee-first",
+          "name": "ee-first",
+          "version": "1.1.1",
+          "exact": "ee-first@1.1.1"
+        },
+        {
+          "physicalId": "node_modules/encodeurl",
+          "name": "encodeurl",
+          "version": "1.0.2",
+          "exact": "encodeurl@1.0.2"
+        },
+        {
+          "physicalId": "node_modules/escape-html",
+          "name": "escape-html",
+          "version": "1.0.3",
+          "exact": "escape-html@1.0.3"
+        },
+        {
+          "physicalId": "node_modules/finalhandler",
+          "name": "finalhandler",
+          "version": "1.1.2",
+          "exact": "finalhandler@1.1.2"
+        },
+        {
+          "physicalId": "node_modules/ms",
+          "name": "ms",
+          "version": "2.0.0",
+          "exact": "ms@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/on-finished",
+          "name": "on-finished",
+          "version": "2.3.0",
+          "exact": "on-finished@2.3.0"
+        },
+        {
+          "physicalId": "node_modules/parseurl",
+          "name": "parseurl",
+          "version": "1.3.3",
+          "exact": "parseurl@1.3.3"
+        },
+        {
+          "physicalId": "node_modules/statuses",
+          "name": "statuses",
+          "version": "1.5.0",
+          "exact": "statuses@1.5.0"
+        },
+        {
+          "physicalId": "node_modules/unpipe",
+          "name": "unpipe",
+          "version": "1.0.0",
+          "exact": "unpipe@1.0.0"
+        },
+        {
+          "physicalId": "node_modules/utils-merge",
+          "name": "utils-merge",
+          "version": "1.0.1",
+          "exact": "utils-merge@1.0.1"
+        }
+      ],
+      "physicalEdges": [
+        {
+          "sourcePhysical": "node_modules/connect",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "connect@3.7.0",
+          "targetExact": "debug@2.6.9",
+          "exactEdge": "connect@3.7.0 -> debug@2.6.9"
+        },
+        {
+          "sourcePhysical": "node_modules/connect",
+          "targetPhysical": "node_modules/finalhandler",
+          "sourceExact": "connect@3.7.0",
+          "targetExact": "finalhandler@1.1.2",
+          "exactEdge": "connect@3.7.0 -> finalhandler@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/connect",
+          "targetPhysical": "node_modules/parseurl",
+          "sourceExact": "connect@3.7.0",
+          "targetExact": "parseurl@1.3.3",
+          "exactEdge": "connect@3.7.0 -> parseurl@1.3.3"
+        },
+        {
+          "sourcePhysical": "node_modules/connect",
+          "targetPhysical": "node_modules/utils-merge",
+          "sourceExact": "connect@3.7.0",
+          "targetExact": "utils-merge@1.0.1",
+          "exactEdge": "connect@3.7.0 -> utils-merge@1.0.1"
+        },
+        {
+          "sourcePhysical": "node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@2.6.9",
+          "targetExact": "ms@2.0.0",
+          "exactEdge": "debug@2.6.9 -> ms@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "finalhandler@1.1.2",
+          "targetExact": "debug@2.6.9",
+          "exactEdge": "finalhandler@1.1.2 -> debug@2.6.9"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/encodeurl",
+          "sourceExact": "finalhandler@1.1.2",
+          "targetExact": "encodeurl@1.0.2",
+          "exactEdge": "finalhandler@1.1.2 -> encodeurl@1.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/escape-html",
+          "sourceExact": "finalhandler@1.1.2",
+          "targetExact": "escape-html@1.0.3",
+          "exactEdge": "finalhandler@1.1.2 -> escape-html@1.0.3"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/on-finished",
+          "sourceExact": "finalhandler@1.1.2",
+          "targetExact": "on-finished@2.3.0",
+          "exactEdge": "finalhandler@1.1.2 -> on-finished@2.3.0"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/parseurl",
+          "sourceExact": "finalhandler@1.1.2",
+          "targetExact": "parseurl@1.3.3",
+          "exactEdge": "finalhandler@1.1.2 -> parseurl@1.3.3"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/statuses",
+          "sourceExact": "finalhandler@1.1.2",
+          "targetExact": "statuses@1.5.0",
+          "exactEdge": "finalhandler@1.1.2 -> statuses@1.5.0"
+        },
+        {
+          "sourcePhysical": "node_modules/finalhandler",
+          "targetPhysical": "node_modules/unpipe",
+          "sourceExact": "finalhandler@1.1.2",
+          "targetExact": "unpipe@1.0.0",
+          "exactEdge": "finalhandler@1.1.2 -> unpipe@1.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/on-finished",
+          "targetPhysical": "node_modules/ee-first",
+          "sourceExact": "on-finished@2.3.0",
+          "targetExact": "ee-first@1.1.1",
+          "exactEdge": "on-finished@2.3.0 -> ee-first@1.1.1"
+        }
+      ],
+      "exactNodes": [
+        "connect@3.7.0",
+        "debug@2.6.9",
+        "ee-first@1.1.1",
+        "encodeurl@1.0.2",
+        "escape-html@1.0.3",
+        "finalhandler@1.1.2",
+        "ms@2.0.0",
+        "on-finished@2.3.0",
+        "parseurl@1.3.3",
+        "statuses@1.5.0",
+        "unpipe@1.0.0",
+        "utils-merge@1.0.1"
+      ],
+      "exactEdges": [
+        "connect@3.7.0 -> debug@2.6.9",
+        "connect@3.7.0 -> finalhandler@1.1.2",
+        "connect@3.7.0 -> parseurl@1.3.3",
+        "connect@3.7.0 -> utils-merge@1.0.1",
+        "debug@2.6.9 -> ms@2.0.0",
+        "finalhandler@1.1.2 -> debug@2.6.9",
+        "finalhandler@1.1.2 -> encodeurl@1.0.2",
+        "finalhandler@1.1.2 -> escape-html@1.0.3",
+        "finalhandler@1.1.2 -> on-finished@2.3.0",
+        "finalhandler@1.1.2 -> parseurl@1.3.3",
+        "finalhandler@1.1.2 -> statuses@1.5.0",
+        "finalhandler@1.1.2 -> unpipe@1.0.0",
+        "on-finished@2.3.0 -> ee-first@1.1.1"
+      ]
+    },
+    {
+      "productId": "P5",
+      "label": "compression",
+      "directory": "product-compression",
+      "rootName": "product-compression",
+      "rootVersion": "1.0.0",
+      "packageNodeInstances": 13,
+      "exactPackageVersionIdentities": 13,
+      "nonRootPhysicalDependencyEdges": 12,
+      "rootDirectEdges": 1,
+      "totalPhysicalEdgesIncludingRoot": 13,
+      "physicalDAG": true,
+      "physicalMaxDepthIncludingRoot": 4,
+      "duplicatePackageNameCount": 1,
+      "duplicatePackageNames": [
+        {
+          "name": "mime-db",
+          "count": 2
+        }
+      ],
+      "unresolvedDependencyCount": 0,
+      "unresolvedDependencies": [],
+      "physicalNodes": [
+        {
+          "physicalId": "node_modules/accepts",
+          "name": "accepts",
+          "version": "1.3.8",
+          "exact": "accepts@1.3.8"
+        },
+        {
+          "physicalId": "node_modules/bytes",
+          "name": "bytes",
+          "version": "3.0.0",
+          "exact": "bytes@3.0.0"
+        },
+        {
+          "physicalId": "node_modules/compressible",
+          "name": "compressible",
+          "version": "2.0.18",
+          "exact": "compressible@2.0.18"
+        },
+        {
+          "physicalId": "node_modules/compression",
+          "name": "compression",
+          "version": "1.7.4",
+          "exact": "compression@1.7.4"
+        },
+        {
+          "physicalId": "node_modules/debug",
+          "name": "debug",
+          "version": "2.6.9",
+          "exact": "debug@2.6.9"
+        },
+        {
+          "physicalId": "node_modules/mime-db",
+          "name": "mime-db",
+          "version": "1.54.0",
+          "exact": "mime-db@1.54.0"
+        },
+        {
+          "physicalId": "node_modules/mime-types",
+          "name": "mime-types",
+          "version": "2.1.35",
+          "exact": "mime-types@2.1.35"
+        },
+        {
+          "physicalId": "node_modules/mime-types/node_modules/mime-db",
+          "name": "mime-db",
+          "version": "1.52.0",
+          "exact": "mime-db@1.52.0"
+        },
+        {
+          "physicalId": "node_modules/ms",
+          "name": "ms",
+          "version": "2.0.0",
+          "exact": "ms@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/negotiator",
+          "name": "negotiator",
+          "version": "0.6.3",
+          "exact": "negotiator@0.6.3"
+        },
+        {
+          "physicalId": "node_modules/on-headers",
+          "name": "on-headers",
+          "version": "1.0.2",
+          "exact": "on-headers@1.0.2"
+        },
+        {
+          "physicalId": "node_modules/safe-buffer",
+          "name": "safe-buffer",
+          "version": "5.1.2",
+          "exact": "safe-buffer@5.1.2"
+        },
+        {
+          "physicalId": "node_modules/vary",
+          "name": "vary",
+          "version": "1.1.2",
+          "exact": "vary@1.1.2"
+        }
+      ],
+      "physicalEdges": [
+        {
+          "sourcePhysical": "node_modules/accepts",
+          "targetPhysical": "node_modules/mime-types",
+          "sourceExact": "accepts@1.3.8",
+          "targetExact": "mime-types@2.1.35",
+          "exactEdge": "accepts@1.3.8 -> mime-types@2.1.35"
+        },
+        {
+          "sourcePhysical": "node_modules/accepts",
+          "targetPhysical": "node_modules/negotiator",
+          "sourceExact": "accepts@1.3.8",
+          "targetExact": "negotiator@0.6.3",
+          "exactEdge": "accepts@1.3.8 -> negotiator@0.6.3"
+        },
+        {
+          "sourcePhysical": "node_modules/compressible",
+          "targetPhysical": "node_modules/mime-db",
+          "sourceExact": "compressible@2.0.18",
+          "targetExact": "mime-db@1.54.0",
+          "exactEdge": "compressible@2.0.18 -> mime-db@1.54.0"
+        },
+        {
+          "sourcePhysical": "node_modules/compression",
+          "targetPhysical": "node_modules/accepts",
+          "sourceExact": "compression@1.7.4",
+          "targetExact": "accepts@1.3.8",
+          "exactEdge": "compression@1.7.4 -> accepts@1.3.8"
+        },
+        {
+          "sourcePhysical": "node_modules/compression",
+          "targetPhysical": "node_modules/bytes",
+          "sourceExact": "compression@1.7.4",
+          "targetExact": "bytes@3.0.0",
+          "exactEdge": "compression@1.7.4 -> bytes@3.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/compression",
+          "targetPhysical": "node_modules/compressible",
+          "sourceExact": "compression@1.7.4",
+          "targetExact": "compressible@2.0.18",
+          "exactEdge": "compression@1.7.4 -> compressible@2.0.18"
+        },
+        {
+          "sourcePhysical": "node_modules/compression",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "compression@1.7.4",
+          "targetExact": "debug@2.6.9",
+          "exactEdge": "compression@1.7.4 -> debug@2.6.9"
+        },
+        {
+          "sourcePhysical": "node_modules/compression",
+          "targetPhysical": "node_modules/on-headers",
+          "sourceExact": "compression@1.7.4",
+          "targetExact": "on-headers@1.0.2",
+          "exactEdge": "compression@1.7.4 -> on-headers@1.0.2"
+        },
+        {
+          "sourcePhysical": "node_modules/compression",
+          "targetPhysical": "node_modules/safe-buffer",
+          "sourceExact": "compression@1.7.4",
+          "targetExact": "safe-buffer@5.1.2",
+          "exactEdge": "compression@1.7.4 -> safe-buffer@5.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/compression",
+          "targetPhysical": "node_modules/vary",
+          "sourceExact": "compression@1.7.4",
+          "targetExact": "vary@1.1.2",
+          "exactEdge": "compression@1.7.4 -> vary@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@2.6.9",
+          "targetExact": "ms@2.0.0",
+          "exactEdge": "debug@2.6.9 -> ms@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/mime-types",
+          "targetPhysical": "node_modules/mime-types/node_modules/mime-db",
+          "sourceExact": "mime-types@2.1.35",
+          "targetExact": "mime-db@1.52.0",
+          "exactEdge": "mime-types@2.1.35 -> mime-db@1.52.0"
+        }
+      ],
+      "exactNodes": [
+        "accepts@1.3.8",
+        "bytes@3.0.0",
+        "compressible@2.0.18",
+        "compression@1.7.4",
+        "debug@2.6.9",
+        "mime-db@1.52.0",
+        "mime-db@1.54.0",
+        "mime-types@2.1.35",
+        "ms@2.0.0",
+        "negotiator@0.6.3",
+        "on-headers@1.0.2",
+        "safe-buffer@5.1.2",
+        "vary@1.1.2"
+      ],
+      "exactEdges": [
+        "accepts@1.3.8 -> mime-types@2.1.35",
+        "accepts@1.3.8 -> negotiator@0.6.3",
+        "compressible@2.0.18 -> mime-db@1.54.0",
+        "compression@1.7.4 -> accepts@1.3.8",
+        "compression@1.7.4 -> bytes@3.0.0",
+        "compression@1.7.4 -> compressible@2.0.18",
+        "compression@1.7.4 -> debug@2.6.9",
+        "compression@1.7.4 -> on-headers@1.0.2",
+        "compression@1.7.4 -> safe-buffer@5.1.2",
+        "compression@1.7.4 -> vary@1.1.2",
+        "debug@2.6.9 -> ms@2.0.0",
+        "mime-types@2.1.35 -> mime-db@1.52.0"
+      ]
+    },
+    {
+      "productId": "P6",
+      "label": "Socket.IO",
+      "directory": "product-socketio",
+      "rootName": "product-socketio",
+      "rootVersion": "1.0.0",
+      "packageNodeInstances": 25,
+      "exactPackageVersionIdentities": 23,
+      "nonRootPhysicalDependencyEdges": 32,
+      "rootDirectEdges": 1,
+      "totalPhysicalEdgesIncludingRoot": 33,
+      "physicalDAG": true,
+      "physicalMaxDepthIncludingRoot": 5,
+      "duplicatePackageNameCount": 1,
+      "duplicatePackageNames": [
+        {
+          "name": "debug",
+          "count": 4
+        }
+      ],
+      "unresolvedDependencyCount": 0,
+      "unresolvedDependencies": [],
+      "physicalNodes": [
+        {
+          "physicalId": "node_modules/@socket.io/component-emitter",
+          "name": "@socket.io/component-emitter",
+          "version": "3.1.2",
+          "exact": "@socket.io/component-emitter@3.1.2"
+        },
+        {
+          "physicalId": "node_modules/@types/cors",
+          "name": "@types/cors",
+          "version": "2.8.19",
+          "exact": "@types/cors@2.8.19"
+        },
+        {
+          "physicalId": "node_modules/@types/node",
+          "name": "@types/node",
+          "version": "22.20.3",
+          "exact": "@types/node@22.20.3"
+        },
+        {
+          "physicalId": "node_modules/@types/ws",
+          "name": "@types/ws",
+          "version": "8.18.1",
+          "exact": "@types/ws@8.18.1"
+        },
+        {
+          "physicalId": "node_modules/accepts",
+          "name": "accepts",
+          "version": "1.3.8",
+          "exact": "accepts@1.3.8"
+        },
+        {
+          "physicalId": "node_modules/base64id",
+          "name": "base64id",
+          "version": "2.0.0",
+          "exact": "base64id@2.0.0"
+        },
+        {
+          "physicalId": "node_modules/cookie",
+          "name": "cookie",
+          "version": "0.7.2",
+          "exact": "cookie@0.7.2"
+        },
+        {
+          "physicalId": "node_modules/cors",
+          "name": "cors",
+          "version": "2.8.6",
+          "exact": "cors@2.8.6"
+        },
+        {
+          "physicalId": "node_modules/debug",
+          "name": "debug",
+          "version": "4.3.7",
+          "exact": "debug@4.3.7"
+        },
+        {
+          "physicalId": "node_modules/engine.io",
+          "name": "engine.io",
+          "version": "6.6.10",
+          "exact": "engine.io@6.6.10"
+        },
+        {
+          "physicalId": "node_modules/engine.io-parser",
+          "name": "engine.io-parser",
+          "version": "5.2.3",
+          "exact": "engine.io-parser@5.2.3"
+        },
+        {
+          "physicalId": "node_modules/engine.io/node_modules/debug",
+          "name": "debug",
+          "version": "4.4.3",
+          "exact": "debug@4.4.3"
+        },
+        {
+          "physicalId": "node_modules/mime-db",
+          "name": "mime-db",
+          "version": "1.52.0",
+          "exact": "mime-db@1.52.0"
+        },
+        {
+          "physicalId": "node_modules/mime-types",
+          "name": "mime-types",
+          "version": "2.1.35",
+          "exact": "mime-types@2.1.35"
+        },
+        {
+          "physicalId": "node_modules/ms",
+          "name": "ms",
+          "version": "2.1.3",
+          "exact": "ms@2.1.3"
+        },
+        {
+          "physicalId": "node_modules/negotiator",
+          "name": "negotiator",
+          "version": "0.6.3",
+          "exact": "negotiator@0.6.3"
+        },
+        {
+          "physicalId": "node_modules/object-assign",
+          "name": "object-assign",
+          "version": "4.1.1",
+          "exact": "object-assign@4.1.1"
+        },
+        {
+          "physicalId": "node_modules/socket.io",
+          "name": "socket.io",
+          "version": "4.8.1",
+          "exact": "socket.io@4.8.1"
+        },
+        {
+          "physicalId": "node_modules/socket.io-adapter",
+          "name": "socket.io-adapter",
+          "version": "2.5.8",
+          "exact": "socket.io-adapter@2.5.8"
+        },
+        {
+          "physicalId": "node_modules/socket.io-adapter/node_modules/debug",
+          "name": "debug",
+          "version": "4.4.3",
+          "exact": "debug@4.4.3"
+        },
+        {
+          "physicalId": "node_modules/socket.io-parser",
+          "name": "socket.io-parser",
+          "version": "4.2.7",
+          "exact": "socket.io-parser@4.2.7"
+        },
+        {
+          "physicalId": "node_modules/socket.io-parser/node_modules/debug",
+          "name": "debug",
+          "version": "4.4.3",
+          "exact": "debug@4.4.3"
+        },
+        {
+          "physicalId": "node_modules/undici-types",
+          "name": "undici-types",
+          "version": "6.21.0",
+          "exact": "undici-types@6.21.0"
+        },
+        {
+          "physicalId": "node_modules/vary",
+          "name": "vary",
+          "version": "1.1.2",
+          "exact": "vary@1.1.2"
+        },
+        {
+          "physicalId": "node_modules/ws",
+          "name": "ws",
+          "version": "8.21.3",
+          "exact": "ws@8.21.3"
+        }
+      ],
+      "physicalEdges": [
+        {
+          "sourcePhysical": "node_modules/@types/cors",
+          "targetPhysical": "node_modules/@types/node",
+          "sourceExact": "@types/cors@2.8.19",
+          "targetExact": "@types/node@22.20.3",
+          "exactEdge": "@types/cors@2.8.19 -> @types/node@22.20.3"
+        },
+        {
+          "sourcePhysical": "node_modules/@types/node",
+          "targetPhysical": "node_modules/undici-types",
+          "sourceExact": "@types/node@22.20.3",
+          "targetExact": "undici-types@6.21.0",
+          "exactEdge": "@types/node@22.20.3 -> undici-types@6.21.0"
+        },
+        {
+          "sourcePhysical": "node_modules/@types/ws",
+          "targetPhysical": "node_modules/@types/node",
+          "sourceExact": "@types/ws@8.18.1",
+          "targetExact": "@types/node@22.20.3",
+          "exactEdge": "@types/ws@8.18.1 -> @types/node@22.20.3"
+        },
+        {
+          "sourcePhysical": "node_modules/accepts",
+          "targetPhysical": "node_modules/mime-types",
+          "sourceExact": "accepts@1.3.8",
+          "targetExact": "mime-types@2.1.35",
+          "exactEdge": "accepts@1.3.8 -> mime-types@2.1.35"
+        },
+        {
+          "sourcePhysical": "node_modules/accepts",
+          "targetPhysical": "node_modules/negotiator",
+          "sourceExact": "accepts@1.3.8",
+          "targetExact": "negotiator@0.6.3",
+          "exactEdge": "accepts@1.3.8 -> negotiator@0.6.3"
+        },
+        {
+          "sourcePhysical": "node_modules/cors",
+          "targetPhysical": "node_modules/object-assign",
+          "sourceExact": "cors@2.8.6",
+          "targetExact": "object-assign@4.1.1",
+          "exactEdge": "cors@2.8.6 -> object-assign@4.1.1"
+        },
+        {
+          "sourcePhysical": "node_modules/cors",
+          "targetPhysical": "node_modules/vary",
+          "sourceExact": "cors@2.8.6",
+          "targetExact": "vary@1.1.2",
+          "exactEdge": "cors@2.8.6 -> vary@1.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@4.3.7",
+          "targetExact": "ms@2.1.3",
+          "exactEdge": "debug@4.3.7 -> ms@2.1.3"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/@types/cors",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "@types/cors@2.8.19",
+          "exactEdge": "engine.io@6.6.10 -> @types/cors@2.8.19"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/@types/node",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "@types/node@22.20.3",
+          "exactEdge": "engine.io@6.6.10 -> @types/node@22.20.3"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/@types/ws",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "@types/ws@8.18.1",
+          "exactEdge": "engine.io@6.6.10 -> @types/ws@8.18.1"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/accepts",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "accepts@1.3.8",
+          "exactEdge": "engine.io@6.6.10 -> accepts@1.3.8"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/cookie",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "cookie@0.7.2",
+          "exactEdge": "engine.io@6.6.10 -> cookie@0.7.2"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/cors",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "cors@2.8.6",
+          "exactEdge": "engine.io@6.6.10 -> cors@2.8.6"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/engine.io/node_modules/debug",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "debug@4.4.3",
+          "exactEdge": "engine.io@6.6.10 -> debug@4.4.3"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/engine.io-parser",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "engine.io-parser@5.2.3",
+          "exactEdge": "engine.io@6.6.10 -> engine.io-parser@5.2.3"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io",
+          "targetPhysical": "node_modules/ws",
+          "sourceExact": "engine.io@6.6.10",
+          "targetExact": "ws@8.21.3",
+          "exactEdge": "engine.io@6.6.10 -> ws@8.21.3"
+        },
+        {
+          "sourcePhysical": "node_modules/engine.io/node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@4.4.3",
+          "targetExact": "ms@2.1.3",
+          "exactEdge": "debug@4.4.3 -> ms@2.1.3"
+        },
+        {
+          "sourcePhysical": "node_modules/mime-types",
+          "targetPhysical": "node_modules/mime-db",
+          "sourceExact": "mime-types@2.1.35",
+          "targetExact": "mime-db@1.52.0",
+          "exactEdge": "mime-types@2.1.35 -> mime-db@1.52.0"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io",
+          "targetPhysical": "node_modules/accepts",
+          "sourceExact": "socket.io@4.8.1",
+          "targetExact": "accepts@1.3.8",
+          "exactEdge": "socket.io@4.8.1 -> accepts@1.3.8"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io",
+          "targetPhysical": "node_modules/base64id",
+          "sourceExact": "socket.io@4.8.1",
+          "targetExact": "base64id@2.0.0",
+          "exactEdge": "socket.io@4.8.1 -> base64id@2.0.0"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io",
+          "targetPhysical": "node_modules/cors",
+          "sourceExact": "socket.io@4.8.1",
+          "targetExact": "cors@2.8.6",
+          "exactEdge": "socket.io@4.8.1 -> cors@2.8.6"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io",
+          "targetPhysical": "node_modules/debug",
+          "sourceExact": "socket.io@4.8.1",
+          "targetExact": "debug@4.3.7",
+          "exactEdge": "socket.io@4.8.1 -> debug@4.3.7"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io",
+          "targetPhysical": "node_modules/engine.io",
+          "sourceExact": "socket.io@4.8.1",
+          "targetExact": "engine.io@6.6.10",
+          "exactEdge": "socket.io@4.8.1 -> engine.io@6.6.10"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io",
+          "targetPhysical": "node_modules/socket.io-adapter",
+          "sourceExact": "socket.io@4.8.1",
+          "targetExact": "socket.io-adapter@2.5.8",
+          "exactEdge": "socket.io@4.8.1 -> socket.io-adapter@2.5.8"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io",
+          "targetPhysical": "node_modules/socket.io-parser",
+          "sourceExact": "socket.io@4.8.1",
+          "targetExact": "socket.io-parser@4.2.7",
+          "exactEdge": "socket.io@4.8.1 -> socket.io-parser@4.2.7"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io-adapter",
+          "targetPhysical": "node_modules/socket.io-adapter/node_modules/debug",
+          "sourceExact": "socket.io-adapter@2.5.8",
+          "targetExact": "debug@4.4.3",
+          "exactEdge": "socket.io-adapter@2.5.8 -> debug@4.4.3"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io-adapter",
+          "targetPhysical": "node_modules/ws",
+          "sourceExact": "socket.io-adapter@2.5.8",
+          "targetExact": "ws@8.21.3",
+          "exactEdge": "socket.io-adapter@2.5.8 -> ws@8.21.3"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io-adapter/node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@4.4.3",
+          "targetExact": "ms@2.1.3",
+          "exactEdge": "debug@4.4.3 -> ms@2.1.3"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io-parser",
+          "targetPhysical": "node_modules/@socket.io/component-emitter",
+          "sourceExact": "socket.io-parser@4.2.7",
+          "targetExact": "@socket.io/component-emitter@3.1.2",
+          "exactEdge": "socket.io-parser@4.2.7 -> @socket.io/component-emitter@3.1.2"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io-parser",
+          "targetPhysical": "node_modules/socket.io-parser/node_modules/debug",
+          "sourceExact": "socket.io-parser@4.2.7",
+          "targetExact": "debug@4.4.3",
+          "exactEdge": "socket.io-parser@4.2.7 -> debug@4.4.3"
+        },
+        {
+          "sourcePhysical": "node_modules/socket.io-parser/node_modules/debug",
+          "targetPhysical": "node_modules/ms",
+          "sourceExact": "debug@4.4.3",
+          "targetExact": "ms@2.1.3",
+          "exactEdge": "debug@4.4.3 -> ms@2.1.3"
+        }
+      ],
+      "exactNodes": [
+        "@socket.io/component-emitter@3.1.2",
+        "@types/cors@2.8.19",
+        "@types/node@22.20.3",
+        "@types/ws@8.18.1",
+        "accepts@1.3.8",
+        "base64id@2.0.0",
+        "cookie@0.7.2",
+        "cors@2.8.6",
+        "debug@4.3.7",
+        "debug@4.4.3",
+        "engine.io-parser@5.2.3",
+        "engine.io@6.6.10",
+        "mime-db@1.52.0",
+        "mime-types@2.1.35",
+        "ms@2.1.3",
+        "negotiator@0.6.3",
+        "object-assign@4.1.1",
+        "socket.io-adapter@2.5.8",
+        "socket.io-parser@4.2.7",
+        "socket.io@4.8.1",
+        "undici-types@6.21.0",
+        "vary@1.1.2",
+        "ws@8.21.3"
+      ],
+      "exactEdges": [
+        "@types/cors@2.8.19 -> @types/node@22.20.3",
+        "@types/node@22.20.3 -> undici-types@6.21.0",
+        "@types/ws@8.18.1 -> @types/node@22.20.3",
+        "accepts@1.3.8 -> mime-types@2.1.35",
+        "accepts@1.3.8 -> negotiator@0.6.3",
+        "cors@2.8.6 -> object-assign@4.1.1",
+        "cors@2.8.6 -> vary@1.1.2",
+        "debug@4.3.7 -> ms@2.1.3",
+        "debug@4.4.3 -> ms@2.1.3",
+        "engine.io@6.6.10 -> @types/cors@2.8.19",
+        "engine.io@6.6.10 -> @types/node@22.20.3",
+        "engine.io@6.6.10 -> @types/ws@8.18.1",
+        "engine.io@6.6.10 -> accepts@1.3.8",
+        "engine.io@6.6.10 -> cookie@0.7.2",
+        "engine.io@6.6.10 -> cors@2.8.6",
+        "engine.io@6.6.10 -> debug@4.4.3",
+        "engine.io@6.6.10 -> engine.io-parser@5.2.3",
+        "engine.io@6.6.10 -> ws@8.21.3",
+        "mime-types@2.1.35 -> mime-db@1.52.0",
+        "socket.io-adapter@2.5.8 -> debug@4.4.3",
+        "socket.io-adapter@2.5.8 -> ws@8.21.3",
+        "socket.io-parser@4.2.7 -> @socket.io/component-emitter@3.1.2",
+        "socket.io-parser@4.2.7 -> debug@4.4.3",
+        "socket.io@4.8.1 -> accepts@1.3.8",
+        "socket.io@4.8.1 -> base64id@2.0.0",
+        "socket.io@4.8.1 -> cors@2.8.6",
+        "socket.io@4.8.1 -> debug@4.3.7",
+        "socket.io@4.8.1 -> engine.io@6.6.10",
+        "socket.io@4.8.1 -> socket.io-adapter@2.5.8",
+        "socket.io@4.8.1 -> socket.io-parser@4.2.7"
+      ]
+    }
+  ],
+  "ecosystem": {
+    "K": 6,
+    "physicalPackageInstances": 138,
+    "sumPerProductExactIdentities": 134,
+    "uniqueExactNodes": 106,
+    "sharedExactNodesAtLeast2": 19,
+    "sharedExactNodesAllProducts": 0,
+    "sumNonRootPhysicalEdges": 199,
+    "rootEdges": 6,
+    "totalPhysicalEdgesIncludingRoot": 205,
+    "uniqueExactNonRootEdges": 189,
+    "sharedExactNonRootEdgesAtLeast2": 6,
+    "sharedExactNonRootEdgesAllProducts": 0,
+    "sameNameDifferentVersionOverlaps": 15,
+    "sharedNodes": [
+      {
+        "node": "debug@2.6.9",
+        "products": [
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "productCount": 4,
+        "rho": 0.6666666666666666
+      },
+      {
+        "node": "ms@2.0.0",
+        "products": [
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "productCount": 4,
+        "rho": 0.6666666666666666
+      },
+      {
+        "node": "cookie@0.7.2",
+        "products": [
+          "P1",
+          "P2",
+          "P6"
+        ],
+        "productCount": 3,
+        "rho": 0.5
+      },
+      {
+        "node": "depd@2.0.0",
+        "products": [
+          "P1",
+          "P2",
+          "P3"
+        ],
+        "productCount": 3,
+        "rho": 0.5
+      },
+      {
+        "node": "ee-first@1.1.1",
+        "products": [
+          "P1",
+          "P3",
+          "P4"
+        ],
+        "productCount": 3,
+        "rho": 0.5
+      },
+      {
+        "node": "parseurl@1.3.3",
+        "products": [
+          "P1",
+          "P2",
+          "P4"
+        ],
+        "productCount": 3,
+        "rho": 0.5
+      },
+      {
+        "node": "vary@1.1.2",
+        "products": [
+          "P1",
+          "P5",
+          "P6"
+        ],
+        "productCount": 3,
+        "rho": 0.5
+      },
+      {
+        "node": "accepts@1.3.8",
+        "products": [
+          "P5",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "debug@4.4.3",
+        "products": [
+          "P1",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "escape-html@1.0.3",
+        "products": [
+          "P1",
+          "P4"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "mime-db@1.52.0",
+        "products": [
+          "P5",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "mime-db@1.54.0",
+        "products": [
+          "P1",
+          "P5"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "mime-types@2.1.35",
+        "products": [
+          "P5",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "ms@2.1.3",
+        "products": [
+          "P1",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "negotiator@0.6.3",
+        "products": [
+          "P5",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "on-finished@2.4.1",
+        "products": [
+          "P1",
+          "P3"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "on-headers@1.1.0",
+        "products": [
+          "P2",
+          "P3"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "safe-buffer@5.1.2",
+        "products": [
+          "P3",
+          "P5"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "node": "unpipe@1.0.0",
+        "products": [
+          "P1",
+          "P4"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      }
+    ],
+    "sharedEdges": [
+      {
+        "edge": "debug@2.6.9 -> ms@2.0.0",
+        "products": [
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "productCount": 4,
+        "rho": 0.6666666666666666
+      },
+      {
+        "edge": "accepts@1.3.8 -> mime-types@2.1.35",
+        "products": [
+          "P5",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "edge": "accepts@1.3.8 -> negotiator@0.6.3",
+        "products": [
+          "P5",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "edge": "debug@4.4.3 -> ms@2.1.3",
+        "products": [
+          "P1",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "edge": "mime-types@2.1.35 -> mime-db@1.52.0",
+        "products": [
+          "P5",
+          "P6"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      },
+      {
+        "edge": "on-finished@2.4.1 -> ee-first@1.1.1",
+        "products": [
+          "P1",
+          "P3"
+        ],
+        "productCount": 2,
+        "rho": 0.3333333333333333
+      }
+    ],
+    "versionOverlaps": [
+      {
+        "name": "accepts",
+        "versions": [
+          "1.3.8",
+          "2.0.0"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "bytes",
+        "versions": [
+          "3.0.0",
+          "3.1.2"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "content-type",
+        "versions": [
+          "1.0.5",
+          "2.1.0"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "cookie-signature",
+        "versions": [
+          "1.0.7",
+          "1.2.2"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "debug",
+        "versions": [
+          "2.6.9",
+          "4.3.7",
+          "4.4.3"
+        ],
+        "versionCount": 3
+      },
+      {
+        "name": "encodeurl",
+        "versions": [
+          "1.0.2",
+          "2.0.0"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "finalhandler",
+        "versions": [
+          "1.1.2",
+          "2.1.1"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "mime-db",
+        "versions": [
+          "1.52.0",
+          "1.54.0"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "mime-types",
+        "versions": [
+          "2.1.35",
+          "3.0.2"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "ms",
+        "versions": [
+          "2.0.0",
+          "2.1.3"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "negotiator",
+        "versions": [
+          "0.6.3",
+          "1.1.0"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "on-finished",
+        "versions": [
+          "2.3.0",
+          "2.4.1"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "on-headers",
+        "versions": [
+          "1.0.2",
+          "1.1.0"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "safe-buffer",
+        "versions": [
+          "5.1.2",
+          "5.2.1"
+        ],
+        "versionCount": 2
+      },
+      {
+        "name": "statuses",
+        "versions": [
+          "1.5.0",
+          "2.0.2"
+        ],
+        "versionCount": 2
+      }
+    ]
+  }
+}

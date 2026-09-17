@@ -1,0 +1,144 @@
+SIX-PRODUCT ECOSYSTEM TOPOLOGY
+==============================
+
+P1=Express, P2=express-session, P3=Morgan, P4=Connect, P5=compression, P6=Socket.IO
+
+PER-PRODUCT STRUCTURE
+---------------------
+P1 Express
+  physical package instances=68
+  exact identities=66
+  non-root physical edges=124
+  root direct edges=1
+  total physical edges including root=125
+  physical DAG=YES
+  max depth including root=12
+  duplicate package names=1
+  unresolved regular dependencies=0
+P2 express-session
+  physical package instances=11
+  exact identities=11
+  non-root physical edges=10
+  root direct edges=1
+  total physical edges including root=11
+  physical DAG=YES
+  max depth including root=3
+  duplicate package names=0
+  unresolved regular dependencies=0
+P3 Morgan
+  physical package instances=9
+  exact identities=9
+  non-root physical edges=8
+  root direct edges=1
+  total physical edges including root=9
+  physical DAG=YES
+  max depth including root=3
+  duplicate package names=0
+  unresolved regular dependencies=0
+P4 Connect
+  physical package instances=12
+  exact identities=12
+  non-root physical edges=13
+  root direct edges=1
+  total physical edges including root=14
+  physical DAG=YES
+  max depth including root=4
+  duplicate package names=0
+  unresolved regular dependencies=0
+P5 compression
+  physical package instances=13
+  exact identities=13
+  non-root physical edges=12
+  root direct edges=1
+  total physical edges including root=13
+  physical DAG=YES
+  max depth including root=4
+  duplicate package names=1
+  unresolved regular dependencies=0
+P6 Socket.IO
+  physical package instances=25
+  exact identities=23
+  non-root physical edges=32
+  root direct edges=1
+  total physical edges including root=33
+  physical DAG=YES
+  max depth including root=5
+  duplicate package names=1
+  unresolved regular dependencies=0
+
+ECOSYSTEM
+---------
+K=6
+physical package instances=138
+sum per-product exact identities=134
+unique exact nodes=106
+shared exact nodes >=2 products=19
+shared exact nodes all 6 products=0
+sum non-root physical edges=199
+root edges=6
+total physical edges including root=205
+unique exact non-root edges=189
+shared exact non-root edges >=2 products=6
+shared exact non-root edges all 6 products=0
+same-name/different-version overlaps=15
+
+SHARED EXACT NODES
+------------------
+debug@2.6.9: products=P2,P3,P4,P5 count=4/6 rho=0.667
+ms@2.0.0: products=P2,P3,P4,P5 count=4/6 rho=0.667
+cookie@0.7.2: products=P1,P2,P6 count=3/6 rho=0.500
+depd@2.0.0: products=P1,P2,P3 count=3/6 rho=0.500
+ee-first@1.1.1: products=P1,P3,P4 count=3/6 rho=0.500
+parseurl@1.3.3: products=P1,P2,P4 count=3/6 rho=0.500
+vary@1.1.2: products=P1,P5,P6 count=3/6 rho=0.500
+accepts@1.3.8: products=P5,P6 count=2/6 rho=0.333
+debug@4.4.3: products=P1,P6 count=2/6 rho=0.333
+escape-html@1.0.3: products=P1,P4 count=2/6 rho=0.333
+mime-db@1.52.0: products=P5,P6 count=2/6 rho=0.333
+mime-db@1.54.0: products=P1,P5 count=2/6 rho=0.333
+mime-types@2.1.35: products=P5,P6 count=2/6 rho=0.333
+ms@2.1.3: products=P1,P6 count=2/6 rho=0.333
+negotiator@0.6.3: products=P5,P6 count=2/6 rho=0.333
+on-finished@2.4.1: products=P1,P3 count=2/6 rho=0.333
+on-headers@1.1.0: products=P2,P3 count=2/6 rho=0.333
+safe-buffer@5.1.2: products=P3,P5 count=2/6 rho=0.333
+unpipe@1.0.0: products=P1,P4 count=2/6 rho=0.333
+
+SHARED EXACT EDGES
+------------------
+debug@2.6.9 -> ms@2.0.0: products=P2,P3,P4,P5 count=4/6 rho=0.667
+accepts@1.3.8 -> mime-types@2.1.35: products=P5,P6 count=2/6 rho=0.333
+accepts@1.3.8 -> negotiator@0.6.3: products=P5,P6 count=2/6 rho=0.333
+debug@4.4.3 -> ms@2.1.3: products=P1,P6 count=2/6 rho=0.333
+mime-types@2.1.35 -> mime-db@1.52.0: products=P5,P6 count=2/6 rho=0.333
+on-finished@2.4.1 -> ee-first@1.1.1: products=P1,P3 count=2/6 rho=0.333
+
+SAME-NAME / DIFFERENT-VERSION OVERLAPS
+--------------------------------------
+accepts: 1.3.8, 2.0.0
+bytes: 3.0.0, 3.1.2
+content-type: 1.0.5, 2.1.0
+cookie-signature: 1.0.7, 1.2.2
+debug: 2.6.9, 4.3.7, 4.4.3
+encodeurl: 1.0.2, 2.0.0
+finalhandler: 1.1.2, 2.1.1
+mime-db: 1.52.0, 1.54.0
+mime-types: 2.1.35, 3.0.2
+ms: 2.0.0, 2.1.3
+negotiator: 0.6.3, 1.1.0
+on-finished: 2.3.0, 2.4.1
+on-headers: 1.0.2, 1.1.0
+safe-buffer: 5.1.2, 5.2.1
+statuses: 1.5.0, 2.0.2
+
+P6 VERSION-GENERALIZATION CANDIDATES
+------------------------------------
+Socket.IO introduces debug@4.3.7 and debug@4.4.3, both using ms@2.1.3.
+This differs from the previously validated exact E1 edge debug@2.6.9 -> ms@2.0.0.
+Therefore P6 can support a stronger version-level generalization study after topology inspection.
+
+IMPORTANT
+---------
+Structural reach rho is not runtime activation, conditional propagation, natural failure probability, vulnerability probability, or natural risk.
+Optional peer dependencies that are intentionally absent are not treated as failed regular dependency resolution.
+npm audit output is a point-in-time tool result and is not a natural failure/compromise probability.
