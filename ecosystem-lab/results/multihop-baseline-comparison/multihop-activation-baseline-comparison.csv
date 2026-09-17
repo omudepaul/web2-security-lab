@@ -1,0 +1,3 @@
+pathId,path,trials,observedJointAlpha,topologyOnlyPrediction,topologyOnlyAbsoluteError,pooledEdge1Rate,pooledEdge2Rate,pooledMarginalProductPrediction,pooledMarginalProductAbsoluteError
+PA,morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0,50,0.4,1,0.6,1,0.4,0.4,0
+PB,morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1,50,0.6,1,0.4,0.6,0.6,0.36,0.24

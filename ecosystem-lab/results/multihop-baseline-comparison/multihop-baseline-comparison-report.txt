@@ -1,0 +1,84 @@
+MULTI-HOP DESCRIPTIVE BASELINE COMPARISON
+=========================================
+
+IMPORTANT CAUTION
+-----------------
+This is NOT an independent predictive benchmark.
+The context-aware quantities are derived from the same controlled experimental observations.
+Therefore, the comparison demonstrates differences in representation/model structure, not out-of-sample predictive superiority.
+
+A. PATH-ACTIVATION REPRESENTATIONS
+----------------------------------
+PA: morgan@1.12.1 -> debug@2.6.9 -> ms@2.0.0
+  observed joint alpha_P=0.4000
+  topology-only prediction=1.0000 absolute error=0.6000
+  pooled marginal product=0.4000 absolute error=0.0000
+PB: morgan@1.12.1 -> on-finished@2.4.1 -> ee-first@1.1.1
+  observed joint alpha_P=0.6000
+  topology-only prediction=1.0000 absolute error=0.4000
+  pooled marginal product=0.3600 absolute error=0.2400
+
+Activation MAE, topology-only: 0.5000
+Activation MAE, pooled marginal-product: 0.1200
+
+B. CONTROLLED-IMPACT REPRESENTATIONS
+------------------------------------
+PA | INACTIVE_COLORS_OFF | CORRUPT_HUMANIZE
+  observed impact=0.0000
+  topology+perturbation=1.0000 error=1.0000
+  context-aware alpha*q=0.0000 error=0.0000
+PA | INACTIVE_COLORS_OFF | EMPTY_HUMANIZE
+  observed impact=0.0000
+  topology+perturbation=1.0000 error=1.0000
+  context-aware alpha*q=0.0000 error=0.0000
+PA | INACTIVE_COLORS_OFF | DELAY_HUMANIZE
+  observed impact=0.0000
+  topology+perturbation=1.0000 error=1.0000
+  context-aware alpha*q=0.0000 error=0.0000
+PA | ACTIVE_COLORS_ON | CORRUPT_HUMANIZE
+  observed impact=1.0000
+  topology+perturbation=1.0000 error=0.0000
+  context-aware alpha*q=1.0000 error=0.0000
+PA | ACTIVE_COLORS_ON | EMPTY_HUMANIZE
+  observed impact=1.0000
+  topology+perturbation=1.0000 error=0.0000
+  context-aware alpha*q=1.0000 error=0.0000
+PA | ACTIVE_COLORS_ON | DELAY_HUMANIZE
+  observed impact=1.0000
+  topology+perturbation=1.0000 error=0.0000
+  context-aware alpha*q=1.0000 error=0.0000
+PB | MORGAN_IMMEDIATE_REQUEST | DROP_COMPLETION
+  observed impact=0.0000
+  topology+perturbation=1.0000 error=1.0000
+  context-aware alpha*q=0.0000 error=0.0000
+PB | MORGAN_IMMEDIATE_REQUEST | CORRUPT_ERROR
+  observed impact=0.0000
+  topology+perturbation=1.0000 error=1.0000
+  context-aware alpha*q=0.0000 error=0.0000
+PB | MORGAN_IMMEDIATE_REQUEST | DELAY_COMPLETION
+  observed impact=0.0000
+  topology+perturbation=1.0000 error=1.0000
+  context-aware alpha*q=0.0000 error=0.0000
+PB | MORGAN_NORMAL_REQUEST | DROP_COMPLETION
+  observed impact=1.0000
+  topology+perturbation=1.0000 error=0.0000
+  context-aware alpha*q=1.0000 error=0.0000
+PB | MORGAN_NORMAL_REQUEST | CORRUPT_ERROR
+  observed impact=1.0000
+  topology+perturbation=1.0000 error=0.0000
+  context-aware alpha*q=1.0000 error=0.0000
+PB | MORGAN_NORMAL_REQUEST | DELAY_COMPLETION
+  observed impact=1.0000
+  topology+perturbation=1.0000 error=0.0000
+  context-aware alpha*q=1.0000 error=0.0000
+
+Impact MAE, topology+perturbation baseline: 0.5000
+Impact MAE, context-aware decomposition: 0.0000
+
+INTERPRETATION
+--------------
+Topology-only representation overstates activation whenever a structurally present path is inactive at runtime.
+Multiplying pooled edge marginals can also misrepresent joint path activation when edges are dependent or contexts are heterogeneous.
+For controlled impact, topology plus perturbation alone incorrectly predicts impact in inactive runtime contexts.
+The context-aware decomposition preserves the distinction between structural presence, joint runtime activation, and conditional propagation.
+Because the same data are used to construct and assess the context-aware quantities, zero error here is an internal consistency result rather than independent predictive validation.
