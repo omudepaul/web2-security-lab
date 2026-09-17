@@ -1,0 +1,43 @@
+P5 COMPRESSION ACTIVATION VALIDATION
+====================================
+
+Target exact edge: debug@2.6.9 -> ms@2.0.0
+Product: compression@1.7.4
+Repetitions/config: 10
+
+PRE-SPECIFIED PREDICTIONS
+-------------------------
+C1_DEBUG_OFF_COLORS_ON: DEBUG=OFF DEBUG_COLORS=1 predicted A=0
+C2_DEBUG_ON_COLORS_OFF: DEBUG=compression DEBUG_COLORS=0 predicted A=0
+C3_DEBUG_ON_COLORS_ON: DEBUG=compression DEBUG_COLORS=1 predicted A=1
+
+RESULTS
+-------
+C1_DEBUG_OFF_COLORS_ON
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=0.0000
+  predictedA=0 observedA=0.0000 accuracy=1.0000
+  mean debug calls=1.0000 enabled debug calls=0.0000 ms calls from debug=0.0000
+  HTTP200=1.0000 gzip=1.0000
+C2_DEBUG_ON_COLORS_OFF
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predictedA=0 observedA=0.0000 accuracy=1.0000
+  mean debug calls=1.0000 enabled debug calls=1.0000 ms calls from debug=0.0000
+  HTTP200=1.0000 gzip=1.0000
+C3_DEBUG_ON_COLORS_ON
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predictedA=1 observedA=1.0000 accuracy=1.0000
+  mean debug calls=1.0000 enabled debug calls=1.0000 ms calls from debug=1.0000
+  HTTP200=1.0000 gzip=1.0000
+
+OVERALL
+-------
+Total planned trials=30
+Fatal=0
+Overall prediction accuracy=1.0000
+Validation=PASS
+
+INTERPRETATION
+--------------
+A_e is runtime activation of the exact debug@2.6.9 -> ms@2.0.0 edge.
+A PASS would support cross-product generality of the previously observed debug enablement/color gate in P5 Compression.
+This does not estimate natural vulnerability, failure, compromise, or incident probability.
