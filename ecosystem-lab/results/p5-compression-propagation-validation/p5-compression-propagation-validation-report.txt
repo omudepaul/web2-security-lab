@@ -1,0 +1,69 @@
+P5 COMPRESSION PROPAGATION VALIDATION
+=====================================
+
+Target exact edge: debug@2.6.9 -> ms@2.0.0
+Product: compression@1.7.4
+Repetitions/cell: 10
+
+PRE-SPECIFIED CONTEXT PREDICTIONS
+---------------------------------
+INACTIVE_COLORS_OFF: DEBUG=compression DEBUG_COLORS=0 predicted alpha=0
+ACTIVE_COLORS_ON: DEBUG=compression DEBUG_COLORS=1 predicted alpha=1
+
+RESULTS
+-------
+INACTIVE_COLORS_OFF / BASELINE
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predicted alpha=0 observed alpha=0.0000 q|active=NA impact=0.0000
+  mean ms calls=0.0000 altered ms calls=0.0000 injected delay=0.0000 ms
+  mean latency delta vs context baseline=0.0000 ms HTTP200=1.0000 gzip=1.0000
+INACTIVE_COLORS_OFF / CORRUPT_HUMANIZE
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predicted alpha=0 observed alpha=0.0000 q|active=NA impact=0.0000
+  mean ms calls=0.0000 altered ms calls=0.0000 injected delay=0.0000 ms
+  mean latency delta vs context baseline=0.3066 ms HTTP200=1.0000 gzip=1.0000
+INACTIVE_COLORS_OFF / EMPTY_HUMANIZE
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predicted alpha=0 observed alpha=0.0000 q|active=NA impact=0.0000
+  mean ms calls=0.0000 altered ms calls=0.0000 injected delay=0.0000 ms
+  mean latency delta vs context baseline=0.2107 ms HTTP200=1.0000 gzip=1.0000
+INACTIVE_COLORS_OFF / DELAY_HUMANIZE
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predicted alpha=0 observed alpha=0.0000 q|active=NA impact=0.0000
+  mean ms calls=0.0000 altered ms calls=0.0000 injected delay=0.0000 ms
+  mean latency delta vs context baseline=0.6011 ms HTTP200=1.0000 gzip=1.0000
+ACTIVE_COLORS_ON / BASELINE
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predicted alpha=1 observed alpha=1.0000 q|active=0.0000 impact=0.0000
+  mean ms calls=1.0000 altered ms calls=0.0000 injected delay=0.0000 ms
+  mean latency delta vs context baseline=0.0000 ms HTTP200=1.0000 gzip=1.0000
+ACTIVE_COLORS_ON / CORRUPT_HUMANIZE
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predicted alpha=1 observed alpha=1.0000 q|active=1.0000 impact=1.0000
+  mean ms calls=1.0000 altered ms calls=1.0000 injected delay=0.0000 ms
+  mean latency delta vs context baseline=0.5805 ms HTTP200=1.0000 gzip=1.0000
+ACTIVE_COLORS_ON / EMPTY_HUMANIZE
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predicted alpha=1 observed alpha=1.0000 q|active=1.0000 impact=1.0000
+  mean ms calls=1.0000 altered ms calls=1.0000 injected delay=0.0000 ms
+  mean latency delta vs context baseline=0.1994 ms HTTP200=1.0000 gzip=1.0000
+ACTIVE_COLORS_ON / DELAY_HUMANIZE
+  n=10 T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  predicted alpha=1 observed alpha=1.0000 q|active=1.0000 impact=1.0000
+  mean ms calls=1.0000 altered ms calls=1.0000 injected delay=50.0000 ms
+  mean latency delta vs context baseline=50.5458 ms HTTP200=1.0000 gzip=1.0000
+
+OVERALL
+-------
+Total planned trials=80
+Fatal=0
+Overall alpha prediction accuracy=1.0000
+Overall impact prediction accuracy=1.0000
+Validation=PASS
+
+INTERPRETATION
+--------------
+Inactive context tests whether a structurally present but runtime-inactive edge blocks the controlled perturbation.
+Active context tests whether deterministic perturbations propagate through the activated exact edge.
+q=1 under an active deterministic perturbation is mechanism validation only, not natural risk or natural failure probability.
+HTTP success can coexist with lower-layer observability or latency impact.
