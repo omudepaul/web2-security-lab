@@ -1,0 +1,39 @@
+P4 CONNECT EXTERNAL-CONTEXT ACTIVATION VALIDATION
+=================================================
+
+Product: connect@3.7.0
+Exact edge: debug@2.6.9 -> ms@2.0.0
+Path: connect@3.7.0 -> debug@2.6.9 -> ms@2.0.0
+
+PRE-SPECIFIED PREDICTION
+------------------------
+C1 DEBUG off, colors on  => predicted A=0
+C2 DEBUG on, colors off  => predicted A=0
+C3 DEBUG on, colors on   => predicted A=1
+
+RESULTS
+-------
+C1_DEBUG_OFF_COLORS_ON
+  trials=10 predictedA=0 observedA=0.0000 accuracy=1.0000
+  T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=0.0000
+  meanConnectDebugCalls=2.0000 meanMsCallsFromDebug=0.0000 HTTP200=1.0000
+C2_DEBUG_ON_COLORS_OFF
+  trials=10 predictedA=0 observedA=0.0000 accuracy=1.0000
+  T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  meanConnectDebugCalls=2.0000 meanMsCallsFromDebug=0.0000 HTTP200=1.0000
+C3_DEBUG_ON_COLORS_ON
+  trials=10 predictedA=1 observedA=1.0000 accuracy=1.0000
+  T=1.0000 L_debug=1.0000 L_ms=1.0000 D=1.0000 E=1.0000
+  meanConnectDebugCalls=2.0000 meanMsCallsFromDebug=2.0000 HTTP200=1.0000
+
+OVERALL
+-------
+status=PASS
+fatal trials=0
+overall prediction accuracy=1.0000
+
+INTERPRETATION
+--------------
+A PASS means the activation rule learned from the earlier product environments reproduced in the new Connect parent-product environment.
+This supports cross-product generality of the context gate for the reused exact debug@2.6.9 -> ms@2.0.0 edge.
+It does not estimate natural vulnerability, failure, compromise, or incident frequency.
