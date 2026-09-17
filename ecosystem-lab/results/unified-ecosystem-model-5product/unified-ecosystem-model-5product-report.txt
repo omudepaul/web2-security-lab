@@ -1,0 +1,51 @@
+FIVE-PRODUCT UNIFIED ECOSYSTEM MODEL
+====================================
+
+Products K=5
+P1=Express, P2=express-session, P3=Morgan, P4=Connect, P5=compression
+
+FORMAL MODEL
+------------
+M_E = ({G_p}_{p=1..K}, C_s, mu, X, S, Lambda, Alpha, Q, Pi)
+
+rho_c = |mu(c)| / K
+pi_c = alpha_c * q_c
+
+COMPONENT SIGNATURES
+--------------------
+N1 NODE: depd@2.0.0
+  products=P1,P2,P3 count=3/5 rho=0.600
+  canonical tested contexts=9 active=5 inactive=4
+  alpha_bar=0.556 q_controlled=1.000 pi_bar_perturbed=0.556
+  evidence=Existing depd activation/perturbation experiments across P1/P2/P3; P4 and P5 do not structurally contain depd@2.0.0.
+E1 EDGE: debug@2.6.9 -> ms@2.0.0
+  products=P2,P3,P4,P5 count=4/5 rho=0.800
+  canonical tested contexts=8 active=4 inactive=4
+  alpha_bar=0.500 q_controlled=1.000 pi_bar_perturbed=0.500
+  evidence=Earlier P2/P3 experiments, P4 Connect validation, and P5 Compression activation/propagation validation.
+  auxiliary control=P5 C1 DEBUG-off/colors-on was also tested and correctly remained inactive, but is excluded from the canonical alpha_bar aggregate to preserve the two-context-per-validation-product comparison.
+E2 EDGE: on-finished@2.4.1 -> ee-first@1.1.1
+  products=P1,P3 count=2/5 rho=0.400
+  canonical tested contexts=4 active=2 inactive=2
+  alpha_bar=0.500 q_controlled=1.000 pi_bar_perturbed=0.500
+  evidence=Existing P1/P3 on-finished@2.4.1 -> ee-first@1.1.1 experiments. P4 uses on-finished@2.3.0 and P5 does not contain the exact E2 relation.
+
+K=4 -> K=5 STRUCTURAL CHANGES
+-----------------------------
+N1 depd@2.0.0: rho changed from 0.750 to 0.600 because P5 does not contain the exact node.
+E1 debug@2.6.9 -> ms@2.0.0: rho changed from 0.750 to 0.800 because P5 contains the exact edge.
+E2 on-finished@2.4.1 -> ee-first@1.1.1: rho changed from 0.500 to 0.400 because P5 does not contain the exact edge.
+
+P5 VALIDATION EFFECT ON E1
+--------------------------
+P5 reproduced the pre-specified activation gate: DEBUG-on/colors-off inactive; DEBUG-on/colors-on active.
+P5 also reproduced deterministic controlled propagation: active CORRUPT_HUMANIZE, EMPTY_HUMANIZE, and DELAY_HUMANIZE each had q=1 and impact=1.
+Across the canonical combined E1 contexts: active=4, inactive=4, alpha_bar=0.500.
+The P5 DEBUG-off/colors-on configuration also correctly remained inactive and is retained as an auxiliary control, not included in canonical alpha_bar.
+
+IMPORTANT
+---------
+rho is structural reach only. It must not be interpreted as runtime activation, conditional propagation, or natural risk.
+alpha_bar is an unweighted descriptive average over designated tested contexts, not a real-world workload-frequency estimate.
+q=1 is a controlled deterministic mechanism result, not a natural compromise/failure probability.
+No natural lambda is claimed. Therefore no scalar natural risk score is produced.

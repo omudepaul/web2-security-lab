@@ -1,0 +1,4 @@
+id,type,component,products,productCount,rho,contextsTested,activeContexts,inactiveContexts,alphaBar,qControlledActivePerturbations,piBarPerturbed,evidence
+N1,NODE,depd@2.0.0,P1;P2;P3,3,0.6,9,5,4,0.5555555555555556,1,0.5555555555555556,Existing depd activation/perturbation experiments across P1/P2/P3; P4 and P5 do not structurally contain depd@2.0.0.
+E1,EDGE,debug@2.6.9 -> ms@2.0.0,P2;P3;P4;P5,4,0.8,8,4,4,0.5,1,0.5,"Earlier P2/P3 experiments, P4 Connect validation, and P5 Compression activation/propagation validation."
+E2,EDGE,on-finished@2.4.1 -> ee-first@1.1.1,P1;P3,2,0.4,4,2,2,0.5,1,0.5,Existing P1/P3 on-finished@2.4.1 -> ee-first@1.1.1 experiments. P4 uses on-finished@2.3.0 and P5 does not contain the exact E2 relation.
