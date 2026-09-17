@@ -1,0 +1,6 @@
+productId,product,N1,E1,E2
+P1,Express,Studied in depd activation/perturbation experiments,Exact edge absent,Studied in activation/propagation experiments
+P2,express-session,Studied in depd activation/perturbation experiments,Studied in debug->ms activation/propagation experiments,Exact edge absent
+P3,Morgan,Studied in depd activation/perturbation experiments,Studied in debug->ms and multi-hop experiments,Studied in on-finished->ee-first and multi-hop experiments
+P4,Connect,Exact node absent,Pre-specified activation + propagation validation PASS,Exact 2.4.1 edge absent; P4 has on-finished@2.3.0
+P5,compression,Exact node absent,Pre-specified activation + propagation validation PASS,Exact edge absent

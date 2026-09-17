@@ -1,0 +1,74 @@
+FIVE-PRODUCT COMPARISON
+=======================
+
+PRODUCT STRUCTURE
+-----------------
+P1 Express
+  nodes=68 exactIdentities=67 totalEdgesIncludingRoot=125
+  DAG=YES maxDepth=12 duplicateNames=2 unresolved=0
+P2 express-session
+  nodes=11 exactIdentities=11 totalEdgesIncludingRoot=11
+  DAG=YES maxDepth=3 duplicateNames=0 unresolved=0
+P3 Morgan
+  nodes=9 exactIdentities=9 totalEdgesIncludingRoot=9
+  DAG=YES maxDepth=3 duplicateNames=0 unresolved=0
+P4 Connect
+  nodes=12 exactIdentities=12 totalEdgesIncludingRoot=14
+  DAG=YES maxDepth=4 duplicateNames=0 unresolved=0
+P5 compression
+  nodes=13 exactIdentities=13 totalEdgesIncludingRoot=13
+  DAG=YES maxDepth=4 duplicateNames=1 unresolved=0
+
+COMPONENT MEMBERSHIP
+--------------------
+N1 = depd@2.0.0
+E1 = debug@2.6.9 -> ms@2.0.0
+E2 = on-finished@2.4.1 -> ee-first@1.1.1
+
+P1: N1=YES E1=NO E2=YES
+P2: N1=YES E1=YES E2=NO
+P3: N1=YES E1=YES E2=YES
+P4: N1=NO E1=YES E2=NO
+P5: N1=NO E1=YES E2=NO
+
+EXPERIMENTAL EVIDENCE
+---------------------
+P1 Express
+  N1: Studied in depd activation/perturbation experiments
+  E1: Exact edge absent
+  E2: Studied in activation/propagation experiments
+P2 express-session
+  N1: Studied in depd activation/perturbation experiments
+  E1: Studied in debug->ms activation/propagation experiments
+  E2: Exact edge absent
+P3 Morgan
+  N1: Studied in depd activation/perturbation experiments
+  E1: Studied in debug->ms and multi-hop experiments
+  E2: Studied in on-finished->ee-first and multi-hop experiments
+P4 Connect
+  N1: Exact node absent
+  E1: Pre-specified activation + propagation validation PASS
+  E2: Exact 2.4.1 edge absent; P4 has on-finished@2.3.0
+P5 compression
+  N1: Exact node absent
+  E1: Pre-specified activation + propagation validation PASS
+  E2: Exact edge absent
+
+CURRENT COMPONENT SIGNATURES
+----------------------------
+N1 depd@2.0.0: rho=0.600 alpha_bar=0.556 q_controlled=1.000 pi_bar=0.556
+E1 debug@2.6.9 -> ms@2.0.0: rho=0.800 alpha_bar=0.500 q_controlled=1.000 pi_bar=0.500
+E2 on-finished@2.4.1 -> ee-first@1.1.1: rho=0.400 alpha_bar=0.500 q_controlled=1.000 pi_bar=0.500
+
+K=4 -> K=5 CHANGE SUMMARY
+-------------------------
+N1 depd@2.0.0: structural reach decreased because P5 does not contain the exact node.
+E1 debug@2.6.9 -> ms@2.0.0: structural reach increased because P5 contains the exact edge and also reproduced the pre-specified runtime mechanism.
+E2 on-finished@2.4.1 -> ee-first@1.1.1: structural reach decreased because P5 does not contain the exact edge.
+
+INTERPRETATION
+--------------
+The five products differ in topology, exact component membership, and experimentally observed runtime behavior.
+P4 Connect and P5 Compression provide successive cross-product validation environments for E1.
+The repeated E1 validation supports mechanism generality for the reused exact edge across multiple parent-product environments.
+This comparison does not estimate natural lambda and does not rank products by natural risk.
