@@ -1,0 +1,104 @@
+FIVE-PRODUCT ECOSYSTEM TOPOLOGY REBUILD
+=======================================
+
+MODEL
+-----
+Physical install-path nodes are used for DAG/cycle analysis.
+Exact name@version identities are used for cross-product sharing.
+Ecosystem product count K=5.
+
+PRODUCT SUMMARIES
+-----------------
+P1 Express
+  root=product-express@1.0.0
+  package node instances=68
+  exact identities=67
+  non-root physical edges=124
+  root/direct edges=1
+  total physical edges including root=125
+  DAG=YES maxDepthIncludingRoot=12
+  duplicate package names=2
+  unresolved dependency edges=0
+P2 express-session
+  root=product-session@1.0.0
+  package node instances=11
+  exact identities=11
+  non-root physical edges=10
+  root/direct edges=1
+  total physical edges including root=11
+  DAG=YES maxDepthIncludingRoot=3
+  duplicate package names=0
+  unresolved dependency edges=0
+P3 Morgan
+  root=product-morgan@1.0.0
+  package node instances=9
+  exact identities=9
+  non-root physical edges=8
+  root/direct edges=1
+  total physical edges including root=9
+  DAG=YES maxDepthIncludingRoot=3
+  duplicate package names=0
+  unresolved dependency edges=0
+P4 Connect
+  root=product-connect@1.0.0
+  package node instances=12
+  exact identities=12
+  non-root physical edges=13
+  root/direct edges=1
+  total physical edges including root=14
+  DAG=YES maxDepthIncludingRoot=4
+  duplicate package names=0
+  unresolved dependency edges=0
+P5 compression
+  root=product-compression@1.0.0
+  package node instances=13
+  exact identities=13
+  non-root physical edges=12
+  root/direct edges=1
+  total physical edges including root=13
+  DAG=YES maxDepthIncludingRoot=4
+  duplicate package names=1
+  unresolved dependency edges=0
+
+ECOSYSTEM SUMMARY
+-----------------
+Products K=5
+Sum individual package node instances=113
+Sum individual exact-identity counts=112
+Unique exact nodes=92
+Exact nodes shared by >=2 products=13
+Exact nodes shared by all 5 products=0
+Sum individual non-root physical edges=167
+Sum individual root/direct edges=5
+Sum individual total physical edges including root=172
+Unique exact non-root edges=163
+Exact non-root edges shared by >=2 products=2
+Exact non-root edges shared by all 5 products=0
+Same-name/different-version overlaps=14
+
+SHARED EXACT NODES
+------------------
+debug@2.6.9 | products=P2,P3,P4,P5 | count=4 | rho=0.800
+ms@2.0.0 | products=P2,P3,P4,P5 | count=4 | rho=0.800
+depd@2.0.0 | products=P1,P2,P3 | count=3 | rho=0.600
+ee-first@1.1.1 | products=P1,P3,P4 | count=3 | rho=0.600
+parseurl@1.3.3 | products=P1,P2,P4 | count=3 | rho=0.600
+cookie@0.7.2 | products=P1,P2 | count=2 | rho=0.400
+escape-html@1.0.3 | products=P1,P4 | count=2 | rho=0.400
+mime-db@1.54.0 | products=P1,P5 | count=2 | rho=0.400
+on-finished@2.4.1 | products=P1,P3 | count=2 | rho=0.400
+on-headers@1.1.0 | products=P2,P3 | count=2 | rho=0.400
+safe-buffer@5.1.2 | products=P3,P5 | count=2 | rho=0.400
+unpipe@1.0.0 | products=P1,P4 | count=2 | rho=0.400
+vary@1.1.2 | products=P1,P5 | count=2 | rho=0.400
+
+SHARED EXACT NON-ROOT EDGES
+---------------------------
+debug@2.6.9 -> ms@2.0.0 | products=P2,P3,P4,P5 | count=4 | rho=0.800
+on-finished@2.4.1 -> ee-first@1.1.1 | products=P1,P3 | count=2 | rho=0.400
+
+IMPORTANT
+---------
+Shared exact identity means reuse of the same package/version or dependency relation across separate installations.
+It does not mean one physical runtime object/file is shared.
+Topology reach rho is structural exposure only.
