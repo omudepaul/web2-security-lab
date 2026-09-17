@@ -1,0 +1,94 @@
+CORRECTED FOUR-PRODUCT ECOSYSTEM TOPOLOGY REBUILD
+=================================================
+
+CORRECTION
+----------
+DAG/cycle analysis uses physical installed package instances (package-lock paths).
+Exact name@version identities are used only for cross-product equivalence/sharing.
+This avoids artificial cycles created by collapsing two physically separate installs into one exact identity.
+
+PRODUCT SUMMARIES
+-----------------
+P1 Express
+  root=product-express@1.0.0
+  package node instances=68
+  unique exact name@version identities within product=67
+  non-root physical dependency edges=124
+  unique exact non-root dependency edges=124
+  root/direct edges=1
+  total physical edges including root=125
+  physical DAG=YES maxDepthIncludingRoot=12
+  package names with multiple installed versions=2
+  unresolved dependency edges=0
+P2 express-session
+  root=product-session@1.0.0
+  package node instances=11
+  unique exact name@version identities within product=11
+  non-root physical dependency edges=10
+  unique exact non-root dependency edges=10
+  root/direct edges=1
+  total physical edges including root=11
+  physical DAG=YES maxDepthIncludingRoot=3
+  package names with multiple installed versions=0
+  unresolved dependency edges=0
+P3 Morgan
+  root=product-morgan@1.0.0
+  package node instances=9
+  unique exact name@version identities within product=9
+  non-root physical dependency edges=8
+  unique exact non-root dependency edges=8
+  root/direct edges=1
+  total physical edges including root=9
+  physical DAG=YES maxDepthIncludingRoot=3
+  package names with multiple installed versions=0
+  unresolved dependency edges=0
+P4 Connect
+  root=product-connect@1.0.0
+  package node instances=12
+  unique exact name@version identities within product=12
+  non-root physical dependency edges=13
+  unique exact non-root dependency edges=13
+  root/direct edges=1
+  total physical edges including root=14
+  physical DAG=YES maxDepthIncludingRoot=4
+  package names with multiple installed versions=0
+  unresolved dependency edges=0
+
+ECOSYSTEM SUMMARY
+-----------------
+Products K=4
+Sum individual package node instances=100
+Sum individual exact-identity counts=99
+Unique exact nodes across ecosystem=84
+Exact nodes shared by >=2 products=10
+Exact nodes shared by all 4 products=0
+Sum individual non-root physical edges=155
+Sum individual root/direct edges=4
+Sum individual total physical edges including root=159
+Unique exact non-root edges across ecosystem=152
+Exact non-root edges shared by >=2 products=2
+Exact non-root edges shared by all 4 products=0
+Same-name/different-version overlaps=10
+
+SHARED EXACT NODES
+------------------
+debug@2.6.9 | products=P2,P3,P4 | count=3 | rho=0.750
+depd@2.0.0 | products=P1,P2,P3 | count=3 | rho=0.750
+ee-first@1.1.1 | products=P1,P3,P4 | count=3 | rho=0.750
+ms@2.0.0 | products=P2,P3,P4 | count=3 | rho=0.750
+parseurl@1.3.3 | products=P1,P2,P4 | count=3 | rho=0.750
+cookie@0.7.2 | products=P1,P2 | count=2 | rho=0.500
+escape-html@1.0.3 | products=P1,P4 | count=2 | rho=0.500
+on-finished@2.4.1 | products=P1,P3 | count=2 | rho=0.500
+on-headers@1.1.0 | products=P2,P3 | count=2 | rho=0.500
+unpipe@1.0.0 | products=P1,P4 | count=2 | rho=0.500
+
+SHARED EXACT NON-ROOT EDGES
+---------------------------
+debug@2.6.9 -> ms@2.0.0 | products=P2,P3,P4 | count=3 | rho=0.750
+on-finished@2.4.1 -> ee-first@1.1.1 | products=P1,P3 | count=2 | rho=0.500
+
+INTERPRETATION
+--------------
+Physical topology and exact cross-product identity are intentionally separated.
+Topology reach rho measures structural exposure only; it is not runtime activation, conditional propagation, or natural incident probability.
