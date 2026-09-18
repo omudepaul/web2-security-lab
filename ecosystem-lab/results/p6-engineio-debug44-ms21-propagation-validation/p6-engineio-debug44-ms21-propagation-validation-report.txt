@@ -1,0 +1,83 @@
+P6 ENGINE.IO DEBUG@4.4.3 -> MS@2.1.3 PROPAGATION VALIDATION
+===========================================================
+
+Product: socket.io@4.8.1
+Parent package: engine.io@6.6.10
+Target exact edge: debug@4.4.3 -> ms@2.1.3
+Repetitions/cell=10
+Delay per target ms call=10 ms
+
+RESULTS
+-------
+INACTIVE_COLORS_OFF / BASELINE
+  n=10 T=1.0000 D=1.0000 E=1.0000
+  predicted alpha=0 observed alpha=0.0000 q|active=NA impact=0.0000
+  mean debug calls=20.0000 enabled calls=8.0000 ms calls=0.0000
+  mean altered ms calls=0.0000 injected delay=0.0000 ms
+  latency delta vs context baseline=0.0000 ms
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+INACTIVE_COLORS_OFF / CORRUPT_HUMANIZE
+  n=10 T=1.0000 D=1.0000 E=1.0000
+  predicted alpha=0 observed alpha=0.0000 q|active=NA impact=0.0000
+  mean debug calls=20.0000 enabled calls=8.0000 ms calls=0.0000
+  mean altered ms calls=0.0000 injected delay=0.0000 ms
+  latency delta vs context baseline=0.1396 ms
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+INACTIVE_COLORS_OFF / EMPTY_HUMANIZE
+  n=10 T=1.0000 D=1.0000 E=1.0000
+  predicted alpha=0 observed alpha=0.0000 q|active=NA impact=0.0000
+  mean debug calls=20.0000 enabled calls=8.0000 ms calls=0.0000
+  mean altered ms calls=0.0000 injected delay=0.0000 ms
+  latency delta vs context baseline=1.0264 ms
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+INACTIVE_COLORS_OFF / DELAY_HUMANIZE
+  n=10 T=1.0000 D=1.0000 E=1.0000
+  predicted alpha=0 observed alpha=0.0000 q|active=NA impact=0.0000
+  mean debug calls=20.0000 enabled calls=8.0000 ms calls=0.0000
+  mean altered ms calls=0.0000 injected delay=0.0000 ms
+  latency delta vs context baseline=2.3717 ms
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+ACTIVE_COLORS_ON / BASELINE
+  n=10 T=1.0000 D=1.0000 E=1.0000
+  predicted alpha=1 observed alpha=1.0000 q|active=0.0000 impact=0.0000
+  mean debug calls=20.0000 enabled calls=8.0000 ms calls=8.0000
+  mean altered ms calls=0.0000 injected delay=0.0000 ms
+  latency delta vs context baseline=0.0000 ms
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+ACTIVE_COLORS_ON / CORRUPT_HUMANIZE
+  n=10 T=1.0000 D=1.0000 E=1.0000
+  predicted alpha=1 observed alpha=1.0000 q|active=1.0000 impact=1.0000
+  mean debug calls=20.0000 enabled calls=8.0000 ms calls=8.0000
+  mean altered ms calls=8.0000 injected delay=0.0000 ms
+  latency delta vs context baseline=-0.0208 ms
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+ACTIVE_COLORS_ON / EMPTY_HUMANIZE
+  n=10 T=1.0000 D=1.0000 E=1.0000
+  predicted alpha=1 observed alpha=1.0000 q|active=1.0000 impact=1.0000
+  mean debug calls=20.0000 enabled calls=8.0000 ms calls=8.0000
+  mean altered ms calls=8.0000 injected delay=0.0000 ms
+  latency delta vs context baseline=-0.9131 ms
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+ACTIVE_COLORS_ON / DELAY_HUMANIZE
+  n=10 T=1.0000 D=1.0000 E=1.0000
+  predicted alpha=1 observed alpha=1.0000 q|active=1.0000 impact=1.0000
+  mean debug calls=20.0000 enabled calls=8.0000 ms calls=8.0000
+  mean altered ms calls=8.0000 injected delay=80.0000 ms
+  latency delta vs context baseline=83.3394 ms
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+
+OVERALL
+-------
+Total planned trials=80
+Fatal=0
+Overall alpha prediction accuracy=1.0000
+Overall impact prediction accuracy=1.0000
+Validation=PASS
+
+INTERPRETATION
+--------------
+Inactive-context trials test whether a structurally present but runtime-inactive edge blocks controlled perturbation.
+Active-context trials test deterministic propagation through the activated debug@4.4.3 -> ms@2.1.3 edge.
+A PASS extends the earlier debug@2.6.9 -> ms@2.0.0 propagation mechanism to a different debug/ms version pair.
+q=1 under deterministic perturbation is mechanism validation only, not a natural failure or compromise probability.
+HTTP success can coexist with observability/timing-layer impact.
