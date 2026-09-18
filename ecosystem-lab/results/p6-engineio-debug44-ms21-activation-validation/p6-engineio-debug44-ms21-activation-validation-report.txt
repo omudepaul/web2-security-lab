@@ -1,0 +1,50 @@
+P6 ENGINE.IO DEBUG@4.4.3 -> MS@2.1.3 ACTIVATION VALIDATION
+==========================================================
+
+Product: socket.io@4.8.1
+Parent package: engine.io@6.6.10
+Target exact edge: debug@4.4.3 -> ms@2.1.3
+Repetitions/config=10
+
+PRE-SPECIFIED PREDICTIONS
+-------------------------
+C1_DEBUG_OFF_COLORS_ON: DEBUG=OFF DEBUG_COLORS=1 predicted A=0
+C2_DEBUG_ON_COLORS_OFF: DEBUG=engine DEBUG_COLORS=0 predicted A=0
+C3_DEBUG_ON_COLORS_ON: DEBUG=engine DEBUG_COLORS=1 predicted A=1
+
+RESULTS
+-------
+C1_DEBUG_OFF_COLORS_ON
+  n=10 T=1.0000 D=1.0000 E=0.0000 C=1.0000
+  predicted A=0 observed A=0.0000 prediction accuracy=1.0000
+  mean debug requires=9.0000 mean ms requires=1.0000
+  mean debug logger calls=20.0000 enabled calls=0.0000 ms calls=0.0000
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+  observed namespaces=engine,engine:polling,engine:socket,engine:transport,engine:uws,engine:webtransport,engine:ws
+C2_DEBUG_ON_COLORS_OFF
+  n=10 T=1.0000 D=1.0000 E=1.0000 C=0.0000
+  predicted A=0 observed A=0.0000 prediction accuracy=1.0000
+  mean debug requires=9.0000 mean ms requires=1.0000
+  mean debug logger calls=20.0000 enabled calls=8.0000 ms calls=0.0000
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+  observed namespaces=engine,engine:polling,engine:socket,engine:transport,engine:uws,engine:webtransport,engine:ws
+C3_DEBUG_ON_COLORS_ON
+  n=10 T=1.0000 D=1.0000 E=1.0000 C=1.0000
+  predicted A=1 observed A=1.0000 prediction accuracy=1.0000
+  mean debug requires=9.0000 mean ms requires=1.0000
+  mean debug logger calls=20.0000 enabled calls=8.0000 ms calls=8.0000
+  HTTP200=1.0000 Engine.IO open packet=1.0000
+  observed namespaces=engine,engine:polling,engine:socket,engine:transport,engine:uws,engine:webtransport,engine:ws
+
+OVERALL
+-------
+Total planned trials=30
+Fatal=0
+Overall prediction accuracy=1.0000
+Validation=PASS
+
+INTERPRETATION
+--------------
+This experiment tests whether the previously observed debug->ms color/enabled activation mechanism generalizes to a different version pair.
+A PASS supports version-level mechanism generalization from debug@2.6.9->ms@2.0.0 to debug@4.4.3->ms@2.1.3 in the tested Engine.IO context.
+This is runtime activation evidence only. It is not a natural failure, vulnerability, compromise, or risk probability.
