@@ -1,0 +1,5 @@
+id,type,component,products,productCount,rho,contextsTested,activeContexts,inactiveContexts,alphaBar,qControlledActivePerturbations,piBarPerturbed
+N1,NODE,depd@2.0.0,P1;P2;P3,3,0.5,9,5,4,0.5555555555555556,1,0.5555555555555556
+E1,EDGE,debug@2.6.9 -> ms@2.0.0,P2;P3;P4;P5,4,0.6666666666666666,8,4,4,0.5,1,0.5
+E2,EDGE,on-finished@2.4.1 -> ee-first@1.1.1,P1;P3,2,0.3333333333333333,4,2,2,0.5,1,0.5
+E3,EDGE,debug@4.4.3 -> ms@2.1.3,P1;P6,2,0.3333333333333333,4,2,2,0.5,1,0.5

@@ -1,0 +1,109 @@
+SIX-PRODUCT COMPARISON
+======================
+
+PRODUCT STRUCTURE
+-----------------
+P1 Express
+  nodes=68 exactIdentities=66 nonRootEdges=124 totalEdgesIncludingRoot=125
+  DAG=YES maxDepth=12 duplicateNames=1 unresolved=0
+P2 express-session
+  nodes=11 exactIdentities=11 nonRootEdges=10 totalEdgesIncludingRoot=11
+  DAG=YES maxDepth=3 duplicateNames=0 unresolved=0
+P3 Morgan
+  nodes=9 exactIdentities=9 nonRootEdges=8 totalEdgesIncludingRoot=9
+  DAG=YES maxDepth=3 duplicateNames=0 unresolved=0
+P4 Connect
+  nodes=12 exactIdentities=12 nonRootEdges=13 totalEdgesIncludingRoot=14
+  DAG=YES maxDepth=4 duplicateNames=0 unresolved=0
+P5 compression
+  nodes=13 exactIdentities=13 nonRootEdges=12 totalEdgesIncludingRoot=13
+  DAG=YES maxDepth=4 duplicateNames=1 unresolved=0
+P6 Socket.IO
+  nodes=25 exactIdentities=23 nonRootEdges=32 totalEdgesIncludingRoot=33
+  DAG=YES maxDepth=5 duplicateNames=1 unresolved=0
+
+K=6 ECOSYSTEM STRUCTURE
+-----------------------
+physical package instances=138
+sum exact identities across products=134
+unique exact nodes=106
+shared exact nodes (>=2 products)=19
+unique exact non-root edges=189
+shared exact non-root edges (>=2 products)=6
+
+COMPONENT MEMBERSHIP
+--------------------
+N1 = depd@2.0.0
+E1 = debug@2.6.9 -> ms@2.0.0
+E2 = on-finished@2.4.1 -> ee-first@1.1.1
+E3 = debug@4.4.3 -> ms@2.1.3
+
+P1: N1=YES E1=NO E2=YES E3=YES
+P2: N1=YES E1=YES E2=NO E3=NO
+P3: N1=YES E1=YES E2=YES E3=NO
+P4: N1=NO E1=YES E2=NO E3=NO
+P5: N1=NO E1=YES E2=NO E3=NO
+P6: N1=NO E1=NO E2=NO E3=YES
+
+EXPERIMENTAL EVIDENCE
+---------------------
+P1 Express
+  N1: Studied in depd activation/perturbation experiments
+  E1: Exact edge absent
+  E2: Studied in activation/propagation and multi-hop experiments
+  E3: Pre-specified Router activation + propagation validation PASS
+P2 express-session
+  N1: Studied in depd activation/perturbation experiments
+  E1: Studied in debug->ms activation/propagation experiments
+  E2: Exact edge absent
+  E3: Exact edge absent
+P3 Morgan
+  N1: Studied in depd activation/perturbation experiments
+  E1: Studied in debug->ms and multi-hop experiments
+  E2: Studied in on-finished->ee-first and multi-hop experiments
+  E3: Exact edge absent
+P4 Connect
+  N1: Exact node absent
+  E1: Pre-specified activation + propagation validation PASS
+  E2: Exact 2.4.1 edge absent; P4 has on-finished@2.3.0
+  E3: Exact edge absent
+P5 compression
+  N1: Exact node absent
+  E1: Pre-specified activation + propagation validation PASS
+  E2: Exact edge absent
+  E3: Exact edge absent
+P6 Socket.IO
+  N1: Exact node absent
+  E1: Exact edge absent
+  E2: Exact edge absent
+  E3: Pre-specified Engine.IO activation + propagation validation PASS
+
+CURRENT COMPONENT SIGNATURES
+----------------------------
+N1 depd@2.0.0: products=P1,P2,P3 rho=0.500 alpha_bar=0.556 q_controlled=1.000 pi_bar=0.556
+E1 debug@2.6.9 -> ms@2.0.0: products=P2,P3,P4,P5 rho=0.667 alpha_bar=0.500 q_controlled=1.000 pi_bar=0.500
+E2 on-finished@2.4.1 -> ee-first@1.1.1: products=P1,P3 rho=0.333 alpha_bar=0.500 q_controlled=1.000 pi_bar=0.500
+E3 debug@4.4.3 -> ms@2.1.3: products=P1,P6 rho=0.333 alpha_bar=0.500 q_controlled=1.000 pi_bar=0.500
+
+K=5 -> K=6 CHANGE SUMMARY
+-------------------------
+N1 depd@2.0.0: structural reach decreased from 0.600 to 0.500 because P6 does not contain the exact node.
+E1 debug@2.6.9 -> ms@2.0.0: structural reach decreased from 0.800 to 0.667 because P6 does not contain the exact edge.
+E2 on-finished@2.4.1 -> ee-first@1.1.1: structural reach decreased from 0.400 to 0.333 because P6 does not contain the exact edge.
+E3 debug@4.4.3 -> ms@2.1.3 enters the comparison as a new exact shared edge in P1 and P6 with rho=0.333.
+
+E3 CROSS-PRODUCT VALIDATION
+---------------------------
+P6 Socket.IO/Engine.IO first validated the new exact E3 version pair under a network-handshake workload.
+P1 Express/Router then reproduced the same pre-specified activation and controlled propagation mechanism under a different parent and HTTP request workload.
+This gives E3 both version-level evidence relative to E1 and cross-product evidence for the exact E3 version pair.
+E1 and E3 remain separate exact package-version edges even though both belong to the observed debug->ms timing-humanization mechanism family.
+
+INTERPRETATION
+--------------
+The six products differ in topology, exact component membership, and experimentally observed runtime behavior.
+Structural membership alone does not establish runtime activation or propagation.
+E1 has repeated cross-product evidence for debug@2.6.9 -> ms@2.0.0 across P2/P3/P4/P5.
+E3 has cross-product evidence for debug@4.4.3 -> ms@2.1.3 across P1/P6.
+The similarity between E1 and E3 supports version-level mechanism generalization within the tested debug->ms family, not generalization to unrelated dependency implementations.
+This comparison does not estimate natural lambda and does not rank products by natural risk.

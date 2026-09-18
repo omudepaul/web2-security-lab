@@ -1,0 +1,7 @@
+productId,label,root,packageNodeInstances,exactIdentities,nonRootPhysicalEdges,rootDirectEdges,totalEdgesIncludingRoot,physicalDAG,maxDepthIncludingRoot,duplicatePackageNames,unresolvedDependencies
+P1,Express,product-express@1.0.0,68,66,124,1,125,YES,12,1,0
+P2,express-session,product-session@1.0.0,11,11,10,1,11,YES,3,0,0
+P3,Morgan,product-morgan@1.0.0,9,9,8,1,9,YES,3,0,0
+P4,Connect,product-connect@1.0.0,12,12,13,1,14,YES,4,0,0
+P5,compression,product-compression@1.0.0,13,13,12,1,13,YES,4,1,0
+P6,Socket.IO,product-socketio@1.0.0,25,23,32,1,33,YES,5,1,0
