@@ -1,0 +1,102 @@
+P5 E4 ACCEPTS -> NEGOTIATOR PHASE-A PROPAGATION VALIDATION
+==========================================================
+
+Exact edge: accepts@1.3.8 -> negotiator@0.6.3
+Product: compression@1.7.4
+Repetitions per cell: 10
+Total planned trials: 80
+Threshold: 1024 bytes; delay per exact call: 25 ms
+
+PRE-REGISTERED RESULTS
+----------------------
+INACTIVE_BELOW_THRESHOLD / BASELINE
+  n=10; predicted alpha=0; observed alpha=0.0000
+  injection=0.0000; impact=0.0000
+  q|active,injected=NA; 95% Wilson=[NA, NA]
+  pi=alpha*q=0.0000
+  accepts invocation=0.0000; Negotiator construction=0.0000
+  mean exact calls=0.0000; injections=0.0000; injected delay=0.0000 ms
+  latency delta vs context baseline=0.0000 ms
+  HTTP 200=1.0000; body integrity=1.0000; encoding accuracy=1.0000
+INACTIVE_BELOW_THRESHOLD / EMPTY_ENCODINGS
+  n=10; predicted alpha=0; observed alpha=0.0000
+  injection=0.0000; impact=0.0000
+  q|active,injected=NA; 95% Wilson=[NA, NA]
+  pi=alpha*q=0.0000
+  accepts invocation=0.0000; Negotiator construction=0.0000
+  mean exact calls=0.0000; injections=0.0000; injected delay=0.0000 ms
+  latency delta vs context baseline=0.4895 ms
+  HTTP 200=1.0000; body integrity=1.0000; encoding accuracy=1.0000
+INACTIVE_BELOW_THRESHOLD / FORCE_DEFLATE
+  n=10; predicted alpha=0; observed alpha=0.0000
+  injection=0.0000; impact=0.0000
+  q|active,injected=NA; 95% Wilson=[NA, NA]
+  pi=alpha*q=0.0000
+  accepts invocation=0.0000; Negotiator construction=0.0000
+  mean exact calls=0.0000; injections=0.0000; injected delay=0.0000 ms
+  latency delta vs context baseline=0.1836 ms
+  HTTP 200=1.0000; body integrity=1.0000; encoding accuracy=1.0000
+INACTIVE_BELOW_THRESHOLD / DELAY_ENCODINGS
+  n=10; predicted alpha=0; observed alpha=0.0000
+  injection=0.0000; impact=0.0000
+  q|active,injected=NA; 95% Wilson=[NA, NA]
+  pi=alpha*q=0.0000
+  accepts invocation=0.0000; Negotiator construction=0.0000
+  mean exact calls=0.0000; injections=0.0000; injected delay=0.0000 ms
+  latency delta vs context baseline=0.2142 ms
+  HTTP 200=1.0000; body integrity=1.0000; encoding accuracy=1.0000
+ACTIVE_ELIGIBLE_GZIP / BASELINE
+  n=10; predicted alpha=1; observed alpha=1.0000
+  injection=0.0000; impact=0.0000
+  q|active,injected=NA; 95% Wilson=[NA, NA]
+  pi=alpha*q=0.0000
+  accepts invocation=1.0000; Negotiator construction=1.0000
+  mean exact calls=1.0000; injections=0.0000; injected delay=0.0000 ms
+  latency delta vs context baseline=0.0000 ms
+  HTTP 200=1.0000; body integrity=1.0000; encoding accuracy=1.0000
+ACTIVE_ELIGIBLE_GZIP / EMPTY_ENCODINGS
+  n=10; predicted alpha=1; observed alpha=1.0000
+  injection=1.0000; impact=1.0000
+  q|active,injected=1.0000; 95% Wilson=[0.7225, 1.0000]
+  pi=alpha*q=1.0000
+  accepts invocation=1.0000; Negotiator construction=1.0000
+  mean exact calls=1.0000; injections=1.0000; injected delay=0.0000 ms
+  latency delta vs context baseline=-1.9517 ms
+  HTTP 200=1.0000; body integrity=1.0000; encoding accuracy=1.0000
+ACTIVE_ELIGIBLE_GZIP / FORCE_DEFLATE
+  n=10; predicted alpha=1; observed alpha=1.0000
+  injection=1.0000; impact=1.0000
+  q|active,injected=1.0000; 95% Wilson=[0.7225, 1.0000]
+  pi=alpha*q=1.0000
+  accepts invocation=1.0000; Negotiator construction=1.0000
+  mean exact calls=3.0000; injections=3.0000; injected delay=0.0000 ms
+  latency delta vs context baseline=-0.2493 ms
+  HTTP 200=1.0000; body integrity=1.0000; encoding accuracy=1.0000
+ACTIVE_ELIGIBLE_GZIP / DELAY_ENCODINGS
+  n=10; predicted alpha=1; observed alpha=1.0000
+  injection=1.0000; impact=1.0000
+  q|active,injected=1.0000; 95% Wilson=[0.7225, 1.0000]
+  pi=alpha*q=1.0000
+  accepts invocation=1.0000; Negotiator construction=1.0000
+  mean exact calls=1.0000; injections=1.0000; injected delay=25.0000 ms
+  latency delta vs context baseline=25.2592 ms
+  HTTP 200=1.0000; body integrity=1.0000; encoding accuracy=1.0000
+
+DECISION
+--------
+Fatal trials: 0
+Valid trials: 80
+Activation prediction accuracy: 1.0000
+Injection prediction accuracy: 1.0000
+Impact prediction accuracy: 1.0000
+Encoding prediction accuracy: 1.0000
+Inactive contexts silent: YES
+Active deterministic q=1 for all perturbations: YES
+All responses complete with valid bodies: YES
+PRE-REGISTERED P5 E4 PHASE-A PROPAGATION HYPOTHESIS: PASS
+
+INTERPRETATION LIMIT
+--------------------
+This is deterministic controlled runtime mechanism validation.
+q=1 here is not a natural failure, vulnerability, compromise, incident, or product-risk probability.
+No natural lambda is estimated.
