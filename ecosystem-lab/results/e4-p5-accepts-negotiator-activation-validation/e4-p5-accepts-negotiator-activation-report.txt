@@ -1,0 +1,77 @@
+P5 E4 ACCEPTS -> NEGOTIATOR ACTIVATION VALIDATION
+=================================================
+
+Exact edge: accepts@1.3.8 -> negotiator@0.6.3
+Product: compression@1.7.4
+Repetitions per condition: 10
+Threshold: 1024 bytes
+
+PRE-REGISTERED CONDITION RESULTS
+--------------------------------
+P5-C1_ELIGIBLE_GZIP
+  n=10
+  predicted A_E4=1; observed activation rate=1.000
+  predicted Y_compress=1; observed compression rate=1.000
+  accepts invocation rate=1.000
+  Negotiator construction rate=1.000
+  mean encoding-selection calls=1.000
+  HTTP 200 rate=1.000
+  activation prediction accuracy=1.000
+  outcome prediction accuracy=1.000
+P5-C2_HEAD_GUARD
+  n=10
+  predicted A_E4=0; observed activation rate=0.000
+  predicted Y_compress=0; observed compression rate=0.000
+  accepts invocation rate=0.000
+  Negotiator construction rate=0.000
+  mean encoding-selection calls=0.000
+  HTTP 200 rate=1.000
+  activation prediction accuracy=1.000
+  outcome prediction accuracy=1.000
+P5-C3_BELOW_THRESHOLD
+  n=10
+  predicted A_E4=0; observed activation rate=0.000
+  predicted Y_compress=0; observed compression rate=0.000
+  accepts invocation rate=0.000
+  Negotiator construction rate=0.000
+  mean encoding-selection calls=0.000
+  HTTP 200 rate=1.000
+  activation prediction accuracy=1.000
+  outcome prediction accuracy=1.000
+P5-C4_ALREADY_ENCODED
+  n=10
+  predicted A_E4=0; observed activation rate=0.000
+  predicted Y_compress=0; observed compression rate=0.000
+  accepts invocation rate=0.000
+  Negotiator construction rate=0.000
+  mean encoding-selection calls=0.000
+  HTTP 200 rate=1.000
+  activation prediction accuracy=1.000
+  outcome prediction accuracy=1.000
+P5-C5_IDENTITY_ONLY
+  n=10
+  predicted A_E4=1; observed activation rate=1.000
+  predicted Y_compress=0; observed compression rate=0.000
+  accepts invocation rate=1.000
+  Negotiator construction rate=1.000
+  mean encoding-selection calls=1.000
+  HTTP 200 rate=1.000
+  activation prediction accuracy=1.000
+  outcome prediction accuracy=1.000
+
+DECISION
+--------
+Fatal trials: 0
+Valid trials: 50
+Activation prediction accuracy: 1.000
+Compression-outcome prediction accuracy: 1.000
+Exact positive call path verified: YES
+Negative conditions silent: YES
+All workloads completed with HTTP 200: YES
+PRE-REGISTERED P5 E4 ACTIVATION HYPOTHESIS: PASS
+
+INTERPRETATION LIMIT
+--------------------
+This is controlled runtime mechanism validation.
+It does not estimate natural failure probability, incident frequency, or product risk.
+Y_compress is a secondary mechanism check and is not substituted for A_E4.

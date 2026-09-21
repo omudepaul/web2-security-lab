@@ -1,0 +1,6 @@
+condition,n,predictedA,observedARate,predictedY,observedYRate,acceptsInvocationRate,negotiatorConstructionRate,meanEncodingSelectionCalls,http200Rate,activationPredictionAccuracy,outcomePredictionAccuracy
+P5-C1_ELIGIBLE_GZIP,10,1,1,1,1,1,1,1,1,1,1
+P5-C2_HEAD_GUARD,10,0,0,0,0,0,0,0,1,1,1
+P5-C3_BELOW_THRESHOLD,10,0,0,0,0,0,0,0,1,1,1
+P5-C4_ALREADY_ENCODED,10,0,0,0,0,0,0,0,1,1,1
+P5-C5_IDENTITY_ONLY,10,1,1,0,0,1,1,1,1,1,1
