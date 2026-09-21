@@ -1,0 +1,6 @@
+condition,n,predictedA,observedARate,predictedY,observedYRate,acceptsInvocationRate,negotiatorConstructionRate,meanEncodingSelectionCalls,http200Rate,callbackOnceRate,activationPredictionAccuracy,outcomePredictionAccuracy
+P6-C1_ELIGIBLE_GZIP,10,1,1,1,1,1,1,1,1,1,1,1
+P6-C2_HTTP_COMPRESSION_DISABLED,10,0,0,0,0,0,0,0,1,1,1,1
+P6-C3_PACKET_COMPRESSION_FALSE,10,0,0,0,0,0,0,0,1,1,1,1
+P6-C4_BELOW_THRESHOLD,10,0,0,0,0,0,0,0,1,1,1,1
+P6-C5_IDENTITY_ONLY,10,1,1,0,0,1,1,1,1,1,1,1
